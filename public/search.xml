@@ -4,26 +4,75 @@
   
     
     <entry>
-      <title>article title</title>
-      <link href="/2019/10/14/article-title/"/>
-      <url>/2019/10/14/article-title/</url>
+      <title>从0搭建自己的webpack开发环境</title>
+      <link href="/2018/04/22/node-da-jian/"/>
+      <url>/2018/04/22/node-da-jian/</url>
       
-        <content type="html"><![CDATA[<script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+        <content type="html"><![CDATA[<div align="middle"><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=411214279&auto=1&height=66"></iframe></div><p>闲来无事，随便写写……</p><h1 id="从0搭建自己的webpack开发环境"><a href="#从0搭建自己的webpack开发环境" class="headerlink" title="从0搭建自己的webpack开发环境"></a>从0搭建自己的webpack开发环境</h1><hr><p><strong>1.什么是Webpack?</strong><br><strong>webpack</strong>是一个现代 <strong>JavaScript</strong> 应用程序的<strong>静态模块打包器</strong>(module bundler)，当 webpack 处理应用程序时，它会递归地构建一个<strong>依赖关系图</strong>(dependency graph)，其中包含应用程序需要的每个<strong>模块</strong>，然后将所有这些模块打包成一个或多个 <strong>bundle</strong><br><img src="node.jpg" alt></p><p>使用Webpack作为前端构建工具：</p><p>· 代码转换：TypeScript 编译成 JavaScript、SCSS 编译成 CSS 等；<br>· 文件优化：压缩 JavaScript、CSS、HTML 代码，压缩合并图片等；<br>· 代码分割：提取多个页面的公共代码、提取首屏不需要执行部分的代码让其异步加载；<br>· 模块合并：在采用模块化的项目里会有很多个模块和文件，需要构建功能把模块分类合并成一个文件；<br>· 自动刷新：监听本地源代码的变化，自动重新构建、刷新浏览器；<br>· 代码校验：在代码被提交到仓库前需要校验代码是否符合规范，以及单元测试是否通过；<br>· 自动发布：更新完代码后，自动构建出线上发布代码并传输给发布系统。</p><p>在<strong>webpack</strong>应用中有两个核心:</p><p>模块转换器，用于把模块原内容按照需求转换成新内容，可以加载非 JS 模块；</p><p>扩展插件，在 Webpack 构建流程中的特定时机注入扩展逻辑来改变构建结果或做你想要的事情。</p><p><strong>2.初始化项目</strong></p>]]></content>
       
       
+      <categories>
+          
+          <category> 开发环境 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 开发环境 </tag>
+            
+        </tags>
       
     </entry>
     
     
     
     <entry>
-      <title>Hello World</title>
-      <link href="/2019/10/14/hello-world/"/>
-      <url>/2019/10/14/hello-world/</url>
+      <title>一名【合格】前端工程师的自检清单</title>
+      <link href="/2018/01/22/self-checking/"/>
+      <url>/2018/01/22/self-checking/</url>
       
-        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></tbody></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></tbody></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></tbody></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></tbody></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+        <content type="html"><![CDATA[<div align="middle"><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=407679465&auto=1&height=66"></iframe></div><p>闲来无事，随便写写……</p><h1 id="开篇"><a href="#开篇" class="headerlink" title="开篇"></a>开篇</h1><hr><p>前端开发是一个非常特殊的行业，它的历史实际上不是很长，但是知识之繁杂，技术迭代速度之快是其他技术所不能比拟的。</p><p><strong>winter</strong>在他的《重学前端》课程中提到：</p><!-- ![](749826.jpg) --><!-- 最后引用《我的少女时代》里的一句话吧。 --><blockquote><p>到现在为止，前端工程师已经成为研发体系中的重要岗位之一。可是，与此相对的是，我发现极少或者几乎没有大学的计算机专业愿意开设前端课程，更没有系统性的教学方案出现。大部分前端工程师的知识，其实都是来自于实践和工作中零散的学习。</p></blockquote><p>这样是一个非常真实的现状，实际上很多前端开发者都是自学甚至转行过来的，前端入门简单，学习了几个API以后上手做项目也很简单，但是这往往成为了限制自身发展的瓶颈。<br>只是停留在会用阶段是远远不够的，我们还需要不断探索和深入。现在市面上并不缺少学习教程，技术文章，如果盲目的学习你会发现看过以后的知识留存率会很低，而且发现没有了解到的知识越来越多，这会让人产生焦虑。<br>实际上，除了坚持学习的强大的自驱力，你还需要一个很简单的学习方法。那就是：建立自己的知识体系。它能帮助你更系统性的学习，同时你也时刻能知道自己哪些地方是不足的。<br>我会把我工作和学习中接触到的知识全部归纳到我的知识体系中，其中不仅仅包括我已经学过的，还有很多我没有来得及学习的。</p><p>下面我会把我的自检清单分享给大家，你可以按照清单上的知识检测自己还有哪些不足和提升，我也建议大家建自己的知识体系，这样工作或者学习甚至面试时，你能快速定位到知识清单中的点，如果你有哪些我没归纳到的点，欢迎在评论区告诉我。</p><p><img src="01.jpg" alt> </p><h1 id="一、JavaScript基础"><a href="#一、JavaScript基础" class="headerlink" title="一、JavaScript基础"></a>一、JavaScript基础</h1><blockquote><p>前端工程师吃饭的家伙，深度、广度一样都不能差。</p></blockquote><p><strong>变量和类型</strong><br>· 1.JavaScript规定了几种语言类型</p><p>· 2.JavaScript对象的底层数据结构是什么</p><p>· 3.Symbol类型在实际开发中的应用、可手动实现一个简单的Symbol</p><p>· 4.JavaScript中的变量在内存中的具体存储形式</p><p>· 5.基本类型对应的内置对象，以及他们之间的装箱拆箱操作</p><p>· 6.理解值类型和引用类型</p><p>· 7.null和undefined的区别</p><p>. 8至少可以说出三种判断JavaScript数据类型的方式，以及他们的优缺点，如何准确的判断数组类型</p>]]></content>
       
       
+      <categories>
+          
+          <category> 随笔 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 随笔 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>js常用数组操作方法</title>
+      <link href="/2018/01/22/js-chang-yong-shu-zu-cao-zuo-fang-fa/"/>
+      <url>/2018/01/22/js-chang-yong-shu-zu-cao-zuo-fang-fa/</url>
+      
+        <content type="html"><![CDATA[<div align="middle"><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=407679465&auto=1&height=66"></iframe></div><p>闲来无事，随便写写……</p><h1 id="开篇"><a href="#开篇" class="headerlink" title="开篇"></a>开篇</h1><hr><p>你真的了解JS数组的那些方法吗？</p><blockquote><p>寄语：<br>JS数组的方法非常的丰富和琐碎，学习和使用过程中总是需要反复的记忆、查看文档，但作为JS基础这样真的不应该，我们应该把它记得滚瓜烂熟，深入理解才对。<br>但是要怎样才能做到呢？这正是我也本文的初衷，根据个人的经验总结了一下，希望能够帮助和我一样困惑的人，搞定这个头疼的问题。</p></blockquote><p><strong>数组的方法</strong><br>JavaScript的数组方法包括数组原型的方法、构造函数的方法（ES6新增部分）<br>针对每一个方法我们主要了解四个方面：<strong>作用、参数、返回值、原数组是否改变</strong></p><p><strong>（一）. 原型上的方法</strong></p><p><strong>1. push()</strong><br>作用：向数组的末尾添加一项或多项<br>参数：ele1[, ele2[, …[, elen]]]<br>返回值：添加元素后数组的长度<br>原数组是否改变：是</p><p>let arr = [1, 2, 3];<br>let temp = arr.push(‘a’, ‘b’);<br>console.log(arr, temp); // [1, 2, 3, ‘a’, ‘b’] 5</p><p><strong>2. pop()</strong><br>作用：删除数组最后一项<br>参数：无<br>返回值：删除的那一项<br>原数组是否改变：是</p><p>let arr = [1, 2, 3];<br>let temp = arr.pop();<br>console.log(arr, temp); // [1, 2] 3</p><p><strong>3. unshift()</strong><br>作用：向数组开头添加一项或多项<br>参数：ele1[, ele2[, …[, elen]]]<br>返回值：添加元素后数组的长度<br>原数组是否改变：是<br>let arr = [1, 2, 3];<br>let temp = arr.unshift(‘a’, ‘b’);<br>console.log(arr, temp); // [‘a’, ‘b’, 1, 2, 3] 5</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 方法 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 方法 </tag>
+            
+        </tags>
       
     </entry>
     

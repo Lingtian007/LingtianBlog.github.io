@@ -1,0 +1,20 @@
+[
+	{
+		"name": "参商",
+		"artist": "不才",
+		"url": "http://music.163.com/song/media/outer/url?id=28288202.mp3",
+		"cover": "/medias/music/avatars/bc.jpg"
+	},
+	{
+		"name": "雅俗共赏",
+		"artist": "许嵩",
+		"url": "http://music.163.com/song/media/outer/url?id=411214279.mp3",
+		"cover": "/medias/music/avatars/xs.jpg"
+	},
+	{
+		"name": "飞云之下",
+		"artist": "林俊杰",
+		"url": "http://music.163.com/song/media/outer/url?id=554242032.mp3",
+		"cover": "/medias/music/avatars/ljj.jpg"
+	}
+]

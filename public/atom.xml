@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Hexo</title>
+  <title>临风顿悟的博客</title>
   
-  
+  <subtitle>LinFengDunWu</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="https://github.com/Lingtian007/LingtianBlog.github.io/"/>
-  <updated>2019-10-14T06:13:01.016Z</updated>
-  <id>https://github.com/Lingtian007/LingtianBlog.github.io/</id>
+  <link href="https://godweiyang.com/"/>
+  <updated>2019-10-12T07:20:33.021Z</updated>
+  <id>https://godweiyang.com/</id>
   
   <author>
-    <name>John Doe</name>
+    <name>临风顿悟</name>
     
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>article title</title>
-    <link href="https://github.com/Lingtian007/LingtianBlog.github.io/2019/10/14/article-title/"/>
-    <id>https://github.com/Lingtian007/LingtianBlog.github.io/2019/10/14/article-title/</id>
-    <published>2019-10-14T06:13:01.000Z</published>
-    <updated>2019-10-14T06:13:01.016Z</updated>
+    <title>从0搭建自己的webpack开发环境</title>
+    <link href="https://godweiyang.com/2018/04/22/node-da-jian/"/>
+    <id>https://godweiyang.com/2018/04/22/node-da-jian/</id>
+    <published>2018-04-22T04:32:09.000Z</published>
+    <updated>2019-10-12T07:20:33.021Z</updated>
     
     <summary type="html">
     
@@ -29,26 +29,26 @@
       
         
         
-          &lt;script&gt;
-        document.querySelectorAll(&#39;.github-emoji&#39;)
-          .forEach(el =&gt; {
-            if (!el.dataset.src) { return; }
-       
+          &lt;div align=&quot;middle&quot;&gt;
+&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;330&quot; height=&quot;86&quot;
         
       
     
     </summary>
     
+      <category term="开发环境" scheme="https://godweiyang.com/categories/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/"/>
     
+    
+      <category term="开发环境" scheme="https://godweiyang.com/tags/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/"/>
     
   </entry>
   
   <entry>
-    <title>Hello World</title>
-    <link href="https://github.com/Lingtian007/LingtianBlog.github.io/2019/10/14/hello-world/"/>
-    <id>https://github.com/Lingtian007/LingtianBlog.github.io/2019/10/14/hello-world/</id>
-    <published>2019-10-14T06:03:51.588Z</published>
-    <updated>2019-10-14T06:03:51.588Z</updated>
+    <title>一名【合格】前端工程师的自检清单</title>
+    <link href="https://godweiyang.com/2018/01/22/self-checking/"/>
+    <id>https://godweiyang.com/2018/01/22/self-checking/</id>
+    <published>2018-01-22T04:32:09.000Z</published>
+    <updated>2019-10-12T06:53:11.954Z</updated>
     
     <summary type="html">
     
@@ -56,13 +56,44 @@
       
         
         
-          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a
+          &lt;div align=&quot;middle&quot;&gt;
+&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;330&quot; height=&quot;86&quot;
         
       
     
     </summary>
     
+      <category term="随笔" scheme="https://godweiyang.com/categories/%E9%9A%8F%E7%AC%94/"/>
     
+    
+      <category term="随笔" scheme="https://godweiyang.com/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>js常用数组操作方法</title>
+    <link href="https://godweiyang.com/2018/01/22/js-chang-yong-shu-zu-cao-zuo-fang-fa/"/>
+    <id>https://godweiyang.com/2018/01/22/js-chang-yong-shu-zu-cao-zuo-fang-fa/</id>
+    <published>2018-01-22T04:32:09.000Z</published>
+    <updated>2019-10-12T07:05:18.885Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;div align=&quot;middle&quot;&gt;
+&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;330&quot; height=&quot;86&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="方法" scheme="https://godweiyang.com/categories/%E6%96%B9%E6%B3%95/"/>
+    
+    
+      <category term="方法" scheme="https://godweiyang.com/tags/%E6%96%B9%E6%B3%95/"/>
     
   </entry>
   
