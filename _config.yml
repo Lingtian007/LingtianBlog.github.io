@@ -117,7 +117,7 @@ deploy:
 # - type: coding
 #   repository: https://git.coding.net/godweiyang/godweiyang.github.io.git
 #   branch: master
-- type: baidu_url_submitter
+# - type: baidu_url_submitter
 
 
 live2d:
