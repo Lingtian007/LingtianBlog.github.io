@@ -13,7 +13,7 @@ timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://linfengdunwu.cn
+url: https://github.com/Lingtian007/LingtianBlog.github.io
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -112,7 +112,7 @@ theme: matery
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
 - type: git
-  repository: https://github.com/Lingtian007/linfendunwu.github.io
+  repository: https://github.com/Lingtian007/LingtianBlog.github.io
   branch: master
 # - type: coding
 #   repository: https://git.coding.net/godweiyang/godweiyang.github.io.git
@@ -139,8 +139,8 @@ live2d:
   react:
     opacity: 0.7
 
-baidu_url_submit:
-  count: 100
-  host: linfengdunwu.com
-  token: 
-  path: baidu_urls.txt
+# baidu_url_submit:
+#   count: 100
+#   host: linfengdunwu.com
+#   token: 
+#   path: baidu_urls.txt
