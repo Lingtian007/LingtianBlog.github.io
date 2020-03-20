@@ -96,7 +96,7 @@ indexbtn:
 # 首页 banner 中的第二行个人信息配置，留空即不启用
 socialLink:
   qq: 632271304
-  github: Lingtian007
+  github: Lingtian007/LingtianBlog
   weibo: 6010843426
   email: 632271304@qq.com
   zhihu: Lingtian
@@ -358,7 +358,7 @@ featureImages:
 - /medias/featureimages/3.jpg
 - /medias/featureimages/4.jpg
 - /medias/featureimages/5.jpg
-- /medias/featureimages/1.jpg
+- /medias/featureimages/6.jpg
 - /medias/featureimages/7.jpg
 - /medias/featureimages/8.jpg
 - /medias/featureimages/9.jpg
@@ -407,4 +407,4 @@ reprint:
 
 # 雪花特效
 snow:
-  enable: true
+  enable: false

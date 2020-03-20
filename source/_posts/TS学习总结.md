@@ -1,7 +1,7 @@
 ---
-title: ts基础总结
+title: TS基础总结
 date: 2019-10-15 14:00:09
-top: true
+top: false
 cover: false
 password:
 toc: true

@@ -1,7 +1,7 @@
 ---
 title: TS+VUE项目搭建
 date: 2019-10-16 15:00:09
-top: true
+top: false
 cover: false
 password:
 toc: true
@@ -63,7 +63,8 @@ categories:
 
 ![](2.jpg)
 
-可看到列表里有很多选项，我们以vue+ts为主，所以我们选择 babel typescript router vuex 这几个，选择完后，如下
+可看到列表里有很多选项，这里是多项选择，按`上/下键`切换选项，`空格键`选择该选项，`enter`键进入下一步。你可以根据项目的实际情况，选择相应的选项。我们以vue+ts为主，所以我们选择 babel typescript router vuex 这几个，选择完后，如下
+
 
 ![](3.jpg)
 

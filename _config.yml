@@ -3,17 +3,17 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 临风顿悟的博客
-subtitle: LinFengDunWu
+title: 唐宇的博客
+subtitle: TangYu
 description: "不忘初心 忘旧年"
 keywords: ""
-author: 临风顿悟
+author: 唐宇
 language: zh-CN
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://github.com/Lingtian007/LingtianBlog.github.io
+url: https://www.linfengdunwu.cn
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
