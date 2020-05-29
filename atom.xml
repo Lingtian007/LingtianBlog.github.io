@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.linfengdunwu.cn/"/>
-  <updated>2020-05-28T08:47:53.185Z</updated>
+  <updated>2020-05-29T01:18:55.535Z</updated>
   <id>https://www.linfengdunwu.cn/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>面试</title>
+    <link href="https://www.linfengdunwu.cn/2020/05/30/mian-shi-zhi-lu/"/>
+    <id>https://www.linfengdunwu.cn/2020/05/30/mian-shi-zhi-lu/</id>
+    <published>2020-05-30T07:32:09.000Z</published>
+    <updated>2020-05-29T01:18:55.535Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;div align=&quot;middle&quot;&gt;
+&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;330&quot; height=&quot;86&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="面试" scheme="https://www.linfengdunwu.cn/categories/%E9%9D%A2%E8%AF%95/"/>
+    
+    
+      <category term="面试" scheme="https://www.linfengdunwu.cn/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+  </entry>
   
   <entry>
     <title>从零搭建前端组件库</title>
@@ -71,60 +98,6 @@
   </entry>
   
   <entry>
-    <title>常见面试篇</title>
-    <link href="https://www.linfengdunwu.cn/2019/12/17/mian-shi-zhi-lu/"/>
-    <id>https://www.linfengdunwu.cn/2019/12/17/mian-shi-zhi-lu/</id>
-    <published>2019-12-17T07:32:09.000Z</published>
-    <updated>2020-05-28T07:51:13.156Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;div align=&quot;middle&quot;&gt;
-&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;330&quot; height=&quot;86&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="面试" scheme="https://www.linfengdunwu.cn/categories/%E9%9D%A2%E8%AF%95/"/>
-    
-    
-      <category term="面试" scheme="https://www.linfengdunwu.cn/tags/%E9%9D%A2%E8%AF%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>React-Native入坑之路 (一)</title>
-    <link href="https://www.linfengdunwu.cn/2019/11/22/react-native-ru-keng-zhi-lu/"/>
-    <id>https://www.linfengdunwu.cn/2019/11/22/react-native-ru-keng-zhi-lu/</id>
-    <published>2019-11-22T04:32:09.000Z</published>
-    <updated>2020-05-28T07:51:13.110Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;div align=&quot;middle&quot;&gt;
-&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;330&quot; height=&quot;86&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="RN" scheme="https://www.linfengdunwu.cn/categories/RN/"/>
-    
-    
-      <category term="RN" scheme="https://www.linfengdunwu.cn/tags/RN/"/>
-    
-  </entry>
-  
-  <entry>
     <title>React小技巧汇总</title>
     <link href="https://www.linfengdunwu.cn/2019/11/06/react-zong-jie/"/>
     <id>https://www.linfengdunwu.cn/2019/11/06/react-zong-jie/</id>
@@ -148,60 +121,6 @@
     
     
       <category term="React" scheme="https://www.linfengdunwu.cn/tags/React/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>React Native 搭建小白教程</title>
-    <link href="https://www.linfengdunwu.cn/2019/11/06/react-native-da-jian-xiao-bai-jiao-cheng/"/>
-    <id>https://www.linfengdunwu.cn/2019/11/06/react-native-da-jian-xiao-bai-jiao-cheng/</id>
-    <published>2019-11-06T04:32:09.000Z</published>
-    <updated>2020-05-28T08:06:51.559Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;div align=&quot;middle&quot;&gt;
-&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;330&quot; height=&quot;86&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="开发环境" scheme="https://www.linfengdunwu.cn/categories/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/"/>
-    
-    
-      <category term="开发环境" scheme="https://www.linfengdunwu.cn/tags/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>React Native 搭建小白教程</title>
-    <link href="https://www.linfengdunwu.cn/2019/11/06/react-native-da-jian-jiao-cheng/"/>
-    <id>https://www.linfengdunwu.cn/2019/11/06/react-native-da-jian-jiao-cheng/</id>
-    <published>2019-11-06T04:32:09.000Z</published>
-    <updated>2020-05-28T08:05:31.581Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;div align=&quot;middle&quot;&gt;
-&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;330&quot; height=&quot;86&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="开发环境" scheme="https://www.linfengdunwu.cn/categories/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/"/>
-    
-    
-      <category term="开发环境" scheme="https://www.linfengdunwu.cn/tags/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/"/>
     
   </entry>
   
@@ -449,6 +368,33 @@
   </entry>
   
   <entry>
+    <title>React-Native入坑之路 (一)</title>
+    <link href="https://www.linfengdunwu.cn/2019/08/22/react-native-ru-keng-zhi-lu/"/>
+    <id>https://www.linfengdunwu.cn/2019/08/22/react-native-ru-keng-zhi-lu/</id>
+    <published>2019-08-22T04:32:09.000Z</published>
+    <updated>2020-05-29T01:20:05.690Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;div align=&quot;middle&quot;&gt;
+&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;330&quot; height=&quot;86&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="RN" scheme="https://www.linfengdunwu.cn/categories/RN/"/>
+    
+    
+      <category term="RN" scheme="https://www.linfengdunwu.cn/tags/RN/"/>
+    
+  </entry>
+  
+  <entry>
     <title>一个基于vue和element-ui的树形穿梭框组件</title>
     <link href="https://www.linfengdunwu.cn/2019/08/20/vue-element-chuan-suo-kuang/"/>
     <id>https://www.linfengdunwu.cn/2019/08/20/vue-element-chuan-suo-kuang/</id>
@@ -476,11 +422,65 @@
   </entry>
   
   <entry>
+    <title>React Native 搭建小白教程</title>
+    <link href="https://www.linfengdunwu.cn/2019/08/06/react-native-da-jian-jiao-cheng/"/>
+    <id>https://www.linfengdunwu.cn/2019/08/06/react-native-da-jian-jiao-cheng/</id>
+    <published>2019-08-06T04:32:09.000Z</published>
+    <updated>2020-05-29T01:19:30.475Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;div align=&quot;middle&quot;&gt;
+&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;330&quot; height=&quot;86&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="开发环境" scheme="https://www.linfengdunwu.cn/categories/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/"/>
+    
+    
+      <category term="开发环境" scheme="https://www.linfengdunwu.cn/tags/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Echars中常用方法</title>
     <link href="https://www.linfengdunwu.cn/2019/07/22/echars-zhong-chang-yong-fang-fa/"/>
     <id>https://www.linfengdunwu.cn/2019/07/22/echars-zhong-chang-yong-fang-fa/</id>
     <published>2019-07-22T04:32:09.000Z</published>
     <updated>2020-05-28T07:51:13.063Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;div align=&quot;middle&quot;&gt;
+&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;330&quot; height=&quot;86&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="开发环境" scheme="https://www.linfengdunwu.cn/categories/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/"/>
+    
+    
+      <category term="开发环境" scheme="https://www.linfengdunwu.cn/tags/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>React Native 搭建小白教程</title>
+    <link href="https://www.linfengdunwu.cn/2019/07/13/react-native-da-jian-xiao-bai-jiao-cheng/"/>
+    <id>https://www.linfengdunwu.cn/2019/07/13/react-native-da-jian-xiao-bai-jiao-cheng/</id>
+    <published>2019-07-13T04:32:09.000Z</published>
+    <updated>2020-05-29T01:19:46.281Z</updated>
     
     <summary type="html">
     
