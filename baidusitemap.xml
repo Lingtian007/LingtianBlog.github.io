@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://www.linfengdunwu.cn/2020/05/30/mian-shi-zhi-lu/</loc>
+    <lastmod>2020-06-01</lastmod>
+  </url>  <url>
     <loc>https://www.linfengdunwu.cn/2019/08/22/react-native-ru-keng-zhi-lu/</loc>
     <lastmod>2020-05-29</lastmod>
   </url>  <url>
@@ -8,9 +11,6 @@
     <lastmod>2020-05-29</lastmod>
   </url>  <url>
     <loc>https://www.linfengdunwu.cn/2019/08/06/react-native-da-jian-jiao-cheng/</loc>
-    <lastmod>2020-05-29</lastmod>
-  </url>  <url>
-    <loc>https://www.linfengdunwu.cn/2020/05/30/mian-shi-zhi-lu/</loc>
     <lastmod>2020-05-29</lastmod>
   </url>  <url>
     <loc>https://www.linfengdunwu.cn/2020/03/28/cong-ling-da-jian-qian-duan-zu-jian-ku/</loc>
@@ -28,10 +28,10 @@
     <loc>https://www.linfengdunwu.cn/2019/01/22/js-chang-yong-fang-fa/</loc>
     <lastmod>2020-05-28</lastmod>
   </url>  <url>
-    <loc>https://www.linfengdunwu.cn/2019/10/18/node.js-da-jian-ben-di-fu-wu-mo-ni-shu-ju/</loc>
+    <loc>https://www.linfengdunwu.cn/2018/04/22/node-da-jian/</loc>
     <lastmod>2020-05-28</lastmod>
   </url>  <url>
-    <loc>https://www.linfengdunwu.cn/2018/04/22/node-da-jian/</loc>
+    <loc>https://www.linfengdunwu.cn/2019/10/18/node.js-da-jian-ben-di-fu-wu-mo-ni-shu-ju/</loc>
     <lastmod>2020-05-28</lastmod>
   </url>  <url>
     <loc>https://www.linfengdunwu.cn/2019/09/22/cong-0-da-jian-zi-ji-de-webpack-kai-fa-huan-jing/</loc>
@@ -40,10 +40,10 @@
     <loc>https://www.linfengdunwu.cn/2019/10/15/ts-xue-xi-zong-jie/</loc>
     <lastmod>2020-05-28</lastmod>
   </url>  <url>
-    <loc>https://www.linfengdunwu.cn/2019/08/20/vue-element-chuan-suo-kuang/</loc>
+    <loc>https://www.linfengdunwu.cn/2019/10/17/vue-xiang-mu-chang-yong-fang-fa-zong-jie/</loc>
     <lastmod>2020-05-28</lastmod>
   </url>  <url>
-    <loc>https://www.linfengdunwu.cn/2019/10/17/vue-xiang-mu-chang-yong-fang-fa-zong-jie/</loc>
+    <loc>https://www.linfengdunwu.cn/2019/08/20/vue-element-chuan-suo-kuang/</loc>
     <lastmod>2020-05-28</lastmod>
   </url>  <url>
     <loc>https://www.linfengdunwu.cn/2019/10/24/vue-zhong-shi-yong-echarts-pei-he-canvas-hui-zhi-tu-li/</loc>
@@ -55,10 +55,10 @@
     <loc>https://www.linfengdunwu.cn/2019/01/22/js-chang-yong-shu-zu-cao-zuo-fang-fa/</loc>
     <lastmod>2020-05-28</lastmod>
   </url>  <url>
-    <loc>https://www.linfengdunwu.cn/2018/01/22/self-checking/</loc>
+    <loc>https://www.linfengdunwu.cn/2019/11/06/react-zong-jie/</loc>
     <lastmod>2020-05-28</lastmod>
   </url>  <url>
-    <loc>https://www.linfengdunwu.cn/2019/11/06/react-zong-jie/</loc>
+    <loc>https://www.linfengdunwu.cn/2018/01/22/self-checking/</loc>
     <lastmod>2020-05-28</lastmod>
   </url>  <url>
     <loc>https://www.linfengdunwu.cn/2019/10/16/ts-vue-xiang-mu-da-jian/</loc>

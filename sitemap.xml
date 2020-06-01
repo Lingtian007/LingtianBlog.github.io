@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.linfengdunwu.cn/2020/05/30/mian-shi-zhi-lu/</loc>
+    
+    <lastmod>2020-06-01T09:22:58.382Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.linfengdunwu.cn/2019/08/22/react-native-ru-keng-zhi-lu/</loc>
     
     <lastmod>2020-05-29T01:20:05.690Z</lastmod>
@@ -19,13 +26,6 @@
     <loc>https://www.linfengdunwu.cn/2019/08/06/react-native-da-jian-jiao-cheng/</loc>
     
     <lastmod>2020-05-29T01:19:30.475Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.linfengdunwu.cn/2020/05/30/mian-shi-zhi-lu/</loc>
-    
-    <lastmod>2020-05-29T01:18:55.535Z</lastmod>
     
   </url>
   
@@ -58,28 +58,7 @@
   </url>
   
   <url>
-    <loc>https://www.linfengdunwu.cn/about/index.html</loc>
-    
-    <lastmod>2020-05-28T07:51:13.156Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.linfengdunwu.cn/categories/index.html</loc>
-    
-    <lastmod>2020-05-28T07:51:13.156Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://www.linfengdunwu.cn/archives/index.html</loc>
-    
-    <lastmod>2020-05-28T07:51:13.156Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.linfengdunwu.cn/contact/index.html</loc>
     
     <lastmod>2020-05-28T07:51:13.156Z</lastmod>
     
@@ -100,6 +79,27 @@
   </url>
   
   <url>
+    <loc>https://www.linfengdunwu.cn/about/index.html</loc>
+    
+    <lastmod>2020-05-28T07:51:13.156Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.linfengdunwu.cn/contact/index.html</loc>
+    
+    <lastmod>2020-05-28T07:51:13.156Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.linfengdunwu.cn/categories/index.html</loc>
+    
+    <lastmod>2020-05-28T07:51:13.156Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.linfengdunwu.cn/2019/01/22/js-chang-yong-fang-fa/</loc>
     
     <lastmod>2020-05-28T07:51:13.141Z</lastmod>
@@ -107,14 +107,14 @@
   </url>
   
   <url>
-    <loc>https://www.linfengdunwu.cn/2019/10/18/node.js-da-jian-ben-di-fu-wu-mo-ni-shu-ju/</loc>
+    <loc>https://www.linfengdunwu.cn/2018/04/22/node-da-jian/</loc>
     
     <lastmod>2020-05-28T07:51:13.141Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.linfengdunwu.cn/2018/04/22/node-da-jian/</loc>
+    <loc>https://www.linfengdunwu.cn/2019/10/18/node.js-da-jian-ben-di-fu-wu-mo-ni-shu-ju/</loc>
     
     <lastmod>2020-05-28T07:51:13.141Z</lastmod>
     
@@ -135,14 +135,14 @@
   </url>
   
   <url>
-    <loc>https://www.linfengdunwu.cn/2019/08/20/vue-element-chuan-suo-kuang/</loc>
+    <loc>https://www.linfengdunwu.cn/2019/10/17/vue-xiang-mu-chang-yong-fang-fa-zong-jie/</loc>
     
     <lastmod>2020-05-28T07:51:13.125Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.linfengdunwu.cn/2019/10/17/vue-xiang-mu-chang-yong-fang-fa-zong-jie/</loc>
+    <loc>https://www.linfengdunwu.cn/2019/08/20/vue-element-chuan-suo-kuang/</loc>
     
     <lastmod>2020-05-28T07:51:13.125Z</lastmod>
     
@@ -170,14 +170,14 @@
   </url>
   
   <url>
-    <loc>https://www.linfengdunwu.cn/2018/01/22/self-checking/</loc>
+    <loc>https://www.linfengdunwu.cn/2019/11/06/react-zong-jie/</loc>
     
     <lastmod>2020-05-28T07:51:13.110Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.linfengdunwu.cn/2019/11/06/react-zong-jie/</loc>
+    <loc>https://www.linfengdunwu.cn/2018/01/22/self-checking/</loc>
     
     <lastmod>2020-05-28T07:51:13.110Z</lastmod>
     
