@@ -12,7 +12,7 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="面试总结, 唐宇的博客">
+    <meta name="keywords" content="2020 前端面试, 唐宇的博客">
     <meta name="baidu-site-verification" content>
     <meta name="google-site-verification" content>
     <meta name="360-site-verification" content>
@@ -22,10 +22,13 @@
 
 闲来无事，随便写写……
 面试总结前言
-从前端学习到找一份合适的工作，大大小小的面试必不可少，所以我对初中级前端面试题进行了初步整理，也方便自己查阅，也希望对小伙伴们有所帮助！
+总结一下面试遇到的问题，为了方便自己查阅，也希望对小伙伴们有所帮助！
 
 一 HTML
-HTML语义化就是让页面内容结构化，它有">
+HTML语义化就是让页面内容结构化，它有如下优点
+
+易于用户阅读，样式丢失的时候能让页面呈现清晰的结构。
+有">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -33,7 +36,7 @@ HTML语义化就是让页面内容结构化，它有">
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>面试总结 | 唐宇的博客</title>
+    <title>2020 前端面试 | 唐宇的博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -307,13 +310,13 @@ HTML语义化就是让页面内容结构化，它有">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/4.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        面试总结
+                        2020 前端面试
                     </div>
                 </div>
             </div>
@@ -462,7 +465,7 @@ HTML语义化就是让页面内容结构化，它有">
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    7.5k
+                    7.4k
                 </div>
                 
 
@@ -491,7 +494,7 @@ HTML语义化就是让页面内容结构化，它有">
 
 <p>闲来无事，随便写写……</p>
 <h1 id="面试总结"><a href="#面试总结" class="headerlink" title="面试总结"></a>面试总结</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><blockquote>
-<p>从前端学习到找一份合适的工作，大大小小的面试必不可少，所以我对初中级前端面试题进行了初步整理，也方便自己查阅，也希望对小伙伴们有所帮助！</p>
+<p>总结一下面试遇到的问题，为了方便自己查阅，也希望对小伙伴们有所帮助！</p>
 </blockquote>
 <h3 id="一-HTML"><a href="#一-HTML" class="headerlink" title="一 HTML"></a>一 HTML</h3><ul>
 <li><p>HTML语义化就是让页面内容结构化，它有如下优点</p>
@@ -504,15 +507,15 @@ HTML语义化就是让页面内容结构化，它有">
 </li>
 </ul>
 <p>如：</p>
-<pre><code>    &lt;header&gt;代表头部
-    &lt;nav&gt;代表超链接区域
-    &lt;main&gt;定义文档主要内容
-    &lt;article&gt;可以表示文章、博客等内容
-    &lt;aside&gt;通常表示侧边栏或嵌入内容
-    &lt;footer&gt;代表尾部</code></pre><ul>
-<li><p>HTML5新标签 </p>
-<pre><code>  有&lt;header&gt;、&lt;footer&gt;、&lt;aside&gt;、&lt;nav&gt;、&lt;video&gt;、&lt;audio&gt;、&lt;canvas&gt;等...</code></pre></li>
+<pre><code>&lt;header&gt;代表头部
+&lt;nav&gt;代表超链接区域
+&lt;main&gt;定义文档主要内容
+&lt;article&gt;可以表示文章、博客等内容
+&lt;aside&gt;通常表示侧边栏或嵌入内容
+&lt;footer&gt;代表尾部</code></pre><ul>
+<li>HTML5新标签 </li>
 </ul>
+<p><code>有&lt;header&gt;、&lt;footer&gt;、&lt;aside&gt;、&lt;nav&gt;、&lt;video&gt;、&lt;audio&gt;、&lt;canvas&gt;等...</code></p>
 <h3 id="二-CSS"><a href="#二-CSS" class="headerlink" title="二 CSS"></a>二 CSS</h3><ul>
 <li><p>盒子模型<br>盒模型分为标准盒模型和怪异盒模型(IE模型)</p>
 <ul>
@@ -528,23 +531,23 @@ HTML语义化就是让页面内容结构化，它有">
 </blockquote>
 <ul>
 <li><p>CSS选择器 </p>
-<pre><code>      通配符：*
-      ID选择器：#ID
-      类选择器：.class
-      元素选择器：p、a    等
-      后代选择器：p span、div a   等
-      伪类选择器：a:hover 等
-      属性选择器：input[type=&quot;text&quot;]  等</code></pre><blockquote>
+<pre><code>通配符：*
+ID选择器：#ID
+类选择器：.class
+元素选择器：p、a    等
+后代选择器：p span、div a   等
+伪类选择器：a:hover 等
+属性选择器：input[type=&quot;text&quot;]  等</code></pre><blockquote>
 <p>权重 !important -&gt; 行内样式 -&gt; #id -&gt; .class -&gt; 元素和伪元素 -&gt; * -&gt; 继承 -&gt; 默认</p>
 </blockquote>
 </li>
 <li><p>CSS新特性 </p>
-<pre><code>      transition：过渡
-      transform：旋转、缩放、移动或者倾斜
-      animation：动画 
-      gradient：渐变
-      shadow：阴影
-      border-radius：圆角</code></pre></li>
+<pre><code>transition：过渡
+transform：旋转、缩放、移动或者倾斜
+animation：动画 
+gradient：渐变
+shadow：阴影
+border-radius：圆角</code></pre></li>
 <li><p>如何垂直水平居中一个div</p>
 <ul>
 <li>div绝对定位水平垂直居中【Transforms 变形】    </li>
@@ -561,11 +564,11 @@ HTML语义化就是让页面内容结构化，它有">
 </ol>
 </li>
 <li><p>多行元素的文本省略号 </p>
-<pre><code>      overflow : hidden;
-      text-overflow: ellipsis;
-      display: -webkit-box;
-      -webkit-line-clamp: 3;
-      -webkit-box-orient: vertical</code></pre></li>
+<pre><code>overflow : hidden;
+text-overflow: ellipsis;
+display: -webkit-box;
+-webkit-line-clamp: 3;
+-webkit-box-orient: vertical</code></pre></li>
 </ul>
 <h3 id="三-JavaScript"><a href="#三-JavaScript" class="headerlink" title="三 JavaScript"></a>三 JavaScript</h3><p><strong>JS的几条基本规范</strong></p>
 <blockquote>
@@ -593,15 +596,17 @@ HTML语义化就是让页面内容结构化，它有">
 <li><p>什么是symbol?</p>
 </li>
 </ul>
-<p>一般问到了基本数据类型种类,你说了symbol的话,肯定会问symbol,   :=&gt; symbol不能使用new,它生成的也是原始数据类型的值, 它生成的数据都是独一无二的.(就算symbol里的变量值相同,那也是两个数据值.    symbol.for和symbol的区别在于 symbol.for会先查找有没有这个key值,有则直接返回,没有才会创建.)  </p>
 <blockquote>
-<p>一般问到基本数据类型,就会问检测复杂数据类型的方法  </p>
+<p>一般问到了基本数据类型种类,你说了symbol的话,肯定会问symbol,   :=&gt; symbol不能使用new,它生成的也是原始数据类型的值, 它生成的数据都是独一无二的.(就算symbol里的变量值相同,那也是两个数据值.    symbol.for和symbol的区别在于 symbol.for会先查找有没有这个key值,有则直接返回,没有才会创建.)  </p>
+</blockquote>
+<blockquote>
+<p>一般问到基本数据类型,就会问检测复杂数据类型的方法 </p>
+</blockquote>
 <ul>
 <li>基本数据类型可以用tepyof检测,对复杂数据类型都是返回object,但是fucntion是特例,会返回function.</li>
 <li>判断复杂数据类型可以用 instandof,(instanceof 运算符用于检测构造函数的 prototype 属性是否出现在某个实例对象的原型链上)</li>
 <li>还可以借用object原型上的 tostring方法,从后往前截取大概8位.</li>
 </ul>
-</blockquote>
 <h4 id="2-数组操作"><a href="#2-数组操作" class="headerlink" title="2.数组操作"></a>2.数组操作</h4><pre><code>map: 遍历数组，返回回调返回值组成的新数组
 forEach: 无法break，可以用try/catch中throw new Error来停止
 filter: 过滤
@@ -773,21 +778,16 @@ return B();
 <li>nginx反向代理(通过add_header处理添加一些响应头信息)</li>
 </ol>
 <h4 id="4-get和post区别"><a href="#4-get和post区别" class="headerlink" title="4.get和post区别"></a>4.get和post区别</h4><ul>
-<li><p>get和post请求的区别在于， get请求需要将参数以？拼接在url后面，而post不需要。  </p>
-</li>
-<li><p>post请求需要设置一个请求头 content-type application x-www-form-urlencode,get使用默认请求头</p>
-</li>
-<li><p>post请求参数以&amp;拼接放入请求体中，上传给服务器。而get请求体中不传参或null,  </p>
-</li>
-<li><p>get 请求相较于post请求，安全性低。  </p>
-</li>
-<li><p>get请求对数据大小有4k的限制，而post没有明显限制</p>
+<li>get和post请求的区别在于， get请求需要将参数以？拼接在url后面，而post不需要。  </li>
+<li>post请求需要设置一个请求头 content-type application x-www-form-urlencode,get使用默认请求头</li>
+<li>post请求参数以&amp;拼接放入请求体中，上传给服务器。而get请求体中不传参或null,  </li>
+<li>get 请求相较于post请求，安全性低。  </li>
+<li>get请求对数据大小有4k的限制，而post没有明显限制</li>
+</ul>
 <p><code>put和post的区别</code> : put指定了资源在服务器的位置,而post没有  , put一般用于对资源的创建于修改.</p>
 <h4 id="5-http状态码"><a href="#5-http状态码" class="headerlink" title="5.http状态码"></a>5.http状态码</h4><blockquote>
 <p> 常见的状态码  200  请求成功，  302 重定向  304 文件未修改  400 请求语法错误，401：未授权  404 找不到资源，405：访问不被允许  500 服务器错误。</p>
 </blockquote>
-</li>
-</ul>
 <h4 id="6-浏览器的渲染原理？"><a href="#6-浏览器的渲染原理？" class="headerlink" title="6.浏览器的渲染原理？"></a>6.浏览器的渲染原理？</h4><p> 解析html以构建dom树 -&gt; 构建render树 -&gt; 布局render树 -&gt; 绘制render树</p>
 <h4 id="7-当输入地址，按下回车的时候，页面发生了什么？"><a href="#7-当输入地址，按下回车的时候，页面发生了什么？" class="headerlink" title="7.当输入地址，按下回车的时候，页面发生了什么？"></a>7.当输入地址，按下回车的时候，页面发生了什么？</h4><blockquote>
 <p>进行域名解析，  先查看浏览器自身的DNS缓存，  然后查看操作系统本身的DNS缓存， 在查找本地host,最后再到DNS服务器。域名解析完成后，会 发起TCP的三次握手，建立TCP连接后发起http请求，服务器响应请求，浏览器获得html代码。之后浏览器解析代码，并将资源缓存。最后进行渲染。</p>
@@ -831,26 +831,23 @@ return B();
 <li>===&gt; 子传父的方式.   :=&gt; 先在父组件methods中创建一个方法<code>@msgFunc</code>， 然后在子组件用自定义事件触发这个 <code>this.$emit(&#39;msgFunc&#39;)</code>;方法进行传值。</li>
 <li>===&gt;非父子 : <code>Bus.$emit(&#39;on&#39;, &#39;来自兄弟组件&#39;)</code>  -&gt;     <code>Bus.$on(&#39;on&#39;, (msg) =&gt; {  this.message = msg }) =&gt;msg = 来自兄弟组件</code></li>
 </ul>
-<h4 id="4-vue组件间的传参方式"><a href="#4-vue组件间的传参方式" class="headerlink" title="4.vue组件间的传参方式"></a>4.vue组件间的传参方式</h4><ul>
-<li>1.<a href="https://vuex.vuejs.org/zh/" target="_blank" rel="noopener">Vuex</a><blockquote>
+</li>
+</ol>
+<h4 id="4-vue组件间的传参方式"><a href="#4-vue组件间的传参方式" class="headerlink" title="4.vue组件间的传参方式"></a>4.vue组件间的传参方式</h4><ol>
+<li><p><a href="https://vuex.vuejs.org/zh/" target="_blank" rel="noopener">Vuex</a></p>
+<blockquote>
 <p>Vuex 是一个专为 Vue.js 应用程序开发的状态管理模式。它采用集中式存储管理应用的所有组件的状态，<br>并以相应的规则保证状态以一种可预测的方式发生变化。Vuex 也集成到 Vue 的官方调试工具 devtools extension，<br>提供了诸如零配置的 time-travel 调试、状态快照导入导出等高级调试功能</p>
 </blockquote>
-</li>
-</ul>
 <ul>
-<li>Vuex优缺点<ul>
-<li>优点</li>
-</ul>
-<ol>
+<li>Vuex优缺点</li>
+<li>优点<ol>
 <li>解决了多层组件之间繁琐的事件传播。</li>
 <li>解决了多组件依赖统同一状态的问题。</li>
 <li>单向数据流</li>
 <li>为Vue量身定做，学习成本不高</li>
 </ol>
-<ul>
-<li>缺点</li>
-</ul>
-<ol>
+</li>
+<li>缺点<ol>
 <li>不能做数据持久化，刷新页面就要重制，要做数据持久化可以考虑使用localstorage。</li>
 <li>增加额外的代码体积，简单的业务场景不建议使用</li>
 </ol>
@@ -858,40 +855,30 @@ return B();
 </ul>
 </li>
 </ol>
-<ul>
-<li><ol start="2">
-<li>本地存储传值</li>
-</ol>
+<ol start="2">
+<li><p>本地存储传值</p>
 </li>
-<li><ol start="3">
-<li>路由传参 </li>
-</ol>
+<li><p>路由传参 </p>
 <ul>
-<li><p>方案一</p>
-<pre><code>getDescribe(id) {
-直接调用$router.push 实现携带参数的跳转
-    this.$router.push({
-    path: `/describe/${id}`,
-    })
-}
-路由配置如下：
- {
-    path: &#39;/describe/:id&#39;,
-    name: &#39;Describe&#39;,
-    component: Describe
-}</code></pre></li>
+<li><p>方案一<br>   getDescribe(id) {<br>   直接调用$router.push 实现携带参数的跳转</p>
+<pre><code>   this.$router.push({
+   path: `/describe/${id}`,
+   })</code></pre><p>   }<br>   路由配置如下：</p>
+<pre><code>{
+   path: &#39;/describe/:id&#39;,
+   name: &#39;Describe&#39;,
+   component: Describe</code></pre><p>   }</p>
+</li>
 <li><p>方案二 </p>
-<pre><code> this.$router.push({
-  name: &#39;Describe&#39;,
-  params(query): {   
-    id: id
-  }
-})
-获取:
-this.$route.params(query).id</code></pre></li>
-</ul>
+<pre><code>this.$router.push({
+ name: &#39;Describe&#39;,
+ params(query): {   
+   id: id
+ }</code></pre><p>   })<br>   获取:<br>   this.$route.params(query).id</p>
 </li>
 </ul>
+</li>
+</ol>
 <p><a href="https://blog.csdn.net/mf_717714/article/details/81945218?utm_medium=distribute.pc_relevant.none-task-blog-baidujs-2" target="_blank" rel="noopener">路由传参params(query)区别</a></p>
 <ul>
 <li><p>方案三</p>
@@ -908,12 +895,12 @@ this.$route.params(query).id</code></pre></li>
 <p>   history模式，是利用H5新增的history interface中的history.pushState（） 和history.replaceState（） 来请求服务器（前端的url必须和实际向后端发起请求的url 一致）实现的，它会向服务器发送请求。 history模式在刷新和F5的时候会出现404错误，需要用nginx配置出错时</p>
 <h4 id="7-vue杂项问题"><a href="#7-vue杂项问题" class="headerlink" title="7.vue杂项问题"></a>7.vue杂项问题</h4><ol>
 <li>vue是单向绑定还是双向绑定？<br>vue是单向绑定的 ，  双向是指 view层和model数据层双向绑定，    而v-model只是双向绑定的一个语法糖。<br>组件和组件中是单向绑定的、</li>
-<li>$nextTick是什么？<br>因为vue是异步更新的，$nextTick是用来知道什么时候DOM更新完成的</li>
-<li>vue-loader是什么？<br>是解析和转换。vue文件的工具，作用是提取出可被浏览器识别的js代码</li>
-<li>vue中 keep-alive 组件的作用<br><code>&lt;keep-alive&gt;</code>是Vue的内置组件，能在组件切换过程中将状态保留在内存中，防止重复渲染DOM。<br>keep-alive：主要用于保留组件状态或避免重新渲染。<br>当二个组件被很频繁的调用的时候可以使用keep-alive标签进行缓存，这样页面就会从缓存中快速渲染，而不是重新渲染。</li>
-<li>vue-router如何响应 路由参数 的变化？<br>1.使用watch监听。  2. 使用beforeUpdate守卫</li>
-<li>过滤器</li>
-<li>Vue.mixin的作用（混入）<blockquote>
+<li><a href="https://www.jianshu.com/p/a7550c0e164f" target="_blank" rel="noopener">$nextTick是什么?</a><br>因为vue是异步更新的，$nextTick是用来知道什么时候DOM更新完成的</li>
+<li><a href="https://www.cnblogs.com/Sherlock09/p/11023593.html" target="_blank" rel="noopener">vue-loader</a>是什么？<br>是解析和转换。vue文件的工具，作用是提取出可被浏览器识别的js代码</li>
+<li>vue中<a href="https://www.jianshu.com/p/a6f741c7b500" target="_blank" rel="noopener"> keep-alive</a> 组件的作用<br><code>&lt;keep-alive&gt;</code>是Vue的内置组件，能在组件切换过程中将状态保留在内存中，防止重复渲染DOM。<br>keep-alive：主要用于保留组件状态或避免重新渲染。<br>当二个组件被很频繁的调用的时候可以使用keep-alive标签进行缓存，这样页面就会从缓存中快速渲染，而不是重新渲染。</li>
+<li><a href="https://segmentfault.com/a/1190000017752182?utm_source=tag-newest" target="_blank" rel="noopener"> vue-router如何响应 路由参数 的变化</a>？<br> 1.使用watch监听。  2. 使用beforeUpdate守卫</li>
+<li><a href="https://www.cnblogs.com/shenjianping/p/11330126.html" target="_blank" rel="noopener">过滤器</a></li>
+<li><a href="https://www.jianshu.com/p/088a7eb6de72" target="_blank" rel="noopener">Vue.mixin的作用（混入）</a><blockquote>
 <p>将使用频率比较多的部分提取出来，定义一个对象可以包含任意组件选项。</p>
 </blockquote>
 </li>
@@ -922,7 +909,7 @@ this.$route.params(query).id</code></pre></li>
 <ol start="8">
 <li><p>router-link  高亮处理<br>1.使用类router-link-active<br>2.在路由中配置  linkActiveClass：‘类名’（类名为自定义样式）</p>
 </li>
-<li><p>编程式导航<br>跳转：this.$router.push()  返回 :this.$router.back()  替换:this.$replace()    ===》  关于跳转和替换的区别在于 历史记录的问题， ：=》 跳转有历史记录，而替换没有。</p>
+<li><p><a href="https://blog.csdn.net/qq_40958876/article/details/99822406?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.nonecase&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.nonecase" target="_blank" rel="noopener">编程式导航</a><br>跳转：this.$router.push()  返回 :this.$router.back()  替换:this.$replace()    ===》  关于跳转和替换的区别在于 历史记录的问题， ：=》 跳转有历史记录，而替换没有。</p>
 </li>
 <li><p>/child  和child的区别<br>/child访问的路径是/child     而child访问的是  /parent/child</p>
 </li>
@@ -933,7 +920,7 @@ this.$route.params(query).id</code></pre></li>
 <p>因为组件是可复用的vue实例。它有可能被多次复用，而组件中的data写成一个函数，数据以函数返回值的形式定义，这样每复用一次组件，就会返回一个新的data，类似于给每个组件实例创建了一个私有的数据空间，让各自组件维护自己的数据，互不影响。 而如果写成对象的形式，就使得所有组件都共用一份data，那么一个组件中改变就会造成所有的组件数据都会改变。</p>
 </blockquote>
 </li>
-<li><p>slot 插槽 </p>
+<li><p><a href="https://www.jianshu.com/p/52e6692639f5" target="_blank" rel="noopener">slot 插槽 </a></p>
 <blockquote>
 <p>作用是可以让父组件向子组件插入一些内容（包含html标签结构），并且也可以在父组件中拿到子组件的数据</p>
 </blockquote>
@@ -948,7 +935,7 @@ this.$route.params(query).id</code></pre></li>
 </li>
 <li><p>vue和jq的区别<br>vue和jq的区别在于控制反转，<br>jq是开发人员起主导作用，通过操作DOM,来进行数据修改<br>vue是框架起主导作用,  修改数据,vue会自己帮我们完成DOM操作</p>
 </li>
-<li><p>watch和computed 的区别</p>
+<li><p><a href="https://www.cnblogs.com/jiajialove/p/11327945.html" target="_blank" rel="noopener">watch和computed 的区别</a></p>
 </li>
 </ol>
 <ul>
@@ -959,7 +946,7 @@ this.$route.params(query).id</code></pre></li>
 </li>
 </ul>
 <ol start="17">
-<li>v-for和v-if不应该一起使用。</li>
+<li><a href="https://www.cnblogs.com/dianzan/p/12751087.html" target="_blank" rel="noopener">v-for和v-if不应该一起使用</a></li>
 </ol>
 <ul>
 <li>原因：v-for比v-if优先，即每一次都需要遍历整个数组，影响速度。</li>
@@ -1189,7 +1176,7 @@ this.$route.params(query).id</code></pre></li>
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《面试总结》
+                    《2020 前端面试》
                 </span> 由
             <a xmlns:cc="http://creativecommons.org/ns#" href="/2020/05/30/mian-shi-zhi-lu/" property="cc:attributionName"
                rel="cc:attributionURL">
@@ -1524,9 +1511,9 @@ this.$route.params(query).id</code></pre></li>
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="面试总结">
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="2020 前端面试">
                         
-                        <span class="card-title">面试总结</span>
+                        <span class="card-title">2020 前端面试</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1574,7 +1561,7 @@ this.$route.params(query).id</code></pre></li>
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="从零搭建前端组件库">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="从零搭建前端组件库">
                         
                         <span class="card-title">从零搭建前端组件库</span>
                     </div>
@@ -1760,7 +1747,7 @@ this.$route.params(query).id</code></pre></li>
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">40.1k</span>
+            <span class="white-color">40k</span>
             
 
             <br>

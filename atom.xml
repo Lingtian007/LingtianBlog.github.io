@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.linfengdunwu.cn/"/>
-  <updated>2020-06-01T09:22:58.382Z</updated>
+  <updated>2020-06-02T06:39:02.440Z</updated>
   <id>https://www.linfengdunwu.cn/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>面试总结</title>
+    <title>2020 前端面试</title>
     <link href="https://www.linfengdunwu.cn/2020/05/30/mian-shi-zhi-lu/"/>
     <id>https://www.linfengdunwu.cn/2020/05/30/mian-shi-zhi-lu/</id>
     <published>2020-05-30T07:32:09.000Z</published>
-    <updated>2020-06-01T09:22:58.382Z</updated>
+    <updated>2020-06-02T06:39:02.440Z</updated>
     
     <summary type="html">
     
@@ -183,7 +183,7 @@
     <link href="https://www.linfengdunwu.cn/2019/10/17/vue-xiang-mu-chang-yong-fang-fa-zong-jie/"/>
     <id>https://www.linfengdunwu.cn/2019/10/17/vue-xiang-mu-chang-yong-fang-fa-zong-jie/</id>
     <published>2019-10-17T07:32:09.000Z</published>
-    <updated>2020-05-28T07:51:13.125Z</updated>
+    <updated>2020-06-02T06:48:24.202Z</updated>
     
     <summary type="html">
     
@@ -198,10 +198,10 @@
     
     </summary>
     
-      <category term="开发环境" scheme="https://www.linfengdunwu.cn/categories/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/"/>
+      <category term="Vue" scheme="https://www.linfengdunwu.cn/categories/Vue/"/>
     
     
-      <category term="开发环境" scheme="https://www.linfengdunwu.cn/tags/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/"/>
+      <category term="Vue" scheme="https://www.linfengdunwu.cn/tags/Vue/"/>
     
   </entry>
   
@@ -453,7 +453,7 @@
     <link href="https://www.linfengdunwu.cn/2019/07/22/echars-zhong-chang-yong-fang-fa/"/>
     <id>https://www.linfengdunwu.cn/2019/07/22/echars-zhong-chang-yong-fang-fa/</id>
     <published>2019-07-22T04:32:09.000Z</published>
-    <updated>2020-05-28T07:51:13.063Z</updated>
+    <updated>2020-06-02T06:45:24.336Z</updated>
     
     <summary type="html">
     
@@ -468,10 +468,10 @@
     
     </summary>
     
-      <category term="开发环境" scheme="https://www.linfengdunwu.cn/categories/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/"/>
+      <category term="技术" scheme="https://www.linfengdunwu.cn/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="开发环境" scheme="https://www.linfengdunwu.cn/tags/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/"/>
+      <category term="技术" scheme="https://www.linfengdunwu.cn/tags/%E6%8A%80%E6%9C%AF/"/>
     
   </entry>
   
@@ -503,11 +503,11 @@
   </entry>
   
   <entry>
-    <title>js常用方法</title>
-    <link href="https://www.linfengdunwu.cn/2019/01/22/js-chang-yong-fang-fa/"/>
-    <id>https://www.linfengdunwu.cn/2019/01/22/js-chang-yong-fang-fa/</id>
+    <title>js常用数组操作方法</title>
+    <link href="https://www.linfengdunwu.cn/2019/01/22/js-chang-yong-shu-zu-cao-zuo-fang-fa/"/>
+    <id>https://www.linfengdunwu.cn/2019/01/22/js-chang-yong-shu-zu-cao-zuo-fang-fa/</id>
     <published>2019-01-22T04:32:09.000Z</published>
-    <updated>2020-05-28T07:51:13.141Z</updated>
+    <updated>2020-05-28T07:51:13.125Z</updated>
     
     <summary type="html">
     
@@ -530,11 +530,11 @@
   </entry>
   
   <entry>
-    <title>js常用数组操作方法</title>
-    <link href="https://www.linfengdunwu.cn/2019/01/22/js-chang-yong-shu-zu-cao-zuo-fang-fa/"/>
-    <id>https://www.linfengdunwu.cn/2019/01/22/js-chang-yong-shu-zu-cao-zuo-fang-fa/</id>
+    <title>js常用方法</title>
+    <link href="https://www.linfengdunwu.cn/2019/01/22/js-chang-yong-fang-fa/"/>
+    <id>https://www.linfengdunwu.cn/2019/01/22/js-chang-yong-fang-fa/</id>
     <published>2019-01-22T04:32:09.000Z</published>
-    <updated>2020-05-28T07:51:13.125Z</updated>
+    <updated>2020-05-28T07:51:13.141Z</updated>
     
     <summary type="html">
     

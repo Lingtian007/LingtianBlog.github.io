@@ -1,8 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://www.linfengdunwu.cn/2019/10/17/vue-xiang-mu-chang-yong-fang-fa-zong-jie/</loc>
+    <lastmod>2020-06-02</lastmod>
+  </url>  <url>
+    <loc>https://www.linfengdunwu.cn/2018/04/22/gis-ji-ben-shi-yong/</loc>
+    <lastmod>2020-06-02</lastmod>
+  </url>  <url>
+    <loc>https://www.linfengdunwu.cn/2019/07/22/echars-zhong-chang-yong-fang-fa/</loc>
+    <lastmod>2020-06-02</lastmod>
+  </url>  <url>
     <loc>https://www.linfengdunwu.cn/2020/05/30/mian-shi-zhi-lu/</loc>
-    <lastmod>2020-06-01</lastmod>
+    <lastmod>2020-06-02</lastmod>
   </url>  <url>
     <loc>https://www.linfengdunwu.cn/2019/08/22/react-native-ru-keng-zhi-lu/</loc>
     <lastmod>2020-05-29</lastmod>
@@ -28,19 +37,16 @@
     <loc>https://www.linfengdunwu.cn/2019/01/22/js-chang-yong-fang-fa/</loc>
     <lastmod>2020-05-28</lastmod>
   </url>  <url>
-    <loc>https://www.linfengdunwu.cn/2018/04/22/node-da-jian/</loc>
+    <loc>https://www.linfengdunwu.cn/2019/10/18/node.js-da-jian-ben-di-fu-wu-mo-ni-shu-ju/</loc>
     <lastmod>2020-05-28</lastmod>
   </url>  <url>
-    <loc>https://www.linfengdunwu.cn/2019/10/18/node.js-da-jian-ben-di-fu-wu-mo-ni-shu-ju/</loc>
+    <loc>https://www.linfengdunwu.cn/2018/04/22/node-da-jian/</loc>
     <lastmod>2020-05-28</lastmod>
   </url>  <url>
     <loc>https://www.linfengdunwu.cn/2019/09/22/cong-0-da-jian-zi-ji-de-webpack-kai-fa-huan-jing/</loc>
     <lastmod>2020-05-28</lastmod>
   </url>  <url>
     <loc>https://www.linfengdunwu.cn/2019/10/15/ts-xue-xi-zong-jie/</loc>
-    <lastmod>2020-05-28</lastmod>
-  </url>  <url>
-    <loc>https://www.linfengdunwu.cn/2019/10/17/vue-xiang-mu-chang-yong-fang-fa-zong-jie/</loc>
     <lastmod>2020-05-28</lastmod>
   </url>  <url>
     <loc>https://www.linfengdunwu.cn/2019/08/20/vue-element-chuan-suo-kuang/</loc>
@@ -65,12 +71,6 @@
     <lastmod>2020-05-28</lastmod>
   </url>  <url>
     <loc>https://www.linfengdunwu.cn/2019/10/17/echars-zai-vue-zhong-ru-he-shi-yong/</loc>
-    <lastmod>2020-05-28</lastmod>
-  </url>  <url>
-    <loc>https://www.linfengdunwu.cn/2018/04/22/gis-ji-ben-shi-yong/</loc>
-    <lastmod>2020-05-28</lastmod>
-  </url>  <url>
-    <loc>https://www.linfengdunwu.cn/2019/07/22/echars-zhong-chang-yong-fang-fa/</loc>
     <lastmod>2020-05-28</lastmod>
   </url>
 </urlset>
