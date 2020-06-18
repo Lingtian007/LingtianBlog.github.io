@@ -12,7 +12,7 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="从零搭建前端组件库, 唐宇的博客">
+    <meta name="keywords" content="highcharts 实时动态刷新曲线图, 唐宇的博客">
     <meta name="baidu-site-verification" content>
     <meta name="google-site-verification" content>
     <meta name="360-site-verification" content>
@@ -21,10 +21,8 @@
 
 
 闲来无事，随便写写……
-前言
-在前端开发中可能会遇到将相同的功能模板集合成一个组件，供他人调用，这样可以减少重复造轮子，也可以节约人力、财力，更能够提高代码的可维护度；下面将通过详细的步骤教你如何构建一个 Vue 前端组件。。
-
-1">
+开篇
+最近要求做前台的一些东西，用到了 Highcharts。其实在Highcharts中文网上有相应的演示demo，一般你所需要的图的样式都可以找到。难点在于实际开发中，需要的数据往往是要结合后台请求并响应">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -32,7 +30,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>从零搭建前端组件库 | 唐宇的博客</title>
+    <title>highcharts 实时动态刷新曲线图 | 唐宇的博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -306,13 +304,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/10.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        从零搭建前端组件库
+                        highcharts 实时动态刷新曲线图
                     </div>
                 </div>
             </div>
@@ -423,8 +421,8 @@
                     
                     <div class="article-tag">
                         
-                        <a href="/tags/技术/" target="_blank">
-                            <span class="chip bg-color">技术</span>
+                        <a href="/tags/方法/" target="_blank">
+                            <span class="chip bg-color">方法</span>
                         </a>
                         
                     </div>
@@ -435,8 +433,8 @@
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                        <a href="/categories/技术/" class="post-category" target="_blank">
-                            技术
+                        <a href="/categories/方法/" class="post-category" target="_blank">
+                            方法
                         </a>
                         
                     </div>
@@ -447,7 +445,7 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-03-28
+                    2020-06-18
                 </div>
 
                 <div class="post-author info-break-policy">
@@ -461,14 +459,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.5k
+                    857
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    6 分
+                    4 分
                 </div>
                 
                 
@@ -485,91 +483,203 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <div align="middle">
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=411214279&auto=1&height=66"></iframe>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=407679465&auto=1&height=66"></iframe>
 </div>
 
 <p>闲来无事，随便写写……</p>
-<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><blockquote>
-<p>在前端开发中可能会遇到将相同的功能模板集合成一个组件，供他人调用，这样可以减少重复造轮子，也可以节约人力、财力，更能够提高代码的可维护度；下面将通过详细的步骤教你如何构建一个 Vue 前端组件。。</p>
+<h1 id="开篇"><a href="#开篇" class="headerlink" title="开篇"></a>开篇</h1><blockquote>
+<p>最近要求做前台的一些东西，用到了 <a href="https://www.highcharts.com.cn/docs/basic-compose" target="_blank" rel="noopener">Highcharts</a>。其实在Highcharts中文网上有相应的演示demo，一般你所需要的图的样式都可以找到。难点在于实际开发中，需要的数据往往是要结合后台请求并响应的数据的。</p>
 </blockquote>
-<h2 id="1、在本机上安装好-NodeJs，并配置好环境变量"><a href="#1、在本机上安装好-NodeJs，并配置好环境变量" class="headerlink" title="1、在本机上安装好 NodeJs，并配置好环境变量"></a>1、在本机上安装好 NodeJs，并配置好环境变量</h2><ul>
-<li><p><code>下载</code> : <a href="http://nodejs.cn/download/" target="_blank" rel="noopener">Nodejs地址</a></p>
-<p>我这里是下载 64 位 Windows 安装包(.msi)，大家可以根据自己电脑系统选择相应的版本即可。</p>
-<p><img src="1.png" alt></p>
-</li>
-<li><p>下载 NodeJs 后双击它，采用默认设置，一直点击下一步，直到 Finish 为止。需要说明的是，在安装 NodeJs 时，已经设置好了系统环境变量，此外 npm 工具也同时被安装好了，我们可以在 cmd 窗口中输入 node -v 命令和 npm -v 命令查看，若都安装成功了话，会看到如下的效果：</p>
-</li>
-</ul>
-<p><img src="2.png" alt></p>
-<h2 id="2、vue-项目安装-如已安装，可略过此步骤"><a href="#2、vue-项目安装-如已安装，可略过此步骤" class="headerlink" title="2、vue 项目安装(如已安装，可略过此步骤)"></a>2、vue 项目安装(如已安装，可略过此步骤)</h2><ul>
-<li><p>创建一个 Vue 项目(使用默认配置安装就 OK)</p>
-<pre><code>vue create ui-demo</code></pre></li>
-<li><p>安装 babel-plugin-component</p>
-<pre><code>npm i babel-plugin-component -D</code></pre></li>
-</ul>
-<p><code>babel-plugin-component</code> 就是 <code>Element UI</code> 用来实现组件按需加载的一个 <code>babel</code> 插件。我们把它用到我们的组件库上，就不需要重新造一个轮子出来了.</p>
-<ul>
-<li><p>在项目的根目录下创建一个 .babelrc 的文件，配置可以参照下面的代码进行更改。</p>
-<pre><code>{ &quot;plugins&quot;: [ [ &quot;component&quot;, { // 组件库的名字，需要和 package.json 里的 name 相同 &quot;libraryName&quot;: &quot;ui-demo&quot;, // 存放组件的文件夹，如果不想配置此项，默认文件夹的名字为 lib &quot;libDir&quot;: &quot;components&quot;, } ] ] }</code></pre></li>
-<li><p>创建一个存放组件的文件夹 </p>
-</li>
-</ul>
-<blockquote>
-<p>既然我们刚刚已经配置了存放组件的文件夹，下一步肯定就是创建这么一个文件夹了。由于我配置了的文件夹名为 components，所以我们的文件夹名字就是 components。</p>
-</blockquote>
-<ul>
-<li><p>上面的操作完成后，我们的项目目录就基本搭建好了，如下：</p>
-</li>
-<li><p>写组件终于到了写组件的时候了，在<code>components</code> 文件夹下新建一个 <code>Component1</code> 的文件夹来存放我们的第一个组件。</p>
-</li>
-<li><p><code>Component1</code> 文件夹里有一个<code>Component1.vue</code> 的文件和一个 <code>index.js</code> 文件。目录如下：<br>Component1 -&gt; Component1.vue 代码:</p>
-<pre><code>&lt;template&gt; 
-&lt;h1 class=&quot;component1&quot;&gt;component1&lt;/h1&gt;
-&lt;/template&gt; 
-&lt;script&gt; 
-export default { name: &#39;Component1&#39; } 
+<hr>
+<h1 id="源码"><a href="#源码" class="headerlink" title="源码"></a>源码</h1><pre><code>&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+    &lt;title&gt;Highcharts Example&lt;/title&gt;
+    &lt;style type=&quot;text/css&quot;&gt;
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;script src=&quot;https://code.jquery.com/jquery-3.1.1.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;${ctxPath}/static/code/highcharts.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;${ctxPath}/static/code/modules/exporting.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;${ctxPath}/static/code/modules/export-data.js&quot;&gt;&lt;/script&gt;
+
+&lt;div id=&quot;container&quot; style=&quot;min-width: 310px; height: 400px; margin: 0 auto&quot;&gt;&lt;/div&gt;
+
+&lt;script type=&quot;text/javascript&quot;&gt;
+    Highcharts.setOptions({
+        global: {
+            useUTC: false
+        }
+    });
+    var max=6;
+    Highcharts.chart(&#39;container&#39;, {
+        chart: {
+            type: &#39;spline&#39;,
+            animation: Highcharts.svg, 
+            events: {
+                load: function() {
+                    var series = this.series;
+                    var loadData = function() {
+                        $.getJSON(&quot;http://localhost:8089/echarts/vintage&quot;, function(data) {
+                            for (var k = 0; k &lt; series.length; k++) {
+                                console.info(data.length)
+                                for (var j = 0; j &lt; data[k].length; j++) {
+                                    var point = data[k][j];
+                                    console.info(point)
+                                    console.info(point[0])
+                                    console.info(point[1])
+                                    var isShift = series[k].data.length &gt;= max;
+                                    console.log(&quot;series &quot; + k + &quot;.data.length=&quot; + series[k].data.length);
+                                    var lastTime = 0;
+                                    if (series[k].data.length &gt; 0)
+                                        lastTime = series[k].data[series[k].data.length - 1].x;
+                                    if (point[0] &gt; lastTime)
+                                        series[k].addPoint([point[0],point[1]], true, isShift);
+                                }
+                            }
+                        })
+                    };
+                    loadData();
+                    setInterval(loadData, 1000); // 轮询请求 
+                }
+            }
+        },
+        title: {
+            text: &#39;访问量实时监控&#39;
+        },
+        xAxis: [
+            {
+                type: &#39;datetime&#39;,
+                tickPixelInterval: 120
+            }
+        ],
+        yAxis: [
+            {
+                title: {
+                    text: &#39;总请求/分钟&#39;,
+                    style: {
+                        color: &#39;#3E576F&#39;
+                    }
+                }
+            },
+            {
+                title: {
+                    text: &#39;平均响应时间&#39;,
+                    style: {
+                        color: &#39;#00AA00&#39;
+                    }
+                },opposite:true
+            }
+        ],
+        plotOptions: {
+            spline: {
+                marker:{
+                    enabled: false,
+                    states: {
+                        hover: {
+                            enabled: true,
+                            symbol: &#39;circle&#39;,
+                            radius: 5,
+                            lineWidth: 1
+                        }
+                    }
+                }
+            }
+        },
+        tooltip: {
+            formatter: function() {
+                return &#39;&lt;b&gt;&#39; + this.series.name + &#39;&lt;/b&gt;&lt;br/&gt;&#39; +
+                    Highcharts.dateFormat(&#39;%Y-%m-%d %H:%M:%S&#39;, this.x) + &#39;&lt;br/&gt;&#39; +
+                    Highcharts.numberFormat(this.y, 2);
+            }
+        },
+        legend: {
+            enabled: true
+        },
+        exporting: {
+            enabled: false
+        },
+        series: [
+            {
+                name: &#39;总请求数&#39;,
+                data: [{x: 1535549581766, y: 8.255385961269337},
+                    {x: 1535549582766, y: 8.522856658860768},
+                    {x: 1535549583766, y: 8.85224288300491},
+                    {x: 1535549584766, y: 8.203602150586137},
+                    {x: 1535549585766, y: 8.830985714653746},
+                    {x: 1535549586766, y: 8.648804185628615},
+                    {x: 1535549587766, y: 8.54365631703881},
+                    {x: 1535549588766, y: 8.183473493411935},
+                    {x: 1535549589766, y: 8.107250381815213},
+                    {x: 1535549590766, y: 8.674642595370756},
+                    {x: 1535549591766, y: 8.875834458275218},
+                    {x: 1535549592766, y: 8.104192236371079},
+                    {x: 1535549593766, y: 8.273510688961343},
+                    {x: 1535549594766, y: 8.698645044397763},
+                    {x: 1535549595766, y: 8.630132546505347},
+                    {x: 1535549596766, y: 8.19276234585974},
+                    {x: 1535549597766, y: 8.202379301534918},
+                    {x: 1535549598766, y: 8.888758703470918},
+                    {x: 1535549599766, y: 8.840359577742495},
+                    {x: 1535551504135, y: 8.965286133918756}]
+            },
+            {
+                name: &#39;错误请求数&#39;,
+                data: [{x: 1535549581768, y: 5.631470025269889},
+                    {x: 1535549582768, y: 5.80833150333066},
+                    {x: 1535549583768, y: 5.615057046709662},
+                    {x: 1535549584768, y: 5.608928585842969},
+                    {x: 1535549585768, y: 5.153605115523144},
+                    {x: 1535549586768, y: 5.438982653534119},
+                    {x: 1535549587768, y: 5.434254193425316},
+                    {x: 1535549588768, y: 5.233764563045739},
+                    {x: 1535549589768, y: 5.066078696056088},
+                    {x: 1535549590768, y: 5.402066058377414},
+                    {x: 1535549591768, y: 5.115167367142142},
+                    {x: 1535549592768, y: 5.569563848237927},
+                    {x: 1535549593768, y: 5.3771521799030895},
+                    {x: 1535549594768, y: 5.557674673748734},
+                    {x: 1535549595768, y: 5.779198450582005},
+                    {x: 1535549596768, y: 5.024568401355755},
+                    {x: 1535549597768, y: 5.999943168524271},
+                    {x: 1535549598768, y: 5.3633974314345725},
+                    {x: 1535549599768, y: 5.152136232686349},
+                    {x: 1535549600768, y: 5.497676337112302}]
+            },
+            {
+                name: &#39;平均响应时间&#39;,
+                yAxis:1,
+                data: [{x: 1535549581770, y: 2.9063965576357296},
+                    {x: 1535549582770, y: 2.115102850799488},
+                    {x: 1535549583770, y: 2.295125026581167},
+                    {x: 1535549584770, y: 2.5839580878751627},
+                    {x: 1535549585770, y: 2.41973580817432},
+                    {x: 1535549586770, y: 2.2324255066003476},
+                    {x: 1535549587770, y: 2.877080909195574},
+                    {x: 1535549588770, y: 2.670387619876992},
+                    {x: 1535549589770, y: 2.8328323536321003},
+                    {x: 1535549590770, y: 2.4492166897167564},
+                    {x: 1535549591770, y: 2.2960889540892544},
+                    {x: 1535549592770, y: 2.4254398993593957},
+                    {x: 1535549593770, y: 2.9139794370919248},
+                    {x: 1535549594770, y: 2.2363677342947907},
+                    {x: 1535549595770, y: 2.7774917450101677},
+                    {x: 1535549596770, y: 2.8122490928540937},
+                    {x: 1535549597770, y: 2.3611332533125644},
+                    {x: 1535549598770, y: 2.2739320663864726},
+                    {x: 1535549599770, y: 2.9702427114600276},
+                    {x: 1535549600770, y: 2.470969458860716}]
+            }
+        ]
+    });
 &lt;/script&gt;
-&lt;style&gt;
-.component1 { color: green; }
-&lt;/style&gt;</code></pre><p>Component1 -&gt; index.js代码：</p>
-<pre><code>import Component1 from &#39;./Component1.vue&#39;; Component1.install = function (Vue) { Vue.component(Component1.name, Component1); } export default Component1;</code></pre></li>
-</ul>
-<p>index.js 中的主要功能就是以插件的形式注册一个全局组件，不懂的小伙伴可以照猫画虎，微调一下就好了。<br>第二个组件代码就不发出来了，复制一份，给个 css 样式就好了。</p>
-<p>在 components 文件夹根目录下创建一个 index.js 用来整合所有组件。<br>components -&gt; index.js 代码：</p>
-<pre><code>    import Compontent1 from &#39;./Component1/index&#39; import Compontent2 from &#39;./Component2/index&#39; const components = [ Compontent1, Compontent2, ] function install (Vue) { components.map = (component =&gt; { Vue.component(component.name, component) }) } if (typeof window !== &#39;undefined&#39; &amp;&amp; window.Vue) { install(window.Vue); } export default { install, Compontent1, Compontent2, }</code></pre><blockquote>
-<p>稍微提醒，需要把 install 也一起导出，观察不细心的可能会不注意就写漏了。</p>
-</blockquote>
-<h2 id="3、修改或添加-package-json-中的配置"><a href="#3、修改或添加-package-json-中的配置" class="headerlink" title="3、修改或添加 package.json 中的配置"></a>3、修改或添加 package.json 中的配置</h2><ul>
-<li><p><code>script</code> 中添加一条命令：</p>
-<p>   “lib”: “vue-cli-service build –target lib –name index –dest package components/index.js”</p>
-</li>
-</ul>
-<p>最后面的 <code>components/index.js</code> 是我们存放组件文件夹根目录的<code>index.js</code> 文件，记得根据你的情况修改。这个命令执行后，会打包生成一个 <code>package</code> 的文件夹。</p>
-<p>添加 <code>files</code> 白名单，打包上传哪些文件到 <code>npm</code> 上：</p>
-<pre><code>  &quot;files&quot;: [
-    &quot;components&quot;,
-    &quot;package&quot;
-    ]</code></pre><p>添加 <code>style</code>，设置样式路径：</p>
-<pre><code>  &quot;style&quot;: &quot;package/index.css&quot;</code></pre><p>路径就是我们打包出来的 package 中的 index.css 文件。</p>
-<ul>
-<li><p>添加 main，设置入口：</p>
-<pre><code>&quot;main&quot;: &quot;components/index.js&quot;</code></pre></li>
-</ul>
-<p>路径是存放组件的 components 文件夹下的 index.js 文件。<br>将 private 设置为 false：</p>
-<pre><code>  &quot;private&quot;: false</code></pre><p>设置此项目不是私有项目之后，才能发布好 npm 上。</p>
-<p>下面的是完整的 package.json 文件配置：</p>
-<pre><code>  { &quot;name&quot;: &quot;ui-demo&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;private&quot;: false, &quot;main&quot;: &quot;components/index.js&quot;, &quot;style&quot;: &quot;package/index.css&quot;, &quot;files&quot;: [ &quot;components&quot;, &quot;package&quot; ], &quot;scripts&quot;: { &quot;serve&quot;: &quot;vue-cli-service serve&quot;, &quot;build&quot;: &quot;vue-cli-service build&quot;, &quot;lint&quot;: &quot;vue-cli-service lint&quot;, &quot;lib&quot;: &quot;vue-cli-service build --target lib --name index --dest package components/index.js&quot; }, &quot;dependencies&quot;: { &quot;core-js&quot;: &quot;^2.6.5&quot;, &quot;vue&quot;: &quot;^2.6.10&quot; }, &quot;devDependencies&quot;: { &quot;@vue/cli-plugin-babel&quot;: &quot;^3.7.0&quot;, &quot;@vue/cli-plugin-eslint&quot;: &quot;^3.7.0&quot;, &quot;@vue/cli-service&quot;: &quot;^3.7.0&quot;, &quot;babel-eslint&quot;: &quot;^10.0.1&quot;, &quot;babel-plugin-component&quot;: &quot;^1.1.1&quot;, &quot;eslint&quot;: &quot;^5.16.0&quot;, &quot;eslint-plugin-vue&quot;: &quot;^5.0.0&quot;, &quot;vue-template-compiler&quot;: &quot;^2.5.21&quot; }, &quot;eslintConfig&quot;: { &quot;root&quot;: true, &quot;env&quot;: { &quot;node&quot;: true }, &quot;extends&quot;: [ &quot;plugin:vue/essential&quot;, &quot;eslint:recommended&quot; ], &quot;rules&quot;: {}, &quot;parserOptions&quot;: { &quot;parser&quot;: &quot;babel-eslint&quot; } }, &quot;postcss&quot;: { &quot;plugins&quot;: { &quot;autoprefixer&quot;: {} } }, &quot;browserslist&quot;: [ &quot;&gt; 1%&quot;, &quot;last 2 versions&quot; ] }</code></pre><h2 id="4、打包我们的代码"><a href="#4、打包我们的代码" class="headerlink" title="4、打包我们的代码"></a>4、打包我们的代码</h2><p>在控制台执行 <code>npm run lib</code> 进行文件打包，打包完成后会多一个 <code>package</code> 文件夹。文件目录就变成如下的了：<br><img src="7.webp" alt></p>
-<h2 id="5、发布-npm-公库"><a href="#5、发布-npm-公库" class="headerlink" title="5、发布 npm(公库)"></a>5、发布 npm(公库)</h2><pre><code>  # 这是登录，前提是你已经在 npm 注册了账号
-  npm login
-  # 发布到 npm
-  npm publish</code></pre><p>安装库</p>
-<pre><code>  npm i ui-demo</code></pre><h2 id="6、发布-npm-私库"><a href="#6、发布-npm-私库" class="headerlink" title="6、发布 npm(私库)"></a>6、发布 npm(私库)</h2><p>首先需要在服务器上搭建一个私库,这里推荐一个:<a href="https://www.jianshu.com/p/d32ce7e9d4d8" target="_blank" rel="noopener">npm私服搭建—verdaccio方案及其最佳实践</a></p>
-<p>建立好私库后,登录、打包跟上面步骤一样,发布时需要使用<code>nrm</code>命令 <code>nrm use xxx</code>(切换到私库地址),如图所示:<br><img src="7.png" alt></p>
-<ul>
-<li>发布<br>npm publish</li>
-<li>npm 安装<br>npm i  ui-demo  –registry 私库地址</li>
-</ul>
-<h1 id="结尾"><a href="#结尾" class="headerlink" title="结尾"></a>结尾</h1><p>这样我们就可以使用我们自己的 UI 库了。</p>
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre><h1 id="效果图"><a href="#效果图" class="headerlink" title="效果图"></a>效果图</h1><p>  <img src="hc.png" alt></p>
+<h1 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h1><p><a href="https://www.highcharts.com.cn/demo/highcharts/dynamic-update" target="_blank" rel="noopener">官网样例</a></p>
 
             </div>
             <hr />
@@ -728,9 +838,9 @@ export default { name: &#39;Component1&#39; }
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《从零搭建前端组件库》
+                    《highcharts 实时动态刷新曲线图》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2020/03/28/cong-ling-da-jian-qian-duan-zu-jian-ku/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2020/06/18/highchart-zhi-chu-kui/" property="cc:attributionName"
                rel="cc:attributionURL">
                 唐宇
             </a> 采用
@@ -771,7 +881,7 @@ export default { name: &#39;Component1&#39; }
         repo: 'Lingtian007.github.io',
         owner: 'Lingtian007',
         admin: "Lingtian007",
-        id: '2020/03/28/cong-ling-da-jian-qian-duan-zu-jian-ku/',
+        id: '2020/06/18/highchart-zhi-chu-kui/',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -1054,9 +1164,60 @@ export default { name: &#39;Component1&#39; }
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2020/06/18/highchart-zhi-chu-kui/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="highcharts 实时动态刷新曲线图">
+                        
+                        <span class="card-title">highcharts 实时动态刷新曲线图</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            闲来无事，随便写写。
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-06-18
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/方法/" class="post-category" target="_blank">
+                                    方法
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/方法/" target="_blank">
+                        <span class="chip bg-color">方法</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
+            </div>
             <div class="card">
                 <a href="/2020/05/30/mian-shi-zhi-lu/">
                     <div class="card-image">
@@ -1074,9 +1235,9 @@ export default { name: &#39;Component1&#39; }
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2020-05-30
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-05-30
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
@@ -1094,55 +1255,6 @@ export default { name: &#39;Component1&#39; }
                     
                     <a href="/tags/面试/" target="_blank">
                         <span class="chip bg-color">面试</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2019/12/30/nian-mo-zong-jie/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="2019 年的思考总结">
-                        
-                        <span class="card-title">2019 年的思考总结</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            闲来无事，随便写写。
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-12-30
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fa fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/总结/" class="post-category" target="_blank">
-                                    总结
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/总结/" target="_blank">
-                        <span class="chip bg-color">总结</span>
                     </a>
                     
                 </div>
