@@ -12,7 +12,7 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="TS+VUE项目搭建, 唐宇的博客">
+    <meta name="keywords" content="React函数式编程 - Hooks, 唐宇的博客">
     <meta name="baidu-site-verification" content>
     <meta name="google-site-verification" content>
     <meta name="360-site-verification" content>
@@ -21,8 +21,9 @@
 
 
 闲来无事，随便写写……
-TS+VUE项目搭建
-自尤大推出vue对typescript的支持后，一直想开箱尝试，对于前端sr来说，vue的顺滑加上ts的面向对象，想着就非常美好~ 终于在两个月前，找到了个机会尝试了一把vue+ts的组">
+前言函数式编程介绍（摘自基维百科）
+
+函数式编程（英语：functional programming）或称函数程序设计、泛函编程，是一种编程范式，它将计算机运算视为函数运算，并且避免使用程序状态以及易变对象。">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -30,7 +31,7 @@ TS+VUE项目搭建
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>TS+VUE项目搭建 | 唐宇的博客</title>
+    <title>React函数式编程 - Hooks | 唐宇的博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -304,13 +305,13 @@ TS+VUE项目搭建
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/26.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        TS+VUE项目搭建
+                        React函数式编程 - Hooks
                     </div>
                 </div>
             </div>
@@ -421,8 +422,8 @@ TS+VUE项目搭建
                     
                     <div class="article-tag">
                         
-                        <a href="/tags/TS/" target="_blank">
-                            <span class="chip bg-color">TS</span>
+                        <a href="/tags/总结/" target="_blank">
+                            <span class="chip bg-color">总结</span>
                         </a>
                         
                     </div>
@@ -433,8 +434,8 @@ TS+VUE项目搭建
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                        <a href="/categories/TS/" class="post-category" target="_blank">
-                            TS
+                        <a href="/categories/总结/" class="post-category" target="_blank">
+                            总结
                         </a>
                         
                     </div>
@@ -445,7 +446,7 @@ TS+VUE项目搭建
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-10-16
+                    2020-07-07
                 </div>
 
                 <div class="post-author info-break-policy">
@@ -459,14 +460,14 @@ TS+VUE项目搭建
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.5k
+                    2.6k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    6 分
+                    10 分
                 </div>
                 
                 
@@ -483,135 +484,331 @@ TS+VUE项目搭建
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <div align="middle">
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=574919767&auto=1&height=66"></iframe>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=1451971434&auto=1&height=66"></iframe>
 </div>
 
 <p>闲来无事，随便写写……</p>
-<h1 id="TS-VUE项目搭建"><a href="#TS-VUE项目搭建" class="headerlink" title="TS+VUE项目搭建"></a>TS+VUE项目搭建</h1><hr>
-<p>自尤大推出vue对typescript的支持后，一直想开箱尝试，对于前端sr来说，vue的顺滑加上ts的面向对象，想着就非常美好~ 终于在两个月前，找到了个机会尝试了一把vue+ts的组合。 开文记录下vue和ts整合之旅和遇到的一些坑。</p>
-<h2 id="Vue"><a href="#Vue" class="headerlink" title="Vue"></a>Vue</h2><p>应该大部分人都知道vue，毕竟如今vue是与react肩并肩的存在，所以就不过多介绍啦。</p>
-<p><a href="https://cn.vuejs.org/index.html" target="_blank" rel="noopener">vue中文官网</a> 官网上的教程就是最好的入门教程</p>
-<h2 id="TypeScript"><a href="#TypeScript" class="headerlink" title="TypeScript"></a>TypeScript</h2><p>我在前几篇文章就一直有在宣传typescript，简单列举下ts的优点</p>
-<ol>
-<li><p>始于JavaScript，归于JavaScript,typescript是JavaScript的超集，所以它可以重用JavaScriptd代码,使用JavaScript的库</p>
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>函数式编程介绍（摘自基维百科）</p>
+<blockquote>
+<p>函数式编程（英语：functional programming）或称函数程序设计、泛函编程，是一种编程范式，它将计算机运算视为函数运算，并且避免使用程序状态以及易变对象。其中，λ演算（lambda calculus）为该语言最重要的基础。而且，λ演算的函数可以接受函数当作输入（引数）和输出（传出值）</p>
+</blockquote>
+<p>面向对象编程介绍（摘自基维百科）</p>
+<blockquote>
+<p>面向对象程序设计（英语：Object-oriented programming，缩写：OOP）是种具有对象概念的程序编程典范，同时也是一种程序开发的抽象方针。它可能包含数据、属性、代码与方法。对象则指的是类的实例。它将对象作为程序的基本单元，将程序和数据封装其中，以提高软件的重用性、灵活性和扩展性，对象里的程序可以访问及经常修改对象相关连的数据。在面向对象程序编程里，计算机程序会被设计成彼此相关的对象</p>
+</blockquote>
+<hr>
+<p>在react 16.8之前，我们使用基于react的框架开发时，声明一个组件有两种方式：</p>
+<ul>
+<li>class声明组件</li>
+<li>函数组件</li>
+</ul>
+<p>在class 组件中，我们可以使用state、react的钩子函数等react特性。但是函数组件是一个无状态组件，而且对于操作DOM、发起请求等副作用并不能很好的处理。为了解决这个问题,react16.8 的新特性可以解决这一问题,以下 三点是 react 官网所提到的 <a href="https://zh-hans.reactjs.org/docs/hooks-intro.html#motivation" target="_blank" rel="noopener">hooks</a>动机.</p>
+<ul>
+<li>代码重用：在hooks出来之前，常见的代码重用方式是 HOC 和render props，这两种方式带来的问题是：你需要解构自己的组件，同时会带来很深的组件嵌套</li>
+<li>复杂的组件逻辑：在class组件中，有许多的lifecycle 函数，你需要在各个函数的里面去做对应的事情。这种方式带来的痛点是：逻辑分散在各处，开发者去维护这些代码会分散自己的精力，理解代码逻辑也很吃力</li>
+<li>class组件的困惑：对于初学者来说，需要理解class组件里面的this是比较吃力的，同时，基于class的组件难以优化。</li>
+</ul>
+<h1 id="什么是React-Hooks"><a href="#什么是React-Hooks" class="headerlink" title="什么是React Hooks"></a>什么是React Hooks</h1><blockquote>
+<p>Hook 是 React 16.8 的新增特性。它可以让你在不编写 class 的情况下使用 state 以及其他的 React 特性。</p>
+</blockquote>
+<h1 id="react-Hooks使用规则"><a href="#react-Hooks使用规则" class="headerlink" title="react Hooks使用规则"></a>react Hooks使用规则</h1><blockquote>
+<p>在学习之前先跟大家说下react hooks使用的规则：</p>
+<ul>
+<li>只能在react函数组件中使用Hooks。</li>
+<li>只能在组件的最顶层使用Hooks</li>
+</ul>
+</blockquote>
+<h1 id="react-Hooks使用"><a href="#react-Hooks使用" class="headerlink" title="react Hooks使用"></a>react Hooks使用</h1><h2 id="一、-useState"><a href="#一、-useState" class="headerlink" title="一、 useState"></a>一、 useState</h2><blockquote>
+<p>作用：在函数组件中调用它，可以添加一些内部的state。</p>
+</blockquote>
+<ul>
+<li><p>示例</p>
+<pre><code>      import React,{useState} from &#39;react&#39;;
+
+      function Counter(){
+          //js
+          const [count,setCount] = useState(0);
+          //ts
+          const [count,setCount] = useState&lt;any&gt;(0);
+          console.log(count)
+          return(
+          &lt;div&gt;
+              &lt;button onClick={()=&gt;{setCount(count+1)}}&gt;+&lt;/button&gt;
+              {count}
+              &lt;button onClick={()=&gt;{setCount(count-1)}}&gt;-&lt;/button&gt;
+          &lt;/div&gt;
+          )
+          }
+      export default Counter;</code></pre></li>
+<li><p>useState 参数</p>
+<blockquote>
+<p>const [state变量，修改该变量的set方法] = useState(初始值)</p>
+</blockquote>
 </li>
-<li><p>JavaScript用的优点它都有，跨浏览器、跨操作系统等</p>
+</ul>
+<p>一般来说函数在执行结束后变量就会消失，但是react保留了state变量，当state发生改变后，函数组件都会重新渲染，useState都会将当前的state值传递给state变量。</p>
+<p>setCount是一个useState返回的用于更新state变量的方法，接收state的新值作为参数。</p>
+<p>下面是使用useState需要注意的地方：</p>
+<ul>
+<li><p>每次setCount 都会重新渲染函数组件。</p>
 </li>
-<li><p>面向对象的编程思想,强大的类型检查</p>
+<li><p>你可以设置多个useState，使用多个变量，但是useState也可以很好的接收 数组、对象作为初始值。</p>
 </li>
-</ol>
-<p>开源大法好</p>
-<p>要说缺点的话，那就是不太适合太小的项目。<br>就凭这些优点，足够我们愉快的玩耍~</p>
-<h2 id="TS安装"><a href="#TS安装" class="headerlink" title="TS安装"></a>TS安装</h2><p> 先将node安装，然后在通过npm安装ts的包</p>
-<pre><code>  npm install -g typescript
-
-  tsc -v //查看ts的版本号</code></pre><h2 id="创建项目"><a href="#创建项目" class="headerlink" title="创建项目"></a>创建项目</h2><h3 id="执行安装命令"><a href="#执行安装命令" class="headerlink" title="执行安装命令"></a>执行安装命令</h3><pre><code>npm install -g @vue/cli</code></pre><p> 安装完成后，可以通过 vue create 快速创建一个新项目的脚手架，或者直接通过 vue serve 构建新想法的原型。</p>
-<h3 id="创建项目-1"><a href="#创建项目-1" class="headerlink" title="创建项目"></a>创建项目</h3><pre><code>vue create vue-ts  //vue-ts 是我们的项目名称，执行后如下
-![](1.jpg)</code></pre><p>可看到有这么几个选项，xiaoli这个选项是我之前创建的，稍后会介绍；default这个后面写着 babel eslint ，表示若选择这个，那么只会引入babel和 ealint；manually select features顾名思义，选择我们想要的。那么我们选择第三个</p>
-<p><img src="2.jpg" alt></p>
-<p>可看到列表里有很多选项，这里是多项选择，按<code>上/下键</code>切换选项，<code>空格键</code>选择该选项，<code>enter</code>键进入下一步。你可以根据项目的实际情况，选择相应的选项。我们以vue+ts为主，所以我们选择 babel typescript router vuex 这几个，选择完后，如下</p>
-<p><img src="3.jpg" alt></p>
-<p>接下来会有好几个yes or no 的选项，大家根据自己项目的需要来选择就可以，最后一步，<code>Save this as a preset for future projects?</code> 若选择yes，就会将我们之前的选择存储起来，作为一个预设选项，方便后续一键创建新项目。所有步骤选完，回车，便开始创建项目文件结构和拉取npm包</p>
-<h2 id="项目结构"><a href="#项目结构" class="headerlink" title="项目结构"></a>项目结构</h2><p> <strong>项目结构如下</strong></p>
-<p><img src="4.jpg" alt></p>
-<p><strong>public:</strong> 用于存放静态文件，<code>index.html</code>入口文件就放在里面，这个文件夹下的文件不会纳入webpack的打包中；<br><strong>src：</strong>存放vue项目工程文件，其中已经帮我们关联好router和vuex，文件结构非常简洁<br>其他：webpack、babel等配置文件</p>
-<h2 id="与TypeScript复用"><a href="#与TypeScript复用" class="headerlink" title="与TypeScript复用"></a>与TypeScript复用</h2><p>项目在构建中，已经引入 <code>vue-class-component</code> ，用于对ts的支持，或者使用 <code>vue-property-decorator</code>,这个库是在之前那个的基础上扩展。</p>
-<p>以下列举tsvue写法的各种变化</p>
-<h3 id="组件声明"><a href="#组件声明" class="headerlink" title="组件声明"></a>组件声明</h3><pre><code> import { Component, Prop, Vue, Watch } from &#39;vue-property-decorator&#39;;
-
-  @Component
-  export default class Test extends Vue {
-
-  }</code></pre><h3 id="data对象"><a href="#data对象" class="headerlink" title="data对象"></a>data对象</h3><p>通过构造函数创建data里的数据</p>
-<pre><code>  import { Component, Prop, Vue, Watch } from &#39;vue-property-decorator&#39;;
-
-  @Component
-  export default class Test extends Vue {
-      private name: string;
-      constructor() {
-          super();
-          this.name = &#39;xiaoli&#39;;
+<li><p>使用count声明state变量的原因是：使其只能被set函数进行修改，达到setState的效果。</p>
+</li>
+<li><p>setState()接收新的state或者一个返回state的函数（setCount(prevCount =&gt; prevCount - 1)}）</p>
+</li>
+<li><p>在class组件中使用state，当setState时，是将setState的参数与原来的state进行对象的合并。但是  useState则是使用新值替换原来的值。可能这么说不太明白，请看下面的示例：</p>
+<pre><code>  import React,{useState} from &#39;react&#39;;
+  function Counter(){
+      const [people,setPeople] = useState({age:16,name:&#39;buzhanhua&#39;});
+      console.log(people.name)
+      return(
+          &lt;div&gt;
+              &lt;button onClick={()=&gt;{setPeople({age:people.age+1})}}&gt;+&lt;/button&gt;
+              {people.age}
+              {people.name}
+              &lt;button onClick={()=&gt;{setPeople({age:people+1})}}&gt;-&lt;/button&gt;
+          &lt;/div&gt;
+      )
+  }
+  export default Counter;</code></pre></li>
+</ul>
+<p>当你点击加号以后，你会发现people的name属性变为了undefined，证明该机制是 替换。</p>
+<h2 id="二、useEffect"><a href="#二、useEffect" class="headerlink" title="二、useEffect"></a>二、useEffect</h2><blockquote>
+<p>作用：给函数组件增加操作副作用的能力。和class中的<code>componentDidMount</code>、<code>componentDidUpdate</code>、<code>componentWillUnMount</code>的用途一致。</p>
+</blockquote>
+<ul>
+<li><p>示例</p>
+<pre><code>  function UseEffect(){
+      const [age,setAge] = useState(0);
+      useEffect(()=&gt;{
+          let time = setInterval(()=&gt;{
+              setAge(age+1);
+              console.log(age)
+          },1000)
+          return ()=&gt;{
+              clearInterval(time)
+          }
+      },[age])
+      return(
+          &lt;div&gt;
+              {age}
+          &lt;/div&gt;
+      )
+  }</code></pre></li>
+<li><p>语法：</p>
+<blockquote>
+<p>useEffect(function,arr);</p>
+</blockquote>
+</li>
+<li><p>注释：</p>
+</li>
+</ul>
+<ul>
+<li><p>useEffect接收两个参数，第一个为一个函数（必选），第二个是一个数组（可选）；</p>
+</li>
+<li><p>参数一是一个函数，用于执行你想在在class组件不同生命周期钩子函数执行的一些代码。（下文细说）。</p>
+</li>
+<li><p>参数二是一个数组，由于state变量变化时，函数组件都会重新渲染，那么useEffect也会在每次渲染的时候都会执行，显然在某些条件下，你并不想让全部的useEffect都重新执行，这个参数就是加以限制，只有当列表的变量变化时，useEffect才会重新执行。</p>
+<pre><code>  useEffect(()=&gt;{
+      // 相当于class组件的componentDidMount和componentDidUpdate
+      return ()=&gt;{
+          //可选，该函数将在组件将要卸载时执行，相当于componentWillUnMount
       }
-  }</code></pre><p><strong>data里的数据使用方式如下</strong><br>      public getName(){<br>          return this.name<br>      }    </p>
-<h3 id="Prop声明"><a href="#Prop声明" class="headerlink" title="Prop声明"></a>Prop声明</h3><pre><code>  @Prop() public msg: string;
-  @Prop({ default: &#39;default value&#39; }) propB: string
-  @Prop([String, Boolean]) propC: string | boolean</code></pre><h3 id="生命周期函数使用"><a href="#生命周期函数使用" class="headerlink" title="生命周期函数使用"></a>生命周期函数使用</h3><pre><code>  public created(): void {
-      console.log(&#39;created&#39;);
+  },[age])
+  // 只执行一次
+  useEffect(()=&gt;{
+      window.addEventListener(&#39;resize&#39;,onResize);
+      return ()=&gt;{
+          window.removeEventListener(&#39;resize&#39;,onResize)
+      }
+  },[])
+  // 参数列表设置为空数组，这样只会在组件加载完成后绑定事件， 组件销毁前解绑事件
+  // 只会执行一次， 但是这种方式要谨慎使用, 亲测 ： 这种方式 setInterval 会有问题</code></pre></li>
+<li><p>useEffect中定义的函数的执行不会阻碍浏览器更新视图，也就是说这些函数时异步执行的，而componentDidMonut和componentDidUpdate中的代码都是同步执行的。</p>
+</li>
+</ul>
+<h2 id="三、useContext"><a href="#三、useContext" class="headerlink" title="三、useContext"></a>三、useContext</h2><blockquote>
+<p>context，你可以理解为一个全局的state，里面可以存变量，方法，可以在provider之下的所有位置进行使用，不用关心层级关系。并可以通过里面的方法对值进行统一处理。</p>
+</blockquote>
+<ul>
+<li><p>16.8的函数组件的context</p>
+<pre><code>  import React ,{createContext,useState,useContext} from &#39;react&#39;;
+  const UserContext = new createContext();
+
+  // 创造一个context
+
+  // 创建provider
+  const UserProvider = props =&gt; {
+      const [username,setUsername] = useState(&#39;&#39;);
+      return(
+          &lt;UserContext.Provider value={{username,setUsername}}&gt;
+              {props.children}
+          &lt;/UserContext.Provider&gt;
+      )
   }
 
-  public mounted():void{
-      console.log(&#39;mounted&#39;)
-  }</code></pre><h3 id="自定义方法"><a href="#自定义方法" class="headerlink" title="自定义方法"></a>自定义方法</h3><p>js下是需要在method对象中声明方法，现变成如下</p>
-<pre><code>  public clickFunc(): void {
-      console.log(this.name)
-      console.log(this.msg)
-  }</code></pre><h3 id="Watch监听属性"><a href="#Watch监听属性" class="headerlink" title="Watch监听属性"></a>Watch监听属性</h3><pre><code>  @Watch(&#39;name&#39;,{ immediate: true, deep: true })
-  public onChildChanged(val: string, oldVal: string) {
-      console.log(&#39;watch new name=&#39; + val);
-  }</code></pre><h3 id="computed计算属性"><a href="#computed计算属性" class="headerlink" title="computed计算属性"></a>computed计算属性</h3><pre><code>  public get allname() {
-      return &#39;computed &#39; + this.name;
-  } </code></pre><p>allname是计算后的值，name是被监听的值</p>
-<h3 id="emit事件"><a href="#emit事件" class="headerlink" title="emit事件"></a>emit事件</h3><pre><code>  @Emit()
-    addToCount(n: number) {
-      this.count += n
+  const Pannel = () =&gt; {
+      const {username,setUsername} = useContext(UserContext);// 使用context
+      return (
+          &lt;div&gt;
+              &lt;div&gt;user:{username}&lt;/div&gt;
+              &lt;input onChange={e =&gt; setUsername(e.target.value)}/&gt;
+          &lt;/div&gt;
+      )
+  }
+
+  const UseContext = ()=&gt;(
+      &lt;UserProvider&gt;
+          &lt;Pannel/&gt;
+      &lt;/UserProvider&gt;
+  )
+
+  export default UseContext;</code></pre></li>
+</ul>
+<p>在使用useContext后，就不需要再用consumer包裹取值了</p>
+<h2 id="四、useMemo和useCallback"><a href="#四、useMemo和useCallback" class="headerlink" title="四、useMemo和useCallback"></a>四、useMemo和useCallback</h2><blockquote>
+<p>这两个Hook的作用类似，主要作为性能优化手段进行使用，试想一下这个场景，当你使用set函数改变state时，函数组件将会重新进行渲染，但是你发现，并不是所有的子组件都有必要重新渲染，那么这两个Hook就是解决这种情况的，用于控制当依赖项数组中的state改变时才进行重新渲染。</p>
+</blockquote>
+<ul>
+<li><p>示例：</p>
+<pre><code>  import React,{useState,useMemo,useCallback} from &#39;react&#39;;
+
+  function Time(){
+      return(
+          &lt;div&gt;{Date.now()}&lt;/div&gt;
+      )
+  }
+
+  function Count(){
+      const [count,setCount] = useState(0);
+      const [name,setName] = useState(&#39;buzhanhua&#39;);
+      //const memoizedComponent = useMemo(()=&gt;&lt;Time/&gt;,[count]);
+      const memoizedComponent = useCallback(&lt;Time/&gt;,[count]);
+      return(
+          &lt;div&gt;
+              &lt;button onClick={()=&gt;{setCount(count+1)}}&gt;改变数字&lt;/button&gt;
+
+              &lt;button onClick={()=&gt;{setName(name+&#39;ha&#39;)}}&gt;改变名字&lt;/button&gt;
+              {memoizedComponent}
+              &lt;p&gt;数字：{count}&lt;/p&gt;
+              &lt;p&gt;名字：{name}&lt;/p&gt;
+          &lt;/div&gt;
+      )
+  }
+
+  export default Count;</code></pre></li>
+<li><p>语法:</p>
+<blockquote>
+<p>useCallback(fn,依赖项数组)等同于useMemo(()=&gt;fn,依赖项数组)</p>
+</blockquote>
+</li>
+</ul>
+<p>在的demo中有两个button按钮，在使用useCallback或者useMemo后，你会发现只有当处于依赖项数组中的count改变时，Time组件才会重新渲染。</p>
+<h2 id="五、useRef"><a href="#五、useRef" class="headerlink" title="五、useRef"></a>五、useRef</h2><blockquote>
+<p>语法： const myRef = useRef(initialValue);<br>useRef返回一个可变的ref对象，其 .current属性被初始化为传入的参数（initialValue）。返回的 ref 对象在组件的整个生命周期内保持不变。其实就是提供给我们一个保存可变变量的空间，大家想一下这个需求：怎么能够记录组件的渲染次数？其他的Hook都是一个常量，只有使用set函数的时候才可以改变，我们如果想实现该需求的话，需要找到一个可更改但又在改变时不会使组件从新渲染的东西。</p>
+</blockquote>
+<pre><code>    //获取节点demo
+
+    import React,{useRef,useState} from &#39;react&#39;;
+
+    function UseRef(){
+        const myRef = useRef(null)
+        const callback = () =&gt;{
+            myRef.current.focus()
+        }
+        return(
+            &lt;div&gt;
+                &lt;input type=&quot;type&quot; ref={myRef}/&gt;
+                &lt;button onClick={callback}&gt;聚焦&lt;/button&gt;
+            &lt;/div&gt;
+        )
     }
 
-    @Emit(&#39;reset&#39;)
-    resetCount() {
-      this.count = 0
-    }</code></pre><p>第一个的事件名称为 add-to-count,n为传过去的参数；第二个事件名为reset-count,参数为空</p>
-<h3 id="指令和过滤器"><a href="#指令和过滤器" class="headerlink" title="指令和过滤器"></a>指令和过滤器</h3><blockquote>
-<p>我尝试了下，发现之前在入口文件直接引入指令或者过滤器的方式不管用了，因为用了ts后，组件的作用域跟之前的不一样了，然后我找了官方的issue，截图如下.</p>
-</blockquote>
-<p><img src="5.jpg" alt></p>
-<p><strong>一个自定义指令</strong></p>
-<pre><code>  // ./directive/index.ts
-  export const focus = {
-      // 当被绑定的元素插入到 DOM 中时……
-      inserted: function (el:HTMLElement) {
-          // 聚焦元素
-          el.focus()
-        }
-  }</code></pre><p><strong>一个过滤器</strong></p>
-<pre><code>  // ./filter/index.ts
-  export const capitalize = function (value:string) {
-      if (!value) return &#39;&#39;
-      value = value.toString()
-      return value.charAt(0).toUpperCase() + value.slice(1)
-  }</code></pre><p><strong>组件中使用</strong></p>
-<pre><code>  import { capitalize }from &#39;@/filter/index&#39;
-  import { focus } from &#39;@/directive/index&#39;
-  @Component({
-      filters:{capitalize},
-      directives:{focus}
-  })
-  export default class Test extends Vue {}
-  复制代码&lt;div&gt;
-      &lt;input v-focus v-model=&quot;modelData&quot;&gt;
-      &lt;div&gt;{{modelData | capitalize}}&lt;/div&gt;
-  &lt;/div&gt;</code></pre><h2 id="Vuex与TS的糅合"><a href="#Vuex与TS的糅合" class="headerlink" title="Vuex与TS的糅合"></a>Vuex与TS的糅合</h2><p>因为vuex是个可选的，所以单独列出来。首先需要引用 <code>vuex-class</code> 库，该库有如下几个模块</p>
-<pre><code>  import {
-      namespace,
-      Action,
-      Getter,
-      Mutation,
-      State
-  } from &#39;vuex-class&#39;;</code></pre><p>分别对应vuex中的 action、getter、mutation等，使用ts对vuex的影响主要在组件对vuex的调用上，vuex的定义还是按照之前的写法即可 </p>
-<pre><code>  @State(&#39;foo&#39;) stateFoo
-  @State(state =&gt; state.bar) stateBar
-  @Getter(&#39;foo&#39;) getterFoo
-  @Action(&#39;foo&#39;) actionFoo
-  @Mutation(&#39;foo&#39;) mutationFoo
-  @someModule.Getter(&#39;foo&#39;) moduleGetterFoo
+    //保存前一个状态
 
-  // If the argument is omitted, use the property name
-  // for each state/getter/action/mutation type
-  @State foo
-  @Getter bar
-  @Action baz
-  @Mutation qu</code></pre><p>若不想使用vuex定义的方法名，可以自定义属性名，因为都是定义在当前this上，所以直接使用this调用即可</p>
-<pre><code>  this.getterFoo // -&gt; store.getters.foo
-  this.actionFoo({ value: true }) // -&gt; store.dispatch(&#39;foo&#39;, { value: true })</code></pre><h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p> ……</p>
+    import React ,{useState,useEffect,useRef}from &#39;react&#39;;
+
+    function Rank(props){
+        const [count, setCount] = useState(0);
+
+        const prevCountRef = useRef();
+        useEffect(() =&gt; {
+        prevCountRef.current = count;
+        });
+        const prevCount = prevCountRef.current;
+        return(
+            &lt;div&gt;RankNow: {count}, before: {prevCount}
+            &lt;button onClick={()=&gt;{setCount(count + 1)}}&gt;点击&lt;/button&gt;
+            &lt;/div&gt;
+        )
+    }
+    export default React.memo(Rank);</code></pre><p>需求实现demo：</p>
+<pre><code>    import React,{useRef,useState} from &#39;react&#39;;
+
+    function Time(props){
+        console.log(props.current)
+        return(
+            &lt;div&gt;{Date.now()}&lt;/div&gt;
+        )
+    }
+    function UseRef(){
+        const myRef = useRef(0);
+        const [count,setCount] = useState(0);
+        myRef.current++
+        return(
+            &lt;div&gt;
+                &lt;Time current={myRef.current}/&gt;
+                &lt;button onClick={()=&gt;{setCount(count+1)}}&gt;+&lt;/button&gt;
+            &lt;/div&gt;
+        )
+    }
+
+    export default UseRef</code></pre><p>注释：</p>
+<ul>
+<li>使用useRef方法返回的{current：…} 和自己创建一个{current:…} 对象的唯一区别就是，每次组件渲染返回的ref对象都是同一个对象，所以它可以实现上面的需求。</li>
+<li>useRef比ref属性更有用，它可以方便的保存任何可变值。</li>
+</ul>
+<h2 id="六、自定义Hook"><a href="#六、自定义Hook" class="headerlink" title="六、自定义Hook"></a>六、自定义Hook</h2><blockquote>
+<p>自定义 Hook 是一个函数，其名称以 “use” 开头（规定），函数内部可以调用其他的 Hook。</p>
+</blockquote>
+<p>下面是一个获取浏览器窗口demo的展示，可以监测手动缩放</p>
+<pre><code>    import React , {useState,useEffect} from &#39;react&#39;;
+
+    function WinSize(){
+        const [size,setSize] = useState({
+            width:  document.documentElement.clientWidth,
+            height:  document.documentElement.clientHeight
+        });
+
+        const onResize =  ()=&gt;{
+            setSize({
+                width: document.documentElement.clientWidth,
+                height: document.documentElement.clientHeight
+            })
+        }
+
+        useEffect(()=&gt;{
+            window.addEventListener(&#39;resize&#39;,onResize);
+            return ()=&gt;{
+                window.removeEventListener(&#39;resize&#39;,onResize);
+            }
+        },[])
+
+        return size;
+    }
+
+    function Demo6(){
+        const size = WinSize();
+        return (
+            &lt;div&gt;
+                浏览器窗口：宽 {size.width} 高 : {size.height}
+            &lt;/div&gt;
+        )
+    }
+
+    export default Demo6</code></pre><h1 id="结束"><a href="#结束" class="headerlink" title="结束"></a>结束</h1><p>未完待续…</p>
 
             </div>
             <hr />
@@ -770,9 +967,9 @@ TS+VUE项目搭建
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《TS+VUE项目搭建》
+                    《React函数式编程 - Hooks》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/10/16/ts-vue-xiang-mu-da-jian/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2020/07/07/react-hooks-han-shu-shi-bian-cheng/" property="cc:attributionName"
                rel="cc:attributionURL">
                 唐宇
             </a> 采用
@@ -813,7 +1010,7 @@ TS+VUE项目搭建
         repo: 'Lingtian007.github.io',
         owner: 'Lingtian007',
         admin: "Lingtian007",
-        id: '2019/10/16/ts-vue-xiang-mu-da-jian/',
+        id: '2020/07/07/react-hooks-han-shu-shi-bian-cheng/',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -1096,17 +1293,18 @@ TS+VUE项目搭建
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2019/10/17/echars-zai-vue-zhong-ru-he-shi-yong/">
+                <a href="/2020/07/07/react-hooks-han-shu-shi-bian-cheng/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="如何在 Vue 项目中使用 Echarts">
+                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="React函数式编程 - Hooks">
                         
-                        <span class="card-title">如何在 Vue 项目中使用 Echarts</span>
+                        <span class="card-title">React函数式编程 - Hooks</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1116,26 +1314,27 @@ TS+VUE项目搭建
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-10-17
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-07-07
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Vue/" class="post-category" target="_blank">
-                                    Vue
+                            <a href="/categories/总结/" class="post-category" target="_blank">
+                                    总结
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Vue/" target="_blank">
-                        <span class="chip bg-color">Vue</span>
+                    <a href="/tags/总结/" target="_blank">
+                        <span class="chip bg-color">总结</span>
                     </a>
                     
                 </div>
@@ -1149,13 +1348,13 @@ TS+VUE项目搭建
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/10/15/ts-xue-xi-zong-jie/">
+                <a href="/2020/06/18/highchart-zhi-chu-kui/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="TS基础总结">
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="highcharts 实时动态刷新曲线图">
                         
-                        <span class="card-title">TS基础总结</span>
+                        <span class="card-title">highcharts 实时动态刷新曲线图</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1166,14 +1365,14 @@ TS+VUE项目搭建
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-10-15
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-06-18
                             </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/TS/" class="post-category" target="_blank">
-                                    TS
+                            <a href="/categories/方法/" class="post-category" target="_blank">
+                                    方法
                                 </a>
                             
                             
@@ -1183,8 +1382,8 @@ TS+VUE项目搭建
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/TS/" target="_blank">
-                        <span class="chip bg-color">TS</span>
+                    <a href="/tags/方法/" target="_blank">
+                        <span class="chip bg-color">方法</span>
                     </a>
                     
                 </div>

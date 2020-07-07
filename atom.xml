@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.linfengdunwu.cn/"/>
-  <updated>2020-06-18T07:38:11.745Z</updated>
+  <updated>2020-07-07T08:05:00.752Z</updated>
   <id>https://www.linfengdunwu.cn/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>React函数式编程 - Hooks</title>
+    <link href="https://www.linfengdunwu.cn/2020/07/07/react-hooks-han-shu-shi-bian-cheng/"/>
+    <id>https://www.linfengdunwu.cn/2020/07/07/react-hooks-han-shu-shi-bian-cheng/</id>
+    <published>2020-07-07T06:32:09.000Z</published>
+    <updated>2020-07-07T08:05:00.752Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;div align=&quot;middle&quot;&gt;
+&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;330&quot; height=&quot;86&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="总结" scheme="https://www.linfengdunwu.cn/categories/%E6%80%BB%E7%BB%93/"/>
+    
+    
+      <category term="总结" scheme="https://www.linfengdunwu.cn/tags/%E6%80%BB%E7%BB%93/"/>
+    
+  </entry>
   
   <entry>
     <title>highcharts 实时动态刷新曲线图</title>
@@ -102,7 +129,7 @@
     <link href="https://www.linfengdunwu.cn/2019/12/30/nian-mo-zong-jie/"/>
     <id>https://www.linfengdunwu.cn/2019/12/30/nian-mo-zong-jie/</id>
     <published>2019-12-30T13:32:09.000Z</published>
-    <updated>2020-05-28T07:51:13.156Z</updated>
+    <updated>2020-06-23T01:52:19.772Z</updated>
     
     <summary type="html">
     
@@ -526,33 +553,6 @@
     
     
       <category term="开发环境" scheme="https://www.linfengdunwu.cn/tags/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>js常用数组操作方法</title>
-    <link href="https://www.linfengdunwu.cn/2019/01/22/js-chang-yong-shu-zu-cao-zuo-fang-fa/"/>
-    <id>https://www.linfengdunwu.cn/2019/01/22/js-chang-yong-shu-zu-cao-zuo-fang-fa/</id>
-    <published>2019-01-22T04:32:09.000Z</published>
-    <updated>2020-05-28T07:51:13.125Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;div align=&quot;middle&quot;&gt;
-&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;330&quot; height=&quot;86&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="方法" scheme="https://www.linfengdunwu.cn/categories/%E6%96%B9%E6%B3%95/"/>
-    
-    
-      <category term="方法" scheme="https://www.linfengdunwu.cn/tags/%E6%96%B9%E6%B3%95/"/>
     
   </entry>
   
