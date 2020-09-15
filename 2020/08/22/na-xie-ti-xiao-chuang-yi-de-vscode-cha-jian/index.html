@@ -12,7 +12,7 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="从0搭建自己的webpack开发环境, 唐宇的博客">
+    <meta name="keywords" content="那些提效-创意的 vscode 插件, 唐宇的博客">
     <meta name="baidu-site-verification" content>
     <meta name="google-site-verification" content>
     <meta name="360-site-verification" content>
@@ -21,8 +21,11 @@
 
 
 闲来无事，随便写写……
-从0搭建自己的webpack开发环境
-1.什么是Webpack?webpack是一个现代 JavaScript 应用程序的静态模块打包器(module bundler)，当 webpack 处理应用程序时，它">
+那些提效/创意的 vscode 插件
+前言
+在前端开发中，vscode 是最常用的编辑器，而 vscode 有着各种实用插件，有些可以帮助我们提升效率，有些可以让我们的工作过程变得更加快乐。
+
+今天我们就来介">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -30,7 +33,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>从0搭建自己的webpack开发环境 | 唐宇的博客</title>
+    <title>那些提效-创意的 vscode 插件 | 唐宇的博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -304,13 +307,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        从0搭建自己的webpack开发环境
+                        那些提效-创意的 vscode 插件
                     </div>
                 </div>
             </div>
@@ -421,8 +424,8 @@
                     
                     <div class="article-tag">
                         
-                        <a href="/tags/开发环境/" target="_blank">
-                            <span class="chip bg-color">开发环境</span>
+                        <a href="/tags/vscode-插件/" target="_blank">
+                            <span class="chip bg-color">vscode 插件</span>
                         </a>
                         
                     </div>
@@ -433,8 +436,8 @@
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                        <a href="/categories/开发环境/" class="post-category" target="_blank">
-                            开发环境
+                        <a href="/categories/vscode-插件/" class="post-category" target="_blank">
+                            vscode 插件
                         </a>
                         
                     </div>
@@ -445,7 +448,7 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2018-04-22
+                    2020-08-22
                 </div>
 
                 <div class="post-author info-break-policy">
@@ -459,14 +462,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    398
+                    1.8k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    6 分
                 </div>
                 
                 
@@ -487,14 +490,151 @@
 </div>
 
 <p>闲来无事，随便写写……</p>
-<h1 id="从0搭建自己的webpack开发环境"><a href="#从0搭建自己的webpack开发环境" class="headerlink" title="从0搭建自己的webpack开发环境"></a>从0搭建自己的webpack开发环境</h1><hr>
-<p><strong>1.什么是Webpack?</strong><br><strong>webpack</strong>是一个现代 <strong>JavaScript</strong> 应用程序的<strong>静态模块打包器</strong>(module bundler)，当 webpack 处理应用程序时，它会递归地构建一个<strong>依赖关系图</strong>(dependency graph)，其中包含应用程序需要的每个<strong>模块</strong>，然后将所有这些模块打包成一个或多个 <strong>bundle</strong><br><img src="node.jpg" alt></p>
-<p>使用Webpack作为前端构建工具：</p>
-<p>· 代码转换：TypeScript 编译成 JavaScript、SCSS 编译成 CSS 等；<br>· 文件优化：压缩 JavaScript、CSS、HTML 代码，压缩合并图片等；<br>· 代码分割：提取多个页面的公共代码、提取首屏不需要执行部分的代码让其异步加载；<br>· 模块合并：在采用模块化的项目里会有很多个模块和文件，需要构建功能把模块分类合并成一个文件；<br>· 自动刷新：监听本地源代码的变化，自动重新构建、刷新浏览器；<br>· 代码校验：在代码被提交到仓库前需要校验代码是否符合规范，以及单元测试是否通过；<br>· 自动发布：更新完代码后，自动构建出线上发布代码并传输给发布系统。</p>
-<p>在<strong>webpack</strong>应用中有两个核心:</p>
-<p>模块转换器，用于把模块原内容按照需求转换成新内容，可以加载非 JS 模块；</p>
-<p>扩展插件，在 Webpack 构建流程中的特定时机注入扩展逻辑来改变构建结果或做你想要的事情。</p>
-<p><strong>2.初始化项目</strong></p>
+<h1 id="那些提效-创意的-vscode-插件"><a href="#那些提效-创意的-vscode-插件" class="headerlink" title="那些提效/创意的 vscode 插件"></a>那些提效/创意的 vscode 插件</h1><hr>
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><blockquote>
+<p>在前端开发中，vscode 是最常用的编辑器，而 vscode 有着各种实用插件，有些可以帮助我们提升效率，有些可以让我们的工作过程变得更加快乐。</p>
+</blockquote>
+<p>今天我们就来介绍一下这些好用的插件吧~</p>
+<h1 id="提效类插件"><a href="#提效类插件" class="headerlink" title="提效类插件"></a>提效类插件</h1><h2 id="1-代码神器-Power-Mode"><a href="#1-代码神器-Power-Mode" class="headerlink" title="1. 代码神器 - Power Mode"></a>1. 代码神器 - Power Mode</h2><p>首先，介绍的第一款插件是 Power Mode，它可以让你的编程过程变得更加快乐（如下图）。<br><img src="t1.gif" alt></p>
+<h2 id="2-高亮标识-Todo-Tree"><a href="#2-高亮标识-Todo-Tree" class="headerlink" title="2. 高亮标识 - Todo Tree"></a>2. 高亮标识 - Todo Tree</h2><p>这里可以推荐一个插件来帮助提高效率，那就是 Todo Tree，我们在应用商店搜索进行安装后，我们只需要添加 // TODO: 这样的注释代码，我们就可以在 Todo Tree 中快速定位到这行注释（如下图）。<br><img src="t2.image" alt><br><img src="t3.image" alt></p>
+<h2 id="3-快速定位括号-Bracket-Pair-Colorizer"><a href="#3-快速定位括号-Bracket-Pair-Colorizer" class="headerlink" title="3. 快速定位括号 - Bracket Pair Colorizer"></a>3. 快速定位括号 - Bracket Pair Colorizer</h2><p><img src="t4.image" alt></p>
+<h2 id="4-拼写检查-Code-Spell-Checker"><a href="#4-拼写检查-Code-Spell-Checker" class="headerlink" title="4. 拼写检查 - Code Spell Checker"></a>4. 拼写检查 - Code Spell Checker</h2><p>我们可以使用 Code Spell Checker 插件进行拼写检测，我们安装插件后，还可以在 setting.json 中指定检测的文件，比如我这里开启了对 Vue 文件的拼写检查（如下图）。</p>
+<p><img src="t5.image" alt><br><img src="t6.image" alt></p>
+<h1 id="Git-管理"><a href="#Git-管理" class="headerlink" title="Git 管理"></a>Git 管理</h1><h2 id="1-Git-History"><a href="#1-Git-History" class="headerlink" title="1.Git History"></a>1.Git History</h2><ul>
+<li>Git History 可以帮助你迅速查看 Git 历史记录，图形化的页面，使 Git 历史一目了然（如下图）<br><img src="t7.image" alt></li>
+<li>我们还可以查看指定文件的指定版本（如下图）<br><img src="t8.image" alt></li>
+<li>我们还可以将光标停留在某一行代码，查看该行代码的提交信息（提交人、提交时间、提交信息）（如下图<br><img src="t9.image" alt></li>
+</ul>
+<h2 id="2-Git-Graph"><a href="#2-Git-Graph" class="headerlink" title="2.Git Graph"></a>2.Git Graph</h2><blockquote>
+<p>Git Graph 可以帮助你更好的分析分支之间的关系（如下图）<br><img src="t10.image" alt></p>
+</blockquote>
+<h2 id="3-Git-Emoji"><a href="#3-Git-Emoji" class="headerlink" title="3.Git Emoji"></a>3.Git Emoji</h2><p>Git Emoji 可以更好的帮助团队形成提交规范，使用一个 Emoji 表情概括本次提交，再加上一些文本描述信息，提交记录将会变得赏心悦目（如下图）。<br><img src="t11.image" alt><br><img src="t12.image" alt></p>
+<h2 id="4-GitLens"><a href="#4-GitLens" class="headerlink" title="4.GitLens"></a>4.GitLens</h2><p>GitLens 可以帮助你快速比对不同分支的代码差异（如下图）<br><img src="t13.image" alt></p>
+<h1 id="常用类"><a href="#常用类" class="headerlink" title="常用类"></a>常用类</h1><ol>
+<li><p>auto close tag<br>   自动关闭标签，在开始标记的结束括号中键入后，将自动插入结束标记</p>
+</li>
+<li><p>Auto Comment Blocks<br>   自动插入注释行</p>
+</li>
+<li><p>Auto Rename Tag<br>   自动重命名配对的HTML / XML标记</p>
+</li>
+<li><p>Auto Complete Tag<br>   结合了自动关闭标签与同时修改同步标签</p>
+</li>
+<li><p>Beautify<br>   美化代码参考资料</p>
+</li>
+<li><p>Code Runner<br>   可以直接运行多种语言的代码片段和文件</p>
+</li>
+<li><p>Code Spell Checker<br>   代码拼写检查工具</p>
+</li>
+<li><p>Drat<br>   支持 Dart编程语言，并提供有效编辑，重构，运行和重新加载Flutter 移动应用程序和AngularDartWeb应用程序的工具。</p>
+</li>
+<li><p>Debugger for Chrome<br>   从VS Code调试在Google Chrome中运行的JavaScript代码。</p>
+</li>
+<li><p>EditorConfig for VS Code<br>  EditorConfig帮助开发人员定义和维护一致的编码风格在不同的编辑器和IDE。<br>  EditorConfig项目包含一个文件格式定义编码风格和文本编辑器插件的集合。<br>  EditorConfig文件易于阅读并且他们与版本控制器很好地合作。</p>
+</li>
+<li><p>ESLint<br>  代码检查工具</p>
+</li>
+<li><p>filesize<br>  实时查看当前文件的大小</p>
+</li>
+<li><p>Flutter<br>  Flutter移动应用程序的支持，以及对Dart编程语言的支持。</p>
+</li>
+<li><p>JavaScript (ES6) code snippets<br>  ES6的代码片段</p>
+</li>
+<li><p>JavaScript Snippet Pack<br>  JS代码片段补全</p>
+</li>
+<li><p>language-stylus<br>  Stylus文件添加语法高亮</p>
+</li>
+<li><p>Open in Browser<br>  在vscode中打开浏览器访问</p>
+</li>
+<li><p>Path Intellisense<br>  自动路径补全</p>
+</li>
+<li><p>Prettier - Code formatter<br>格式化代码</p>
+</li>
+<li><p>Scss<br>  缩进Sass语法高亮</p>
+</li>
+<li><p>TypeScript Importer<br>  自动搜索工作空间文件中的TypeScript定义，并将所有已知符号作为完成项提供，以允许代码完成。</p>
+</li>
+<li><p>Vetur<br>  代码格式化</p>
+</li>
+</ol>
+<h1 id="vscode快捷键"><a href="#vscode快捷键" class="headerlink" title="vscode快捷键"></a>vscode快捷键</h1><p><strong>1.同时打开多个窗口（查看多个项目）</strong></p>
+<ul>
+<li>打开一个新窗口： Ctrl+Shift+N</li>
+<li>关闭窗口： Ctrl+Shift+W</li>
+<li>同时打开多个编辑器（查看多个文件）</li>
+</ul>
+<p><strong>2.新建文件 Ctrl+N</strong></p>
+<ul>
+<li>历史打开文件之间切换 Ctrl+Tab，Alt+Left，Alt+Right</li>
+<li>切出一个新的编辑器（最多3个）Ctrl+\，也可以按住Ctrl鼠标点击Explorer里的文件名</li>
+<li>左中右3个编辑器的快捷键Ctrl+1 Ctrl+2 Ctrl+3</li>
+<li>3个编辑器之间循环切换 Ctrl+`</li>
+<li>编辑器换位置，Ctrl+k然后按Left或Right</li>
+</ul>
+<p><strong>3.格式调整</strong></p>
+<ul>
+<li>代码行缩进Ctrl+[， Ctrl+]</li>
+<li>折叠打开代码块 Ctrl+Shift+[， Ctrl+Shift+]</li>
+<li>Ctrl+C Ctrl+V如果不选中，默认复制或剪切一整行</li>
+<li>代码格式化：Shift+Alt+F，或Ctrl+Shift+P后输入format code</li>
+<li>修剪空格Ctrl+Shift+X</li>
+<li>上下移动一行： Alt+Up 或 Alt+Down</li>
+<li>向上向下复制一行： Shift+Alt+Up或Shift+Alt+Down</li>
+<li>在当前行下边插入一行Ctrl+Enter</li>
+<li>在当前行上方插入一行Ctrl+Shift+Enter</li>
+</ul>
+<p><strong>4.光标相关</strong></p>
+<ul>
+<li>移动到行首：Home</li>
+<li>移动到行尾：End</li>
+<li>移动到文件结尾：Ctrl+End</li>
+<li>移动到文件开头：Ctrl+Home</li>
+<li>移动到后半个括号 Ctrl+Shift+]</li>
+<li>选中当前行Ctrl+i（双击）</li>
+<li>选择从光标到行尾Shift+End</li>
+<li>选择从行首到光标处Shift+Home</li>
+<li>删除光标右侧的所有字Ctrl+Delete</li>
+<li>Shrink/expand selection： Shift+Alt+Left和Shift+Alt+Right</li>
+<li>Multi-Cursor：可以连续选择多处，然后一起修改，Alt+Click添加cursor或者Ctrl+Alt+Down 或 Ctrl+Alt+Up</li>
+<li>同时选中所有匹配的Ctrl+Shift+L</li>
+<li>Ctrl+D下一个匹配的也被选中(被我自定义成删除当前行了，见下边Ctrl+Shift+K)</li>
+<li>回退上一个光标操作Ctrl+U</li>
+</ul>
+<p><strong>5.重构代码</strong></p>
+<ul>
+<li>跳转到定义处：F12</li>
+<li>定义处缩略图：只看一眼而不跳转过去Alt+F12</li>
+<li>列出所有的引用：Shift+F12</li>
+<li>同时修改本文件中所有匹配的：Ctrl+F12</li>
+<li>重命名：比如要修改一个方法名，可以选中后按F2，输入新的名字，回车，会发现所有的文件都修改过了。</li>
+<li>跳转到下一个Error或Warning：当有多个错误时可以按F8逐个跳转</li>
+<li>查看diff 在explorer里选择文件右键 Set file to compare，然后需要对比的文件上右键选择Compare with’file_name_you_chose’.</li>
+</ul>
+<p><strong>6.查找替换</strong></p>
+<ul>
+<li>查找 Ctrl+F</li>
+<li>查找替换 Ctrl+H</li>
+<li>整个文件夹中查找 Ctrl+Shift+F</li>
+</ul>
+<p><strong>7.显示相关</strong></p>
+<ul>
+<li>全屏：F11</li>
+<li>zoomIn/zoomOut：Ctrl + =/Ctrl + -</li>
+<li>侧边栏显/隐：Ctrl+B</li>
+<li>预览markdown Ctrl+Shift+V</li>
+</ul>
+<p><strong>8.其他</strong></p>
+<ul>
+<li>自动保存：File -&gt; AutoSave ，或者Ctrl+Shift+P，输入 auto</li>
+</ul>
+<h1 id="浏览器插件"><a href="#浏览器插件" class="headerlink" title="浏览器插件"></a>浏览器插件</h1><ol>
+<li>FeHelper(前端助手)<br>JSON自动格式化、手动格式化，支持排序、解码、下载等，</li>
+<li>MONKNOW<br>新标签页 - 个性化面板<br>这是您梦寐以求的新标签页。支持网站网址URL分组管理，数据实时云同步，黑暗深色夜间主题模式。</li>
+<li>Postman Interceptor<br>Sends requests fired through the Postman chrome app.</li>
+<li>有道词典Chrome划词插件<br>支持Chrome浏览器的划词翻译</li>
+<li>谷歌访问助手<br>最简单易用的谷歌访问助手,为chrome扩展用户量身打造。可以解决chrome扩展无法自动更新的问题，同时可以访问谷歌google搜索，gmail邮箱，</li>
+</ol>
+<h1 id="番外"><a href="#番外" class="headerlink" title="番外"></a>番外</h1><h2 id="在-vscode-里画流程图-draw-io"><a href="#在-vscode-里画流程图-draw-io" class="headerlink" title="在 vscode 里画流程图 - draw.io"></a>在 vscode 里画流程图 - draw.io</h2><p>安装 draw.io 后，新建一个 helloworld.drawio，就可以在 vscode 里面画流程图啦（如下图）！<br><img src="t14.image" alt></p>
+<h1 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h1><p>持续更新中……</p>
 
             </div>
             <hr />
@@ -653,9 +793,9 @@
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《从0搭建自己的webpack开发环境》
+                    《那些提效-创意的 vscode 插件》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2018/04/22/node-da-jian/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2020/08/22/na-xie-ti-xiao-chuang-yi-de-vscode-cha-jian/" property="cc:attributionName"
                rel="cc:attributionURL">
                 唐宇
             </a> 采用
@@ -696,7 +836,7 @@
         repo: 'Lingtian007.github.io',
         owner: 'Lingtian007',
         admin: "Lingtian007",
-        id: '2018/04/22/node-da-jian/',
+        id: '2020/08/22/na-xie-ti-xiao-chuang-yi-de-vscode-cha-jian/',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -983,13 +1123,13 @@
             <div class="article-badge left-badge text-color">
                 <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2018/04/22/gis-ji-ben-shi-yong/">
+                <a href="/2020/09/01/ji-yu-jquery-dai-shu-ju-de-ri-li-cha-jian/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/26.jpg" class="responsive-img" alt="GIS基本使用">
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="基于jQuery带数据的日历插件">
                         
-                        <span class="card-title">GIS基本使用</span>
+                        <span class="card-title">基于jQuery带数据的日历插件</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1000,14 +1140,14 @@
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2018-04-22
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2020-09-01
                         </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/gis/" class="post-category" target="_blank">
-                                    gis
+                            <a href="/categories/插件/" class="post-category" target="_blank">
+                                    插件
                                 </a>
                             
                             
@@ -1017,8 +1157,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/gis/" target="_blank">
-                        <span class="chip bg-color">gis</span>
+                    <a href="/tags/插件/" target="_blank">
+                        <span class="chip bg-color">插件</span>
                     </a>
                     
                 </div>
@@ -1032,13 +1172,13 @@
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2018/01/22/self-checking/">
+                <a href="/2020/07/07/react-hooks-han-shu-shi-bian-cheng/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="一名【合格】前端工程师的自检清单">
+                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="React函数式编程 - Hooks">
                         
-                        <span class="card-title">一名【合格】前端工程师的自检清单</span>
+                        <span class="card-title">React函数式编程 - Hooks</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1049,14 +1189,14 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2018-01-22
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-07-07
                             </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/随笔/" class="post-category" target="_blank">
-                                    随笔
+                            <a href="/categories/总结/" class="post-category" target="_blank">
+                                    总结
                                 </a>
                             
                             
@@ -1066,8 +1206,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/随笔/" target="_blank">
-                        <span class="chip bg-color">随笔</span>
+                    <a href="/tags/总结/" target="_blank">
+                        <span class="chip bg-color">总结</span>
                     </a>
                     
                 </div>
@@ -1222,7 +1362,7 @@
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">43.3k</span>
+            <span class="white-color">44.7k</span>
             
 
             <br>
