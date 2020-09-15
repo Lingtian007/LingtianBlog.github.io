@@ -12,7 +12,7 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="TS+VUE项目搭建, 唐宇的博客">
+    <meta name="keywords" content="基于jQuery带数据的日历插件, 唐宇的博客">
     <meta name="baidu-site-verification" content>
     <meta name="google-site-verification" content>
     <meta name="360-site-verification" content>
@@ -21,8 +21,9 @@
 
 
 闲来无事，随便写写……
-TS+VUE项目搭建
-自尤大推出vue对typescript的支持后，一直想开箱尝试，对于前端sr来说，vue的顺滑加上ts的面向对象，想着就非常美好~ 终于在两个月前，找到了个机会尝试了一把vue+ts的组">
+基于jQuery带数据的日历插件
+源码地址
+">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -30,7 +31,7 @@ TS+VUE项目搭建
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>TS+VUE项目搭建 | 唐宇的博客</title>
+    <title>基于jQuery带数据的日历插件 | 唐宇的博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -304,13 +305,13 @@ TS+VUE项目搭建
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/26.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        TS+VUE项目搭建
+                        基于jQuery带数据的日历插件
                     </div>
                 </div>
             </div>
@@ -421,8 +422,8 @@ TS+VUE项目搭建
                     
                     <div class="article-tag">
                         
-                        <a href="/tags/TS/" target="_blank">
-                            <span class="chip bg-color">TS</span>
+                        <a href="/tags/插件/" target="_blank">
+                            <span class="chip bg-color">插件</span>
                         </a>
                         
                     </div>
@@ -433,8 +434,8 @@ TS+VUE项目搭建
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                        <a href="/categories/TS/" class="post-category" target="_blank">
-                            TS
+                        <a href="/categories/插件/" class="post-category" target="_blank">
+                            插件
                         </a>
                         
                     </div>
@@ -445,7 +446,7 @@ TS+VUE项目搭建
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-10-16
+                    2020-09-01
                 </div>
 
                 <div class="post-author info-break-policy">
@@ -459,14 +460,14 @@ TS+VUE项目搭建
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.5k
+                    23
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    6 分
+                    1 分
                 </div>
                 
                 
@@ -483,135 +484,12 @@ TS+VUE项目搭建
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <div align="middle">
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=574919767&auto=1&height=66"></iframe>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=411214279&auto=1&height=66"></iframe>
 </div>
 
 <p>闲来无事，随便写写……</p>
-<h1 id="TS-VUE项目搭建"><a href="#TS-VUE项目搭建" class="headerlink" title="TS+VUE项目搭建"></a>TS+VUE项目搭建</h1><hr>
-<p>自尤大推出vue对typescript的支持后，一直想开箱尝试，对于前端sr来说，vue的顺滑加上ts的面向对象，想着就非常美好~ 终于在两个月前，找到了个机会尝试了一把vue+ts的组合。 开文记录下vue和ts整合之旅和遇到的一些坑。</p>
-<h2 id="Vue"><a href="#Vue" class="headerlink" title="Vue"></a>Vue</h2><p>应该大部分人都知道vue，毕竟如今vue是与react肩并肩的存在，所以就不过多介绍啦。</p>
-<p><a href="https://cn.vuejs.org/index.html" target="_blank" rel="noopener">vue中文官网</a> 官网上的教程就是最好的入门教程</p>
-<h2 id="TypeScript"><a href="#TypeScript" class="headerlink" title="TypeScript"></a>TypeScript</h2><p>我在前几篇文章就一直有在宣传typescript，简单列举下ts的优点</p>
-<ol>
-<li><p>始于JavaScript，归于JavaScript,typescript是JavaScript的超集，所以它可以重用JavaScriptd代码,使用JavaScript的库</p>
-</li>
-<li><p>JavaScript用的优点它都有，跨浏览器、跨操作系统等</p>
-</li>
-<li><p>面向对象的编程思想,强大的类型检查</p>
-</li>
-</ol>
-<p>开源大法好</p>
-<p>要说缺点的话，那就是不太适合太小的项目。<br>就凭这些优点，足够我们愉快的玩耍~</p>
-<h2 id="TS安装"><a href="#TS安装" class="headerlink" title="TS安装"></a>TS安装</h2><p> 先将node安装，然后在通过npm安装ts的包</p>
-<pre><code>  npm install -g typescript
-
-  tsc -v //查看ts的版本号</code></pre><h2 id="创建项目"><a href="#创建项目" class="headerlink" title="创建项目"></a>创建项目</h2><h3 id="执行安装命令"><a href="#执行安装命令" class="headerlink" title="执行安装命令"></a>执行安装命令</h3><pre><code>npm install -g @vue/cli</code></pre><p> 安装完成后，可以通过 vue create 快速创建一个新项目的脚手架，或者直接通过 vue serve 构建新想法的原型。</p>
-<h3 id="创建项目-1"><a href="#创建项目-1" class="headerlink" title="创建项目"></a>创建项目</h3><pre><code>vue create vue-ts  //vue-ts 是我们的项目名称，执行后如下
-![](1.jpg)</code></pre><p>可看到有这么几个选项，xiaoli这个选项是我之前创建的，稍后会介绍；default这个后面写着 babel eslint ，表示若选择这个，那么只会引入babel和 ealint；manually select features顾名思义，选择我们想要的。那么我们选择第三个</p>
-<p><img src="2.jpg" alt></p>
-<p>可看到列表里有很多选项，这里是多项选择，按<code>上/下键</code>切换选项，<code>空格键</code>选择该选项，<code>enter</code>键进入下一步。你可以根据项目的实际情况，选择相应的选项。我们以vue+ts为主，所以我们选择 babel typescript router vuex 这几个，选择完后，如下</p>
-<p><img src="3.jpg" alt></p>
-<p>接下来会有好几个yes or no 的选项，大家根据自己项目的需要来选择就可以，最后一步，<code>Save this as a preset for future projects?</code> 若选择yes，就会将我们之前的选择存储起来，作为一个预设选项，方便后续一键创建新项目。所有步骤选完，回车，便开始创建项目文件结构和拉取npm包</p>
-<h2 id="项目结构"><a href="#项目结构" class="headerlink" title="项目结构"></a>项目结构</h2><p> <strong>项目结构如下</strong></p>
-<p><img src="4.jpg" alt></p>
-<p><strong>public:</strong> 用于存放静态文件，<code>index.html</code>入口文件就放在里面，这个文件夹下的文件不会纳入webpack的打包中；<br><strong>src：</strong>存放vue项目工程文件，其中已经帮我们关联好router和vuex，文件结构非常简洁<br>其他：webpack、babel等配置文件</p>
-<h2 id="与TypeScript复用"><a href="#与TypeScript复用" class="headerlink" title="与TypeScript复用"></a>与TypeScript复用</h2><p>项目在构建中，已经引入 <code>vue-class-component</code> ，用于对ts的支持，或者使用 <code>vue-property-decorator</code>,这个库是在之前那个的基础上扩展。</p>
-<p>以下列举tsvue写法的各种变化</p>
-<h3 id="组件声明"><a href="#组件声明" class="headerlink" title="组件声明"></a>组件声明</h3><pre><code> import { Component, Prop, Vue, Watch } from &#39;vue-property-decorator&#39;;
-
-  @Component
-  export default class Test extends Vue {
-
-  }</code></pre><h3 id="data对象"><a href="#data对象" class="headerlink" title="data对象"></a>data对象</h3><p>通过构造函数创建data里的数据</p>
-<pre><code>  import { Component, Prop, Vue, Watch } from &#39;vue-property-decorator&#39;;
-
-  @Component
-  export default class Test extends Vue {
-      private name: string;
-      constructor() {
-          super();
-          this.name = &#39;xiaoli&#39;;
-      }
-  }</code></pre><p><strong>data里的数据使用方式如下</strong><br>      public getName(){<br>          return this.name<br>      }    </p>
-<h3 id="Prop声明"><a href="#Prop声明" class="headerlink" title="Prop声明"></a>Prop声明</h3><pre><code>  @Prop() public msg: string;
-  @Prop({ default: &#39;default value&#39; }) propB: string
-  @Prop([String, Boolean]) propC: string | boolean</code></pre><h3 id="生命周期函数使用"><a href="#生命周期函数使用" class="headerlink" title="生命周期函数使用"></a>生命周期函数使用</h3><pre><code>  public created(): void {
-      console.log(&#39;created&#39;);
-  }
-
-  public mounted():void{
-      console.log(&#39;mounted&#39;)
-  }</code></pre><h3 id="自定义方法"><a href="#自定义方法" class="headerlink" title="自定义方法"></a>自定义方法</h3><p>js下是需要在method对象中声明方法，现变成如下</p>
-<pre><code>  public clickFunc(): void {
-      console.log(this.name)
-      console.log(this.msg)
-  }</code></pre><h3 id="Watch监听属性"><a href="#Watch监听属性" class="headerlink" title="Watch监听属性"></a>Watch监听属性</h3><pre><code>  @Watch(&#39;name&#39;,{ immediate: true, deep: true })
-  public onChildChanged(val: string, oldVal: string) {
-      console.log(&#39;watch new name=&#39; + val);
-  }</code></pre><h3 id="computed计算属性"><a href="#computed计算属性" class="headerlink" title="computed计算属性"></a>computed计算属性</h3><pre><code>  public get allname() {
-      return &#39;computed &#39; + this.name;
-  } </code></pre><p>allname是计算后的值，name是被监听的值</p>
-<h3 id="emit事件"><a href="#emit事件" class="headerlink" title="emit事件"></a>emit事件</h3><pre><code>  @Emit()
-    addToCount(n: number) {
-      this.count += n
-    }
-
-    @Emit(&#39;reset&#39;)
-    resetCount() {
-      this.count = 0
-    }</code></pre><p>第一个的事件名称为 add-to-count,n为传过去的参数；第二个事件名为reset-count,参数为空</p>
-<h3 id="指令和过滤器"><a href="#指令和过滤器" class="headerlink" title="指令和过滤器"></a>指令和过滤器</h3><blockquote>
-<p>我尝试了下，发现之前在入口文件直接引入指令或者过滤器的方式不管用了，因为用了ts后，组件的作用域跟之前的不一样了，然后我找了官方的issue，截图如下.</p>
-</blockquote>
-<p><img src="5.jpg" alt></p>
-<p><strong>一个自定义指令</strong></p>
-<pre><code>  // ./directive/index.ts
-  export const focus = {
-      // 当被绑定的元素插入到 DOM 中时……
-      inserted: function (el:HTMLElement) {
-          // 聚焦元素
-          el.focus()
-        }
-  }</code></pre><p><strong>一个过滤器</strong></p>
-<pre><code>  // ./filter/index.ts
-  export const capitalize = function (value:string) {
-      if (!value) return &#39;&#39;
-      value = value.toString()
-      return value.charAt(0).toUpperCase() + value.slice(1)
-  }</code></pre><p><strong>组件中使用</strong></p>
-<pre><code>  import { capitalize }from &#39;@/filter/index&#39;
-  import { focus } from &#39;@/directive/index&#39;
-  @Component({
-      filters:{capitalize},
-      directives:{focus}
-  })
-  export default class Test extends Vue {}
-  复制代码&lt;div&gt;
-      &lt;input v-focus v-model=&quot;modelData&quot;&gt;
-      &lt;div&gt;{{modelData | capitalize}}&lt;/div&gt;
-  &lt;/div&gt;</code></pre><h2 id="Vuex与TS的糅合"><a href="#Vuex与TS的糅合" class="headerlink" title="Vuex与TS的糅合"></a>Vuex与TS的糅合</h2><p>因为vuex是个可选的，所以单独列出来。首先需要引用 <code>vuex-class</code> 库，该库有如下几个模块</p>
-<pre><code>  import {
-      namespace,
-      Action,
-      Getter,
-      Mutation,
-      State
-  } from &#39;vuex-class&#39;;</code></pre><p>分别对应vuex中的 action、getter、mutation等，使用ts对vuex的影响主要在组件对vuex的调用上，vuex的定义还是按照之前的写法即可 </p>
-<pre><code>  @State(&#39;foo&#39;) stateFoo
-  @State(state =&gt; state.bar) stateBar
-  @Getter(&#39;foo&#39;) getterFoo
-  @Action(&#39;foo&#39;) actionFoo
-  @Mutation(&#39;foo&#39;) mutationFoo
-  @someModule.Getter(&#39;foo&#39;) moduleGetterFoo
-
-  // If the argument is omitted, use the property name
-  // for each state/getter/action/mutation type
-  @State foo
-  @Getter bar
-  @Action baz
-  @Mutation qu</code></pre><p>若不想使用vuex定义的方法名，可以自定义属性名，因为都是定义在当前this上，所以直接使用this调用即可</p>
-<pre><code>  this.getterFoo // -&gt; store.getters.foo
-  this.actionFoo({ value: true }) // -&gt; store.dispatch(&#39;foo&#39;, { value: true })</code></pre><h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p> ……</p>
+<h1 id="基于jQuery带数据的日历插件"><a href="#基于jQuery带数据的日历插件" class="headerlink" title="基于jQuery带数据的日历插件"></a>基于jQuery带数据的日历插件</h1><hr>
+<p><a href="https://github.com/Lingtian007/calendar-pro" target="_blank" rel="noopener">源码地址</a></p>
 
             </div>
             <hr />
@@ -770,9 +648,9 @@ TS+VUE项目搭建
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《TS+VUE项目搭建》
+                    《基于jQuery带数据的日历插件》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/10/16/ts-vue-xiang-mu-da-jian/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2020/09/01/ji-yu-jquery-dai-shu-ju-de-ri-li-cha-jian/" property="cc:attributionName"
                rel="cc:attributionURL">
                 唐宇
             </a> 采用
@@ -813,7 +691,7 @@ TS+VUE项目搭建
         repo: 'Lingtian007.github.io',
         owner: 'Lingtian007',
         admin: "Lingtian007",
-        id: '2019/10/16/ts-vue-xiang-mu-da-jian/',
+        id: '2020/09/01/ji-yu-jquery-dai-shu-ju-de-ri-li-cha-jian/',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -1096,17 +974,18 @@ TS+VUE项目搭建
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2019/10/17/echars-zai-vue-zhong-ru-he-shi-yong/">
+                <a href="/2020/09/01/ji-yu-jquery-dai-shu-ju-de-ri-li-cha-jian/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="如何在 Vue 项目中使用 Echarts">
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="基于jQuery带数据的日历插件">
                         
-                        <span class="card-title">如何在 Vue 项目中使用 Echarts</span>
+                        <span class="card-title">基于jQuery带数据的日历插件</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1116,26 +995,27 @@ TS+VUE项目搭建
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-10-17
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-09-01
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Vue/" class="post-category" target="_blank">
-                                    Vue
+                            <a href="/categories/插件/" class="post-category" target="_blank">
+                                    插件
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Vue/" target="_blank">
-                        <span class="chip bg-color">Vue</span>
+                    <a href="/tags/插件/" target="_blank">
+                        <span class="chip bg-color">插件</span>
                     </a>
                     
                 </div>
@@ -1149,13 +1029,13 @@ TS+VUE项目搭建
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/10/15/ts-xue-xi-zong-jie/">
+                <a href="/2020/07/07/react-hooks-han-shu-shi-bian-cheng/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="TS基础总结">
+                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="React函数式编程 - Hooks">
                         
-                        <span class="card-title">TS基础总结</span>
+                        <span class="card-title">React函数式编程 - Hooks</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1166,14 +1046,14 @@ TS+VUE项目搭建
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-10-15
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-07-07
                             </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/TS/" class="post-category" target="_blank">
-                                    TS
+                            <a href="/categories/总结/" class="post-category" target="_blank">
+                                    总结
                                 </a>
                             
                             
@@ -1183,8 +1063,8 @@ TS+VUE项目搭建
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/TS/" target="_blank">
-                        <span class="chip bg-color">TS</span>
+                    <a href="/tags/总结/" target="_blank">
+                        <span class="chip bg-color">总结</span>
                     </a>
                     
                 </div>
