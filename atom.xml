@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.linfengdunwu.cn/"/>
-  <updated>2020-09-18T08:51:48.753Z</updated>
+  <updated>2020-09-23T03:05:58.401Z</updated>
   <id>https://www.linfengdunwu.cn/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>常用函数</title>
+    <link href="https://www.linfengdunwu.cn/2020/09/22/chang-yong-han-shu/"/>
+    <id>https://www.linfengdunwu.cn/2020/09/22/chang-yong-han-shu/</id>
+    <published>2020-09-22T04:32:09.000Z</published>
+    <updated>2020-09-23T03:05:58.401Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;div align=&quot;middle&quot;&gt;
+&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;330&quot; height=&quot;86&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="方法" scheme="https://www.linfengdunwu.cn/categories/%E6%96%B9%E6%B3%95/"/>
+    
+    
+      <category term="方法" scheme="https://www.linfengdunwu.cn/tags/%E6%96%B9%E6%B3%95/"/>
+    
+  </entry>
   
   <entry>
     <title>手写 React Hooks</title>
@@ -526,33 +553,6 @@
     
     
       <category term="方法" scheme="https://www.linfengdunwu.cn/tags/%E6%96%B9%E6%B3%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>从0搭建自己的webpack开发环境(转)</title>
-    <link href="https://www.linfengdunwu.cn/2019/09/22/cong-0-da-jian-zi-ji-de-webpack-kai-fa-huan-jing/"/>
-    <id>https://www.linfengdunwu.cn/2019/09/22/cong-0-da-jian-zi-ji-de-webpack-kai-fa-huan-jing/</id>
-    <published>2019-09-22T04:32:09.000Z</published>
-    <updated>2020-05-28T07:51:13.141Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;div align=&quot;middle&quot;&gt;
-&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;330&quot; height=&quot;86&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="开发环境" scheme="https://www.linfengdunwu.cn/categories/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/"/>
-    
-    
-      <category term="开发环境" scheme="https://www.linfengdunwu.cn/tags/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/"/>
     
   </entry>
   

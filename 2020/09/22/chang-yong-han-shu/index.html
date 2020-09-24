@@ -12,7 +12,7 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="基于jQuery带数据的日历插件, 唐宇的博客">
+    <meta name="keywords" content="常用函数, 唐宇的博客">
     <meta name="baidu-site-verification" content>
     <meta name="google-site-verification" content>
     <meta name="360-site-verification" content>
@@ -21,9 +21,11 @@
 
 
 闲来无事，随便写写……
-基于jQuery带数据的日历插件
-源码地址
-">
+开篇
+一 、时间类1.时间戳格式化  /**
+  * 时间戳格式化
+  * @param {*} timestamp  timestamp:时间戳 
+  * @param {*} num num:0 YYYY">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -31,7 +33,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>基于jQuery带数据的日历插件 | 唐宇的博客</title>
+    <title>常用函数 | 唐宇的博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -305,13 +307,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        基于jQuery带数据的日历插件
+                        常用函数
                     </div>
                 </div>
             </div>
@@ -422,8 +424,8 @@
                     
                     <div class="article-tag">
                         
-                        <a href="/tags/插件/" target="_blank">
-                            <span class="chip bg-color">插件</span>
+                        <a href="/tags/方法/" target="_blank">
+                            <span class="chip bg-color">方法</span>
                         </a>
                         
                     </div>
@@ -434,8 +436,8 @@
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                        <a href="/categories/插件/" class="post-category" target="_blank">
-                            插件
+                        <a href="/categories/方法/" class="post-category" target="_blank">
+                            方法
                         </a>
                         
                     </div>
@@ -446,7 +448,7 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-09-01
+                    2020-09-22
                 </div>
 
                 <div class="post-author info-break-policy">
@@ -460,14 +462,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    23
+                    1.4k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    6 分
                 </div>
                 
                 
@@ -484,12 +486,212 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <div align="middle">
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=411214279&auto=1&height=66"></iframe>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=407679465&auto=1&height=66"></iframe>
 </div>
 
 <p>闲来无事，随便写写……</p>
-<h1 id="基于jQuery带数据的日历插件"><a href="#基于jQuery带数据的日历插件" class="headerlink" title="基于jQuery带数据的日历插件"></a>基于jQuery带数据的日历插件</h1><hr>
-<p><a href="https://github.com/Lingtian007/calendar-pro" target="_blank" rel="noopener">源码地址</a></p>
+<h1 id="开篇"><a href="#开篇" class="headerlink" title="开篇"></a>开篇</h1><hr>
+<h1 id="一-、时间类"><a href="#一-、时间类" class="headerlink" title="一 、时间类"></a>一 、时间类</h1><h2 id="1-时间戳格式化"><a href="#1-时间戳格式化" class="headerlink" title="1.时间戳格式化"></a>1.时间戳格式化</h2><pre><code>  /**
+  * 时间戳格式化
+  * @param {*} timestamp  timestamp:时间戳 
+  * @param {*} num num:0 YYYY-MM-DD  num:1  YYYY-MM-DD hh:mm:ss
+  */
+  _timeConvert(timestamp,num){
+
+    var date = new Date(timestamp);
+    var y = date.getFullYear();  
+    var m = date.getMonth() + 1;  
+    m = m &lt; 10 ? (&#39;0&#39; + m) : m;  
+    var d = date.getDate();  
+    d = d &lt; 10 ? (&#39;0&#39; + d) : d;  
+    var h = date.getHours();
+    h = h &lt; 10 ? (&#39;0&#39; + h) : h;
+    var minute = date.getMinutes();
+    var second = date.getSeconds();
+    minute = minute &lt; 10 ? (&#39;0&#39; + minute) : minute;  
+    second = second &lt; 10 ? (&#39;0&#39; + second) : second; 
+    if(num==0){
+        return y + &#39;-&#39; + m + &#39;-&#39; + d;  
+    }else{
+        return y + &#39;-&#39; + m + &#39;-&#39; + d +&#39; &#39;+ h +&#39;:&#39;+ minute +&#39;:&#39; + second;  
+    }
+  }</code></pre><h2 id="2-时间格式化"><a href="#2-时间格式化" class="headerlink" title="2.时间格式化"></a>2.时间格式化</h2><pre><code>  /**
+  * 时间格式化成 YYYY-MM-DD
+  * @param date 日期
+  */
+  assetFormattingDateOther(date: string){
+    if (!date) return &quot;--&quot;;
+    return date.replace(/(\d{4})(\d{2})(\d{2})/g, &quot;$1-$2-$3&quot;);
+  };
+  /**
+  * 时间格式化成 MM-DD
+  * @param date 日期
+  */
+  export const assetFormattingDate = (date: string) =&gt; {
+    if (!date) return &quot;--&quot;;
+    return date.replace(/(\d{4})(\d{2})(\d{2})/g, &quot;$2-$3&quot;);
+  };</code></pre><h1 id="二-、数值类"><a href="#二-、数值类" class="headerlink" title="二 、数值类"></a>二 、数值类</h1><h2 id="1-转千分位"><a href="#1-转千分位" class="headerlink" title="1.转千分位"></a>1.转千分位</h2><pre><code>  /**
+  * 转千分位-保留2位小数
+  * @param value
+  */
+  export const transforThounds = (value: number | string | undefined) =&gt; {
+    if (!value) return &quot;--&quot;;
+    let n = parseFloat(value.toString());
+    if (isNaN(n)) {
+      return &quot;--&quot;;
+    } else {
+      let val = parseFloat(value.toString()).toFixed(2);
+      let re = /(\d{1,3})(?=(\d{3})+(?:\.))/g;
+      return val.replace(re, &quot;$1,&quot;);
+    }
+  };</code></pre><h2 id="2-号替换"><a href="#2-号替换" class="headerlink" title="2.*号替换"></a>2.*号替换</h2><pre><code>  /**
+  * *号替换
+  * @param value
+  */
+  export const taransforStart = (value: string) =&gt; {
+    let val = value;
+    return val.substr(0, 3) + &quot;****&quot; + val.substr(-2, 2);
+  };</code></pre><h2 id="3-数值格式化函数"><a href="#3-数值格式化函数" class="headerlink" title="3.数值格式化函数"></a>3.数值格式化函数</h2><pre><code> /**
+  * 数值格式化函数
+  * @param Dight:要格式化的 数字;
+  * @param How::要保留的小数位数。 
+  */
+  ForDight(Dight,How){
+  var Dight = Math.round (Dight*Math.pow(10,How))/Math.pow(10,How); 
+  return Dight; 
+
+  } </code></pre><h2 id="4-取整"><a href="#4-取整" class="headerlink" title="4.取整"></a>4.取整</h2><pre><code>  // 1.只保留整数部分（丢弃小数部分）
+  parseInt(5.1234);// 5
+  // 2.向下取整（&lt;= 该数值的最大整数）和parseInt()一样
+  Math.floor(5.1234);// 5    
+  // 3.向上取整（有小数，整数就+1）
+  Math.ceil(5.1234);
+
+  // 4.四舍五入（小数部分）
+  Math.round(5.1234);// 5
+  Math.round(5.6789);// 6
+  // 5.绝对值
+  Math.abs(-1);// 1
+  // 6.返回两者中的较大值
+  Math.max(1,2);// 2
+  // 7.返回两者中的较小值
+  Math.min(1,2);// 1
+  // 随机数（0-1）
+  Math.random();</code></pre><h1 id="三-、获取URL"><a href="#三-、获取URL" class="headerlink" title="三 、获取URL"></a>三 、获取URL</h1><h2 id="1-截取完整字符串中的host"><a href="#1-截取完整字符串中的host" class="headerlink" title="1.截取完整字符串中的host"></a>1.截取完整字符串中的host</h2><pre><code>  /**
+  * 截取完整字符串中的host
+  * @param {String} url 地址
+  * @returns {String} host
+  */
+  export const GetHost = (url) =&gt; {
+      url = url.match(/https?:\/\/([^/]+)\//i);
+      let domain = &#39;&#39;;
+      if (url &amp;&amp; url[1]) {
+          domain = url[1];
+      }
+      return domain;
+  };    </code></pre><h2 id="2-截取完整字符串中的子地址"><a href="#2-截取完整字符串中的子地址" class="headerlink" title="2.截取完整字符串中的子地址"></a>2.截取完整字符串中的子地址</h2><pre><code>  /**
+  * 截取完整字符串中的子地址
+  * @param {String} url 地址
+  * @returns {String} 子地址
+  */
+  export const GetSubUrl = (url) =&gt; {
+      url = url.match(/https?:\/\/.*?(\/[^]+)/i);
+      let domain = &#39;&#39;;
+      if (url &amp;&amp; url[1]) {
+          domain = url[1];
+      }
+      return domain;
+  };</code></pre><h2 id="3-获取URL中的参数"><a href="#3-获取URL中的参数" class="headerlink" title="3.获取URL中的参数"></a>3.获取URL中的参数</h2><pre><code>url：
+  http://xxxx.com?name=魅力&amp;id=123
+js中:
+var name = getUrlParam(&quot;name&quot;);
+/*通过正则获取url中的参数*/
+function getUrlParam(name){
+    var reg = new RegExp(&quot;(^|&amp;)&quot;+ name +&quot;=([^&amp;]*)(&amp;|$)&quot;);
+    var r = window.location.search.substr(1).match(reg);
+    if(r!=null)return  decodeURI(r[2]); return null;
+}</code></pre><h1 id="四-、字符串"><a href="#四-、字符串" class="headerlink" title="四 、字符串"></a>四 、字符串</h1><h2 id="1-js-判断字符串中是否包含某个字符串"><a href="#1-js-判断字符串中是否包含某个字符串" class="headerlink" title="1. js 判断字符串中是否包含某个字符串"></a>1. js 判断字符串中是否包含某个字符串</h2><ul>
+<li><p>String对象的方法</p>
+<pre><code>方法一: indexOf()   (推荐)
+var str = &quot;123&quot;;
+console.log(str.indexOf(&quot;3&quot;) != -1 );  // true
+indexOf() 方法可返回某个指定的字符串值在字符串中首次出现的位置。如果要检索的字符串值没有出现，则该方法返回 -1。
+方法二: search() 
+var str = &quot;123&quot;;
+console.log(str.search(&quot;3&quot;) != -1 );  // true
+search() 方法用于检索字符串中指定的子字符串，或检索与正则表达式相匹配的子字符串。如果没有找到任何匹配的子串，则返回 -1。
+方法三:match()
+var str = &quot;123&quot;;
+var reg = RegExp(/3/);
+if(str.match(reg)){
+    // 包含        
+}
+match() 方法可在字符串内检索指定的值，或找到一个或多个正则表达式的匹配。</code></pre></li>
+<li><p>RegExp 对象方法</p>
+</li>
+</ul>
+<pre><code>  方法四:test() 
+  var str = &quot;123&quot;;
+  var reg = RegExp(/3/);
+  console.log(reg.test(str)); // true
+  test() 方法用于检索字符串中指定的值。返回 true 或 false。
+  方法五:exec()
+  var str = &quot;123&quot;;
+  var reg = RegExp(/3/);
+  if(reg.exec(str)){
+      // 包含        
+  }
+  exec() 方法用于检索字符串中的正则表达式的匹配。返回一个数组，其中存放匹配的结果。如果未找到匹配，则返回值为 null。</code></pre><h2 id="2-JS-快速获取数据中的最大、最小值"><a href="#2-JS-快速获取数据中的最大、最小值" class="headerlink" title="2. JS 快速获取数据中的最大、最小值"></a>2. JS 快速获取数据中的最大、最小值</h2><pre><code>  var  numbers = [5,23 , 1420 , 5215 , 228 , 400 , 105, 411];
+  var maxInNumbers = Math.max.apply(Math, numbers);
+  var minInNumbers = Math.min.apply(Math, numbers);</code></pre><h2 id="3-加密"><a href="#3-加密" class="headerlink" title="3. 加密"></a>3. 加密</h2><p>用户名-手机号加密特殊处理: <a href="https://juejin.im/post/6854573208323457032" target="_blank" rel="noopener">地址</a></p>
+<h2 id="4-待添加"><a href="#4-待添加" class="headerlink" title="4. 待添加"></a>4. 待添加</h2><h1 id="五-、数组类"><a href="#五-、数组类" class="headerlink" title="五 、数组类"></a>五 、数组类</h1><h2 id="1-数组转对象"><a href="#1-数组转对象" class="headerlink" title="1. 数组转对象"></a>1. 数组转对象</h2><pre><code>  // arr需要转换的数组
+  Object.assign({},...arr)</code></pre><h2 id="2-数组的拼接"><a href="#2-数组的拼接" class="headerlink" title="2. 数组的拼接"></a>2. 数组的拼接</h2><p>  <a href="https://www.cnblogs.com/codebook/p/10472158.html" target="_blank" rel="noopener">地址</a></p>
+<pre><code>    var arr = [&#39;tom&#39;, &#39;jerry&#39;];
+    var arr2 = [1, 2];
+    arr.push(...arr2);
+    console.log(arr)
+    // [&quot;tom&quot;, &quot;jerry&quot;, 1, 2]</code></pre><h1 id="六-、杂项"><a href="#六-、杂项" class="headerlink" title="六 、杂项"></a>六 、杂项</h1><h2 id="1-防重"><a href="#1-防重" class="headerlink" title="1.防重"></a>1.防重</h2><pre><code>// 一
+  var isclick= true;
+  function click(){
+      if(isclick){
+        isclick = false;
+        //下面添加需要执行的事件
+          ...
+      }
+  }
+// 二
+  var isclick= true;
+  function click(){
+      if(isclick){
+          isclick= false;
+          //下面添加需要执行的事件
+              ...
+
+          //定时器
+          setTimeout(function(){ 
+              isclick = true;
+          }, 500);
+      }
+  }</code></pre><h2 id="2-定位到当前位置"><a href="#2-定位到当前位置" class="headerlink" title="2.定位到当前位置"></a>2.定位到当前位置</h2><pre><code>  /**
+  * 定位到当前位置
+  * index 当前时间 下标-(0-13)
+  */
+    set_month_position( index) {
+    let w = document.body.clientWidth / 2; //获取当前屏幕宽度
+    let tab_a = $(`${&quot;#a_detail&quot; + index}`); // 当前选择元素
+    let tab_aLeft = tab_a.position().left; //获取当前元素距离父元素左侧的距离
+    let tab_aWidth = tab_a.offset().width / 2; //获取当前元素的宽度
+    console.log(
+      tab_a,
+      w,
+      tab_aLeft,
+      tab_aWidth,
+      &quot;当前元素/视图宽度/元素距离父元素左侧的距离/元素的宽度&quot;
+    );
+    let scroll = (tab_a.parent() as any).scrollLeft();
+    let now_Width = scroll + (tab_aLeft - w) + tab_aWidth; //获取当全选中元素居中需设置的距离
+    (tab_a.parent() as any).scrollLeft(now_Width); //为当前元素的父元素设置滚动距离
+  }</code></pre><h1 id="七-、待添加"><a href="#七-、待添加" class="headerlink" title="七 、待添加"></a>七 、待添加</h1><h1 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h1><p>JS方法速查: <a href="https://zhukunpenglinyutong.github.io/1.quickcheck/" target="_blank" rel="noopener">https://zhukunpenglinyutong.github.io/1.quickcheck/</a><br>常用JS方法整理: <a href="https://www.juejin.im/post/6844903650586787848#heading-13" target="_blank" rel="noopener">https://www.juejin.im/post/6844903650586787848#heading-13</a><br>JS常用数组操作方法: <a href="https://www.juejin.im/post/6844904086870081544" target="_blank" rel="noopener">https://www.juejin.im/post/6844904086870081544</a></p>
 
             </div>
             <hr />
@@ -648,9 +850,9 @@
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《基于jQuery带数据的日历插件》
+                    《常用函数》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2020/09/01/ji-yu-jquery-dai-shu-ju-de-ri-li-cha-jian/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2020/09/22/chang-yong-han-shu/" property="cc:attributionName"
                rel="cc:attributionURL">
                 唐宇
             </a> 采用
@@ -691,7 +893,7 @@
         repo: 'Lingtian007.github.io',
         owner: 'Lingtian007',
         admin: "Lingtian007",
-        id: '2020/09/01/ji-yu-jquery-dai-shu-ju-de-ri-li-cha-jian/',
+        id: '2020/09/22/chang-yong-han-shu/',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -974,17 +1176,18 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/09/17/highcharts-tu-biao-shi-yong-zong-jie/">
+                <a href="/2020/09/22/chang-yong-han-shu/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/26.jpg" class="responsive-img" alt="highCharts图表使用总结">
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="常用函数">
                         
-                        <span class="card-title">highCharts图表使用总结</span>
+                        <span class="card-title">常用函数</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -994,9 +1197,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2020-09-17
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-09-22
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
@@ -1009,6 +1212,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -1027,13 +1231,13 @@
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/08/22/na-xie-ti-xiao-chuang-yi-de-vscode-cha-jian/">
+                <a href="/2020/09/17/shou-xie-react-hooks/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="那些提效-创意的 vscode 插件">
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="手写 React Hooks">
                         
-                        <span class="card-title">那些提效-创意的 vscode 插件</span>
+                        <span class="card-title">手写 React Hooks</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1044,14 +1248,14 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-08-22
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-09-17
                             </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/vscode-插件/" class="post-category" target="_blank">
-                                    vscode 插件
+                            <a href="/categories/源码/" class="post-category" target="_blank">
+                                    源码
                                 </a>
                             
                             
@@ -1061,8 +1265,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/vscode-插件/" target="_blank">
-                        <span class="chip bg-color">vscode 插件</span>
+                    <a href="/tags/源码/" target="_blank">
+                        <span class="chip bg-color">源码</span>
                     </a>
                     
                 </div>
