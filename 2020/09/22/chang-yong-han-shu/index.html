@@ -20,12 +20,13 @@
 
 
 
+
 闲来无事，随便写写…… 
 开篇
 一 、时间类1.时间戳格式化  /**
   * 时间戳格式化
   * @param {*} timestamp  timestamp:时间戳 
-  * @param {*} num num:0 YYY">
+  * @param {*} num num:0 YY">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -307,7 +308,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -462,14 +463,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.4k
+                    1.7k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    6 分
+                    8 分
                 </div>
                 
                 
@@ -486,7 +487,8 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <div align="middle">
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=407679465&auto=1&height=66"></iframe>
+<!-- <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=407679465&auto=1&height=66"></iframe> -->
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=1405128273&auto=1&height=66"></iframe>
 </div>
 
 <p>闲来无事，随便写写…… </p>
@@ -610,6 +612,12 @@ function getUrlParam(name){
     var reg = new RegExp(&quot;(^|&amp;)&quot;+ name +&quot;=([^&amp;]*)(&amp;|$)&quot;);
     var r = window.location.search.substr(1).match(reg);
     if(r!=null)return  decodeURI(r[2]); return null;
+}</code></pre><h2 id="4-去掉url前缀"><a href="#4-去掉url前缀" class="headerlink" title="4.去掉url前缀"></a>4.去掉url前缀</h2><pre><code>function removeUrlPrefix(a){
+    a=a.replace(/：/g,&quot;:&quot;).replace(/．/g,&quot;.&quot;).replace(/／/g,&quot;/&quot;);
+    while(trim(a).toLowerCase().indexOf(&quot;http://&quot;)==0){
+        a=trim(a.replace(/http:\/\//i,&quot;&quot;));
+    }
+    return a;
 }</code></pre><h1 id="四-、字符串"><a href="#四-、字符串" class="headerlink" title="四 、字符串"></a>四 、字符串</h1><h2 id="1-js-判断字符串中是否包含某个字符串"><a href="#1-js-判断字符串中是否包含某个字符串" class="headerlink" title="1. js 判断字符串中是否包含某个字符串"></a>1. js 判断字符串中是否包含某个字符串</h2><ul>
 <li><p>String对象的方法</p>
 <pre><code>方法一: indexOf()   (推荐)
@@ -644,7 +652,44 @@ match() 方法可在字符串内检索指定的值，或找到一个或多个正
   exec() 方法用于检索字符串中的正则表达式的匹配。返回一个数组，其中存放匹配的结果。如果未找到匹配，则返回值为 null。</code></pre><h2 id="2-JS-快速获取数据中的最大、最小值"><a href="#2-JS-快速获取数据中的最大、最小值" class="headerlink" title="2. JS 快速获取数据中的最大、最小值"></a>2. JS 快速获取数据中的最大、最小值</h2><pre><code>  var  numbers = [5,23 , 1420 , 5215 , 228 , 400 , 105, 411];
   var maxInNumbers = Math.max.apply(Math, numbers);
   var minInNumbers = Math.min.apply(Math, numbers);</code></pre><h2 id="3-加密"><a href="#3-加密" class="headerlink" title="3. 加密"></a>3. 加密</h2><p>用户名-手机号加密特殊处理: <a href="https://juejin.im/post/6854573208323457032" target="_blank" rel="noopener">地址</a></p>
-<h2 id="4-待添加"><a href="#4-待添加" class="headerlink" title="4. 待添加"></a>4. 待添加</h2><h1 id="五-、数组类"><a href="#五-、数组类" class="headerlink" title="五 、数组类"></a>五 、数组类</h1><h2 id="1-数组转对象"><a href="#1-数组转对象" class="headerlink" title="1. 数组转对象"></a>1. 数组转对象</h2><pre><code>  // arr需要转换的数组
+<h2 id="4-是否为非空"><a href="#4-是否为非空" class="headerlink" title="4. 是否为非空"></a>4. 是否为非空</h2><pre><code>  /** 
+  *是否为非空
+  *data 值
+  */
+  function isNotEmpty(data){ 
+    return data !== &#39;&#39; &amp;&amp; data !== null &amp;&amp; data!== undefined &amp;&amp; data !== JSON.stringify(data) !== &#39;[]&#39; &amp;&amp; data !== JSON.stringify(data) !== &#39;{}&#39;
+  }  
+  isEmpty(null) // false
+  isEmpty(1)    //true</code></pre><h2 id="5-字符串长度截取"><a href="#5-字符串长度截取" class="headerlink" title="5. 字符串长度截取"></a>5. 字符串长度截取</h2><pre><code>  function cutstr(str, len) {
+      var temp,
+          icount = 0,
+          patrn = /[^\x00-\xff]/，
+          strre = &quot;&quot;;
+      for (var i = 0; i &lt; str.length; i++) {
+          if (icount &lt; len - 1) {
+              temp = str.substr(i, 1);
+                  if (patrn.exec(temp) == null) {
+                    icount = icount + 1
+              } else {
+                  icount = icount + 2
+              }
+              strre += temp
+              } else {
+              break;
+          }
+      }
+      return strre + &quot;...&quot;
+  }</code></pre><h2 id="6-替换全部"><a href="#6-替换全部" class="headerlink" title="6. 替换全部"></a>6. 替换全部</h2><pre><code>  String.prototype.replaceAll = function(s1, s2) {
+      return this.replace(new RegExp(s1, &quot;gm&quot;), s2)
+  }</code></pre><h2 id="7-清除空格"><a href="#7-清除空格" class="headerlink" title="7. 清除空格"></a>7. 清除空格</h2><pre><code>  // 清除 空格
+  String.prototype.trim = function() {
+      var reExtraSpace = /^\s*(.*?)\s+$/;
+      return this.replace(reExtraSpace, &quot;$1&quot;)
+  }
+
+  // 清除左右空格
+  function ltrim(s){ return s.replace( /^(\s*|　*)/, &quot;&quot;); } 
+  function rtrim(s){ return s.replace( /(\s*|　*)$/, &quot;&quot;); }</code></pre><h2 id="8-待添加"><a href="#8-待添加" class="headerlink" title="8. 待添加"></a>8. 待添加</h2><h1 id="五-、数组类"><a href="#五-、数组类" class="headerlink" title="五 、数组类"></a>五 、数组类</h1><h2 id="1-数组转对象"><a href="#1-数组转对象" class="headerlink" title="1. 数组转对象"></a>1. 数组转对象</h2><pre><code>  // arr需要转换的数组
   Object.assign({},...arr)</code></pre><h2 id="2-数组的拼接"><a href="#2-数组的拼接" class="headerlink" title="2. 数组的拼接"></a>2. 数组的拼接</h2><p>  <a href="https://www.cnblogs.com/codebook/p/10472158.html" target="_blank" rel="noopener">地址</a></p>
 <pre><code>    var arr = [&#39;tom&#39;, &#39;jerry&#39;];
     var arr2 = [1, 2];
@@ -691,7 +736,7 @@ match() 方法可在字符串内检索指定的值，或找到一个或多个正
     let scroll = (tab_a.parent() as any).scrollLeft();
     let now_Width = scroll + (tab_aLeft - w) + tab_aWidth; //获取当全选中元素居中需设置的距离
     (tab_a.parent() as any).scrollLeft(now_Width); //为当前元素的父元素设置滚动距离
-  }</code></pre><h1 id="七-、待添加"><a href="#七-、待添加" class="headerlink" title="七 、待添加"></a>七 、待添加</h1><h1 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h1><p>JS方法速查: <a href="https://zhukunpenglinyutong.github.io/1.quickcheck/" target="_blank" rel="noopener">https://zhukunpenglinyutong.github.io/1.quickcheck/</a><br>常用JS方法整理: <a href="https://www.juejin.im/post/6844903650586787848#heading-13" target="_blank" rel="noopener">https://www.juejin.im/post/6844903650586787848#heading-13</a><br>JS常用数组操作方法: <a href="https://www.juejin.im/post/6844904086870081544" target="_blank" rel="noopener">https://www.juejin.im/post/6844904086870081544</a></p>
+  }</code></pre><h1 id="七-、待添加"><a href="#七-、待添加" class="headerlink" title="七 、待添加"></a>七 、待添加</h1><h1 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h1><p>JS方法速查: <a href="https://zhukunpenglinyutong.github.io/1.quickcheck/" target="_blank" rel="noopener">https://zhukunpenglinyutong.github.io/1.quickcheck/</a><br>常用JS方法整理: <a href="https://www.juejin.im/post/6844903650586787848#heading-13" target="_blank" rel="noopener">https://www.juejin.im/post/6844903650586787848#heading-13</a><br>JS常用数组操作方法: <a href="https://www.juejin.im/post/6844904086870081544" target="_blank" rel="noopener">https://www.juejin.im/post/6844904086870081544</a><br>Javascript常用方法函数收集一: <a href="https://www.imooc.com/article/1237" target="_blank" rel="noopener">https://www.imooc.com/article/1237</a><br>Javascript常用方法函数收集二: <a href="https://www.imooc.com/article/1242" target="_blank" rel="noopener">https://www.imooc.com/article/1242</a></p>
 
             </div>
             <hr />
@@ -1185,7 +1230,7 @@ match() 方法可在字符串内检索指定的值，或找到一个或多个正
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="常用函数">
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="常用函数">
                         
                         <span class="card-title">常用函数</span>
                     </div>
@@ -1235,7 +1280,7 @@ match() 方法可在字符串内检索指定的值，或找到一个或多个正
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="手写 React Hooks">
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="手写 React Hooks">
                         
                         <span class="card-title">手写 React Hooks</span>
                     </div>
@@ -1421,7 +1466,7 @@ match() 方法可在字符串内检索指定的值，或找到一个或多个正
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">48.6k</span>
+            <span class="white-color">48.8k</span>
             
 
             <br>
