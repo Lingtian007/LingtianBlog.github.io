@@ -308,7 +308,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -463,14 +463,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.7k
+                    2.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    8 分
+                    10 分
                 </div>
                 
                 
@@ -736,7 +736,106 @@ match() 方法可在字符串内检索指定的值，或找到一个或多个正
     let scroll = (tab_a.parent() as any).scrollLeft();
     let now_Width = scroll + (tab_aLeft - w) + tab_aWidth; //获取当全选中元素居中需设置的距离
     (tab_a.parent() as any).scrollLeft(now_Width); //为当前元素的父元素设置滚动距离
-  }</code></pre><h1 id="七-、待添加"><a href="#七-、待添加" class="headerlink" title="七 、待添加"></a>七 、待添加</h1><h1 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h1><p>JS方法速查: <a href="https://zhukunpenglinyutong.github.io/1.quickcheck/" target="_blank" rel="noopener">https://zhukunpenglinyutong.github.io/1.quickcheck/</a><br>常用JS方法整理: <a href="https://www.juejin.im/post/6844903650586787848#heading-13" target="_blank" rel="noopener">https://www.juejin.im/post/6844903650586787848#heading-13</a><br>JS常用数组操作方法: <a href="https://www.juejin.im/post/6844904086870081544" target="_blank" rel="noopener">https://www.juejin.im/post/6844904086870081544</a><br>Javascript常用方法函数收集一: <a href="https://www.imooc.com/article/1237" target="_blank" rel="noopener">https://www.imooc.com/article/1237</a><br>Javascript常用方法函数收集二: <a href="https://www.imooc.com/article/1242" target="_blank" rel="noopener">https://www.imooc.com/article/1242</a></p>
+  }</code></pre><h2 id="3-渲染几万条数据不卡住页面"><a href="#3-渲染几万条数据不卡住页面" class="headerlink" title="3.渲染几万条数据不卡住页面"></a>3.渲染几万条数据不卡住页面</h2><pre><code>  // 渲染大数据时，合理使用createDocumentFragment和requestAnimationFrame，将操作切分为一小段一小段执行。
+  setTimeout(() =&gt; {
+    // 插入十万条数据
+    const total = 100000;
+    // 一次插入的数据
+    const once = 20;
+    // 插入数据需要的次数
+    const loopCount = Math.ceil(total / once);
+    let countOfRender = 0;
+    const ul = document.querySelector(&#39;ul&#39;);
+    // 添加数据的方法
+    function add() {
+      const fragment = document.createDocumentFragment();
+      for(let i = 0; i &lt; once; i++) {
+        const li = document.createElement(&#39;li&#39;);
+        li.innerText = Math.floor(Math.random() * total);
+        fragment.appendChild(li);
+      }
+      ul.appendChild(fragment);
+      countOfRender += 1;
+      loop();
+    }
+    function loop() {
+      if(countOfRender &lt; loopCount) {
+        window.requestAnimationFrame(add);
+      }
+    }
+    loop();
+  }, 0)</code></pre><h2 id="4-图片懒加载"><a href="#4-图片懒加载" class="headerlink" title="4.图片懒加载"></a>4.图片懒加载</h2><pre><code>  // &lt;img src=&quot;default.png&quot; data-src=&quot;https://xxxx/real.png&quot;&gt;
+  function isVisible(el) {
+    const position = el.getBoundingClientRect()
+    const windowHeight = document.documentElement.clientHeight
+    // 顶部边缘可见
+    const topVisible = position.top &gt; 0 &amp;&amp; position.top &lt; windowHeight;
+    // 底部边缘可见
+    const bottomVisible = position.bottom &lt; windowHeight &amp;&amp; position.bottom &gt; 0;
+    return topVisible || bottomVisible;
+  }
+
+  function imageLazyLoad() {
+    const images = document.querySelectorAll(&#39;img&#39;)
+    for (let img of images) {
+      const realSrc = img.dataset.src
+      if (!realSrc) continue
+      if (isVisible(img)) {
+        img.src = realSrc
+        img.dataset.src = &#39;&#39;
+      }
+    }
+  }
+
+  // 测试
+  window.addEventListener(&#39;load&#39;, imageLazyLoad)
+  window.addEventListener(&#39;scroll&#39;, imageLazyLoad)
+  // or
+  window.addEventListener(&#39;scroll&#39;, throttle(imageLazyLoad, 1000))</code></pre><h1 id="七-、防抖和节流"><a href="#七-、防抖和节流" class="headerlink" title="七 、防抖和节流"></a>七 、防抖和节流</h1><pre><code>  // 防抖
+  //定义:触发高频时间后n秒内函数只会执行一次,如果n秒内高频时间再次触发,则重新计算时间。
+  function debounce(func, ms = 1000) {
+    let timer;
+    return function (...args) {
+      if (timer) {
+        clearTimeout(timer)
+      }
+      timer = setTimeout(() =&gt; {
+        func.apply(this, args)
+      }, ms)
+    }
+  }
+
+  // 测试
+  const task = () =&gt; { console.log(&#39;run task&#39;) }
+  const debounceTask = debounce(task, 1000)
+  window.addEventListener(&#39;scroll&#39;, debounceTask)
+
+
+  // 节流
+  // 定义:高频时间触发,但n秒内只会执行一次,所以节流会稀释函数的执行频率。
+  function throttle(func, ms = 1000) {
+    let canRun = true
+    return function (...args) {
+      if (!canRun) return
+      canRun = false
+      setTimeout(() =&gt; {
+        func.apply(this, args)
+        canRun = true
+      }, ms)
+    }
+  }
+
+  // 测试
+  const task = () =&gt; { console.log(&#39;run task&#39;) }
+  const throttleTask = throttle(task, 1000)
+  window.addEventListener(&#39;scroll&#39;, throttleTask)</code></pre><h1 id="八-、待添加"><a href="#八-、待添加" class="headerlink" title="八 、待添加"></a>八 、待添加</h1><h1 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h1><ul>
+<li>JS方法速查: <a href="https://zhukunpenglinyutong.github.io/1.quickcheck/" target="_blank" rel="noopener">https://zhukunpenglinyutong.github.io/1.quickcheck/</a></li>
+<li>常用JS方法整理: <a href="https://www.juejin.im/post/6844903650586787848#heading-13" target="_blank" rel="noopener">https://www.juejin.im/post/6844903650586787848#heading-13</a></li>
+<li>JS常用数组操作方法: <a href="https://www.juejin.im/post/6844904086870081544" target="_blank" rel="noopener">https://www.juejin.im/post/6844904086870081544</a></li>
+<li>Javascript常用方法函数收集一: <a href="https://www.imooc.com/article/1237" target="_blank" rel="noopener">https://www.imooc.com/article/1237</a></li>
+<li>Javascript常用方法函数收集二: <a href="https://www.imooc.com/article/1242" target="_blank" rel="noopener">https://www.imooc.com/article/1242</a></li>
+<li>32个手撕JS: <a href="https://juejin.im/post/6875152247714480136#heading-37" target="_blank" rel="noopener">https://juejin.im/post/6875152247714480136#heading-37</a></li>
+</ul>
 
             </div>
             <hr />
@@ -1221,18 +1320,17 @@ match() 方法可在字符串内检索指定的值，或找到一个或多个正
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
-            </div>
+                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/09/22/chang-yong-han-shu/">
+                <a href="/2020/11/13/qian-duan-huan-cun-fang-an/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="常用函数">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="前端缓存方案">
                         
-                        <span class="card-title">常用函数</span>
+                        <span class="card-title">前端缓存方案</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1242,9 +1340,9 @@ match() 方法可在字符串内检索指定的值，或找到一个或多个正
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-09-22
-                            </span>
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2020-11-13
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
@@ -1257,7 +1355,6 @@ match() 方法可在字符串内检索指定的值，或找到一个或多个正
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
@@ -1280,7 +1377,7 @@ match() 方法可在字符串内检索指定的值，或找到一个或多个正
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="手写 React Hooks">
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="手写 React Hooks">
                         
                         <span class="card-title">手写 React Hooks</span>
                     </div>
@@ -1466,7 +1563,7 @@ match() 方法可在字符串内检索指定的值，或找到一个或多个正
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">48.8k</span>
+            <span class="white-color">49.7k</span>
             
 
             <br>

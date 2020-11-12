@@ -12,7 +12,7 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="VUE中使用echarts配合canvas绘制图例下载, 唐宇的博客">
+    <meta name="keywords" content="前端缓存方案, 唐宇的博客">
     <meta name="baidu-site-verification" content>
     <meta name="google-site-verification" content>
     <meta name="360-site-verification" content>
@@ -21,8 +21,13 @@
 
 
 闲来无事，随便写写……
-VUE中使用echarts配合canvas绘制图例
-什么是canvas?HTML5 &amp;lt;canvas&amp;gt; 元素用于图形的绘制，通过脚本 (通常是JavaScript)来完成.&amp;lt;canvas&amp;gt">
+开篇
+前端 api 请求缓存方案
+— TS版 —/**
+* 存储数据
+* */
+class CacheData&amp;lt;A extends Array&amp;lt;any&gt;, T&gt; {
+  data: { [key:">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -30,7 +35,7 @@ VUE中使用echarts配合canvas绘制图例
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>VUE中使用echarts配合canvas绘制图例下载 | 唐宇的博客</title>
+    <title>前端缓存方案 | 唐宇的博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -304,13 +309,13 @@ VUE中使用echarts配合canvas绘制图例
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        VUE中使用echarts配合canvas绘制图例下载
+                        前端缓存方案
                     </div>
                 </div>
             </div>
@@ -445,7 +450,7 @@ VUE中使用echarts配合canvas绘制图例
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-10-24
+                    2020-11-13
                 </div>
 
                 <div class="post-author info-break-policy">
@@ -459,14 +464,14 @@ VUE中使用echarts配合canvas绘制图例
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    630
+                    453
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    2 分
                 </div>
                 
                 
@@ -483,143 +488,134 @@ VUE中使用echarts配合canvas绘制图例
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <div align="middle">
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=411214279&auto=1&height=66"></iframe>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=407679465&auto=1&height=66"></iframe>
 </div>
 
 <p>闲来无事，随便写写……</p>
-<h1 id="VUE中使用echarts配合canvas绘制图例"><a href="#VUE中使用echarts配合canvas绘制图例" class="headerlink" title="VUE中使用echarts配合canvas绘制图例"></a>VUE中使用echarts配合canvas绘制图例</h1><hr>
-<h2 id="什么是canvas"><a href="#什么是canvas" class="headerlink" title="什么是canvas?"></a>什么是<a href="https://www.runoob.com/html/html5-canvas.html" target="_blank" rel="noopener">canvas</a>?</h2><p>HTML5 <code>&lt;canvas&gt;</code> 元素用于图形的绘制，通过脚本 (通常是JavaScript)来完成.<br><code>&lt;canvas&gt;</code> 标签只是图形容器，您必须使用脚本来绘制图形。<br>你可以通过多种方法使用 canvas 绘制路径,盒、圆、字符以及添加图像。</p>
-<h2 id="添加图例"><a href="#添加图例" class="headerlink" title="添加图例"></a>添加图例</h2><p>  <strong>html</strong></p>
-<pre><code>&lt;img src=&quot;../../../static/img/xx.png&quot; id=&quot;zhinanzhen&quot; alt=&quot;指南针&quot; class=&quot;NS&quot; v-if=&quot;NSShow&quot; &gt;
-&lt;img src=&quot;../../../static/img/xx.png&quot; id=&quot;bilichi&quot; alt class=&quot;blc&quot; v-if=&quot;NSShow&quot; /&gt;</code></pre><p>  <strong>js</strong></p>
-<pre><code>    //点击下载
-    downloadImg() {
-    let canvas = document.getElementsByTagName(&#39;canvas&#39;)[0]; // 获取地图元素
-    let tempcanvas = document.createElement(&#39;canvas&#39;);  // 创建地图元素
-    tempcanvas.width = 700;
-    tempcanvas.height = canvas.height;
-    // tempcanvas.style.backgroundColor = &#39;#fff&#39;
-    let ctx = tempcanvas.getContext(&#39;2d&#39;); 
+<h1 id="开篇"><a href="#开篇" class="headerlink" title="开篇"></a>开篇</h1><hr>
+<p>前端 api 请求缓存方案</p>
+<h1 id="—-TS版-—"><a href="#—-TS版-—" class="headerlink" title="— TS版 —"></a>— TS版 —</h1><pre class="line-numbers language-ts"><code class="language-ts"><span class="token comment" spellcheck="true">/**
+* 存储数据
+* */</span>
+<span class="token keyword">class</span> <span class="token class-name">CacheData</span><span class="token operator">&lt;</span>A <span class="token keyword">extends</span> <span class="token class-name">Array</span><span class="token operator">&lt;</span><span class="token keyword">any</span><span class="token operator">></span><span class="token punctuation">,</span> T<span class="token operator">></span> <span class="token punctuation">{</span>
+  data<span class="token punctuation">:</span> <span class="token punctuation">{</span> <span class="token punctuation">[</span>key<span class="token punctuation">:</span> <span class="token keyword">string</span><span class="token punctuation">]</span><span class="token punctuation">:</span> T <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">get</span><span class="token punctuation">(</span>args<span class="token punctuation">:</span> A<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>data<span class="token punctuation">[</span>JSON<span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span>args<span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">set</span><span class="token punctuation">(</span>args<span class="token punctuation">:</span> A<span class="token punctuation">,</span> newData<span class="token punctuation">:</span> T<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>data<span class="token punctuation">[</span>JSON<span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span>args<span class="token punctuation">)</span><span class="token punctuation">]</span> <span class="token operator">=</span> newData<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">remove</span><span class="token punctuation">(</span>args<span class="token punctuation">:</span> A<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">delete</span> <span class="token keyword">this</span><span class="token punctuation">.</span>data<span class="token punctuation">[</span>JSON<span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span>args<span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">clear</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>data <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment" spellcheck="true">/**
+* 缓存方法 的 高阶函数
+* @param fun 需要缓存的函数
+* */</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">function</span> cache<span class="token operator">&lt;</span>A <span class="token keyword">extends</span> <span class="token class-name">Array</span><span class="token operator">&lt;</span><span class="token keyword">any</span><span class="token operator">></span><span class="token punctuation">,</span> R<span class="token operator">></span><span class="token punctuation">(</span>
+  fun<span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token operator">...</span>args<span class="token punctuation">:</span> A<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> Promise<span class="token operator">&lt;</span>R<span class="token operator">></span>
+<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> cacheMap <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">CacheData</span><span class="token operator">&lt;</span>A<span class="token punctuation">,</span> R<span class="token operator">></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">function</span> <span class="token function">cachedFunction</span><span class="token punctuation">(</span><span class="token operator">...</span>args<span class="token punctuation">:</span> A<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> cacheData <span class="token operator">=</span> cacheMap<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span>args<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>cacheData <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">try</span><span class="token punctuation">{</span>
+          <span class="token keyword">let</span> name <span class="token operator">=</span> <span class="token punctuation">(</span>cacheData as <span class="token keyword">any</span><span class="token punctuation">)</span><span class="token punctuation">.</span>__proto__<span class="token punctuation">.</span><span class="token keyword">constructor</span><span class="token punctuation">.</span>name<span class="token punctuation">;</span>
+          console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"从缓存中读取数据"</span><span class="token punctuation">)</span>
+          console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>name<span class="token punctuation">,</span><span class="token string">"参数:"</span> <span class="token punctuation">,</span> JSON<span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span>args<span class="token punctuation">)</span><span class="token punctuation">)</span>
+          console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span> name<span class="token punctuation">,</span> <span class="token string">"返回值:"</span><span class="token punctuation">,</span> JSON<span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span>cacheData<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token keyword">catch</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">{</span>
+          console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> Promise<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>cacheData<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> <span class="token function">fun</span><span class="token punctuation">(</span><span class="token operator">...</span>args<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>r <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+      cacheMap<span class="token punctuation">.</span><span class="token keyword">set</span><span class="token punctuation">(</span>args<span class="token punctuation">,</span> r<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">return</span> r<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment" spellcheck="true">// 添加缓存对象</span>
+  cachedFunction<span class="token punctuation">.</span>cache <span class="token operator">=</span> cacheMap<span class="token punctuation">;</span>
+
+  <span class="token keyword">return</span> cachedFunction<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>使用方法</p>
+<pre class="line-numbers language-ts"><code class="language-ts"><span class="token keyword">import</span> cache <span class="token keyword">from</span> <span class="token string">"common/util/cache"</span>
+<span class="token keyword">import</span> someService <span class="token keyword">from</span> <span class="token string">"service/xxx"</span>
+
+<span class="token comment" spellcheck="true">// 返回有缓存的Service 的闭包的函数</span>
+<span class="token keyword">const</span> cachedService <span class="token operator">=</span> <span class="token function">cache</span><span class="token punctuation">(</span>someService<span class="token punctuation">)</span> 
 
 
-    ctx.drawImage(canvas, (canvas.width - 700) / 2, 0, 700, canvas.height, 0, 0, 700, canvas.height);
-    //context.drawImage(img,sx,sy,swidth,sheight,x,y,width,height);
-    let img1 = document.getElementById(&quot;zhinanzhen&quot;); 
-    img1.setAttribute(&#39;crossOrigin&#39;, &#39;anonymous&#39;); // 图片跨域
-    ctx.drawImage(img1, 550, 100, 82, 82)
-    //ctx.drawImage(img1, 左右, 上下, 长, 宽)
-    let img2 = document.getElementById(&quot;bilichi&quot;);
-    img2.setAttribute(&#39;crossOrigin&#39;, &#39;anonymous&#39;);
-    ctx.drawImage(img2, 50, canvas.height - 32, 165, 32)
+<span class="token keyword">class</span> <span class="token class-name">YourEffect</span> <span class="token punctuation">{</span>
+    <span class="token function">someEffect</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token function">cachedService</span><span class="token punctuation">(</span>serviceParams<span class="token punctuation">)</span>
+            <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>response <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+                <span class="token comment" spellcheck="true">// ...</span>
+            <span class="token punctuation">}</span><span class="token punctuation">)</span>       
+    <span class="token punctuation">}</span>       
 
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="—-JS版-—"><a href="#—-JS版-—" class="headerlink" title="— JS版 —"></a>— JS版 —</h1><pre class="line-numbers language-ts"><code class="language-ts"><span class="token keyword">const</span> querys <span class="token operator">=</span><span class="token punctuation">{</span>
+    wares<span class="token punctuation">:</span> <span class="token string">'getWares'</span><span class="token punctuation">,</span>
+    skus<span class="token punctuation">:</span> <span class="token string">'getSku'</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">const</span> promiseCache <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Map</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 
-    let url = tempcanvas.toDataURL(&quot;image/png&quot;); // 生成图片 第二个参数0-1 默认0.94
-    // let url=tempcanvas.toDataURL(&quot;image/jpeg&quot;, 1.0);
+async <span class="token function">queryAll</span><span class="token punctuation">(</span>queryApiName<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// 判断传入的数据是否是数组</span>
+    <span class="token keyword">const</span> queryIsArray <span class="token operator">=</span> <span class="token keyword">Array</span><span class="token punctuation">.</span><span class="token function">isArray</span><span class="token punctuation">(</span>queryApiName<span class="token punctuation">)</span>
+    <span class="token comment" spellcheck="true">// 统一化处理数据，无论是字符串还是数组均视为数组</span>
+    <span class="token keyword">const</span> apis <span class="token operator">=</span> queryIsArray <span class="token operator">?</span> queryApiName <span class="token punctuation">:</span> <span class="token punctuation">[</span>queryApiName<span class="token punctuation">]</span>
 
-    var oA = document.createElement(&quot;a&quot;);
-    oA.download = &#39;&#39;;// 设置下载的文件名，默认是&#39;下载&#39;
-    oA.href = url;
-    document.body.appendChild(oA);
-    oA.click();
-    oA.remove(); // 下载之后把创建的元素删除
-     }
-     // 绘制底图 
+    <span class="token comment" spellcheck="true">// 获取所有的 请求服务</span>
+    <span class="token keyword">const</span> promiseApi <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
 
-    drawMap() {
-    let _this = this
-    this.$echarts.registerMap(&#39;maps&#39;, china);
-    mapcontainerPro ? mapcontainerPro.dispose() : &#39;&#39;
-    mapcontainerPro = this.$echarts.init(document.getElementById(&#39;mapcontainerPro&#39;));
-    mapcontainerPro.setOption({   
-      title: [{
-        text: this.imgTitle,
-        left: &#39;center&#39;,
-        top: &#39;3%&#39;,
-        textStyle: {
-          color: &#39;black&#39;,
-          fontSize: 16
-        }
-      }, {
-        text: this.unit,
-        left: &#39;34%&#39;,
-        bottom: &#39;22%&#39;,
-        textStyle: {
-          fontSize: 16,
-          fontWeight: &#39;bold&#39;
-        }
-      }],
-      tooltip: {
-        show: true,
-        formatter: &#39;{b0}: {c0}&#39;
-      },
-      toolbox: {
-        show: false,
-        feature: {
-          dataView: {},
-          // saveAsImage: {
-          //   show: true,
-          //   excludeComponents: [&#39;toolbox&#39;],
-          //   pixelRatio: 2
-          // }
-        }
-      },
-      color: [&#39;#5B9CD6&#39;],
-      visualMap: {            // 图例
-        pieces: this.pieces,
-        inverse: false,       // 图例排序
-        orient: &#39;vertical&#39;, //图例方向
-        left: &#39;34%&#39;,
-        top: &#39;78%&#39;,
-        // min: 0,//最小
-        // max: this.range4,//最大
-        // splitNumber: 4,//共分5层
-        color: this.vColor,//颜色从高到低依次渐变
-        textStyle: {
-          fontSize: 16
-          // color: &#39;#00000&#39;,
-          //text:&#39;9jfhfhn&#39;
-        },
-      },
-      series: [
-        {
-          name: &#39;全国地图&#39;,
-          type: &#39;map&#39;,
-          aspectScale: 0.9, //地图长宽比
-          zoom: 1.1, //缩放比例
-          top: &#39;15%&#39;,
-          left: &#39;center&#39;,
-          label: {
-            normal: {
-              fontSize: 12
-            }
-          },
-          map: &#39;maps&#39;, // 自定义扩展图表类型
-          symbolSize: function (val) {
-            return val[2] / 10;
-          },
-          // label:{
-          //   show:true,
-          //   fontSize:12,
-          //   offset:[30,40]
-          // },
-          itemStyle: {
-            normal: {
-              label: {
-                show: true,
-                fontWeight: &quot;bolder&quot;,
-                fontSize: 12
-              },
-              areaColor: &#39;blue&#39;,
-              borderColor: &#39;black&#39;,
-              borderWidth: 0
-            },
-            emphasis: { label: { show: true } },
-          },
-          data: this.showData
-        }
-      ]
-    });
-  }</code></pre>
+    apis<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span>api <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">// 利用promise </span>
+        <span class="token keyword">let</span> promise <span class="token operator">=</span> promiseCache<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span>api<span class="token punctuation">)</span>
+
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>promise<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token comment" spellcheck="true">// 如果 缓存中有，直接push</span>
+            promise<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>promise<span class="token punctuation">)</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+            promise <span class="token operator">=</span> request<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span>querys<span class="token punctuation">[</span>api<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>res <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+                <span class="token comment" spellcheck="true">// 对res 进行操作</span>
+                <span class="token operator">...</span>
+                <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token keyword">catch</span><span class="token punctuation">(</span>error <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+                <span class="token comment" spellcheck="true">// 在请求回来后，如果出现问题，把promise从cache中删除</span>
+                promiseCache<span class="token punctuation">.</span><span class="token keyword">delete</span><span class="token punctuation">(</span>api<span class="token punctuation">)</span>
+                <span class="token keyword">return</span> Promise<span class="token punctuation">.</span><span class="token function">reject</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span>
+            <span class="token punctuation">}</span><span class="token punctuation">)</span>
+            promiseCache<span class="token punctuation">.</span><span class="token keyword">set</span><span class="token punctuation">(</span>api<span class="token punctuation">,</span> promise<span class="token punctuation">)</span>
+            promiseCache<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>promise<span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> Promise<span class="token punctuation">.</span><span class="token function">all</span><span class="token punctuation">(</span>promiseApi<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>res <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">// 根据传入的 是字符串还是数组来返回数据，因为本身都是数组操作</span>
+        <span class="token comment" spellcheck="true">// 如果传入的是字符串，则需要取出操作</span>
+        <span class="token keyword">return</span> queryIsArray <span class="token operator">?</span> res <span class="token punctuation">:</span> res<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+调用方式
+
+<span class="token function">queryAll</span><span class="token punctuation">(</span><span class="token string">'wares'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span> <span class="token operator">...</span> <span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true">// 第二次调用 不会去取 wares，只会去skus</span>
+<span class="token function">queryAll</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'wares'</span><span class="token punctuation">,</span> <span class="token string">'skus'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span> <span class="token operator">...</span> <span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
             </div>
             <hr />
 
@@ -777,9 +773,9 @@ VUE中使用echarts配合canvas绘制图例
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《VUE中使用echarts配合canvas绘制图例下载》
+                    《前端缓存方案》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/10/24/vue-zhong-shi-yong-echarts-pei-he-canvas-hui-zhi-tu-li/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2020/11/13/qian-duan-huan-cun-fang-an/" property="cc:attributionName"
                rel="cc:attributionURL">
                 唐宇
             </a> 采用
@@ -820,7 +816,7 @@ VUE中使用echarts配合canvas绘制图例
         repo: 'Lingtian007.github.io',
         owner: 'Lingtian007',
         admin: "Lingtian007",
-        id: '2019/10/24/vue-zhong-shi-yong-echarts-pei-he-canvas-hui-zhi-tu-li/',
+        id: '2020/11/13/qian-duan-huan-cun-fang-an/',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -1103,17 +1099,18 @@ VUE中使用echarts配合canvas绘制图例
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2019/11/06/react-zong-jie/">
+                <a href="/2020/11/13/qian-duan-huan-cun-fang-an/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="React小技巧汇总">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="前端缓存方案">
                         
-                        <span class="card-title">React小技巧汇总</span>
+                        <span class="card-title">前端缓存方案</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1123,26 +1120,27 @@ VUE中使用echarts配合canvas绘制图例
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-11-06
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-11-13
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/React/" class="post-category" target="_blank">
-                                    React
+                            <a href="/categories/方法/" class="post-category" target="_blank">
+                                    方法
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/React/" target="_blank">
-                        <span class="chip bg-color">React</span>
+                    <a href="/tags/方法/" target="_blank">
+                        <span class="chip bg-color">方法</span>
                     </a>
                     
                 </div>
@@ -1156,13 +1154,13 @@ VUE中使用echarts配合canvas绘制图例
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/10/18/node.js-da-jian-ben-di-fu-wu-mo-ni-shu-ju/">
+                <a href="/2020/09/22/chang-yong-han-shu/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="Node.js搭建本地服务模拟数据">
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="常用函数">
                         
-                        <span class="card-title">Node.js搭建本地服务模拟数据</span>
+                        <span class="card-title">常用函数</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1173,14 +1171,14 @@ VUE中使用echarts配合canvas绘制图例
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-10-18
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-09-22
                             </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/开发环境/" class="post-category" target="_blank">
-                                    开发环境
+                            <a href="/categories/方法/" class="post-category" target="_blank">
+                                    方法
                                 </a>
                             
                             
@@ -1190,8 +1188,8 @@ VUE中使用echarts配合canvas绘制图例
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/开发环境/" target="_blank">
-                        <span class="chip bg-color">开发环境</span>
+                    <a href="/tags/方法/" target="_blank">
+                        <span class="chip bg-color">方法</span>
                     </a>
                     
                 </div>
