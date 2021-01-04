@@ -12,24 +12,17 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="提高工作效率的常用js函数汇总, 唐宇的博客">
+    <meta name="keywords" content="移动端常见问题汇总, 唐宇的博客">
     <meta name="baidu-site-verification" content>
     <meta name="google-site-verification" content>
     <meta name="360-site-verification" content>
     <meta name="description" content="
 
-
-
 闲来无事，随便写写……
-前言本文总结了项目开发过程中常用的js函数和正则，意在提高大家平时的开发效率，具体内容如下：
-
-常用的正则校验
-常用的设备检测方式
-常用的日期时间函数
-跨端事件处理
-js移动端适配方案
-xss预防方式
-常用的">
+前言
+本文是摘录整理了移动端常见的一些bug以及解决方案，第一篇，后面还会有持续的文章更新整理。
+1. 禁止用户选择页面中的文字或者图片-webkit-touch-callout: none;
+-webkit-u">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -37,7 +30,7 @@ xss预防方式
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>提高工作效率的常用js函数汇总 | 唐宇的博客</title>
+    <title>移动端常见问题汇总 | 唐宇的博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -311,13 +304,13 @@ xss预防方式
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/23.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        提高工作效率的常用js函数汇总
+                        移动端常见问题汇总
                     </div>
                 </div>
             </div>
@@ -428,8 +421,8 @@ xss预防方式
                     
                     <div class="article-tag">
                         
-                        <a href="/tags/随笔/" target="_blank">
-                            <span class="chip bg-color">随笔</span>
+                        <a href="/tags/方法/" target="_blank">
+                            <span class="chip bg-color">方法</span>
                         </a>
                         
                     </div>
@@ -440,8 +433,8 @@ xss预防方式
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                        <a href="/categories/随笔/" class="post-category" target="_blank">
-                            随笔
+                        <a href="/categories/方法/" class="post-category" target="_blank">
+                            方法
                         </a>
                         
                     </div>
@@ -452,7 +445,7 @@ xss预防方式
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2018-01-22
+                    2020-11-22
                 </div>
 
                 <div class="post-author info-break-policy">
@@ -466,14 +459,14 @@ xss预防方式
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.4k
+                    1.2k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    7 分
+                    5 分
                 </div>
                 
                 
@@ -489,245 +482,115 @@ xss预防方式
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <div align="middle">
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=407679465&auto=1&height=66"></iframe>
-</div>
+                <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=1313052971&auto=1&height=66"></iframe>
 
 <p>闲来无事，随便写写……</p>
-<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>本文总结了项目开发过程中常用的js函数和正则，意在提高大家平时的开发效率，具体内容如下：</p>
-<ol>
-<li>常用的正则校验</li>
-<li>常用的设备检测方式</li>
-<li>常用的日期时间函数</li>
-<li>跨端事件处理</li>
-<li>js移动端适配方案</li>
-<li>xss预防方式</li>
-<li>常用的js算法(防抖，截流，去重，排序，模板渲染，观察者…)</li>
-<li>……</li>
-</ol>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><h3 id="1-正则"><a href="#1-正则" class="headerlink" title="1. 正则"></a>1. 正则</h3><pre><code>  // 匹配邮箱
-  let reg = /^([a-zA-Z]|[0-9])(\w|\-)+@[a-zA-Z0-9]+\.([a-zA-Z]{2,4})$
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><hr>
+<p>本文是摘录整理了移动端常见的一些bug以及解决方案，第一篇，后面还会有持续的文章更新整理。</p>
+<h1 id="1-禁止用户选择页面中的文字或者图片"><a href="#1-禁止用户选择页面中的文字或者图片" class="headerlink" title="1. 禁止用户选择页面中的文字或者图片"></a>1. 禁止用户选择页面中的文字或者图片</h1><pre class="line-numbers language-js"><code class="language-js"><span class="token operator">-</span>webkit<span class="token operator">-</span>touch<span class="token operator">-</span>callout<span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+<span class="token operator">-</span>webkit<span class="token operator">-</span>user<span class="token operator">-</span>select<span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+<span class="token operator">-</span>khtml<span class="token operator">-</span>user<span class="token operator">-</span>select<span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+<span class="token operator">-</span>moz<span class="token operator">-</span>user<span class="token operator">-</span>select<span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+<span class="token operator">-</span>ms<span class="token operator">-</span>user<span class="token operator">-</span>select<span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+user<span class="token operator">-</span>select<span class="token punctuation">:</span> none<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="2-移动端如何清除输入框内阴影"><a href="#2-移动端如何清除输入框内阴影" class="headerlink" title="2. 移动端如何清除输入框内阴影"></a>2. 移动端如何清除输入框内阴影</h1><pre class="line-numbers language-js"><code class="language-js"><span class="token operator">-</span>webkit<span class="token operator">-</span>text<span class="token operator">-</span>size<span class="token operator">-</span>adjust<span class="token punctuation">:</span> <span class="token number">100</span><span class="token operator">%</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h1 id="3-IOS的input不能自动获得焦点"><a href="#3-IOS的input不能自动获得焦点" class="headerlink" title="3. IOS的input不能自动获得焦点"></a>3. IOS的input不能自动获得焦点</h1><pre class="line-numbers language-js"><code class="language-js"><span class="token comment" spellcheck="true">//不能把focus封装起来起来触发，那样也无效</span>
+document<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'touchstart'</span><span class="token punctuation">,</span><span class="token keyword">function</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">{</span>
+  document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'focus'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">focus</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="4-动画定义3D启用硬件加速"><a href="#4-动画定义3D启用硬件加速" class="headerlink" title="4. 动画定义3D启用硬件加速"></a>4. 动画定义3D启用硬件加速</h1><pre class="line-numbers language-js"><code class="language-js">Element <span class="token punctuation">{</span>
+  <span class="token operator">-</span>webkit<span class="token operator">-</span>transform<span class="token punctuation">:</span><span class="token function">translate3d</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span>
+  transform<span class="token punctuation">:</span> <span class="token function">translate3d</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="5-移动端点击300ms延迟"><a href="#5-移动端点击300ms延迟" class="headerlink" title="5. 移动端点击300ms延迟"></a>5. 移动端点击300ms延迟</h1><pre class="line-numbers language-js"><code class="language-js">300ms尚可接受，不过因为300ms产生的问题，我们必须要解决。300ms导致用户体验并不是很好，解决这个问题，我们一般在移动端用tap事件来取代click事件。
+推荐两个js，一个是fastclick，一个是tap<span class="token punctuation">.</span>js
+关于300ms延迟，具体请看：http<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>thx<span class="token punctuation">.</span>github<span class="token punctuation">.</span>io<span class="token operator">/</span>mobile<span class="token regex">/300ms-click-delay/</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h1 id="6-移动端点透问题"><a href="#6-移动端点透问题" class="headerlink" title="6.移动端点透问题"></a>6.移动端点透问题</h1><pre class="line-numbers language-js"><code class="language-js"><span class="token comment" spellcheck="true">//案例如下：</span>
+<span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">"haorooms"</span><span class="token operator">></span>点头事件测试<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+<span class="token operator">&lt;</span>a href<span class="token operator">=</span><span class="token string">"www.jb51.net"</span><span class="token operator">></span>www<span class="token punctuation">.</span>jb51<span class="token punctuation">.</span>net<span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">></span>
+<span class="token comment" spellcheck="true">//div是绝对定位的蒙层,并且z-index高于a。而a标签是页面中的一个链接，我们给div绑定tap事件：</span>
+<span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'#haorooms'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'tap'</span><span class="token punctuation">,</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+ <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'#haorooms'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">hide</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">//我们点击蒙层时 div正常消失，但是当我们在a标签上点击蒙层时，发现a链接被触发，这就是所谓的点透事件。</span>
 
-  // (新)匹配手机号
-  let reg = /^1[0-9]{10}$/;
+<span class="token comment" spellcheck="true">// 原因：touchstart 早于 touchend 早于click。 亦即click的触发是有延迟的，这个时间大概在300ms左右，也就是说我们tap触发之后蒙层隐藏， 此时 click还没有触发，300ms之后由于蒙层隐藏，我们的click触发到了下面的a链接上。</span>
+<span class="token comment" spellcheck="true">//解决：</span>
+<span class="token function">（1）尽量都使用touch事件来替换click事件。例如用touchend事件</span><span class="token punctuation">(</span>推荐<span class="token punctuation">)</span>。
+（<span class="token number">2</span>）用fastclick，https<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>github<span class="token punctuation">.</span>com<span class="token operator">/</span>ftlabs<span class="token operator">/</span>fastclick
+（<span class="token number">3</span>）用preventDefault阻止a标签的click
+<span class="token function">（4）延迟一定的时间</span><span class="token punctuation">(</span>300ms<span class="token operator">+</span><span class="token punctuation">)</span>来处理事件 （不推荐）
+（<span class="token number">5</span>）以上一般都能解决，实在不行就换成click事件。
+下面介绍一下touchend事件，如下：
+<span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"#haorooms"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">"touchend"</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>event<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  event<span class="token punctuation">.</span><span class="token function">preventDefault</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+ <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="7-h5屏幕适配"><a href="#7-h5屏幕适配" class="headerlink" title="7. h5屏幕适配"></a>7. h5屏幕适配</h1><ul>
+<li>使用rem进行等比缩放<blockquote>
+<p>rem作用于非根元素时，相对于根元素字体大小；rem作用于根元素字体大小时，相对于其出初始字体大小,比如根元素（html）设置font-size=12px; 非根元素设置width:2rem;则换成px表示就是24px,如果根元素设置成font-size=1rem;则根元素换成px就是相对于初始字体大小，一般是12px；<br>原理分析：rem屏幕适配就是一种等比缩放效果<br>一般来说设计稿是基于p6（750），或者是p5（640）的尺寸，以p6为例子：</p>
+</blockquote>
+</li>
+</ul>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token comment" spellcheck="true">// 设置</span>
+<span class="token operator">&lt;</span>meta name<span class="token operator">=</span><span class="token string">"viewport"</span> content<span class="token operator">=</span><span class="token string">"width=device-width,initial-scale=1.0,maximum-scale=1,user-scale=no"</span><span class="token operator">></span> 
 
-  // (旧)匹配手机号
-  let reg = /^1(3|4|5|7|8)[0-9]{9}$/;
+<span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span>doc<span class="token punctuation">,</span> win<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">var</span> docEl <span class="token operator">=</span> doc<span class="token punctuation">.</span>documentElement
+  <span class="token keyword">var</span> resizeEvt <span class="token operator">=</span> <span class="token string">'orientationchange'</span> <span class="token keyword">in</span> window <span class="token operator">?</span> <span class="token string">'orientationchange'</span> <span class="token punctuation">:</span> <span class="token string">'resize'</span>
+  <span class="token keyword">var</span> recalc <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> clientWidth <span class="token operator">=</span> docEl<span class="token punctuation">.</span>clientWidth
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>clientWidth<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>clientWidth <span class="token operator">>=</span> <span class="token number">750</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>  <span class="token comment" spellcheck="true">// 避免无无限放大</span>
+      docEl<span class="token punctuation">.</span>style<span class="token punctuation">.</span>fontSize <span class="token operator">=</span> <span class="token string">'100px'</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+      docEl<span class="token punctuation">.</span>style<span class="token punctuation">.</span>fontSize <span class="token operator">=</span> <span class="token number">100</span><span class="token operator">*</span><span class="token punctuation">(</span>clientWidth <span class="token operator">/</span> <span class="token number">750</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">'px'</span> <span class="token comment" spellcheck="true">// 设置根元素的font-size</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>doc<span class="token punctuation">.</span>addEventListener<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span>
+  <span class="token punctuation">}</span>
+  win<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span>resizeEvt<span class="token punctuation">,</span> recalc<span class="token punctuation">,</span> <span class="token boolean">false</span><span class="token punctuation">)</span>
+  doc<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'DOMContentLoaded'</span><span class="token punctuation">,</span> recalc<span class="token punctuation">,</span> <span class="token boolean">false</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">(</span>document<span class="token punctuation">,</span> window<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li><p>使用vw进行适配布局<br>相对于视口的宽度。视口被均分为100单位的vw<br>如果屏幕宽度为200px，那么1vw=2px</p>
+</li>
+<li><p>dpr </p>
+<blockquote>
+<p>默认单位 dp</p>
+</blockquote>
+</li>
+</ul>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token keyword">import</span> <span class="token punctuation">{</span>Dimensions<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react-native'</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// 58 app 只有竖屏模式，所以可以只获取一次 width</span>
+<span class="token keyword">const</span> deviceWidthDp <span class="token operator">=</span> Dimensions<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span><span class="token string">'window'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>width<span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// UI 默认给图是 640</span>
+<span class="token keyword">const</span> uiWidthPx <span class="token operator">=</span> <span class="token number">640</span><span class="token punctuation">;</span>
+<span class="token keyword">function</span> <span class="token function">pxToDp</span><span class="token punctuation">(</span>uiElementPx<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token keyword">return</span> uiElementPx <span class="token operator">*</span>  deviceWidthDp <span class="token operator">/</span> uiWidthPx<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 
-  // 匹配8-16位数字和字母密码的正则表达式
-  let reg = /^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{8,16}$/;
-
-  // 匹配国内电话号码 0510-4305211
-  let reg = /\d{3}-\d{8}|\d{4}-\d{7}/;
-
-  // 匹配身份证号码
-  let reg=/(^\d{15}$)|(^\d{18}$)|(^\d{17}(\d|X|x)$)/;
-
-  // 匹配腾讯QQ号
-  let reg = /[1-9][0-9]{4,}/;
-
-  // 匹配ip地址
-  let reg = /\d+\.\d+\.\d+\.\d+/;
-
-  // 匹配中文
-  let reg = /^[\u4e00-\u9fa5]*$/;</code></pre><h3 id="2-检测平台（设备）类型"><a href="#2-检测平台（设备）类型" class="headerlink" title="2.检测平台（设备）类型"></a>2.检测平台（设备）类型</h3><pre><code>  let isWechat = /micromessenger/i.test(navigator.userAgent),
-  isWeibo = /weibo/i.test(navigator.userAgent),
-  isQQ = /qq\//i.test(navigator.userAgent),
-  isIOS = /(iphone|ipod|ipad|ios)/i.test(navigator.userAgent),
-  isAndroid = /android/i.test(navigator.userAgent);</code></pre><h3 id="3-常用的日期时间函数"><a href="#3-常用的日期时间函数" class="headerlink" title="3. 常用的日期时间函数"></a>3. 常用的日期时间函数</h3><pre><code>  // 时间格式化
-  function format_date(timeStamp) {
-      let date = new Date(timeStamp);
-      return date.getFullYear() + &quot;年&quot;
-          + prefix_zero(date.getMonth() + 1) + &quot;月&quot;
-          + prefix_zero(date.getDate()) + &quot;日 &quot;
-          + prefix_zero(date.getHours()) + &quot;:&quot;
-          + prefix_zero(date.getMinutes());
-  }
-  // moment.js方法
-
-  //require 方式
-  var moment=require(&#39;moment&#39;);
-  //import 方式
-  import moment from &#39;moment&#39;;
-
-  格式化时间类型
-  1.取当天时间，以YYYY年MM月DD日形式显示
-
-  var now=moment().format(&quot;YYYY年MM月DD日&quot;);
-  2.任意时间戳格式化，以YYYY-MM-DD HH:mm:ss形式显示
-
-  var t1=moment(1411641720000).format(&#39;YYYY-MM-DD HH:mm:ss&#39;);
-  获取前一天日期，格式以YYYY-MM-DD形式显示
-  var t11=moment().day(0).format(&#39;YYYY-MM-DD&#39;);
-  获取本周五日期，格式以YYYY-MM-DD形式显示
-  var t12=moment().weekday(5).format(&#39;YYYY-MM-DD&#39;);
-  获取上周五日期，格式以YYYY-MM-DD形式显示
-  var t13=moment().weekday(-3).format(&#39;YYYY-MM-DD&#39;);
-  可以简单理解为上周倒数第几天，上周倒数第三天就是上周五了，和当天日期无关
-
-  获取当前年份、月份、日期
-  var t14=moment().year()
-  var t15=moment().month()//此处月份从0开始，当前月要+1
-  var t16=moment().date();
-
-
-  // 数字格式化
-  function prefix_zero(num) {
-      return num &gt;= 10 ? num : &quot;0&quot; + num;
-  }
-
-  // 倒计时时间格式化
-  function format_time(timeStamp) {
-      let day = Math.floor(timeStamp / (24 * 3600 * 1000));
-      let leave1 = timeStamp % (24 * 3600 * 1000);
-      let hours = Math.floor(leave1 / (3600 * 1000));
-      let leave2 = leave1 % (3600 * 1000);
-      let minutes = Math.floor(leave2 / (60 * 1000));
-      let leave3 = leave2 % (60 * 1000);
-      let seconds = Math.floor(leave3 / 1000);
-      if (day) return day + &quot;天&quot; + hours + &quot;小时&quot; + minutes + &quot;分&quot;;
-      if (hours) return hours + &quot;小时&quot; + minutes + &quot;分&quot; + seconds + &quot;秒&quot;;
-      if (minutes) return minutes + &quot;分&quot; + seconds + &quot;秒&quot;;
-      if (seconds) return seconds + &quot;秒&quot;;
-      return &quot;时间到！&quot;;
-  }</code></pre><h3 id="4-跨端事件处理"><a href="#4-跨端事件处理" class="headerlink" title="4.跨端事件处理"></a>4.跨端事件处理</h3><pre><code>  // 是否支持触摸事件
-  let isSupportTouch = (&quot;ontouchstart&quot; in document.documentElement) ? true : false;
-
-  //禁用Enter键表单自动提交
-  document.onkeydown = function(event) {
-      let target, code, tag;
-      if (!event) {
-          event = window.event; //针对ie浏览器
-          target = event.srcElement;
-          code = event.keyCode;
-          if (code == 13) {
-              tag = target.tagName;
-              if (tag == &quot;TEXTAREA&quot;) { return true; }
-              else { return false; }
-          }
-      }
-      else {
-          target = event.target; //针对遵循w3c标准的浏览器，如Firefox
-          code = event.keyCode;
-          if (code == 13) {
-              tag = target.tagName;
-              if (tag == &quot;INPUT&quot;) { return false; }
-              else { return true; }
-          }
-      }
-  };</code></pre><h3 id="5-移动端适配方案"><a href="#5-移动端适配方案" class="headerlink" title="5. 移动端适配方案"></a>5. 移动端适配方案</h3><pre><code>  (function (doc, win) {
-      var docEl = doc.documentElement,
-          resizeEvt = &#39;orientationchange&#39; in window ? &#39;orientationchange&#39; : &#39;resize&#39;,
-          recalc = function () {
-              var clientWidth = docEl.clientWidth;
-              var fontSize = 20;
-              docEl.style.fontSize = fontSize + &#39;px&#39;;
-              var docStyles = getComputedStyle(docEl);
-              var realFontSize = parseFloat(docStyles.fontSize);
-              var scale = realFontSize / fontSize;
-              console.log(&quot;realFontSize: &quot; + realFontSize + &quot;, scale: &quot; + scale);
-              fontSize = clientWidth / 667 * 20;
-              if(isIphoneX()) fontSize = 19;
-              fontSize = fontSize / scale;
-              docEl.style.fontSize = fontSize + &#39;px&#39;;
-          };
-      // Abort if browser does not support addEventListener
-      if (!doc.addEventListener) return;
-      win.addEventListener(resizeEvt, recalc, false);
-      doc.addEventListener(&#39;DOMContentLoaded&#39;, recalc, false);
-
-      // iphoneX判断
-      function isIphoneX(){
-          return /iphone/gi.test(navigator.userAgent) &amp;&amp; (screen.height == 812 &amp;&amp; screen.width == 375)
-      }
-
-  })(document, window);</code></pre><h3 id="6-xss预防方式"><a href="#6-xss预防方式" class="headerlink" title="6.xss预防方式"></a>6.xss预防方式</h3><pre><code>  // 敏感符号转义
-  function entities(s) {
-      let e = {
-          &#39;&quot;&#39;: &#39;&amp;quot;&#39;,
-          &#39;&amp;&#39;: &#39;&amp;amp;&#39;,
-          &#39;&lt;&#39;: &#39;&amp;lt;&#39;,
-          &#39;&gt;&#39;: &#39;&amp;gt;&#39;
-      }
-      return s.replace(/[&quot;&lt;&gt;&amp;]/g, m =&gt; {
-          return e[m]
-      })
-  }</code></pre><h3 id="7-JS方法"><a href="#7-JS方法" class="headerlink" title="7. JS方法"></a>7. JS方法</h3><pre><code>  // 数组去重方法 
-  1. 过滤+indexof
-  function distinct(arr = testArr) {
-      return arr.filter((v, i, array) =&gt; array.indexOf(v) === i)
-  }
-
-  2. 双重for循环
-  var array = [1, 1, &#39;1&#39;, &#39;1&#39;];
-  function unique(array) {
-      // res用来存储结果
-      var res = [];
-      for (var i = 0, arrayLen = array.length; i &lt; arrayLen; i++) {
-          for (var j = 0, resLen = res.length; j &lt; resLen; j++ ) {
-              if (array[i] === res[j]) {
-                  break;
-              }
-          }
-          // 如果array[i]是唯一的，那么执行完循环，j等于resLen
-          if (j === resLen) {
-              res.push(array[i])
-          }
-      }
-      return res;
-  }
-  console.log(unique(array)); // [1, &quot;1&quot;]
-
-  3.排序后相邻去除法 
-  var array = [1, 1, &#39;1&#39;];
-  function unique(array) {
-      var res = [];
-      var sortedArray = array.concat().sort();
-      var seen;
-      for (var i = 0, len = sortedArray.length; i &lt; len; i++) {
-          // 如果是第一个元素或者相邻的元素不相同
-          if (!i || seen !== sortedArray[i]) {
-              res.push(sortedArray[i])
-          }
-          seen = sortedArray[i];
-      }
-      return res;
-  }
-  console.log(unique(array));
-
-  4.Object 键值对
-  var array = [1, 2, 1, 1, &#39;1&#39;];
-  function unique(array) {
-      var obj = {};
-      return array.filter(function(item, index, array){
-          return obj.hasOwnProperty(item) ? false : (obj[item] = true)
-      })
-  }
-  console.log(unique(array)); // [1, 2]
-
-  //-----------------------------------------
-  var array = [{value: 1}, {value: 1}, {value: 2}];
-  function unique(array) {
-      var obj = {};
-      return array.filter(function(item, index, array){
-          console.log(typeof item + JSON.stringify(item))
-          return obj.hasOwnProperty(typeof item + JSON.stringify(item)) ? false : (obj[typeof item + JSON.stringify(item)] = true)
-      })
-  }
-  console.log(unique(array)); // [{value: 1}, {value: 2}]
-
-  5.ES6
-  var array = [1, 2, 1, 1, &#39;1&#39;];
-  function unique(array) {
-    return Array.from(new Set(array));
-  }
-  console.log(unique(array)); // [1, 2, &quot;1&quot;]
-
-
-  // 置换函数
-  function swap(arr, indexA, indexB) {
-      [arr[indexA], arr[indexB]] = [arr[indexB], arr[indexA]];
-  }</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="8-ios-使用-position-sticky-实现粘性布局"><a href="#8-ios-使用-position-sticky-实现粘性布局" class="headerlink" title="8. ios 使用 position:sticky 实现粘性布局"></a>8. ios 使用 position:sticky 实现粘性布局</h1><pre class="line-numbers language-js"><code class="language-js"><span class="token comment" spellcheck="true">// 失效原因:</span>
+<span class="token comment" spellcheck="true">//1.父元素高度没子元素高，通常为父元素设置height:100%;</span>
+<span class="token comment" spellcheck="true">//2:父元素设置了overflow:hidden,overflow-x:hidden,overflow-y:hidden,或者overflow:auto属性都能影响到</span>
+<span class="token punctuation">{</span>
+    position<span class="token punctuation">:</span> sticky<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="9-js获取手机屏幕宽度、高度"><a href="#9-js获取手机屏幕宽度、高度" class="headerlink" title="9. js获取手机屏幕宽度、高度"></a>9. js获取手机屏幕宽度、高度</h1><p>网页可见区域宽：document.body.clientWidth<br>网页可见区域高：document.body.clientHeight<br>网页可见区域宽：document.body.offsetWidth (包括边线的宽)<br>网页可见区域高：document.body.offsetHeight (包括边线的宽)<br>网页正文全文宽：document.body.scrollWidth<br>网页正文全文高：document.body.scrollHeight<br>网页被卷去的高：document.body.scrollTop<br>网页被卷去的左：document.body.scrollLeft<br>网页正文部分上：window.screenTop<br>网页正文部分左：window.screenLeft<br>屏幕分辨率的高：window.screen.height<br>屏幕分辨率的宽：window.screen.width<br>屏幕可用工作区高度：window.screen.availHeight<br>屏幕可用工作区宽度：window.screen.availWidth </p>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token comment" spellcheck="true">//判断手机类型 例iphone X</span>
+<span class="token keyword">function</span> <span class="token function">isIphoneX</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token regex">/iphone/gi</span><span class="token punctuation">.</span><span class="token function">test</span><span class="token punctuation">(</span>navigator<span class="token punctuation">.</span>userAgent<span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> <span class="token punctuation">(</span>screen<span class="token punctuation">.</span>height <span class="token operator">==</span> <span class="token number">812</span> <span class="token operator">&amp;&amp;</span> screen<span class="token punctuation">.</span>width <span class="token operator">==</span> <span class="token number">375</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="10-ios-input框输入存在小数点光标跑到最后"><a href="#10-ios-input框输入存在小数点光标跑到最后" class="headerlink" title="10. ios input框输入存在小数点光标跑到最后"></a>10. ios input框输入存在小数点光标跑到最后</h1><pre class="line-numbers language-js"><code class="language-js"><span class="token keyword">const</span> <span class="token punctuation">{</span> value <span class="token punctuation">}</span> <span class="token operator">=</span> e<span class="token punctuation">.</span>target<span class="token punctuation">;</span>
+<span class="token keyword">const</span> matchResult <span class="token operator">=</span> value<span class="token punctuation">.</span><span class="token function">match</span><span class="token punctuation">(</span><span class="token regex">/^(?!0\d)\d{1,12}((\.\d{1,2})|\.)?/</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> available <span class="token operator">=</span> matchResult <span class="token operator">==</span> <span class="token keyword">null</span> <span class="token operator">?</span> <span class="token keyword">null</span> <span class="token punctuation">:</span> matchResult<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span>available <span class="token operator">!==</span> value<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    e<span class="token punctuation">.</span>target<span class="token punctuation">.</span>value <span class="token operator">=</span> available<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="持续更新……"><a href="#持续更新……" class="headerlink" title="持续更新……"></a>持续更新……</h1>
             </div>
             <hr />
 
@@ -885,9 +748,9 @@ xss预防方式
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《提高工作效率的常用js函数汇总》
+                    《移动端常见问题汇总》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2018/01/22/ti-gao-gong-zuo-xiao-lu-de-chang-yong-js-han-shu-hui-zong/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2020/11/22/yi-dong-duan-chang-jian-wen-ti-hui-zong/" property="cc:attributionName"
                rel="cc:attributionURL">
                 唐宇
             </a> 采用
@@ -928,7 +791,7 @@ xss预防方式
         repo: 'Lingtian007.github.io',
         owner: 'Lingtian007',
         admin: "Lingtian007",
-        id: '2018/01/22/ti-gao-gong-zuo-xiao-lu-de-chang-yong-js-han-shu-hui-zong/',
+        id: '2020/11/22/yi-dong-duan-chang-jian-wen-ti-hui-zong/',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -1215,13 +1078,13 @@ xss预防方式
             <div class="article-badge left-badge text-color">
                 <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2018/01/22/self-checking/">
+                <a href="/2020/12/16/xie-zai-2020-de-wei-sheng/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="一名【合格】前端工程师的自检清单">
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="写在2020的尾声">
                         
-                        <span class="card-title">一名【合格】前端工程师的自检清单</span>
+                        <span class="card-title">写在2020的尾声</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1232,14 +1095,14 @@ xss预防方式
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2018-01-22
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2020-12-16
                         </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/随笔/" class="post-category" target="_blank">
-                                    随笔
+                            <a href="/categories/年度总结/" class="post-category" target="_blank">
+                                    年度总结
                                 </a>
                             
                             
@@ -1249,8 +1112,8 @@ xss预防方式
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/随笔/" target="_blank">
-                        <span class="chip bg-color">随笔</span>
+                    <a href="/tags/年度总结/" target="_blank">
+                        <span class="chip bg-color">年度总结</span>
                     </a>
                     
                 </div>
@@ -1261,16 +1124,16 @@ xss预防方式
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="fa fa-dot-circle-o"></i>
+                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2018/01/22/ti-gao-gong-zuo-xiao-lu-de-chang-yong-js-han-shu-hui-zong/">
+                <a href="/2020/11/13/qian-duan-huan-cun-fang-an/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="提高工作效率的常用js函数汇总">
+                        <img src="/medias/featureimages/27.jpg" class="responsive-img" alt="前端缓存方案">
                         
-                        <span class="card-title">提高工作效率的常用js函数汇总</span>
+                        <span class="card-title">前端缓存方案</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1281,26 +1144,25 @@ xss预防方式
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2018-01-22
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-11-13
                             </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/随笔/" class="post-category" target="_blank">
-                                    随笔
+                            <a href="/categories/方法/" class="post-category" target="_blank">
+                                    方法
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/随笔/" target="_blank">
-                        <span class="chip bg-color">随笔</span>
+                    <a href="/tags/方法/" target="_blank">
+                        <span class="chip bg-color">方法</span>
                     </a>
                     
                 </div>
