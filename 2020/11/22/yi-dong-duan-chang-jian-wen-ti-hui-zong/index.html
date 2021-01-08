@@ -304,7 +304,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -459,14 +459,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.2k
+                    1.4k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    5 分
+                    6 分
                 </div>
                 
                 
@@ -590,6 +590,31 @@ document<span class="token punctuation">.</span><span class="token function">add
 <span class="token keyword">if</span> <span class="token punctuation">(</span>available <span class="token operator">!==</span> value<span class="token punctuation">)</span> <span class="token punctuation">{</span>
     e<span class="token punctuation">.</span>target<span class="token punctuation">.</span>value <span class="token operator">=</span> available<span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="11-ios：iphoneX及以上底部安全区适配"><a href="#11-ios：iphoneX及以上底部安全区适配" class="headerlink" title="11. ios：iphoneX及以上底部安全区适配"></a>11. ios：iphoneX及以上底部安全区适配</h1><pre class="line-numbers language-js"><code class="language-js"><span class="token comment" spellcheck="true">// 1. html添加meta标签：viewport-fit=cover 重要</span>
+<span class="token operator">&lt;</span>meta content<span class="token operator">=</span><span class="token string">"width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover"</span> name<span class="token operator">=</span><span class="token string">"viewport"</span><span class="token operator">/</span><span class="token operator">></span>
+<span class="token comment" spellcheck="true">// 2. 最外层容器样式</span>
+<span class="token comment" spellcheck="true">// 适配不同屏幕</span>
+@media <span class="token punctuation">(</span><span class="token operator">-</span>webkit<span class="token operator">-</span>min<span class="token operator">-</span>device<span class="token operator">-</span>pixel<span class="token operator">-</span>ratio<span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+#container <span class="token punctuation">{</span>
+      padding<span class="token operator">-</span>bottom<span class="token punctuation">:</span> <span class="token function">calc</span><span class="token punctuation">(</span><span class="token function">constant</span><span class="token punctuation">(</span>safe<span class="token operator">-</span>area<span class="token operator">-</span>inset<span class="token operator">-</span>bottom<span class="token punctuation">)</span><span class="token operator">*</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      padding<span class="token operator">-</span>bottom<span class="token punctuation">:</span> <span class="token function">calc</span><span class="token punctuation">(</span><span class="token function">env</span><span class="token punctuation">(</span>safe<span class="token operator">-</span>area<span class="token operator">-</span>inset<span class="token operator">-</span>bottom<span class="token punctuation">)</span><span class="token operator">*</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+@media <span class="token punctuation">(</span><span class="token operator">-</span>webkit<span class="token operator">-</span>min<span class="token operator">-</span>device<span class="token operator">-</span>pixel<span class="token operator">-</span>ratio<span class="token punctuation">:</span> <span class="token number">3</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+#container <span class="token punctuation">{</span>
+      padding<span class="token operator">-</span>bottom<span class="token punctuation">:</span> <span class="token function">calc</span><span class="token punctuation">(</span><span class="token function">constant</span><span class="token punctuation">(</span>safe<span class="token operator">-</span>area<span class="token operator">-</span>inset<span class="token operator">-</span>bottom<span class="token punctuation">)</span><span class="token operator">*</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      padding<span class="token operator">-</span>bottom<span class="token punctuation">:</span> <span class="token function">calc</span><span class="token punctuation">(</span><span class="token function">env</span><span class="token punctuation">(</span>safe<span class="token operator">-</span>area<span class="token operator">-</span>inset<span class="token operator">-</span>bottom<span class="token punctuation">)</span><span class="token operator">*</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token comment" spellcheck="true">// 3.部分页面position：fixed底部对齐会有影响，需设置该元素：</span>
+@supports <span class="token punctuation">(</span>bottom<span class="token punctuation">:</span> <span class="token function">env</span><span class="token punctuation">(</span>safe<span class="token operator">-</span>area<span class="token operator">-</span>inset<span class="token operator">-</span>bottom<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    #store<span class="token operator">-</span>cart<span class="token operator">-</span>fiexd <span class="token punctuation">.</span>cart<span class="token operator">-</span>bar <span class="token punctuation">{</span> 
+        padding<span class="token operator">-</span>bottom<span class="token punctuation">:</span> <span class="token function">constant</span><span class="token punctuation">(</span>safe<span class="token operator">-</span>area<span class="token operator">-</span>inset<span class="token operator">-</span>bottom<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        padding<span class="token operator">-</span>bottom<span class="token punctuation">:</span> <span class="token function">env</span><span class="token punctuation">(</span>safe<span class="token operator">-</span>area<span class="token operator">-</span>inset<span class="token operator">-</span>bottom<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>参考地址:<a href="https://blog.csdn.net/sinat_24946363/article/details/105181622?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromBaidu-1.control&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromBaidu-1.control" target="_blank" rel="noopener">iPhone安全区域</a></p>
 <h1 id="持续更新……"><a href="#持续更新……" class="headerlink" title="持续更新……"></a>持续更新……</h1>
             </div>
             <hr />
@@ -1082,7 +1107,7 @@ document<span class="token punctuation">.</span><span class="token function">add
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="写在2020的尾声">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="写在2020的尾声">
                         
                         <span class="card-title">写在2020的尾声</span>
                     </div>
@@ -1131,7 +1156,7 @@ document<span class="token punctuation">.</span><span class="token function">add
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/27.jpg" class="responsive-img" alt="前端缓存方案">
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="前端缓存方案">
                         
                         <span class="card-title">前端缓存方案</span>
                     </div>
@@ -1317,7 +1342,7 @@ document<span class="token punctuation">.</span><span class="token function">add
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">51.9k</span>
+            <span class="white-color">52.1k</span>
             
 
             <br>
