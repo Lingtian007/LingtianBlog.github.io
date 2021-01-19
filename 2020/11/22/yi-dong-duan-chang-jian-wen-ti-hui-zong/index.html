@@ -304,7 +304,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -614,6 +614,15 @@ document<span class="token punctuation">.</span><span class="token function">add
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="12-安卓-ios-通用-时间转时间戳"><a href="#12-安卓-ios-通用-时间转时间戳" class="headerlink" title="12. 安卓 ios (通用)时间转时间戳"></a>12. 安卓 ios (通用)时间转时间戳</h1><pre class="line-numbers language-js"><code class="language-js"><span class="token comment" spellcheck="true">/**
+ * 格式化时间成时间戳
+ * @param {*} data - 2021-01-14 => 1610613229
+ */</span>
+<span class="token keyword">const</span> changeTimeMS<span class="token operator">=</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">></span><span class="token punctuation">{</span>
+    <span class="token keyword">let</span> splitTime<span class="token operator">=</span>data<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token regex">/[- : \/]/</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">let</span> time <span class="token operator">=</span>  <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span>splitTime<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> splitTime<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span> splitTime<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> <span class="token operator">+</span>time<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>参考地址:<a href="https://blog.csdn.net/sinat_24946363/article/details/105181622?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromBaidu-1.control&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromBaidu-1.control" target="_blank" rel="noopener">iPhone安全区域</a></p>
 <h1 id="持续更新……"><a href="#持续更新……" class="headerlink" title="持续更新……"></a>持续更新……</h1>
             </div>
@@ -1107,7 +1116,7 @@ document<span class="token punctuation">.</span><span class="token function">add
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="写在2020的尾声">
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="写在2020的尾声">
                         
                         <span class="card-title">写在2020的尾声</span>
                     </div>
@@ -1156,7 +1165,7 @@ document<span class="token punctuation">.</span><span class="token function">add
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="前端缓存方案">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="前端缓存方案">
                         
                         <span class="card-title">前端缓存方案</span>
                     </div>
@@ -1342,7 +1351,7 @@ document<span class="token punctuation">.</span><span class="token function">add
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">52.1k</span>
+            <span class="white-color">52.9k</span>
             
 
             <br>

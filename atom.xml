@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.linfengdunwu.cn/"/>
-  <updated>2020-12-25T01:37:12.557Z</updated>
+  <updated>2021-01-18T06:36:27.479Z</updated>
   <id>https://www.linfengdunwu.cn/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JS组件系列-图表组件</title>
+    <link href="https://www.linfengdunwu.cn/2021/01/18/js-zu-jian-xi-lie-shi-yong-dan-li-mo-shi-shi-xian-tu-biao-zu-jian/"/>
+    <id>https://www.linfengdunwu.cn/2021/01/18/js-zu-jian-xi-lie-shi-yong-dan-li-mo-shi-shi-xian-tu-biao-zu-jian/</id>
+    <published>2021-01-18T07:32:09.000Z</published>
+    <updated>2021-01-18T06:36:27.479Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;div align=&quot;middle&quot;&gt;
+&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;330&quot; height=&quot;86&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="组件" scheme="https://www.linfengdunwu.cn/categories/%E7%BB%84%E4%BB%B6/"/>
+    
+    
+      <category term="组件" scheme="https://www.linfengdunwu.cn/tags/%E7%BB%84%E4%BB%B6/"/>
+    
+  </entry>
   
   <entry>
     <title>写在2020的尾声</title>
@@ -48,7 +75,7 @@
     <link href="https://www.linfengdunwu.cn/2020/11/22/yi-dong-duan-chang-jian-wen-ti-hui-zong/"/>
     <id>https://www.linfengdunwu.cn/2020/11/22/yi-dong-duan-chang-jian-wen-ti-hui-zong/</id>
     <published>2020-11-22T07:32:09.000Z</published>
-    <updated>2021-01-08T07:27:56.687Z</updated>
+    <updated>2021-01-14T08:34:54.628Z</updated>
     
     <summary type="html">
     
@@ -525,33 +552,6 @@
     
     
       <category term="Vue" scheme="https://www.linfengdunwu.cn/tags/Vue/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>TS+VUE项目搭建</title>
-    <link href="https://www.linfengdunwu.cn/2019/10/16/ts-vue-xiang-mu-da-jian/"/>
-    <id>https://www.linfengdunwu.cn/2019/10/16/ts-vue-xiang-mu-da-jian/</id>
-    <published>2019-10-16T07:00:09.000Z</published>
-    <updated>2020-05-28T07:51:13.110Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;div align=&quot;middle&quot;&gt;
-&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;330&quot; height=&quot;86&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="TS" scheme="https://www.linfengdunwu.cn/categories/TS/"/>
-    
-    
-      <category term="TS" scheme="https://www.linfengdunwu.cn/tags/TS/"/>
     
   </entry>
   
