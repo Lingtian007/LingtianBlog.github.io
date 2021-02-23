@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.linfengdunwu.cn/"/>
-  <updated>2021-01-18T06:36:27.479Z</updated>
+  <updated>2021-02-23T08:17:37.394Z</updated>
   <id>https://www.linfengdunwu.cn/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>一文了解JS执行顺序</title>
+    <link href="https://www.linfengdunwu.cn/2021/02/23/yi-wen-liao-jie-js-zhi-xing-shun-xu/"/>
+    <id>https://www.linfengdunwu.cn/2021/02/23/yi-wen-liao-jie-js-zhi-xing-shun-xu/</id>
+    <published>2021-02-23T06:32:09.000Z</published>
+    <updated>2021-02-23T08:17:37.394Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;div align=&quot;middle&quot;&gt;
+&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;330&quot; height=&quot;86&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="总结" scheme="https://www.linfengdunwu.cn/categories/%E6%80%BB%E7%BB%93/"/>
+    
+    
+      <category term="总结" scheme="https://www.linfengdunwu.cn/tags/%E6%80%BB%E7%BB%93/"/>
+    
+  </entry>
   
   <entry>
     <title>JS组件系列-图表组件</title>
@@ -507,33 +534,6 @@
     <id>https://www.linfengdunwu.cn/2019/10/17/vue-xiang-mu-chang-yong-fang-fa-zong-jie/</id>
     <published>2019-10-17T07:32:09.000Z</published>
     <updated>2020-06-02T06:48:24.202Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;div align=&quot;middle&quot;&gt;
-&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;330&quot; height=&quot;86&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="Vue" scheme="https://www.linfengdunwu.cn/categories/Vue/"/>
-    
-    
-      <category term="Vue" scheme="https://www.linfengdunwu.cn/tags/Vue/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>如何在 Vue 项目中使用 Echarts</title>
-    <link href="https://www.linfengdunwu.cn/2019/10/17/echars-zai-vue-zhong-ru-he-shi-yong/"/>
-    <id>https://www.linfengdunwu.cn/2019/10/17/echars-zai-vue-zhong-ru-he-shi-yong/</id>
-    <published>2019-10-17T01:32:09.000Z</published>
-    <updated>2020-05-28T07:51:13.078Z</updated>
     
     <summary type="html">
     
