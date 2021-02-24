@@ -306,7 +306,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -461,14 +461,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.5k
+                    1.4k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    6 分
+                    5 分
                 </div>
                 
                 
@@ -503,14 +503,21 @@
 <p><img src="2.png" alt></p>
 <h2 id="2、vue-项目安装-如已安装，可略过此步骤"><a href="#2、vue-项目安装-如已安装，可略过此步骤" class="headerlink" title="2、vue 项目安装(如已安装，可略过此步骤)"></a>2、vue 项目安装(如已安装，可略过此步骤)</h2><ul>
 <li><p>创建一个 Vue 项目(使用默认配置安装就 OK)</p>
-<pre><code>vue create ui-demo</code></pre></li>
+<pre class="line-numbers language-js"><code class="language-js">    vue create ui<span class="token operator">-</span>demo<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
 <li><p>安装 babel-plugin-component</p>
-<pre><code>npm i babel-plugin-component -D</code></pre></li>
+<pre class="line-numbers language-js"><code class="language-js">    npm i babel<span class="token operator">-</span>plugin<span class="token operator">-</span>component <span class="token operator">-</span>D<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
 </ul>
 <p><code>babel-plugin-component</code> 就是 <code>Element UI</code> 用来实现组件按需加载的一个 <code>babel</code> 插件。我们把它用到我们的组件库上，就不需要重新造一个轮子出来了.</p>
 <ul>
 <li><p>在项目的根目录下创建一个 .babelrc 的文件，配置可以参照下面的代码进行更改。</p>
-<pre><code>{ &quot;plugins&quot;: [ [ &quot;component&quot;, { // 组件库的名字，需要和 package.json 里的 name 相同 &quot;libraryName&quot;: &quot;ui-demo&quot;, // 存放组件的文件夹，如果不想配置此项，默认文件夹的名字为 lib &quot;libDir&quot;: &quot;components&quot;, } ] ] }</code></pre></li>
+<pre class="line-numbers language-js"><code class="language-js">    <span class="token punctuation">{</span> <span class="token string">"plugins"</span><span class="token punctuation">:</span> <span class="token punctuation">[</span> <span class="token punctuation">[</span> 
+          <span class="token string">"component"</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> 
+          <span class="token string">"libraryName"</span><span class="token punctuation">:</span> <span class="token string">"ui-demo"</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">// 组件库的名字，需要和 package.json 里的 name 相同 </span>
+          <span class="token string">"libDir"</span><span class="token punctuation">:</span> <span class="token string">"components"</span><span class="token punctuation">,</span><span class="token comment" spellcheck="true">// 存放组件的文件夹，如果不想配置此项，默认文件夹的名字为 lib</span>
+    <span class="token punctuation">}</span> <span class="token punctuation">]</span> <span class="token punctuation">]</span> <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
 <li><p>创建一个存放组件的文件夹 </p>
 </li>
 </ul>
@@ -518,57 +525,129 @@
 <p>既然我们刚刚已经配置了存放组件的文件夹，下一步肯定就是创建这么一个文件夹了。由于我配置了的文件夹名为 components，所以我们的文件夹名字就是 components。</p>
 </blockquote>
 <ul>
-<li><p>上面的操作完成后，我们的项目目录就基本搭建好了，如下：</p>
-</li>
-<li><p>写组件终于到了写组件的时候了，在<code>components</code> 文件夹下新建一个 <code>Component1</code> 的文件夹来存放我们的第一个组件。</p>
-</li>
-<li><p><code>Component1</code> 文件夹里有一个<code>Component1.vue</code> 的文件和一个 <code>index.js</code> 文件。目录如下：<br>Component1 -&gt; Component1.vue 代码:</p>
-<pre><code>&lt;template&gt; 
-&lt;h1 class=&quot;component1&quot;&gt;component1&lt;/h1&gt;
-&lt;/template&gt; 
-&lt;script&gt; 
-export default { name: &#39;Component1&#39; } 
-&lt;/script&gt;
-&lt;style&gt;
-.component1 { color: green; }
-&lt;/style&gt;</code></pre><p>Component1 -&gt; index.js代码：</p>
-<pre><code>import Component1 from &#39;./Component1.vue&#39;; Component1.install = function (Vue) { Vue.component(Component1.name, Component1); } export default Component1;</code></pre></li>
+<li>上面的操作完成后，我们的项目目录就基本搭建好了，如下：</li>
+<li>写组件终于到了写组件的时候了，在<code>components</code> 文件夹下新建一个 <code>Component1</code> 的文件夹来存放我们的第一个组件。</li>
+<li><code>Component1</code> 文件夹里有一个<code>Component1.vue</code> 的文件和一个 <code>index.js</code> 文件。目录如下：<br>Component1 -&gt; Component1.vue 代码:<pre class="line-numbers language-js"><code class="language-js">    <span class="token operator">&lt;</span>template<span class="token operator">></span> 
+    <span class="token operator">&lt;</span>h1 <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"component1"</span><span class="token operator">></span>component1<span class="token operator">&lt;</span><span class="token operator">/</span>h1<span class="token operator">></span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>template<span class="token operator">></span> 
+    <span class="token operator">&lt;</span>script<span class="token operator">></span> 
+    <span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span> name<span class="token punctuation">:</span> <span class="token string">'Component1'</span> <span class="token punctuation">}</span> 
+    <span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span>
+    <span class="token operator">&lt;</span>style<span class="token operator">></span>
+    <span class="token punctuation">.</span>component1 <span class="token punctuation">{</span> color<span class="token punctuation">:</span> green<span class="token punctuation">;</span> <span class="token punctuation">}</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>style<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+Component1 -&gt; index.js代码：</li>
 </ul>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token keyword">import</span> Component1 <span class="token keyword">from</span> <span class="token string">'./Component1.vue'</span><span class="token punctuation">;</span>
+Component1<span class="token punctuation">.</span>install <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span>Vue<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    Vue<span class="token punctuation">.</span><span class="token function">component</span><span class="token punctuation">(</span>Component1<span class="token punctuation">.</span>name<span class="token punctuation">,</span> Component1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">export</span>
+<span class="token keyword">default</span> Component1<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>index.js 中的主要功能就是以插件的形式注册一个全局组件，不懂的小伙伴可以照猫画虎，微调一下就好了。<br>第二个组件代码就不发出来了，复制一份，给个 css 样式就好了。</p>
 <p>在 components 文件夹根目录下创建一个 index.js 用来整合所有组件。<br>components -&gt; index.js 代码：</p>
-<pre><code>    import Compontent1 from &#39;./Component1/index&#39; import Compontent2 from &#39;./Component2/index&#39; const components = [ Compontent1, Compontent2, ] function install (Vue) { components.map = (component =&gt; { Vue.component(component.name, component) }) } if (typeof window !== &#39;undefined&#39; &amp;&amp; window.Vue) { install(window.Vue); } export default { install, Compontent1, Compontent2, }</code></pre><blockquote>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token keyword">import</span> Compontent1 <span class="token keyword">from</span> <span class="token string">'./Component1/index'</span>
+<span class="token keyword">import</span> Compontent2 <span class="token keyword">from</span> <span class="token string">'./Component2/index'</span>
+<span class="token keyword">const</span> components <span class="token operator">=</span> <span class="token punctuation">[</span>Compontent1<span class="token punctuation">,</span> Compontent2<span class="token punctuation">,</span> <span class="token punctuation">]</span>
+<span class="token keyword">function</span> <span class="token function">install</span><span class="token punctuation">(</span>Vue<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    components<span class="token punctuation">.</span>map <span class="token operator">=</span> <span class="token punctuation">(</span>component <span class="token operator">=</span> <span class="token operator">></span><span class="token punctuation">{</span>
+        Vue<span class="token punctuation">.</span><span class="token function">component</span><span class="token punctuation">(</span>component<span class="token punctuation">.</span>name<span class="token punctuation">,</span> component<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">typeof</span> window <span class="token operator">!==</span> <span class="token string">'undefined'</span> <span class="token operator">&amp;&amp;</span> window<span class="token punctuation">.</span>Vue<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">install</span><span class="token punctuation">(</span>window<span class="token punctuation">.</span>Vue<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">export</span>
+<span class="token keyword">default</span> <span class="token punctuation">{</span>
+        install<span class="token punctuation">,</span>
+        Compontent1<span class="token punctuation">,</span>
+        Compontent2<span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<blockquote>
 <p>稍微提醒，需要把 install 也一起导出，观察不细心的可能会不注意就写漏了。</p>
 </blockquote>
 <h2 id="3、修改或添加-package-json-中的配置"><a href="#3、修改或添加-package-json-中的配置" class="headerlink" title="3、修改或添加 package.json 中的配置"></a>3、修改或添加 package.json 中的配置</h2><ul>
-<li><p><code>script</code> 中添加一条命令：</p>
-<p>   “lib”: “vue-cli-service build –target lib –name index –dest package components/index.js”</p>
+<li><code>script</code> 中添加一条命令：<pre class="line-numbers language-js"><code class="language-js">   <span class="token string">"lib"</span><span class="token punctuation">:</span> <span class="token string">"vue-cli-service build --target lib --name index --dest package components/index.js"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 </li>
 </ul>
 <p>最后面的 <code>components/index.js</code> 是我们存放组件文件夹根目录的<code>index.js</code> 文件，记得根据你的情况修改。这个命令执行后，会打包生成一个 <code>package</code> 的文件夹。</p>
 <p>添加 <code>files</code> 白名单，打包上传哪些文件到 <code>npm</code> 上：</p>
-<pre><code>  &quot;files&quot;: [
-    &quot;components&quot;,
-    &quot;package&quot;
-    ]</code></pre><p>添加 <code>style</code>，设置样式路径：</p>
-<pre><code>  &quot;style&quot;: &quot;package/index.css&quot;</code></pre><p>路径就是我们打包出来的 package 中的 index.css 文件。</p>
+<pre class="line-numbers language-js"><code class="language-js"> <span class="token string">"files"</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>
+      <span class="token string">"components"</span><span class="token punctuation">,</span>
+      <span class="token string">"package"</span>
+      <span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p>添加 <code>style</code>，设置样式路径：</p>
+<pre class="line-numbers language-js"><code class="language-js"> <span class="token string">"style"</span><span class="token punctuation">:</span> <span class="token string">"package/index.css"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>路径就是我们打包出来的 package 中的 index.css 文件。</p>
 <ul>
-<li><p>添加 main，设置入口：</p>
-<pre><code>&quot;main&quot;: &quot;components/index.js&quot;</code></pre></li>
+<li>添加 main，设置入口：<pre class="line-numbers language-js"><code class="language-js"><span class="token string">"main"</span><span class="token punctuation">:</span> <span class="token string">"components/index.js"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
 </ul>
 <p>路径是存放组件的 components 文件夹下的 index.js 文件。<br>将 private 设置为 false：</p>
-<pre><code>  &quot;private&quot;: false</code></pre><p>设置此项目不是私有项目之后，才能发布好 npm 上。</p>
+<pre class="line-numbers language-js"><code class="language-js"> <span class="token string">"private"</span><span class="token punctuation">:</span> <span class="token boolean">false</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>设置此项目不是私有项目之后，才能发布好 npm 上。</p>
 <p>下面的是完整的 package.json 文件配置：</p>
-<pre><code>  { &quot;name&quot;: &quot;ui-demo&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;private&quot;: false, &quot;main&quot;: &quot;components/index.js&quot;, &quot;style&quot;: &quot;package/index.css&quot;, &quot;files&quot;: [ &quot;components&quot;, &quot;package&quot; ], &quot;scripts&quot;: { &quot;serve&quot;: &quot;vue-cli-service serve&quot;, &quot;build&quot;: &quot;vue-cli-service build&quot;, &quot;lint&quot;: &quot;vue-cli-service lint&quot;, &quot;lib&quot;: &quot;vue-cli-service build --target lib --name index --dest package components/index.js&quot; }, &quot;dependencies&quot;: { &quot;core-js&quot;: &quot;^2.6.5&quot;, &quot;vue&quot;: &quot;^2.6.10&quot; }, &quot;devDependencies&quot;: { &quot;@vue/cli-plugin-babel&quot;: &quot;^3.7.0&quot;, &quot;@vue/cli-plugin-eslint&quot;: &quot;^3.7.0&quot;, &quot;@vue/cli-service&quot;: &quot;^3.7.0&quot;, &quot;babel-eslint&quot;: &quot;^10.0.1&quot;, &quot;babel-plugin-component&quot;: &quot;^1.1.1&quot;, &quot;eslint&quot;: &quot;^5.16.0&quot;, &quot;eslint-plugin-vue&quot;: &quot;^5.0.0&quot;, &quot;vue-template-compiler&quot;: &quot;^2.5.21&quot; }, &quot;eslintConfig&quot;: { &quot;root&quot;: true, &quot;env&quot;: { &quot;node&quot;: true }, &quot;extends&quot;: [ &quot;plugin:vue/essential&quot;, &quot;eslint:recommended&quot; ], &quot;rules&quot;: {}, &quot;parserOptions&quot;: { &quot;parser&quot;: &quot;babel-eslint&quot; } }, &quot;postcss&quot;: { &quot;plugins&quot;: { &quot;autoprefixer&quot;: {} } }, &quot;browserslist&quot;: [ &quot;&gt; 1%&quot;, &quot;last 2 versions&quot; ] }</code></pre><h2 id="4、打包我们的代码"><a href="#4、打包我们的代码" class="headerlink" title="4、打包我们的代码"></a>4、打包我们的代码</h2><p>在控制台执行 <code>npm run lib</code> 进行文件打包，打包完成后会多一个 <code>package</code> 文件夹。文件目录就变成如下的了：<br><img src="7.webp" alt></p>
-<h2 id="5、发布-npm-公库"><a href="#5、发布-npm-公库" class="headerlink" title="5、发布 npm(公库)"></a>5、发布 npm(公库)</h2><pre><code>  # 这是登录，前提是你已经在 npm 注册了账号
-  npm login
-  # 发布到 npm
-  npm publish</code></pre><p>安装库</p>
-<pre><code>  npm i ui-demo</code></pre><h2 id="6、发布-npm-私库"><a href="#6、发布-npm-私库" class="headerlink" title="6、发布 npm(私库)"></a>6、发布 npm(私库)</h2><p>首先需要在服务器上搭建一个私库,这里推荐一个:<a href="https://www.jianshu.com/p/d32ce7e9d4d8" target="_blank" rel="noopener">npm私服搭建—verdaccio方案及其最佳实践</a></p>
+<pre class="line-numbers language-js"><code class="language-js">    <span class="token punctuation">{</span>
+    <span class="token string">"name"</span><span class="token punctuation">:</span> <span class="token string">"ui-demo"</span><span class="token punctuation">,</span>
+    <span class="token string">"version"</span><span class="token punctuation">:</span> <span class="token string">"0.1.0"</span><span class="token punctuation">,</span>
+    <span class="token string">"private"</span><span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+    <span class="token string">"main"</span><span class="token punctuation">:</span> <span class="token string">"components/index.js"</span><span class="token punctuation">,</span>
+    <span class="token string">"style"</span><span class="token punctuation">:</span> <span class="token string">"package/index.css"</span><span class="token punctuation">,</span>
+    <span class="token string">"files"</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">"components"</span><span class="token punctuation">,</span> <span class="token string">"package"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token string">"scripts"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        <span class="token string">"serve"</span><span class="token punctuation">:</span> <span class="token string">"vue-cli-service serve"</span><span class="token punctuation">,</span>
+        <span class="token string">"build"</span><span class="token punctuation">:</span> <span class="token string">"vue-cli-service build"</span><span class="token punctuation">,</span>
+        <span class="token string">"lint"</span><span class="token punctuation">:</span> <span class="token string">"vue-cli-service lint"</span><span class="token punctuation">,</span>
+        <span class="token string">"lib"</span><span class="token punctuation">:</span> <span class="token string">"vue-cli-service build --target lib --name index --dest package components/index.js"</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token string">"dependencies"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        <span class="token string">"core-js"</span><span class="token punctuation">:</span> <span class="token string">"^2.6.5"</span><span class="token punctuation">,</span>
+        <span class="token string">"vue"</span><span class="token punctuation">:</span> <span class="token string">"^2.6.10"</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token string">"devDependencies"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        <span class="token string">"@vue/cli-plugin-babel"</span><span class="token punctuation">:</span> <span class="token string">"^3.7.0"</span><span class="token punctuation">,</span>
+        <span class="token string">"@vue/cli-plugin-eslint"</span><span class="token punctuation">:</span> <span class="token string">"^3.7.0"</span><span class="token punctuation">,</span>
+        <span class="token string">"@vue/cli-service"</span><span class="token punctuation">:</span> <span class="token string">"^3.7.0"</span><span class="token punctuation">,</span>
+        <span class="token string">"babel-eslint"</span><span class="token punctuation">:</span> <span class="token string">"^10.0.1"</span><span class="token punctuation">,</span>
+        <span class="token string">"babel-plugin-component"</span><span class="token punctuation">:</span> <span class="token string">"^1.1.1"</span><span class="token punctuation">,</span>
+        <span class="token string">"eslint"</span><span class="token punctuation">:</span> <span class="token string">"^5.16.0"</span><span class="token punctuation">,</span>
+        <span class="token string">"eslint-plugin-vue"</span><span class="token punctuation">:</span> <span class="token string">"^5.0.0"</span><span class="token punctuation">,</span>
+        <span class="token string">"vue-template-compiler"</span><span class="token punctuation">:</span> <span class="token string">"^2.5.21"</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token string">"eslintConfig"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        <span class="token string">"root"</span><span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+        <span class="token string">"env"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+            <span class="token string">"node"</span><span class="token punctuation">:</span> <span class="token boolean">true</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token string">"extends"</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">"plugin:vue/essential"</span><span class="token punctuation">,</span> <span class="token string">"eslint:recommended"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token string">"rules"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token string">"parserOptions"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+            <span class="token string">"parser"</span><span class="token punctuation">:</span> <span class="token string">"babel-eslint"</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token string">"postcss"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        <span class="token string">"plugins"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+            <span class="token string">"autoprefixer"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token string">"browserslist"</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">"> 1%"</span><span class="token punctuation">,</span> <span class="token string">"last 2 versions"</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="4、打包我们的代码"><a href="#4、打包我们的代码" class="headerlink" title="4、打包我们的代码"></a>4、打包我们的代码</h2><p>在控制台执行 <code>npm run lib</code> 进行文件打包，打包完成后会多一个 <code>package</code> 文件夹。文件目录就变成如下的了：<br><img src="7.webp" alt></p>
+<h2 id="5、发布-npm-公库"><a href="#5、发布-npm-公库" class="headerlink" title="5、发布 npm(公库)"></a>5、发布 npm(公库)</h2><pre class="line-numbers language-js"><code class="language-js">      <span class="token comment" spellcheck="true">// 这是登录，前提是你已经在 npm 注册了账号</span>
+      npm login
+
+      <span class="token comment" spellcheck="true">// 发布到 npm</span>
+      npm publish
+
+      <span class="token comment" spellcheck="true">// 安装库</span>
+      npm i ui<span class="token operator">-</span>demo<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="6、发布-npm-私库"><a href="#6、发布-npm-私库" class="headerlink" title="6、发布 npm(私库)"></a>6、发布 npm(私库)</h2><p>首先需要在服务器上搭建一个私库,这里推荐一个:<a href="https://www.jianshu.com/p/d32ce7e9d4d8" target="_blank" rel="noopener">npm私服搭建—verdaccio方案及其最佳实践</a></p>
 <p>建立好私库后,登录、打包跟上面步骤一样,发布时需要使用<code>nrm</code>命令 <code>nrm use xxx</code>(切换到私库地址),如图所示:<br><img src="7.png" alt></p>
-<ul>
-<li>发布<br>npm publish</li>
-<li>npm 安装<br>npm i  ui-demo  –registry 私库地址</li>
-</ul>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token comment" spellcheck="true">// 发布</span>
+  npm publish
+
+<span class="token comment" spellcheck="true">//  npm 安装</span>
+  npm i  ui<span class="token operator">-</span>demo  <span class="token operator">--</span>registry 私库地址<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h1 id="结尾"><a href="#结尾" class="headerlink" title="结尾"></a>结尾</h1><p>这样我们就可以使用我们自己的 UI 库了。</p>
 
             </div>
@@ -1062,7 +1141,7 @@ export default { name: &#39;Component1&#39; }
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="2020 前端面试">
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="2020 前端面试">
                         
                         <span class="card-title">2020 前端面试</span>
                     </div>
@@ -1111,7 +1190,7 @@ export default { name: &#39;Component1&#39; }
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="2019 年的思考总结">
+                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="2019 年的思考总结">
                         
                         <span class="card-title">2019 年的思考总结</span>
                     </div>
@@ -1297,7 +1376,7 @@ export default { name: &#39;Component1&#39; }
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">53.4k</span>
+            <span class="white-color">53.8k</span>
             
 
             <br>

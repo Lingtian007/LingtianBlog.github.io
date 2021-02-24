@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.linfengdunwu.cn/"/>
-  <updated>2021-02-23T08:17:37.394Z</updated>
+  <updated>2021-02-24T09:02:50.372Z</updated>
   <id>https://www.linfengdunwu.cn/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>前端项目优化方案</title>
+    <link href="https://www.linfengdunwu.cn/2021/02/24/qian-duan-xiang-mu-you-hua-fang-an/"/>
+    <id>https://www.linfengdunwu.cn/2021/02/24/qian-duan-xiang-mu-you-hua-fang-an/</id>
+    <published>2021-02-24T09:32:09.000Z</published>
+    <updated>2021-02-24T09:02:50.372Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;div align=&quot;middle&quot;&gt;
+&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;330&quot; height=&quot;86&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="方案" scheme="https://www.linfengdunwu.cn/categories/%E6%96%B9%E6%A1%88/"/>
+    
+    
+      <category term="方案" scheme="https://www.linfengdunwu.cn/tags/%E6%96%B9%E6%A1%88/"/>
+    
+  </entry>
   
   <entry>
     <title>一文了解JS执行顺序</title>
@@ -398,7 +425,7 @@
     <link href="https://www.linfengdunwu.cn/2020/03/28/cong-ling-da-jian-qian-duan-zu-jian-ku/"/>
     <id>https://www.linfengdunwu.cn/2020/03/28/cong-ling-da-jian-qian-duan-zu-jian-ku/</id>
     <published>2020-03-28T07:32:09.000Z</published>
-    <updated>2020-05-28T08:47:53.185Z</updated>
+    <updated>2021-02-23T09:35:46.181Z</updated>
     
     <summary type="html">
     
@@ -525,33 +552,6 @@
     
     
       <category term="开发环境" scheme="https://www.linfengdunwu.cn/tags/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>VUE项目常用方法总结</title>
-    <link href="https://www.linfengdunwu.cn/2019/10/17/vue-xiang-mu-chang-yong-fang-fa-zong-jie/"/>
-    <id>https://www.linfengdunwu.cn/2019/10/17/vue-xiang-mu-chang-yong-fang-fa-zong-jie/</id>
-    <published>2019-10-17T07:32:09.000Z</published>
-    <updated>2020-06-02T06:48:24.202Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;div align=&quot;middle&quot;&gt;
-&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;330&quot; height=&quot;86&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="Vue" scheme="https://www.linfengdunwu.cn/categories/Vue/"/>
-    
-    
-      <category term="Vue" scheme="https://www.linfengdunwu.cn/tags/Vue/"/>
     
   </entry>
   
