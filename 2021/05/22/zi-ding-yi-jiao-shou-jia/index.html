@@ -12,7 +12,7 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="js常用方法, 唐宇的博客">
+    <meta name="keywords" content="自定义脚手架-cli, 唐宇的博客">
     <meta name="baidu-site-verification" content>
     <meta name="google-site-verification" content>
     <meta name="360-site-verification" content>
@@ -20,10 +20,12 @@
 
 
 
-闲来无事，随便写写……
+写在前面：2021年已经过去一半了，时间真的过的稍微有点快呀～ ……
 开篇
-你真的了解JS的那些方法吗？
-">
+
+搭建自己的一个cli，首先是要知道自己想要实现什么功能，然后在确定交互形式，简言之就是先实现思路，再进行搭建
+
+1.准备工作// commander:解析">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -31,7 +33,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>js常用方法 | 唐宇的博客</title>
+    <title>自定义脚手架-cli | 唐宇的博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -305,13 +307,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        js常用方法
+                        自定义脚手架-cli
                     </div>
                 </div>
             </div>
@@ -446,7 +448,7 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-01-22
+                    2021-05-22
                 </div>
 
                 <div class="post-author info-break-policy">
@@ -460,14 +462,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    22
+                    600
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
                 
@@ -487,10 +489,147 @@
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=407679465&auto=1&height=66"></iframe>
 </div>
 
-<p>闲来无事，随便写写……</p>
+<p>写在前面：2021年已经过去一半了，时间真的过的稍微有点快呀～ ……</p>
 <h1 id="开篇"><a href="#开篇" class="headerlink" title="开篇"></a>开篇</h1><hr>
-<p>你真的了解JS的那些方法吗？</p>
+<blockquote>
+<p>搭建自己的一个cli，首先是要知道自己想要实现什么功能，然后在确定交互形式，简言之就是先实现思路，再进行搭建</p>
+</blockquote>
+<h2 id="1-准备工作"><a href="#1-准备工作" class="headerlink" title="1.准备工作"></a>1.准备工作</h2><pre class="line-numbers language-js"><code class="language-js"><span class="token comment" spellcheck="true">// commander:解析用户输入的命令</span>
+<span class="token keyword">const</span> program <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'commander'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// 提供给我们单选/多选项目</span>
+<span class="token keyword">const</span> inquirer <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'inquirer'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// 函数的跨平台写法</span>
+<span class="token keyword">const</span> spwn <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"cross-spawn"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> fs <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'fs'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> path <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"path"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="2-配置package-json"><a href="#2-配置package-json" class="headerlink" title="2. 配置package.json"></a>2. 配置package.json</h2><pre class="line-numbers language-js"><code class="language-js"><span class="token string">"scripts"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token string">"cli"</span><span class="token punctuation">:</span><span class="token string">"node cli.js"</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">// 启动指令</span>
+    <span class="token operator">...</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+    <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="3-创建文件cli-js"><a href="#3-创建文件cli-js" class="headerlink" title="3. 创建文件cli.js"></a>3. 创建文件cli.js</h2><p>们的可执行文件放置在bin的目录的cli文件中，<br>此时我们要配置当前脚手架的执行环境，因此需要在cli文件的头部添加上</p>
+<pre class="line-numbers language-js"><code class="language-js">#<span class="token operator">!</span><span class="token operator">/</span>usr<span class="token operator">/</span>bin<span class="token operator">/</span>env node<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<blockquote>
+<p>该信息必须在头部，不能在其顶部添加任何其他的信息，否则会导致报错，</p>
+</blockquote>
+<pre class="line-numbers language-js"><code class="language-js">#<span class="token operator">!</span> <span class="token operator">/</span>usr<span class="token operator">/</span>bin<span class="token operator">/</span>env node
 
+<span class="token keyword">const</span> program <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'commander'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> spwn <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"cross-spawn"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> inquirer <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'inquirer'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> fs <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'fs'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> path <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"path"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">//去除环境,启动端描述和空格</span>
+<span class="token keyword">const</span> toFilter<span class="token operator">=</span><span class="token punctuation">(</span>val<span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">></span><span class="token punctuation">{</span>
+   <span class="token keyword">let</span> valStr<span class="token operator">=</span>val<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">'-'</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+   <span class="token keyword">let</span> RemoveSpace<span class="token operator">=</span>valStr<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token regex">/(\s*$)/g</span><span class="token punctuation">,</span> <span class="token string">""</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+   <span class="token keyword">return</span> RemoveSpace<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment" spellcheck="true">// 业务开发目录</span>
+<span class="token keyword">const</span> businessFilesPath <span class="token operator">=</span> path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>__dirname <span class="token operator">+</span> <span class="token string">"/src/pages"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// 获取业务文件名</span>
+<span class="token keyword">const</span> businessFilesNames <span class="token operator">=</span> fs<span class="token punctuation">.</span><span class="token function">readdirSync</span><span class="token punctuation">(</span>businessFilesPath<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> Run<span class="token operator">=</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">></span><span class="token punctuation">{</span>
+    <span class="token keyword">const</span> promptList <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+        type<span class="token punctuation">:</span> <span class="token string">'list'</span><span class="token punctuation">,</span>
+        message<span class="token punctuation">:</span> <span class="token string">'请选择运行环境:'</span><span class="token punctuation">,</span>
+        name<span class="token punctuation">:</span> <span class="token string">'env'</span><span class="token punctuation">,</span>
+        choices<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+          <span class="token string">"mock - 本地开发环境"</span><span class="token punctuation">,</span>
+          <span class="token string">"dev - 联调环境"</span><span class="token punctuation">,</span>
+          <span class="token string">"sit - 测试环境"</span><span class="token punctuation">,</span>
+          <span class="token string">"uat - 仿真环境"</span><span class="token punctuation">,</span>
+          <span class="token string">"build - 生产环境"</span>
+        <span class="token punctuation">]</span><span class="token punctuation">,</span>
+        filter<span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>val<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment" spellcheck="true">// 去除文字描述</span>
+          <span class="token keyword">return</span> <span class="token function">toFilter</span><span class="token punctuation">(</span>val<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token punctuation">{</span>
+        type<span class="token punctuation">:</span> <span class="token string">'list'</span><span class="token punctuation">,</span>
+        message<span class="token punctuation">:</span> <span class="token string">'请选择启动端:'</span><span class="token punctuation">,</span>
+        name<span class="token punctuation">:</span> <span class="token string">'tool'</span><span class="token punctuation">,</span>
+        choices<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+          <span class="token string">"h5 - webapp"</span><span class="token punctuation">,</span>
+          <span class="token string">"weapp - 微信小程序"</span><span class="token punctuation">,</span>
+          <span class="token string">"alipay - 支付宝小程序"</span><span class="token punctuation">,</span>
+          <span class="token string">"swan - 百度小程序"</span><span class="token punctuation">,</span>
+          <span class="token string">"tt - 字节跳动小程序"</span><span class="token punctuation">,</span>
+          <span class="token string">"qq - QQ小程序"</span>
+        <span class="token punctuation">]</span><span class="token punctuation">,</span>
+        filter<span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>val<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment" spellcheck="true">// 去除文字描述</span>
+          <span class="token keyword">return</span> <span class="token function">toFilter</span><span class="token punctuation">(</span>val<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token punctuation">{</span>
+        type<span class="token punctuation">:</span> <span class="token string">'list'</span><span class="token punctuation">,</span>
+        message<span class="token punctuation">:</span> <span class="token string">'是否打包:'</span><span class="token punctuation">,</span>
+        name<span class="token punctuation">:</span> <span class="token string">'IsDist'</span><span class="token punctuation">,</span>
+        choices<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+          <span class="token string">"Yes"</span><span class="token punctuation">,</span>
+          <span class="token string">"No"</span><span class="token punctuation">,</span>
+        <span class="token punctuation">]</span><span class="token punctuation">,</span>
+        when<span class="token punctuation">:</span><span class="token keyword">function</span><span class="token punctuation">(</span>answers<span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">const</span> <span class="token punctuation">{</span>env<span class="token punctuation">,</span>tool<span class="token punctuation">}</span><span class="token operator">=</span>answers<span class="token punctuation">;</span>
+            <span class="token keyword">let</span> envList<span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">'sit'</span><span class="token punctuation">,</span><span class="token string">'uat'</span><span class="token punctuation">,</span><span class="token string">'build'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span>envList<span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span>env<span class="token punctuation">)</span> <span class="token operator">!=</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>
+                <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        type<span class="token punctuation">:</span> <span class="token string">'list'</span><span class="token punctuation">,</span>
+        message<span class="token punctuation">:</span> <span class="token string">'请选择模块:'</span><span class="token punctuation">,</span>
+        name<span class="token punctuation">:</span> <span class="token string">'module'</span><span class="token punctuation">,</span>
+        choices<span class="token punctuation">:</span>businessFilesNames<span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+          type<span class="token punctuation">:</span> <span class="token string">'list'</span><span class="token punctuation">,</span>
+          message<span class="token punctuation">:</span> <span class="token string">'PWA是否启用:'</span><span class="token punctuation">,</span>
+          name<span class="token punctuation">:</span> <span class="token string">'PWA'</span><span class="token punctuation">,</span>
+          choices<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+            <span class="token string">"true"</span><span class="token punctuation">,</span>
+            <span class="token string">"false"</span>
+          <span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+      inquirer<span class="token punctuation">.</span><span class="token function">prompt</span><span class="token punctuation">(</span>promptList<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>answers <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+        <span class="token keyword">const</span><span class="token punctuation">{</span> env<span class="token punctuation">,</span> tool<span class="token punctuation">,</span> module<span class="token punctuation">,</span> PWA<span class="token punctuation">,</span>IsDist <span class="token punctuation">}</span> <span class="token operator">=</span> answers<span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">// console.log(IsDist);</span>
+        <span class="token keyword">let</span> envList<span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">'sit'</span><span class="token punctuation">,</span><span class="token string">'uat'</span><span class="token punctuation">,</span><span class="token string">'build'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token keyword">let</span> watch<span class="token operator">=</span><span class="token string">''</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>envList<span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span>env<span class="token punctuation">)</span> <span class="token operator">!=</span> <span class="token operator">-</span><span class="token number">1</span> <span class="token operator">&amp;&amp;</span> tool <span class="token operator">===</span> <span class="token string">'h5'</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span>IsDist <span class="token operator">&amp;&amp;</span> IsDist<span class="token operator">===</span><span class="token string">"Yes"</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                watch<span class="token operator">=</span><span class="token string">""</span>
+            <span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>
+                watch<span class="token operator">=</span><span class="token string">":watch"</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        <span class="token comment" spellcheck="true">// const watch = (envList.indexOf(env) != -1 &amp;&amp; tool === 'h5') || IsDist==='N' ? ':watch' : '';</span>
+        <span class="token keyword">let</span>  order<span class="token operator">=</span> <span class="token template-string"><span class="token string">`npm run </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>env<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">:</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>tool<span class="token interpolation-punctuation punctuation">}</span></span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>watch<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string"> APP_CONFIG=</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>module<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">H5 PWA_ENABLE=</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>PWA<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">`</span></span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>order<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 返回的结果</span>
+        <span class="token function">spwn</span><span class="token punctuation">(</span><span class="token string">"npm"</span><span class="token punctuation">,</span> <span class="token punctuation">[</span>
+          <span class="token string">"run"</span><span class="token punctuation">,</span>
+          <span class="token template-string"><span class="token string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>env<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">:</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>tool<span class="token interpolation-punctuation punctuation">}</span></span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>watch<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">`</span></span><span class="token punctuation">,</span>
+          <span class="token template-string"><span class="token string">`APP_CONFIG=</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>module<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">H5`</span></span><span class="token punctuation">,</span>
+          <span class="token template-string"><span class="token string">`PWA_ENABLE=</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>PWA<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">`</span></span><span class="token punctuation">,</span>
+        <span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token punctuation">{</span>stdio<span class="token punctuation">:</span><span class="token punctuation">[</span><span class="token string">"pipe"</span><span class="token punctuation">,</span>process<span class="token punctuation">.</span>stdout<span class="token punctuation">,</span>process<span class="token punctuation">.</span>stderr<span class="token punctuation">]</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token punctuation">}</span>
+program
+  <span class="token punctuation">.</span><span class="token function">action</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+    <span class="token function">Run</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+
+<span class="token comment" spellcheck="true">// 用来解析终端输入的 options</span>
+program<span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span>process<span class="token punctuation">.</span>argv<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="3-使用"><a href="#3-使用" class="headerlink" title="3. 使用"></a>3. 使用</h2><pre class="line-numbers language-js"><code class="language-js"> npm run cli<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h1 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h1>
             </div>
             <hr />
 
@@ -648,9 +787,9 @@
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《js常用方法》
+                    《自定义脚手架-cli》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/01/22/js-chang-yong-fang-fa/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2021/05/22/zi-ding-yi-jiao-shou-jia/" property="cc:attributionName"
                rel="cc:attributionURL">
                 唐宇
             </a> 采用
@@ -691,7 +830,7 @@
         repo: 'Lingtian007.github.io',
         owner: 'Lingtian007',
         admin: "Lingtian007",
-        id: '2019/01/22/js-chang-yong-fang-fa/',
+        id: '2021/05/22/zi-ding-yi-jiao-shou-jia/',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -978,13 +1117,13 @@
             <div class="article-badge left-badge text-color">
                 <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2019/07/13/react-native-da-jian-xiao-bai-jiao-cheng/">
+                <a href="/2021/06/22/yi-jian-sheng-cheng-xiang-mu-mo-ban/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="React Native 搭建小白教程">
+                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="一键生成项目模板">
                         
-                        <span class="card-title">React Native 搭建小白教程</span>
+                        <span class="card-title">一键生成项目模板</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -995,14 +1134,14 @@
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-07-13
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2021-06-22
                         </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/开发环境/" class="post-category" target="_blank">
-                                    开发环境
+                            <a href="/categories/脚本/" class="post-category" target="_blank">
+                                    脚本
                                 </a>
                             
                             
@@ -1012,8 +1151,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/开发环境/" target="_blank">
-                        <span class="chip bg-color">开发环境</span>
+                    <a href="/tags/脚本/" target="_blank">
+                        <span class="chip bg-color">脚本</span>
                     </a>
                     
                 </div>
@@ -1027,13 +1166,13 @@
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/01/22/js-chang-yong-shu-zu-cao-zuo-fang-fa/">
+                <a href="/2021/05/13/xiao-cheng-xu-he-h5-ye-mian-zhi-jian-hu-xiang-tiao-zhuan/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="js常用数组操作方法">
+                        <img src="/medias/featureimages/24.jpg" class="responsive-img" alt="小程序和H5页面之间互相跳转">
                         
-                        <span class="card-title">js常用数组操作方法</span>
+                        <span class="card-title">小程序和H5页面之间互相跳转</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1044,7 +1183,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-01-22
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2021-05-13
                             </span>
                         <span class="publish-author">
                             
@@ -1217,7 +1356,7 @@
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">53.8k</span>
+            <span class="white-color">55.8k</span>
             
 
             <br>
