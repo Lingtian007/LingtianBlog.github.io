@@ -1,0 +1,1834 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-05-28 15:51:13
+ * @LastEditTime: 2020-05-29 14:06:01
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \LingtianBlog\themes\matery\layout\layout.ejs
+--> 
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="React小技巧汇总, 唐宇的博客">
+    <meta name="baidu-site-verification" content>
+    <meta name="google-site-verification" content>
+    <meta name="360-site-verification" content>
+    <meta name="description" content="
+
+
+
+自学 React.js 一段时间了，把使用过程遇到的小坑和小技巧记录下来，希望能够帮助到其他人。此文章是长篇大论你只有耐得住寂寞，禁得住诱惑才会有所成长……
+React 小技巧汇总
+一、工具篇1.显示 html  &amp;lt;div d">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>React小技巧汇总 | 唐宇的博客</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+    <style type="text/css">
+        
+    </style>
+
+    <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
+    <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?46e79e71af0709a5b9106bf20cecc493";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+
+<body>
+
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <!-- <img src="/medias/logo.png" class="logo-img" alt="LOGO"> -->
+                    
+                    <span class="logo-span">唐宇的博客</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fa fa-navicon"></i></a>
+<ul class="right">
+    
+    <li class="hide-on-med-and-down">
+        <a href="/" class="waves-effect waves-light">
+            
+            <span>首页</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/tags" class="waves-effect waves-light">
+            
+            <span>标签</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/categories" class="waves-effect waves-light">
+            
+            <span>分类</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/archives" class="waves-effect waves-light">
+            
+            <span>归档</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/about" class="waves-effect waves-light">
+            
+            <span>关于</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/friends" class="waves-effect waves-light">
+            
+            <span>友情链接</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/contact" class="waves-effect waves-light">
+            
+            <span>留言板</span>
+        </a>
+    </li>
+    
+    <li>
+        <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+            <i id="searchIcon" class="fa fa-search" title="搜索"></i>
+        </a>
+    </li>
+</ul>
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <!-- <img src="/medias/logo.png" class="logo-img circle responsive-img"> -->
+        
+        <div class="logo-name">唐宇的博客</div>
+        <div class="logo-desc">
+            
+            不忘初心 忘旧年
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li>
+            <a href="/" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-link"></i>
+                
+                首页
+            </a>
+        </li>
+        
+        <li>
+            <a href="/tags" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-link"></i>
+                
+                标签
+            </a>
+        </li>
+        
+        <li>
+            <a href="/categories" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-link"></i>
+                
+                分类
+            </a>
+        </li>
+        
+        <li>
+            <a href="/archives" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-link"></i>
+                
+                归档
+            </a>
+        </li>
+        
+        <li>
+            <a href="/about" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-link"></i>
+                
+                关于
+            </a>
+        </li>
+        
+        <li>
+            <a href="/friends" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-link"></i>
+                
+                友情链接
+            </a>
+        </li>
+        
+        <li>
+            <a href="/contact" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-link"></i>
+                
+                留言板
+            </a>
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/Lingtian007" class="waves-effect waves-light" target="_blank">
+                <i class="fa fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/Lingtian007" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <div class="description center-align post-title">
+                        React小技巧汇总
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #toc-content .is-active-link::before {
+        background-color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 20px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                        <a href="/tags/React/" target="_blank">
+                            <span class="chip bg-color">React</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fa fa-bookmark fa-fw icon-category"></i>
+                        
+                        <a href="/categories/React/" class="post-category" target="_blank">
+                            React
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                <div class="post-date info-break-policy">
+                    <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2019-11-06
+                </div>
+
+                <div class="post-author info-break-policy">
+                    <i class="fa fa-user-o fa-fw"></i>作者:&nbsp;&nbsp;
+                    
+                    唐宇
+                    
+                </div>
+
+                
+                
+                <div class="info-break-policy">
+                    <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    5.2k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    21 分
+                </div>
+                
+                
+
+                
+                <div id="busuanzi_container_page_pv" class="info-break-policy">
+                    <i class="fa fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                    <span id="busuanzi_value_page_pv"></span>
+                </div>
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <div align="middle">
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=1347529350&auto=1&height=66"></iframe>
+</div>
+
+<p>自学 <code>React.js</code> 一段时间了，把使用过程遇到的小坑和小技巧记录下来，希望能够帮助到其他人。此文章是长篇大论你只有耐得住寂寞，禁得住诱惑才会有所成长……</p>
+<h1 id="React-小技巧汇总"><a href="#React-小技巧汇总" class="headerlink" title="React 小技巧汇总"></a>React 小技巧汇总</h1><hr>
+<h2 id="一、工具篇"><a href="#一、工具篇" class="headerlink" title="一、工具篇"></a>一、工具篇</h2><h3 id="1-显示-html"><a href="#1-显示-html" class="headerlink" title="1.显示 html"></a>1.显示 html</h3><pre><code>  &lt;div dangerouslySetInnerHTML={{ __html: LANG.auth_register_tips1 }}/&gt;</code></pre><h3 id="2-常用组件"><a href="#2-常用组件" class="headerlink" title="2.常用组件"></a>2.常用组件</h3><ul>
+<li><code>axios</code>(http 请求模块，可用于前端任何场景，很强大)=&gt;<a href="https://www.jianshu.com/p/79816fa9c54f" target="_blank" rel="noopener">封装 axios</a></li>
+<li><code>echarts-for-react</code>(可视化图表，别人基于 react 对 echarts 的封装，足够用了)=&gt;<a href="https://www.jianshu.com/p/f6c1c4618c22" target="_blank" rel="noopener">echarts-for-react</a></li>
+<li><code>recharts</code>(另一个基于 react 封装的图表)=&gt;<a href="https://recharts.cosx.org/recharts" target="_blank" rel="noopener">官网</a></li>
+<li><code>nprogress</code>(顶部加载条，蛮好用)</li>
+<li><code>react-draft-wysiwyg</code>(别人基于 react 的富文本封装，如果找到其他更好的可以替换)</li>
+<li><code>react-draggable</code>(拖拽模块，找了个简单版的)</li>
+<li><code>screenfull</code>(全屏插件)</li>
+<li><code>photoswipe</code>(图片弹层查看插件，不依赖 jQuery，还是蛮好用)</li>
+<li><code>animate.css</code>(css 动画库)</li>
+<li><code>redux Web</code> 应用是一个状态机，视图与状态是一一对应的.所有的状态，保存在一个对象里面</li>
+<li><code>redux-logger</code> 日志</li>
+<li><code>Reselect</code> 记忆组件</li>
+<li><code>redux-thunk</code> 为了解决异步 action 的问题</li>
+<li><code>redux-saga</code> 为了解决异步 action 的问题</li>
+<li><code>react-router-redux</code> 保持路由与应用状态(state)同步</li>
+<li><code>react-router-dom</code>路由基本组件 1).<a href="https://www.jianshu.com/p/8954e9fb0c7e" target="_blank" rel="noopener">在 React 中使用 react-router-dom 路由</a> 2).<a href="https://www.jianshu.com/p/19ef80d2e122" target="_blank" rel="noopener">react-router-dom 及组件生命周期</a></li>
+</ul>
+<h3 id="3-react-devtools-调试工具"><a href="#3-react-devtools-调试工具" class="headerlink" title="3.react-devtools 调试工具"></a>3.react-devtools 调试工具</h3><p><a href="https://github.com/facebook/react-devtools" target="_blank" rel="noopener">工具地址</a>:<a href="https://github.com/facebook/react-devtools" target="_blank" rel="noopener">https://github.com/facebook/react-devtools</a></p>
+<p>或者 直接谷歌应用商店搜索<code>react-devtools</code>进行安装.</p>
+<h2 id="二、组件通讯篇"><a href="#二、组件通讯篇" class="headerlink" title="二、组件通讯篇"></a>二、组件通讯篇</h2><p><img src="1.jpg" alt></p>
+<p><strong>需要组件之进行通信的几种情况</strong></p>
+<ul>
+<li>redux 架构</li>
+<li>父组件向子组件 —— props</li>
+<li>子组件向父组件 —— props.funciton 接收参数</li>
+<li>利用事件机制</li>
+</ul>
+<h3 id="1-父组件向子组件通信"><a href="#1-父组件向子组件通信" class="headerlink" title="1. 父组件向子组件通信"></a>1. 父组件向子组件通信</h3><p>React 数据流动是单向的,父组件向子组件通信也是最常见的;父组件通过 props 向子组件传递需要的信息</p>
+<h3 id="2-子组件向父组件通信"><a href="#2-子组件向父组件通信" class="headerlink" title="2. 子组件向父组件通信"></a>2. 子组件向父组件通信</h3><ul>
+<li>利用回调函数</li>
+<li>利用自定义事件机制</li>
+</ul>
+<p><strong>子组件改变父组件的 state</strong></p>
+<pre><code>  // 一般改变state值的一种方式
+  const { data } = this.state;
+  this.setState({ data: {...data, key: 1 } });
+  // 另外一种可以通过callback的方式改变state的值
+  this.setState(({ data }) =&gt; ({ data: {...data, key: 1 } }));
+  // 还可以
+  this.setState((state, props) =&gt; {
+  return { counter: state.counter + props.step };
+  });</code></pre><h3 id="3-跨级组件通信"><a href="#3-跨级组件通信" class="headerlink" title="3. 跨级组件通信"></a>3. 跨级组件通信</h3><ul>
+<li>层层组件传递 props<blockquote>
+<p>例如 A 组件和 B 组件之间要进行通信,先找到 A 和 B 公共的父组件,A 先向 C 组件通信,C 组件通过 props 和 B 组件通信,此时 C 组件起的就是中间件的作用</p>
+</blockquote>
+</li>
+<li>使用 context<br>下面例子中的组件关系: ListItem 是 List 的子组件,List 是 app 的子组件</li>
+</ul>
+<p>ListItem.js</p>
+<pre><code>  import React, { Component } from &#39;react&#39;;
+  import PropTypes from &#39;prop-types&#39;;
+  class ListItem extends Component {
+  // 子组件声明自己要使用context
+  static contextTypes = {
+        color: PropTypes.string,
+  }
+  static propTypes = {
+        value: PropTypes.string,
+  }
+  render() {
+        const { value } = this.props;
+        return (
+              &lt;li style={{ background: this.context.color }}&gt;
+              &lt;span&gt;{value}&lt;/span&gt;
+              &lt;/li&gt;
+        );
+  }
+  }
+  export default ListItem;</code></pre><p>List.js</p>
+<pre><code>  import ListItem from &#39;./ListItem&#39;;
+  class List extends Component {
+  // 父组件声明自己支持context
+  static childContextTypes = {
+        color: PropTypes.string,
+  }
+  static propTypes = {
+        list: PropTypes.array,
+  }
+  // 提供一个函数,用来返回相应的context对象
+  getChildContext() {
+        return {
+              color: &#39;red&#39;,
+        };
+  }
+  render() {
+        const { list } = this.props;
+        return (
+              &lt;div&gt;
+              &lt;ul&gt;
+                    {
+                          list.map((entry, index) =&gt;
+                          &lt;ListItem key={`list-${index}`} value={entry.text} /&gt;,
+                    )
+                    }
+              &lt;/ul&gt;
+              &lt;/div&gt;
+        );
+  }
+  }
+  export default List;</code></pre><p>App.js</p>
+<pre><code>  import React, { Component } from &#39;react&#39;;
+  import List from &#39;./components/List&#39;;
+  const list = [
+  {
+        text: &#39;题目一&#39;,
+  },
+  {
+        text: &#39;题目二&#39;,
+  },
+  ];
+  export default class App extends Component {
+  render() {
+        return (
+              &lt;div&gt;
+              &lt;List
+                    list={list}
+              /&gt;
+              &lt;/div&gt;
+        );
+  }
+  }</code></pre><h3 id="4-没有嵌套关系的组件通信"><a href="#4-没有嵌套关系的组件通信" class="headerlink" title="4. 没有嵌套关系的组件通信"></a>4. 没有嵌套关系的组件通信</h3><!-- + 使用自定义事件机制
+
+>在componentDidMount事件中,如果组件挂载完成,再订阅事件;在组件卸载的时候,在componentWillUnmount事件中取消事件的订阅;以常用的发布/订阅模式举例,借用Node.js Events模块的浏览器版实现 -->
+
+<ul>
+<li>组件间通信之 onRef 方法</li>
+</ul>
+<blockquote>
+<p>组件间通信除了 props 外还有 onRef 方法，不过 React 官方文档建议不要过度依赖 ref。本文使用 onRef 语境为在表单录入时提取公共组件，在提交时分别获取表单信息。</p>
+</blockquote>
+<p>下面 demo 中点击父组件按钮可以获取子组件全部信息，包括状态和方法，可以看下 demo 中控制台打印。</p>
+<pre><code>  // 父组件
+  class Parent extends React.Component {
+  testRef=(ref)=&gt;{
+  this.child = ref
+  console.log(ref) // -&gt; 获取整个Child元素
+  }
+  handleClick=()=&gt;{
+  alert(this.child.state.info) // -&gt; 通过this.child可以拿到child所有状态和方法
+  }
+  render() {
+  return &lt;div&gt;
+        &lt;Child onRef={this.testRef} /&gt;
+        &lt;button onClick={this.handleClick}&gt;父组件按钮&lt;/button&gt;
+  &lt;/div&gt;
+  }
+  }
+  // 子组件
+  class Child extends React.Component {
+  constructor(props) {
+  super(props)
+  this.state = {
+        info:&#39;快点击子组件按钮哈哈哈&#39;
+  }
+  }
+  componentDidMount(){
+  this.props.onRef(this)
+  console.log(this) // -&gt;将child传递给this.props.onRef()方法
+  }
+  handleChildClick=()=&gt;{
+  this.setState({info:&#39;通过父组件按钮获取到子组件信息啦啦啦&#39;})
+  }
+  render(){
+  return &lt;button onClick={this.handleChildClick}&gt;子组件按钮&lt;/button&gt;
+  }
+  }</code></pre><p><code>原理</code>：当在子组件中调用 onRef 函数时，正在调用从父组件传递的函数。this.props.onRef（this）这里的参数指向子组件本身，父组件接收该引用作为第一个参数：onRef = {ref =&gt;（this.child = ref）}然后它使用 this.child 保存引用。之后，可以在父组件内访问整个子组件实例，并且可以调用子组件函数。</p>
+<h2 id="三、路由篇"><a href="#三、路由篇" class="headerlink" title="三、路由篇"></a>三、路由篇</h2><blockquote>
+<p>使用 React 构建的单页面应用，要想实现页面间的跳转，首先想到的就是使用路由。在 React 中，常用的有两个包可以实现这个需求，那就是 react-router 和 react-router-dom。本文主要针对 react-router-dom 进行说明。</p>
+</blockquote>
+<h3 id="1、React-Router-中有三类组件"><a href="#1、React-Router-中有三类组件" class="headerlink" title="1、React Router 中有三类组件:"></a>1、React Router 中有三类组件:</h3><ul>
+<li>router 组件（BrowserRouter，HashRouter）</li>
+<li>route matching 组件（Route，Switch）</li>
+<li>navigation 组件（Link）</li>
+</ul>
+<blockquote>
+<p>基于 React Router 的 web 应用，根组件应该是一个 router 组件（BrowserRouter，HashRouter）。 项目中，react-router-dom 提供了和两种路由。两种路由都会创建一个 history 对象。如果我们的应用有服务器响应 web 的请求，我们通常使用<browserrouter>组件; 如果使用静态文件服务器，则我们应该使用<hashrouter>组件</hashrouter></browserrouter></p>
+</blockquote>
+<h3 id="2、HashRouter-和-BrowserRouter"><a href="#2、HashRouter-和-BrowserRouter" class="headerlink" title="2、HashRouter 和 BrowserRouter"></a>2、HashRouter 和 BrowserRouter</h3><p>其实就是路由的 hash 和 history 两种模式（要是不了解这两种模式之间的区别那就需要去恶补下啦）</p>
+<p>并且这两个组件是路由的容器，<code>必须在最外层</code>—&gt;内部是 <code>Route</code></p>
+<pre><code>  // hash模式
+  ReactDom.render(
+  &lt;HashRouter&gt;
+        &lt;Route path=&quot;/&quot; component={Home}/&gt;
+  &lt;/HashRouter&gt;
+  )
+  // history模式
+  ReactDom.render(
+  &lt;BrowserRouter&gt;
+        &lt;Route path=&quot;/&quot; component={Home}/&gt;
+  &lt;/BrowserRouter&gt;
+  )</code></pre><p><strong>下面说说 HashRouter 和 BrowserRouter 上的参数</strong></p>
+<ul>
+<li>basename 路由的基础链接，用来部署到非根目录下，比如你需要将项目部署到 <a href="http://www.xxxx.com/web" target="_blank" rel="noopener">www.xxxx.com/web</a> 下，则设置 basename=”/web”</li>
+<li>getUserConfirmation 用来拦截 Prompt 组件，并且决定是否跳转</li>
+<li>forceRefresh 用来设置是否强制浏览器整体刷新，默认值为 false</li>
+<li>keLength 用来设置 location.key 的长度，默认是 6，可以自定义</li>
+</ul>
+<h3 id="3、Route"><a href="#3、Route" class="headerlink" title="3、Route"></a>3、Route</h3><p>Route 是路由的一个原材料，它是控制路径对应显示的组件</p>
+<p>Route 的参数:</p>
+<ul>
+<li>path 跳转的路径</li>
+<li>component 对应路径显示的组件</li>
+<li>render 可以自己写 render 函数返回具体的 dom，而不需要去设置 component</li>
+<li>location 传递 route 对象，和当前的 route 对象对比，如果匹配则跳转</li>
+<li>exact 匹配规则，true 的时候则精确匹配。</li>
+</ul>
+<h3 id="4、Router"><a href="#4、Router" class="headerlink" title="4、Router"></a>4、Router</h3><p>低级路由，适用于任何路由组件，主要和 redux 深度集成，使用必须配合 history 对象</p>
+<p>使用 Router 路由的目的是和状态管理库如 redux 中的 history 同步对接</p>
+<pre><code>  &lt;Router history={history}&gt;
+  ...
+  &lt;/Router&gt;</code></pre><h3 id="5、Link-和-NavLink"><a href="#5、Link-和-NavLink" class="headerlink" title="5、Link 和 NavLink"></a>5、Link 和 NavLink</h3><p>两者都是跳转路由，NavLink 的参数更多些<br><strong>Link 的 api</strong></p>
+<ul>
+<li><p>to 有两种写法，表示跳转到哪个路由</p>
+</li>
+<li><p>字符串写法</p>
+  <link to="/a">
+</li>
+<li><p>对象写法</p>
+<pre><code>&lt;Link to={{
+      pathname: '/courses',
+      search: '?sort=name',
+      hash: '#the-hash',
+      state: { fromDashboard: true }
+      }}/&gt;</code></pre></li>
+<li><p>replace 就是将 push 改成 replace</p>
+</li>
+<li><p>innerRef 访问 Link 标签的 dom</p>
+</li>
+</ul>
+<p><strong>NavLink 的 api</strong></p>
+<ul>
+<li><p>Link 的所有 api</p>
+</li>
+<li><p>activeClassName 路由激活的时候设置的类名</p>
+</li>
+<li><p>activeStyle 路由激活设置的样式</p>
+</li>
+<li><p>exact 参考 Route，符合这个条件才会激活 active 类</p>
+</li>
+<li><p>strict 参考 Route，符合这个条件才会激活 active 类</p>
+</li>
+<li><p>isActive 接收一个回调函数，active 状态变化的时候回触发，返回 false 则中断跳转</p>
+<pre><code>const oddEvent = (match, location) =&gt; {
+console.log(match,location)
+if (!match) {
+return false
+}
+console.log(match.id)
+return true
+}
+&lt;NavLink isActive={oddEvent} to=&quot;/a/123&quot;&gt;组件一&lt;/NavLink&gt;</code></pre></li>
+</ul>
+<ul>
+<li><p>location 接收一个 location 对象，当 url 满足这个对象的条件才会跳转</p>
+<pre><code>&lt;NavLink to=&quot;/a/123&quot; location={{ key:"mb5wu3", pathname:"/a/123" }}/&gt;</code></pre></li>
+</ul>
+<h3 id="6、Redirect"><a href="#6、Redirect" class="headerlink" title="6、Redirect"></a>6、Redirect</h3><p>Redirect 重定向很简单，我们直接看代码即可</p>
+<pre><code>  // 基本的重定向
+  &lt;Redirect to=&quot;/somewhere/else&quot; /&gt;
+  // 对象形式
+  &lt;Redirect
+  to={{
+      pathname: "/login",
+      search: "?utm=your+face",
+      state: { referrer: currentLocation }
+      }}
+  /&gt;
+  // 采用push生成新的记录
+  &lt;Redirect push to=&quot;/somewhere/else&quot; /&gt;
+  // 配合Switch组件使用，form表示重定向之前的路径，如果匹配则重定向，不匹配则不重定向
+  &lt;Switch&gt;
+  &lt;Redirect from=&#39;/old-path&#39; to=&#39;/new-path&#39;/&gt;
+  &lt;Route path=&#39;/new-path&#39; component={Place}/&gt;
+  &lt;/Switch&gt;</code></pre><h3 id="7、Switch"><a href="#7、Switch" class="headerlink" title="7、Switch"></a>7、Switch</h3><p>路由切换，只会匹配第一个路由，可以想象成 tab 栏</p>
+<p>Switch 内部只能包含 Route、Redirect、Router</p>
+<pre><code>  &lt;Switch&gt;
+  &lt;Route exact path=&quot;/&quot; component={Home}/&gt;
+  &lt;Route path=&quot;/about&quot; component={About}/&gt;
+  &lt;Route path=&quot;/:user&quot; component={User}/&gt;
+  &lt;Route component={NoMatch}/&gt;
+  &lt;/Switch&gt;</code></pre><h3 id="8、withRouter"><a href="#8、withRouter" class="headerlink" title="8、withRouter"></a>8、withRouter</h3><p>当一个非路由组件也想访问到当前路由的 match,location,history 对象，那么 withRouter 将是一个非常好的选择，可以理解为将一个组件包裹成路由组件</p>
+<pre><code>  import { withRouter } from &#39;react-router-dom&#39;
+  const MyComponent = (props) =&gt; {
+  const { match, location, history } = this.props
+  return (
+        &lt;div&gt;{props.location.pathname}&lt;/div&gt;
+  )
+  }
+  const FirstTest = withRouter(MyComponent);</code></pre><h3 id="9、history-对象"><a href="#9、history-对象" class="headerlink" title="9、history 对象"></a>9、history 对象</h3><p>用过 vue 的都知道，vue-router 有组件形式的导航，也有编程式导航，那 react-router 怎么使用 api 来控制前进后退和刷新呢？这就需要我们来说明下<code>history</code>对象的作用了其实在每个路由组件中我们可以使用<code>this.props.history</code>获取到<code>history</code>对象，也可以使用 withRouter 包裹组件获取，在 history 中封装了 push，replace，go 等方法，具体内容如下</p>
+<pre><code>  History {
+  length: number;
+  action: Action;
+  location: Location;
+  push(path: Path, state?: LocationState): void; // 调用push前进到一个地址,可以接受一个state对象，就是自定义的路由数据
+  push(location: LocationDescriptorObject): void; // 接受一个location的描述对象
+  replace(path: Path, state?: LocationState): void; // 用页面替换当前的路径，不可再goBack
+  replace(location: LocationDescriptorObject): void; // 同上
+  go(n: number): void; // 往前走多少也页面
+  goBack(): void; // 返回一个页面
+  goForward(): void; // 前进一个页面
+  block(prompt?: boolean | string | TransitionPromptHook): UnregisterCallback;
+  listen(listener: LocationListener): UnregisterCallback;
+  createHref(location: LocationDescriptorObject): Href;
+  }</code></pre><p>这样我们想使用 api 来操作前进后退就可以调用 history 中的方法啦</p>
+<p>其次也可通过暗转 history 库来实现，具体案例如下</p>
+<pre><code>  import { BrowserRouter } from &#39;react-router-dom&#39;;
+  const history = require(&#39;history&#39;).createBrowserHistory();
+  /**
+  * forceRefresh: bool
+  * 作用：当浏览器不支持 HTML5 的 history API 时强制刷新页面。
+  */
+  const supportsHistory = &#39;pushState&#39; in window.history;
+  &lt;BrowserRouter
+        history={history}
+        basename=&quot;/&quot;
+        forceRefresh={!supportsHistory}
+        &gt;
+        {/* 路由入口 */}
+        ......
+  &lt;/BrowserRouter&gt;</code></pre><h3 id="10、-React-router-页面跳转的三种方式"><a href="#10、-React-router-页面跳转的三种方式" class="headerlink" title="10、 React-router 页面跳转的三种方式"></a>10、 React-router 页面跳转的三种方式</h3><p><a href="https://blog.csdn.net/Vue2018/article/details/100564775" target="_blank" rel="noopener">React-router 页面跳转的三种方式</a>:<a href="https://blog.csdn.net/Vue2018/article/details/100564775" target="_blank" rel="noopener">https://blog.csdn.net/Vue2018/article/details/100564775</a></p>
+<h2 id="四、性能篇"><a href="#四、性能篇" class="headerlink" title="四、性能篇"></a>四、性能篇</h2><h3 id="1、react-组件的性能优化（渲染角度优化）"><a href="#1、react-组件的性能优化（渲染角度优化）" class="headerlink" title="1、react 组件的性能优化（渲染角度优化）"></a>1、react 组件的性能优化（渲染角度优化）</h3><h4 id="1、react-性能查看工具"><a href="#1、react-性能查看工具" class="headerlink" title="1、react 性能查看工具"></a>1、react 性能查看工具</h4><blockquote>
+<p>再讲性能优化之前，我们需要先来了解一下如何查看 react 加载组件时所耗费的时间的工具，在 react 16 版本之前我们可以使用 React Perf 来查看。react16 版本之前，我们可以使用 react-addons-perf 工具来查看，而在最新的 16 版本，我们只需要在 url 后加上?react_pref。</p>
+</blockquote>
+<p>首先来了解一下<a href="https://reactjs.org/docs/perf.html" target="_blank" rel="noopener">react-addons-perf</a></p>
+<p><code>react-addons-perf</code>这是 <code>React</code> 官方推出的一个性能工具包，可以打印出组件渲染的时间、次数、浪费时间等。</p>
+<p>简单说几个 api，具体用法可参考<a href="https://reactjs.org/docs/perf.html" target="_blank" rel="noopener">官网</a>：</p>
+<ul>
+<li>Perf.start() 开始记录</li>
+<li>Perf.stop() 结束记录</li>
+<li>Perf.printInclusive() 查看所有设计到的组件 render</li>
+<li>Perf.printWasted() 查看不需要的浪费组件 render</li>
+</ul>
+<p>大家可以在 chorme 中先安装 React Perf 扩展，然后在入口文件或者 redux 的 store.js 中加入相应的代码即可：<br><img src="2.jpg" alt></p>
+<p>再来了解一下，在最新的 React16 版本中，在<code>url</code>后加上<code>?react_pref</code>，就可以在 chrome 浏览器的<code>performance</code>，我们可以查看<code>User Timeing</code>来查看组件的加载时间。点击 record 开始记录，注意记录时长不要超过 20s，否则可能导致 chrome 挂起。</p>
+<p><img src="3.jpg" alt><br>大图<br><img src="4.jpg" alt></p>
+<h4 id="2、单个-react-组件性能优化"><a href="#2、单个-react-组件性能优化" class="headerlink" title="2、单个 react 组件性能优化"></a>2、单个 react 组件性能优化</h4><ul>
+<li>1、render 里面尽量减少新建变量和 bind 函数，传递参数是尽量减少传递参数的数量。</li>
+</ul>
+<blockquote>
+<p>首先我们先思考一个问题，比如我要实现一个点击按钮使相应的 num 增加 1，我们有哪一些方法。<br>大家应该都能想到，无非就是三种，如下图：</p>
+</blockquote>
+<p><img src="5.jpg" alt></p>
+<ul>
+<li><p>第一种是在<code>构造函数</code>中绑定 this，</p>
+</li>
+<li><p>第二种是在 render()函数里面绑定 this，</p>
+</li>
+<li><p>第三种就是使用箭头函数，都能实现上述方法；<br>但是哪一种方法的性能最好，是我们要考虑的问题。应该大家都知道答案：<br><code>第一种的性能最好</code>。因为第一种，构造函数每一次渲染的时候<code>只会执行一遍</code>；<br>而第二种方法，在每次 render()的时候都会重新执行一遍函数；<br>第三种方法的话，每一次 render()的时候，都会生成一个新的箭头函数，即使两个箭头函数的内容是一样的。</p>
+</li>
+<li><p>2、定制 shouldComponentUpdate 函数</p>
+</li>
+</ul>
+<blockquote>
+<p>shouldComponentUpdate 是决定 react 组件什么时候能够不重新渲染的函数，但是这个函数默认的实现方式就是简单的返回一个 true。也就是说，默认每次更新的时候都要调用所用的生命周期函数，包括 render 函数，重新渲染。<br>我们来看一下下面的一个例子</p>
+</blockquote>
+<p><img src="6.jpg" alt></p>
+<p>我们写两个组件，App 和 Demo 组件，并写两个方法，一个改变 App 中的 num 的值，一个是改变 title，我们在 Demo 的 render 中打印 render 函数。我们可以看到以下的效果：</p>
+<p><img src="7.jpg" alt></p>
+<p>我们可以清晰的看到虽然 demo 组件里的 title 值没有改变，但是还是 render 了。</p>
+<p>为了解决这个问题，我们可以对 demo 组件进行如下的修改：</p>
+<p><img src="8.jpg" alt></p>
+<p>只有当 demo 的 title 值发生改变的时候，我们才去 render，我们可以看一下效果：</p>
+<p><img src="9.jpg" alt></p>
+<p>以上只是一个特别简单的一个对于 shouldComponentUpdate 的定制。在最新的 react 中，react 给我们提供了 React.PureComponent，官方也在早期提供了名为 react-addons-pure-render-mixin 插件来重新实现 shouldComponentUpdate 生命周期方法。<br><img src="10.jpg" alt></p>
+<p>通过上述的方法的效果也是和我们定制 shouldComponentUpdate 的效果是一致的。但是我们要注意的是，这里的 PureRender 是浅比较的，因为深比较的场景是相当昂贵的。所以我们要注意我们在 1.1 中说到的一些注意点：不要直接为 props 设置对象或者数组、不要将方法直接绑定在元素上，因为其实函数也是对象</p>
+<h3 id="2、redux-性能优化：reselect（数据获取时优化-待研究）"><a href="#2、redux-性能优化：reselect（数据获取时优化-待研究）" class="headerlink" title="2、redux 性能优化：reselect（数据获取时优化 待研究）"></a>2、redux 性能优化：reselect（数据获取时优化 待研究）</h3><p><a href="https://www.jianshu.com/p/1fcef4c892ba?utm_campaign=maleskine&utm_content=note&utm_medium=seo_notes&utm_source=recommendation" target="_blank" rel="noopener">react-redux 性能优化之 reselect</a></p>
+<h3 id="3-1、分隔代码"><a href="#3-1、分隔代码" class="headerlink" title="3-1、分隔代码"></a>3-1、分隔代码</h3><h4 id="1、动态加载"><a href="#1、动态加载" class="headerlink" title="1、动态加载"></a>1、动态加载</h4><p>ES6 标准引入了 import 以方便我们静态加载模块。形式如：</p>
+<pre><code>  import xxx from xxx.</code></pre><p>尽管 import 对于我们加载模块很有帮助，但是静态加载模块的方式一定程度上限制了我们来实现异步模块加载。不过，目前动态加载模块的 import()语法已处于提案阶段，并且 webpack 已将他引入并使用。import()提供了基于 Promise 的 API，因此，import()的返回值是一个完成状态或拒绝状态的 Promise 对象。形式如：</p>
+<pre><code>  import(/* webpackChunkName: &#39;module&#39;*/ &quot;module&quot;)
+  .then(() =&gt; {
+        //todo
+  })
+  .catch(_ =&gt; console.log(&#39;It is an error&#39;))</code></pre><p>webpack 在编译时，识别到动态加载的 import 语法，则 webpack 会为当前动态加载的模块创建一个单独的 bundle。如果你使用的是官方的 Create-react-app 脚手架或 React 的服务端渲染框架 Next.js，那么可以直接使用动态 import 语法。如果你的脚手架是你自己配置的 webpack，那么你需要按照官方指南来设置，请移步[1]。</p>
+<h4 id="2、动态加载-React-组件"><a href="#2、动态加载-React-组件" class="headerlink" title="2、动态加载 React 组件"></a>2、动态加载 React 组件</h4><p>当前最为流行的一种方法是使用 React-loadable [2]库提供的懒加载 React 组件。它利用 import()语法，使用 Promise 语法加载 React 组件。同时，React-loadable 支持 React 的服务端渲染。 通常，我们以如下方式实现组件：</p>
+<pre><code>  import LazyComponet from &#39;LazyComponent&#39;;
+  export default function DemoComponent() {
+  return (
+        &lt;div&gt;
+              &lt;p&gt;demo component&lt;/p&gt;
+              &lt;AComponent /&gt;
+        &lt;/div&gt;
+  )
+  }</code></pre><p>在上面的例子中，假设 LazyComponet 在 DemoComponent 渲染时我们并不展示。但是因为我们使用 import 语法将 LazyComponet 导入，所以在编译时会将 LazyComponet 的代码与 DemoComponent 的代码打包到同一个 bundle 里面。 但是，这并不是我们想要的。所以我们可以通过使用 React-loadable 来懒加载 LazyComponet ，同时将 LazyComponet 的代码单独打包到一个 bundle 里面。我们可以看一下官网提供的例子：</p>
+<pre><code>  import Loadable from &#39;react-loadable&#39;;
+  import Loading from &#39;./my-loading-component&#39;;
+  const LoadableComponent = Loadable({
+  loader: () =&gt; import(&#39;./my-component&#39;),
+  loading: Loading,
+  });
+  export default class App extends React.Component {
+  render() {
+  return &lt;LoadableComponent/&gt;;
+  }
+  }</code></pre><p>从例子中我们可以看到，react-loadable 使用动态 import()方法，并将导入的组件分配给 loader 属性。同时，react-loadable 提供了一个 loading 属性，以设置在加载组件时将展示的组件。</p>
+<h4 id="3、高阶组件（HOC）"><a href="#3、高阶组件（HOC）" class="headerlink" title="3、高阶组件（HOC）"></a>3、高阶组件（HOC）</h4><p>高阶函数，可以传入函数作为参数的函数，如 map,sort,reduce。高阶组件包装了另一个组件的组件。</p>
+<p>属性代理 （Props Proxy）<br>反向继承 （Inheritance Inversion）</p>
+<h4 id="4、无状态组件"><a href="#4、无状态组件" class="headerlink" title="4、无状态组件"></a>4、无状态组件</h4><p>使用无状态组件，只从父组件接收 props，可以提高组件的渲染性能</p>
+<pre><code>  const HelloWorld = (props) =&gt; &lt;div&gt;{props.name}&lt;/div&gt;ReactDOM.render(&lt;HelloWorld name=&quot;HelloWorld&quot; /&gt;,App)</code></pre><h4 id="5、componentWillReceiveProps-中取-props-的值"><a href="#5、componentWillReceiveProps-中取-props-的值" class="headerlink" title="5、componentWillReceiveProps 中取 props 的值"></a>5、componentWillReceiveProps 中取 props 的值</h4><p>注意应该取 nextProps,而不是 this.props</p>
+<h4 id="6、bind-绑定函数"><a href="#6、bind-绑定函数" class="headerlink" title="6、bind 绑定函数"></a>6、bind 绑定函数</h4><p>利用 bind 绑定函数，是默认有 event 这个参数的，只是这个参数在给定参数之后</p>
+<pre><code>  handleClockClick (id, e) {
+        console.log(id,e)
+        }
+  &lt;button onClick={this.handleClockClick.bind(this, 2)}&gt;Clock&lt;/button&gt;</code></pre><h4 id="7、ES6-类中，函数-this-不默认指向-对象"><a href="#7、ES6-类中，函数-this-不默认指向-对象" class="headerlink" title="7、ES6 类中，函数 this 不默认指向 对象"></a>7、ES6 类中，函数 this 不默认指向 对象</h4><ul>
+<li><p>this.getDomNode 已经在低版本被移除了，现在设置 ref=xxx，然后使用 this.refs.xxx 访问 DOM 元素</p>
+</li>
+<li><p><code>ref</code> 可以赋值两种类型，一种是字符串，一种是函数, 字符串只能用在类组件，DOM 元素使用函数，纯函数组件不能使用 ref。旧版本 DOM 元素虽然可以使用 ref，但是 React 已不推荐。</p>
+<pre><code>ref=&quot;test&quot; // this.refs.test 访问ref={test =&gt; this.test = test} // this.test 访问</code></pre></li>
+</ul>
+<h4 id="8、当只写属性名时，默认值为-true"><a href="#8、当只写属性名时，默认值为-true" class="headerlink" title="8、当只写属性名时，默认值为 true"></a>8、当只写属性名时，默认值为 true</h4><pre><code>  &lt;MyComponent isStock/&gt;// isStock 默认为 true</code></pre><h4 id="9、在-IE11-以下使用-React16"><a href="#9、在-IE11-以下使用-React16" class="headerlink" title="9、在 IE11 以下使用 React16"></a>9、在 IE11 以下使用 React16</h4><p>React16 依赖集合类型 Map 和 Set，在未提供原生支持的浏览器，需要使用一个 polyfill,例如 core-js 和 babel-polyfill<br>使用 core-js 支持</p>
+<pre><code>  import &#39;core-js/es6/map&#39;;import &#39;core-js/es6/set&#39;;
+  import React from &#39;react&#39;;
+  import ReactDOM from &#39;react-dom&#39;;
+  ReactDOM.render(&lt;h1&gt;Hello, world!&lt;/h1&gt;,document.getElementById(&#39;root&#39;));</code></pre><h3 id="3-2、分隔代码"><a href="#3-2、分隔代码" class="headerlink" title="3-2、分隔代码"></a>3-2、分隔代码</h3><h4 id="1、componentDidMount-请求服务器数据"><a href="#1、componentDidMount-请求服务器数据" class="headerlink" title="1、componentDidMount 请求服务器数据"></a>1、componentDidMount 请求服务器数据</h4><p>在 componentDidMount 请求服务器数据并利用 setState 时应注意，在组件卸载 componentWillUnmount 应该把去求去掉</p>
+<h4 id="2、利用-es6-rest-参数（形式为…变量名）传递可变数量的-props"><a href="#2、利用-es6-rest-参数（形式为…变量名）传递可变数量的-props" class="headerlink" title="2、利用 es6 rest 参数（形式为…变量名）传递可变数量的 props"></a>2、利用 es6 rest 参数（形式为…变量名）传递可变数量的 props</h4><pre><code>  // 定义子组件
+  const Demo = ({ prop1, prop2, ...restProps }) =&gt; (
+  &lt;div&gt;{ restProps.text}&lt;/div&gt;
+  )
+  // 父组件使用Demo
+  &lt;Demo prop1={xxx} prop2={xxx} text={xxx}/&gt;</code></pre><h4 id="3、setState-的其他用法"><a href="#3、setState-的其他用法" class="headerlink" title="3、setState 的其他用法"></a>3、setState 的其他用法</h4><pre><code>  // 一般改变state值的一种方式
+  const { data } = this.state;
+  this.setState({ data: {...data, key: 1 } });
+  // 另外一种可以通过callback的方式改变state的值
+  this.setState(({ data }) =&gt; ({ data: {...data, key: 1 } }));
+  // 还可以
+  this.setState((state, props) =&gt; {
+  return { counter: state.counter + props.step };
+  });</code></pre><h4 id="4、React-性能优化"><a href="#4、React-性能优化" class="headerlink" title="4、React 性能优化"></a>4、React 性能优化</h4><p>// React 性能优化有很多种方式，<br>// 那常见的一种就是在生命周期函数 shouldComponentUpdate 里面判断<br>// 某些值或属性来控制组件是否重新再次渲染。<br>// 判断一般的字符串，数字或者基础的对象，数组都还是比较好处理<br>// 那嵌套的对象或者数组就比较麻烦了，对于这种<br>// 推荐使用 lodash(或者其他的类似库)的 isEqual 对嵌套数组或对象进行判断<br>shouldComponentUpdate(nextProps, nextState) {<br>if (_.isEqual(nextState.columns, this.state.columns)) return false;<br>return true;<br>}</p>
+<h4 id="5、React-进阶提高-技巧篇（28-个视频）链接"><a href="#5、React-进阶提高-技巧篇（28-个视频）链接" class="headerlink" title="5、React 进阶提高 - 技巧篇（28 个视频）链接"></a>5、React 进阶提高 - 技巧篇（28 个视频）链接</h4><p>介绍 React 的一些进阶知识点，一些开发上的实践技巧，一些工具库等。</p>
+<p><a href="www.qiuzhi99.com/">视频更新地址：</a><a href="http://www.qiuzhi99.com/" target="_blank" rel="noopener">www.qiuzhi99.com/</a></p>
+<h2 id="五、学习资料"><a href="#五、学习资料" class="headerlink" title="五、学习资料"></a>五、学习资料</h2><p><a href="doc.react-china.org">翻译后的官方文档，学技术一定要多看几遍文档</a>: doc.react-china.org<br><a href="https://www.reactjscn.com/" target="_blank" rel="noopener">react官网</a>:<a href="https://www.reactjscn.com/" target="_blank" rel="noopener">https://www.reactjscn.com/</a></p>
+
+            </div>
+            <hr />
+
+            
+            <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.88rem;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-large waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fa fa-close"></i></a>
+            <h4 class="reward-title">写作不易，客官能否打赏一杯奶茶？</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+            
+
+            <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+
+<div id="article-share">
+    
+    <div class="social-share" data-disabled="qzone" data-wechat-qrcode-helper="<p>微信里点“发现”->“扫一扫”二维码便可查看分享。</p>"></div>
+    
+</div>
+
+<script src="/libs/share/js/social-share.min.js"></script>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        <p class="reprint-tip">
+            <i class="fa fa-exclamation-triangle"></i>&nbsp;&nbsp;
+            <span>转载规则</span>
+        </p>
+        
+            <div class="center-align">
+                <a rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.zh">
+                    <img alt=""
+                         style="border-width:0"
+                         src="https://i.creativecommons.org/l/by/4.0/88x31.png"/>
+                </a>
+            </div>
+            <br/>
+            <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
+                  property="dct:title" rel="dct:type">
+                    《React小技巧汇总》
+                </span> 由
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/11/06/react-zong-jie/" property="cc:attributionName"
+               rel="cc:attributionURL">
+                唐宇
+            </a> 采用
+            <a rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.zh">
+                知识共享署名 4.0 国际许可协议
+            </a>进行许可。
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+        </div>
+    </div>
+
+    
+    <link rel="stylesheet" href="/libs/gitalk/gitalk.css">
+<link rel="stylesheet" href="/css/my-gitalk.css">
+
+<div class="card gitalk-card" data-aos="fade-up">
+    <div id="gitalk-container" class="card-content"></div>
+</div>
+
+<script src="/libs/gitalk/gitalk.min.js"></script>
+<script>
+    let gitalk = new Gitalk({
+        clientID: 'f0af2af6cee5fc6ad7ce',
+        clientSecret: 'd0f22709cb94f03b4d771d2ed5c091c8f0cc312b',
+        repo: 'Lingtian007.github.io',
+        owner: 'Lingtian007',
+        admin: "Lingtian007",
+        id: '2019/11/06/react-zong-jie/',
+        distractionFreeMode: false  // Facebook-like distraction free mode
+    });
+
+    gitalk.render('gitalk-container');
+</script>
+    
+
+    
+
+    
+
+    
+
+    
+    <style>
+    .valine-card {
+        margin: 1.5rem auto;
+    }
+
+    .valine-card .card-content {
+        padding: 20px 20px 5px 20px;
+    }
+
+    #vcomments input[type=text],
+    #vcomments input[type=email],
+    #vcomments input[type=url],
+    #vcomments textarea {
+        box-sizing: border-box;
+    }
+
+    #vcomments p {
+        margin: 2px 2px 10px;
+        font-size: 1.05rem;
+        line-height: 1.78rem;
+    }
+
+    #vcomments blockquote p {
+        text-indent: 0.2rem;
+    }
+
+    #vcomments a {
+        padding: 0 2px;
+        color: #42b983;
+        font-weight: 500;
+        text-decoration: underline;
+    }
+
+    #vcomments img {
+        max-width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+
+    #vcomments ol li {
+        list-style-type: decimal;
+    }
+
+    #vcomments ol,
+    ul {
+        display: block;
+        padding-left: 2em;
+        word-spacing: 0.05rem;
+    }
+
+    #vcomments ul li,
+    ol li {
+        display: list-item;
+        line-height: 1.8rem;
+        font-size: 1rem;
+    }
+
+    #vcomments ul li {
+        list-style-type: disc;
+    }
+
+    #vcomments ul ul li {
+        list-style-type: circle;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    #vcomments table, th, td {
+        border: 0;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments h1 {
+        font-size: 1.85rem;
+        font-weight: bold;
+        line-height: 2.2rem;
+    }
+
+    #vcomments h2 {
+        font-size: 1.65rem;
+        font-weight: bold;
+        line-height: 1.9rem;
+    }
+
+    #vcomments h3 {
+        font-size: 1.45rem;
+        font-weight: bold;
+        line-height: 1.7rem;
+    }
+
+    #vcomments h4 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    #vcomments h5 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        line-height: 1.4rem;
+    }
+
+    #vcomments h6 {
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+
+    #vcomments p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    #vcomments hr {
+        margin: 12px 0;
+        border: 0;
+        border-top: 1px solid #ccc;
+    }
+
+    #vcomments blockquote {
+        margin: 15px 0;
+        border-left: 5px solid #42b983;
+        padding: 1rem 0.8rem 0.3rem 0.8rem;
+        color: #666;
+        background-color: rgba(66, 185, 131, .1);
+    }
+
+    #vcomments pre {
+        font-family: monospace, monospace;
+        padding: 1.2em;
+        margin: .5em 0;
+        background: #272822;
+        overflow: auto;
+        border-radius: 0.3em;
+        tab-size: 4;
+    }
+
+    #vcomments code {
+        font-family: monospace, monospace;
+        padding: 1px 3px;
+        font-size: 0.92rem;
+        color: #e96900;
+        background-color: #f8f8f8;
+        border-radius: 2px;
+    }
+
+    #vcomments pre code {
+        font-family: monospace, monospace;
+        padding: 0;
+        color: #e8eaf6;
+        background-color: #272822;
+    }
+
+    #vcomments pre[class*="language-"] {
+        padding: 1.2em;
+        margin: .5em 0;
+    }
+
+    #vcomments code[class*="language-"],
+    pre[class*="language-"] {
+        color: #e8eaf6;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+
+    #vcomments b,
+    strong {
+        font-weight: bold;
+    }
+
+    #vcomments dfn {
+        font-style: italic;
+    }
+
+    #vcomments small {
+        font-size: 85%;
+    }
+
+    #vcomments cite {
+        font-style: normal;
+    }
+
+    #vcomments mark {
+        background-color: #fcf8e3;
+        padding: .2em;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+</style>
+
+<div class="card valine-card" data-aos="fade-up">
+    <div id="vcomments" class="card-content"></div>
+</div>
+
+<script src="/libs/valine/av-min.js"></script>
+<script src="/libs/valine/Valine.min.js"></script>
+<!-- <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script> -->
+
+<script>
+    new Valine({
+        el: '#vcomments',
+        appId: '',
+        appKey: '',
+        notify: 'false' === 'true',
+        verify: 'false' === 'true',
+        visitor: 'false' === 'true',
+        avatar: 'wavatar',
+        pageSize: '10',
+        lang: 'zh-cn',
+        placeholder: '如果你没有GitHub账号，还可以在这里评论啦！'
+    });
+</script>
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2019/12/30/nian-mo-zong-jie/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="2019 年的思考总结">
+                        
+                        <span class="card-title">2019 年的思考总结</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            闲来无事，随便写写。
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-12-30
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/总结/" class="post-category" target="_blank">
+                                    总结
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/总结/" target="_blank">
+                        <span class="chip bg-color">总结</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2019/10/24/vue-zhong-shi-yong-echarts-pei-he-canvas-hui-zhi-tu-li/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="VUE中使用echarts配合canvas绘制图例下载">
+                        
+                        <span class="card-title">VUE中使用echarts配合canvas绘制图例下载</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            闲来无事，随便写写。
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-10-24
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/方法/" class="post-category" target="_blank">
+                                    方法
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/方法/" target="_blank">
+                        <span class="chip bg-color">方法</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: 唐宇的博客<br />'
+            + '作者: 唐宇<br />'
+            + '链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () { bodyElement.removeChild(newdiv); }, 200);
+    });
+</script>
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="fa fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fa fa-list"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            // headingsOffset: -205,
+            headingSelector: 'h1, h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h1, h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).slideUp(500);
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).slideDown(500);
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+    
+
+</main>
+
+
+    <footer class="page-footer bg-color">
+    <div class="container row center-align">
+        <div class="col s12 m8 l8 copy-right">
+            &copy; 2020 LFDW. All Rights Reserved.
+
+            
+            &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
+            <span class="white-color">55.8k</span>
+            
+
+            <br>
+            <span id="sitetime"></span>
+
+            
+            
+            <br>
+            
+            <span id="busuanzi_container_site_pv" style='display:none'>
+                <i class="fa fa-heart-o"></i>
+                本站总访问量 <span id="busuanzi_value_site_pv" class="white-color"></span>
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv" style='display:none'>
+                人次,&nbsp;访客数 <span id="busuanzi_value_site_uv" class="white-color"></span> 人.
+            </span>
+            
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/Lingtian007/blogDemo" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fa fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:632271304@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fa fa-envelope-open"></i>
+    </a>
+
+
+
+    <a href="https://zhihu.com/people/Lingtian" class="tooltipped" target="_blank" data-tooltip="访问我的知乎" data-position="top" data-delay="50">
+        <i class="fa fa-inverse">知</i>
+    </a>
+
+
+
+    <a href="https://user.qzone.qq.com/632271304" class="tooltipped" target="_blank" data-tooltip="访问我的QQ空间" data-position="top" data-delay="50">
+        <i class="fa fa-qq"></i>
+    </a>
+
+
+
+    <a href="https://weibo.com/6010843426" class="tooltipped" target="_blank" data-tooltip="关注我的微博" data-position="top" data-delay="50">
+        <i class="fa fa-weibo"></i>
+    </a>
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fa fa-rss"></i>
+    </a>
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+<!-- 不蒜子计数初始值纠正 -->
+<script>
+    $(document).ready(function () {
+
+        var int = setInterval(fixCount, 50);
+        var pvcountOffset = 80000;
+        var uvcountOffset = 20000;
+
+        function fixCount() {
+            if (document.getElementById("busuanzi_container_site_pv").style.display != "none") {
+                $("#busuanzi_value_site_pv").html(parseInt($("#busuanzi_value_site_pv").html()) + pvcountOffset);
+                clearInterval(int);
+            }
+            if ($("#busuanzi_container_site_pv").css("display") != "none") {
+                $("#busuanzi_value_site_uv").html(parseInt($("#busuanzi_value_site_uv").html()) + uvcountOffset); // 加上初始数据 
+                clearInterval(int);
+            }
+        }
+    });
+</script>
+
+<script language=javascript>
+    function siteTime() {
+        window.setTimeout("siteTime()", 1000);
+        var seconds = 1000;
+        var minutes = seconds * 60;
+        var hours = minutes * 60;
+        var days = hours * 24;
+        var years = days * 365;
+        var today = new Date();
+        var todayYear = today.getFullYear();
+        var todayMonth = today.getMonth() + 1;
+        var todayDate = today.getDate();
+        var todayHour = today.getHours();
+        var todayMinute = today.getMinutes();
+        var todaySecond = today.getSeconds();
+        /* Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+        year - 作为date对象的年份，为4位年份值
+        month - 0-11之间的整数，做为date对象的月份
+        day - 1-31之间的整数，做为date对象的天数
+        hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+        minutes - 0-59之间的整数，做为date对象的分钟数
+        seconds - 0-59之间的整数，做为date对象的秒数
+        microseconds - 0-999之间的整数，做为date对象的毫秒数 */
+        var t1 = Date.UTC(2019, 05, 11, 00, 00, 00); //北京时间2018-2-13 00:00:00
+        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+        var diff = t2 - t1;
+        var diffYears = Math.floor(diff / years);
+        var diffDays = Math.floor((diff / days) - diffYears * 365);
+        var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+        var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes);
+        var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes * minutes) / seconds);
+        document.getElementById("sitetime").innerHTML = "本站已运行 " + diffYears + " 年 " + diffDays + " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+    }/*因为建站时间还没有一年，就将之注释掉了。需要的可以取消*/
+    siteTime();
+</script>
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fa fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
+});
+</script>
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fa fa-angle-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <script type="text/javascript"> var OriginTitile = document.title, st; document.addEventListener("visibilitychange", function () { document.hidden ? (document.title = "Σ(っ °Д °;)っ喔哟，崩溃啦！", clearTimeout(st)) : (document.title = "φ(゜▽゜*)♪咦，又好了！", st = setTimeout(function () { document.title = OriginTitile }, 3e3)) })
+    </script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id="></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', '');
+</script>
+
+
+
+    
+    <script src="/libs/others/clicklove.js"></script>
+    
+
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    <!-- 雪花特效 -->
+    <!-- 
+    <script type="text/javascript" src="/libs/others/snow.js"></script>
+     -->
+
+</body>
+
+</html>
