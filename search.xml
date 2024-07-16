@@ -154,11 +154,11 @@
     
     
     <entry>
-      <title>js常用方法</title>
-      <link href="/LingtianBlog.github.io/2021/01/22/js-chang-yong-fang-fa/"/>
-      <url>/LingtianBlog.github.io/2021/01/22/js-chang-yong-fang-fa/</url>
+      <title>React复习笔记</title>
+      <link href="/LingtianBlog.github.io/2021/01/22/react-fu-xi-bi-ji/"/>
+      <url>/LingtianBlog.github.io/2021/01/22/react-fu-xi-bi-ji/</url>
       
-        <content type="html"><![CDATA[<div align="middle"><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=407679465&auto=1&height=66"></iframe></div><p>闲来无事，随便写写……</p><h1 id="开篇"><a href="#开篇" class="headerlink" title="开篇"></a>开篇</h1><hr><p>你真的了解JS的那些方法吗？</p>]]></content>
+        <content type="html"><![CDATA[<div align="middle"><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=407679465&auto=1&height=66"></iframe></div><p>闲来无事，随便写写……</p><h1 id="开篇"><a href="#开篇" class="headerlink" title="开篇"></a>开篇</h1><hr><p>你真的了解React吗？</p><h2 id="基本知识"><a href="#基本知识" class="headerlink" title="基本知识"></a>基本知识</h2><ol><li>区分Real DOM和Virtual DOM</li></ol><table><thead><tr><th>Real DOM</th><th align="right">Virtual DOM</th></tr></thead><tbody><tr><td>1. 更新缓慢。</td><td align="right">1. 更新更快。</td></tr><tr><td>2. 可以直接更新 HTML。</td><td align="right">2. 无法直接更新 HTML。</td></tr><tr><td>3. 如果元素更新，则创建新DOM。</td><td align="right">3. 如果元素更新，则更新 JSX。</td></tr><tr><td>4. DOM操作代价很高。</td><td align="right">4. DOM 操作非常简单。</td></tr><tr><td>5. 消耗的内存较多。</td><td align="right">5. 很少的内存消耗。</td></tr></tbody></table>]]></content>
       
       
       <categories>
@@ -179,11 +179,11 @@
     
     
     <entry>
-      <title>React复习笔记</title>
-      <link href="/LingtianBlog.github.io/2021/01/22/react-fu-xi-bi-ji/"/>
-      <url>/LingtianBlog.github.io/2021/01/22/react-fu-xi-bi-ji/</url>
+      <title>js常用方法</title>
+      <link href="/LingtianBlog.github.io/2021/01/22/js-chang-yong-fang-fa/"/>
+      <url>/LingtianBlog.github.io/2021/01/22/js-chang-yong-fang-fa/</url>
       
-        <content type="html"><![CDATA[<div align="middle"><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=407679465&auto=1&height=66"></iframe></div><p>闲来无事，随便写写……</p><h1 id="开篇"><a href="#开篇" class="headerlink" title="开篇"></a>开篇</h1><hr><p>你真的了解React吗？</p><h2 id="基本知识"><a href="#基本知识" class="headerlink" title="基本知识"></a>基本知识</h2><ol><li>区分Real DOM和Virtual DOM</li></ol><table><thead><tr><th>Real DOM</th><th align="right">Virtual DOM</th></tr></thead><tbody><tr><td>1. 更新缓慢。</td><td align="right">1. 更新更快。</td></tr><tr><td>2. 可以直接更新 HTML。</td><td align="right">2. 无法直接更新 HTML。</td></tr><tr><td>3. 如果元素更新，则创建新DOM。</td><td align="right">3. 如果元素更新，则更新 JSX。</td></tr><tr><td>4. DOM操作代价很高。</td><td align="right">4. DOM 操作非常简单。</td></tr><tr><td>5. 消耗的内存较多。</td><td align="right">5. 很少的内存消耗。</td></tr></tbody></table>]]></content>
+        <content type="html"><![CDATA[<div align="middle"><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=407679465&auto=1&height=66"></iframe></div><p>闲来无事，随便写写……</p><h1 id="开篇"><a href="#开篇" class="headerlink" title="开篇"></a>开篇</h1><hr><p>你真的了解JS的那些方法吗？</p>]]></content>
       
       
       <categories>
