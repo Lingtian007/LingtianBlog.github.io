@@ -310,7 +310,7 @@ HTML语义化就是让页面内容结构化，它有如下优点
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -465,14 +465,14 @@ HTML语义化就是让页面内容结构化，它有如下优点
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    7.5k
+                    7.8k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    27 分
+                    28 分
                 </div>
                 
                 
@@ -548,6 +548,33 @@ animation：动画
 gradient：渐变
 shadow：阴影
 border-radius：圆角</code></pre></li>
+<li><p>css命名长短 优缺点<br>性能分为下载性能(速度)和渲染性能，大家认为：</p>
+</li>
+</ul>
+<ol>
+<li>下载性能可能是短命名略胜一筹，因为文件会稍小些；</li>
+<li>渲染性能则是长命名好些，因为CSS中通常短命名我们用类似.box .hd {}定义样式，而长命名直接是.box-hd {}，pagespeed认为选择器长度会影响渲染性能。<br>(注：其实平时工作中这两点都会被忽略。gzip可以进一步减少第一个问题的差距，而由此引发的渲染性能也是微乎其微)</li>
+</ol>
+<p>然后大家就可维护性进行了讨论，这次支持长命名的人较多。</p>
+<ol>
+<li><p>长命名给人较为可靠的感觉；</p>
+</li>
+<li><p>长命名较短命名发生冲突的几率低很多；</p>
+</li>
+<li><p>可复用的内容通过短命名定义，无可争议；<br>…<br>最后是使用场景，玉伯借用YAHOO首页的例子牵头，大家讨论，总结如下：(主要依据可维护性)</p>
+</li>
+<li><p>框架级样式用短命名，比如盒模型、栅格；</p>
+</li>
+<li><p>通用样式用短命名，比如.hidden、.clearfix；</p>
+</li>
+<li><p>应用级样式用长命名，比如淘江湖项目的通用样式都加上“sns”前缀(有.sns-avatar、.sns-box等)；</p>
+</li>
+<li><p>页面级样式用长命名，比如类目模块，可能包含category-hd、category-bd、category-bd-tips等；</p>
+</li>
+<li><p>嵌入式应用用长命名，因为可能会被嵌入到任何复杂环境中，比如开源编辑器、Google的各种应用(map, adsence, gmail…)</p>
+</li>
+</ol>
+<ul>
 <li><p>如何垂直水平居中一个div</p>
 <ul>
 <li>div绝对定位水平垂直居中【Transforms 变形】    </li>
@@ -605,7 +632,7 @@ display: -webkit-box;
 <p>一般问到基本数据类型,就会问检测复杂数据类型的方法 </p>
 </blockquote>
 <ul>
-<li>基本数据类型可以用tepyof检测,对复杂数据类型都是返回object,但是fucntion是特例,会返回function.</li>
+<li>基本数据类型可以用typeof检测,对复杂数据类型都是返回object,但是fucntion是特例,会返回function.</li>
 <li>判断复杂数据类型可以用 instandof,(instanceof 运算符用于检测构造函数的 prototype 属性是否出现在某个实例对象的原型链上)</li>
 <li>还可以借用object原型上的 tostring方法,从后往前截取大概8位.</li>
 </ul>
@@ -788,7 +815,7 @@ return B();
 </ul>
 <p><code>put和post的区别</code> : put指定了资源在服务器的位置,而post没有  , put一般用于对资源的创建于修改.</p>
 <h4 id="5-http状态码"><a href="#5-http状态码" class="headerlink" title="5.http状态码"></a>5.http状态码</h4><blockquote>
-<p> 常见的状态码  200  请求成功，  302 重定向  304 文件未修改  400 请求语法错误，401：未授权  404 找不到资源，405：访问不被允许  500 服务器错误。</p>
+<p> 常见的状态码  200  请求成功，  302： 重定向  304： 文件未修改  400：请求语法错误，401：未授权  404： 找不到资源，405：访问不被允许  500 服务器错误。</p>
 </blockquote>
 <h4 id="6-浏览器的渲染原理？"><a href="#6-浏览器的渲染原理？" class="headerlink" title="6.浏览器的渲染原理？"></a>6.浏览器的渲染原理？</h4><p> 解析html以构建dom树 -&gt; 构建render树 -&gt; 布局render树 -&gt; 绘制render树</p>
 <h4 id="7-当输入地址，按下回车的时候，页面发生了什么？"><a href="#7-当输入地址，按下回车的时候，页面发生了什么？" class="headerlink" title="7.当输入地址，按下回车的时候，页面发生了什么？"></a>7.当输入地址，按下回车的时候，页面发生了什么？</h4><blockquote>
@@ -1513,7 +1540,7 @@ return B();
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="highcharts 实时动态刷新曲线图">
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="highcharts 实时动态刷新曲线图">
                         
                         <span class="card-title">highcharts 实时动态刷新曲线图</span>
                     </div>
@@ -1562,7 +1589,7 @@ return B();
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="从零搭建前端组件库">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="从零搭建前端组件库">
                         
                         <span class="card-title">从零搭建前端组件库</span>
                     </div>
@@ -1748,7 +1775,7 @@ return B();
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">55.8k</span>
+            <span class="white-color">56.2k</span>
             
 
             <br>
