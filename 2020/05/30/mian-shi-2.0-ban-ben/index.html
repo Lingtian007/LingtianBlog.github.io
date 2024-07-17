@@ -1,0 +1,1963 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-05-28 15:51:13
+ * @LastEditTime: 2020-05-29 14:06:01
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \LingtianBlog\themes\matery\layout\layout.ejs
+--> 
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="2020 前端面试, 唐宇的博客">
+    <meta name="baidu-site-verification" content>
+    <meta name="google-site-verification" content>
+    <meta name="360-site-verification" content>
+    <meta name="description" content="
+
+
+
+闲来无事，随便写写……
+面试总结前言
+总结一下面试遇到的问题，为了方便自己查阅，也希望对小伙伴们有所帮助！
+
+一 HTML
+HTML语义化就是让页面内容结构化，它有如下优点
+
+易于用户阅读，样式丢失的时候能让页面呈现清晰的结构。
+有">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>2020 前端面试 | 唐宇的博客</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+    <style type="text/css">
+        
+    </style>
+
+    <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
+    <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?46e79e71af0709a5b9106bf20cecc493";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+
+<body>
+
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <!-- <img src="/medias/logo.png" class="logo-img" alt="LOGO"> -->
+                    
+                    <span class="logo-span">唐宇的博客</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fa fa-navicon"></i></a>
+<ul class="right">
+    
+    <li class="hide-on-med-and-down">
+        <a href="/" class="waves-effect waves-light">
+            
+            <span>首页</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/tags" class="waves-effect waves-light">
+            
+            <span>标签</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/categories" class="waves-effect waves-light">
+            
+            <span>分类</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/archives" class="waves-effect waves-light">
+            
+            <span>归档</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/about" class="waves-effect waves-light">
+            
+            <span>关于</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/friends" class="waves-effect waves-light">
+            
+            <span>友情链接</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/contact" class="waves-effect waves-light">
+            
+            <span>留言板</span>
+        </a>
+    </li>
+    
+    <li>
+        <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+            <i id="searchIcon" class="fa fa-search" title="搜索"></i>
+        </a>
+    </li>
+</ul>
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <!-- <img src="/medias/logo.png" class="logo-img circle responsive-img"> -->
+        
+        <div class="logo-name">唐宇的博客</div>
+        <div class="logo-desc">
+            
+            不忘初心 忘旧年
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li>
+            <a href="/" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-link"></i>
+                
+                首页
+            </a>
+        </li>
+        
+        <li>
+            <a href="/tags" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-link"></i>
+                
+                标签
+            </a>
+        </li>
+        
+        <li>
+            <a href="/categories" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-link"></i>
+                
+                分类
+            </a>
+        </li>
+        
+        <li>
+            <a href="/archives" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-link"></i>
+                
+                归档
+            </a>
+        </li>
+        
+        <li>
+            <a href="/about" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-link"></i>
+                
+                关于
+            </a>
+        </li>
+        
+        <li>
+            <a href="/friends" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-link"></i>
+                
+                友情链接
+            </a>
+        </li>
+        
+        <li>
+            <a href="/contact" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-link"></i>
+                
+                留言板
+            </a>
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/Lingtian007" class="waves-effect waves-light" target="_blank">
+                <i class="fa fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/Lingtian007" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <div class="description center-align post-title">
+                        2020 前端面试
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #toc-content .is-active-link::before {
+        background-color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 20px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                        <a href="/tags/面试/" target="_blank">
+                            <span class="chip bg-color">面试</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fa fa-bookmark fa-fw icon-category"></i>
+                        
+                        <a href="/categories/面试/" class="post-category" target="_blank">
+                            面试
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                <div class="post-date info-break-policy">
+                    <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2020-05-30
+                </div>
+
+                <div class="post-author info-break-policy">
+                    <i class="fa fa-user-o fa-fw"></i>作者:&nbsp;&nbsp;
+                    
+                    唐宇
+                    
+                </div>
+
+                
+                
+                <div class="info-break-policy">
+                    <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    7.8k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    28 分
+                </div>
+                
+                
+
+                
+                <div id="busuanzi_container_page_pv" class="info-break-policy">
+                    <i class="fa fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                    <span id="busuanzi_value_page_pv"></span>
+                </div>
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <div align="middle">
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=525278524&auto=1&height=66"></iframe>
+</div>
+
+<p>闲来无事，随便写写……</p>
+<h1 id="面试总结"><a href="#面试总结" class="headerlink" title="面试总结"></a>面试总结</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><blockquote>
+<p>总结一下面试遇到的问题，为了方便自己查阅，也希望对小伙伴们有所帮助！</p>
+</blockquote>
+<h3 id="一-HTML"><a href="#一-HTML" class="headerlink" title="一 HTML"></a>一 HTML</h3><ul>
+<li><p>HTML语义化就是让页面内容结构化，它有如下优点</p>
+<ul>
+<li>易于用户阅读，样式丢失的时候能让页面呈现清晰的结构。</li>
+<li>有利于SEO，搜索引擎根据标签来确定上下文和各个关键字的权重。</li>
+<li>方便其他设备解析，如盲人阅读器根据语义渲染网页</li>
+<li>有利于开发和维护，语义化更具可读性，代码更好维护，与CSS3关系更和谐</li>
+</ul>
+</li>
+</ul>
+<p>如：</p>
+<pre><code>&lt;header&gt;代表头部
+&lt;nav&gt;代表超链接区域
+&lt;main&gt;定义文档主要内容
+&lt;article&gt;可以表示文章、博客等内容
+&lt;aside&gt;通常表示侧边栏或嵌入内容
+&lt;footer&gt;代表尾部</code></pre><ul>
+<li>HTML5新标签 </li>
+</ul>
+<p><code>有&lt;header&gt;、&lt;footer&gt;、&lt;aside&gt;、&lt;nav&gt;、&lt;video&gt;、&lt;audio&gt;、&lt;canvas&gt;等...</code></p>
+<h3 id="二-CSS"><a href="#二-CSS" class="headerlink" title="二 CSS"></a>二 CSS</h3><ul>
+<li><p>盒子模型<br>盒模型分为标准盒模型和怪异盒模型(IE模型)</p>
+<ul>
+<li>标准盒模型 :在标准的盒子模型中，width指content部分的宽度</li>
+<li>IE盒模型: 在IE盒子模型中，width表示content+padding+border这三个部分的宽度</li>
+</ul>
+</li>
+<li><p>rem与em的区别</p>
+</li>
+</ul>
+<blockquote>
+<p>rem是根据根的font-size变化，而em是根据父级的font-size变化</p>
+</blockquote>
+<ul>
+<li><p>CSS选择器 </p>
+<pre><code>通配符：*
+ID选择器：#ID
+类选择器：.class
+元素选择器：p、a    等
+后代选择器：p span、div a   等
+伪类选择器：a:hover 等
+属性选择器：input[type=&quot;text&quot;]  等</code></pre><blockquote>
+<p>权重 !important -&gt; 行内样式 -&gt; #id -&gt; .class -&gt; 元素和伪元素 -&gt; * -&gt; 继承 -&gt; 默认</p>
+</blockquote>
+</li>
+<li><p>CSS新特性 </p>
+<pre><code>transition：过渡
+transform：旋转、缩放、移动或者倾斜
+animation：动画 
+gradient：渐变
+shadow：阴影
+border-radius：圆角</code></pre></li>
+<li><p>css命名长短 优缺点<br>性能分为下载性能(速度)和渲染性能，大家认为：</p>
+</li>
+</ul>
+<ol>
+<li>下载性能可能是短命名略胜一筹，因为文件会稍小些；</li>
+<li>渲染性能则是长命名好些，因为CSS中通常短命名我们用类似.box .hd {}定义样式，而长命名直接是.box-hd {}，pagespeed认为选择器长度会影响渲染性能。<br>(注：其实平时工作中这两点都会被忽略。gzip可以进一步减少第一个问题的差距，而由此引发的渲染性能也是微乎其微)</li>
+</ol>
+<p>然后大家就可维护性进行了讨论，这次支持长命名的人较多。</p>
+<ol>
+<li><p>长命名给人较为可靠的感觉；</p>
+</li>
+<li><p>长命名较短命名发生冲突的几率低很多；</p>
+</li>
+<li><p>可复用的内容通过短命名定义，无可争议；<br>…<br>最后是使用场景，玉伯借用YAHOO首页的例子牵头，大家讨论，总结如下：(主要依据可维护性)</p>
+</li>
+<li><p>框架级样式用短命名，比如盒模型、栅格；</p>
+</li>
+<li><p>通用样式用短命名，比如.hidden、.clearfix；</p>
+</li>
+<li><p>应用级样式用长命名，比如淘江湖项目的通用样式都加上“sns”前缀(有.sns-avatar、.sns-box等)；</p>
+</li>
+<li><p>页面级样式用长命名，比如类目模块，可能包含category-hd、category-bd、category-bd-tips等；</p>
+</li>
+<li><p>嵌入式应用用长命名，因为可能会被嵌入到任何复杂环境中，比如开源编辑器、Google的各种应用(map, adsence, gmail…)</p>
+</li>
+</ol>
+<ul>
+<li><p>如何垂直水平居中一个div</p>
+<ul>
+<li>div绝对定位水平垂直居中【Transforms 变形】    </li>
+<li>flex display:flex;<br>  justify-content:center;<br>  align-items:center;</li>
+<li>将父盒子设置为table-cell元素，可以使用text-align:center和 vertical-align:middle实现水平、垂直居中。</li>
+<li>比较完美的解决方案是利用三层结构模拟父子结构</li>
+</ul>
+</li>
+<li><p>less /scss 优点:</p>
+<ol>
+<li>支持嵌套 </li>
+<li>支持变量定义 </li>
+<li>支持“模板函数”（自己定义的名称。。。），比如有些CSS需要做兼容前缀的话，你可以这样使用一个模板函数定义一下，调用的时候传入正常值就可以了。会自动生成前缀的CSS</li>
+</ol>
+</li>
+<li><p>多行元素的文本省略号 </p>
+<pre><code>overflow : hidden;
+text-overflow: ellipsis;
+display: -webkit-box;
+-webkit-line-clamp: 3;
+-webkit-box-orient: vertical</code></pre></li>
+<li><p>flex 布局实现div均分自动换行<br>flex-wrap: wrap </p>
+</li>
+</ul>
+<h3 id="三-JavaScript"><a href="#三-JavaScript" class="headerlink" title="三 JavaScript"></a>三 JavaScript</h3><p><strong>JS的几条基本规范</strong></p>
+<blockquote>
+<p>1、不要在同一行声明多个变量<br>2、请使用===/！==来比较true/false或者数值<br>3、使用对象字面量替代new Array这种形式<br>4、不要使用全局变量<br>5、Switch语句必须带有default分支<br>6、函数不应该有时候有返回值，有时候没有返回值<br>7、For循环必须使用大括号<br>8、IF语句必须使用大括号<br>9、for-in循环中的变量 应该使用var关键字明确限定作用域，从而避免作用域污染</p>
+</blockquote>
+<h4 id="1-JS的基本数据类型与复杂数据类型"><a href="#1-JS的基本数据类型与复杂数据类型" class="headerlink" title="1.JS的基本数据类型与复杂数据类型"></a>1.JS的基本数据类型与复杂数据类型</h4><ul>
+<li><p>基本数据类型存储在栈中，引用数据类型存储在堆中，引用地址存放在栈内，</p>
+</li>
+<li><p>将基本数据存储在栈中是因为它们占据的空间是固定的，更有利于迅速查询变量的值，</p>
+</li>
+<li><p>==&gt;为什么引用数据类型不放在栈中,  :=&gt;由于引用数据类型大小不固定，如果存放在栈中会降低变量的搜索效率(栈内存主要是根据程序逻辑明确申请的内存，所以也会变相降低程序逻辑处理效率。) </p>
+</li>
+<li><p>引用数据类型大小衡量通过占用内存的大小，  在进行比较的时候比较的是引用地址。 </p>
+</li>
+<li><p>基本数据类型有哪些?  </p>
+<ul>
+<li>六种 <code>number  string  boolean   undefind  null   es6新增的symbol</code> ,</li>
+</ul>
+</li>
+<li><p>复杂数据类型有哪些?</p>
+<ul>
+<li><code>object,  Array,function</code></li>
+</ul>
+</li>
+<li><p>什么是symbol?</p>
+</li>
+</ul>
+<blockquote>
+<p>一般问到了基本数据类型种类,你说了symbol的话,肯定会问symbol,   :=&gt; symbol不能使用new,它生成的也是原始数据类型的值, 它生成的数据都是独一无二的.(就算symbol里的变量值相同,那也是两个数据值.    symbol.for和symbol的区别在于 symbol.for会先查找有没有这个key值,有则直接返回,没有才会创建.)  </p>
+</blockquote>
+<blockquote>
+<p>一般问到基本数据类型,就会问检测复杂数据类型的方法 </p>
+</blockquote>
+<ul>
+<li>基本数据类型可以用typeof检测,对复杂数据类型都是返回object,但是fucntion是特例,会返回function.</li>
+<li>判断复杂数据类型可以用 instandof,(instanceof 运算符用于检测构造函数的 prototype 属性是否出现在某个实例对象的原型链上)</li>
+<li>还可以借用object原型上的 tostring方法,从后往前截取大概8位.</li>
+</ul>
+<h4 id="2-数组操作"><a href="#2-数组操作" class="headerlink" title="2.数组操作"></a>2.数组操作</h4><pre><code>map: 遍历数组，返回回调返回值组成的新数组
+forEach: 无法break，可以用try/catch中throw new Error来停止
+filter: 过滤
+some: 有一项返回true，则整体为true
+every: 有一项返回false，则整体为false
+join: 通过指定连接符生成字符串
+push / pop: 末尾推入和弹出，改变原数组， 返回推入/弹出项【有误】
+unshift / shift: 头部推入和弹出，改变原数组，返回操作项【有误】
+sort(fn) / reverse: 排序与反转，改变原数组
+concat: 连接数组，不影响原数组， 浅拷贝
+slice(start, end): 返回截断后的新数组，不改变原数组
+splice(start, number, value...): 返回删除元素组成的数组，value 为插入项，改变原数组
+indexOf / lastIndexOf(value, fromIndex): 查找数组项，返回对应的下标
+reduce / reduceRight(fn(prev, cur)， defaultPrev): 两两执行，prev 为上次化简函数的return值，cur 为当前值(从第二项开始)</code></pre><h4 id="3-JS有哪些内置对象"><a href="#3-JS有哪些内置对象" class="headerlink" title="3.JS有哪些内置对象"></a>3.JS有哪些内置对象</h4><pre><code>Object是JavaScript中所有对象的父对象
+
+数据封装对象：Object、Array、Boolean、Number和String
+其他对象：Function、Arguments、Math、Date、RegExp、Error</code></pre><h4 id="4-闭包"><a href="#4-闭包" class="headerlink" title="4.闭包"></a>4.闭包</h4><p><strong>什么是闭包</strong></p>
+<blockquote>
+<p>函数A 里面包含了 函数B，而 函数B 里面使用了 函数A 的变量，那么 函数B 被称为闭包。(闭包就是能够读取其他函数内部变量的函数)</p>
+</blockquote>
+<pre><code>function A() {
+var a = 1;
+function B() {
+    console.log(a);
+}
+return B();
+}</code></pre><p><strong>闭包的特征</strong></p>
+<ul>
+<li>函数内再嵌套函数</li>
+<li>内部函数可以引用外层的参数和变量</li>
+<li>参数和变量不会被垃圾回收制回收</li>
+</ul>
+<p><strong>对闭包的理解</strong></p>
+<blockquote>
+<p>使用闭包主要是为了设计私有的方法和变量。闭包的优点是可以避免全局变量的污染，缺点是闭包会常驻内存，会增大内存使用量，使用不当很容易造成内存泄露。在js中，函数即闭包，只有函数才会产生作用域的概念</p>
+</blockquote>
+<p><strong>闭包的优缺点</strong></p>
+<ul>
+<li>优点: 能够实现封装和缓存等</li>
+<li>缺点: 就是消耗内存、不正当使用会造成<a href="https://blog.csdn.net/weixin_41989325/article/details/102808390" target="_blank" rel="noopener">内存泄露</a>的问题</li>
+</ul>
+<h4 id="5-JS作用域及作用域链"><a href="#5-JS作用域及作用域链" class="headerlink" title="5.JS作用域及作用域链"></a>5.JS作用域及作用域链</h4><blockquote>
+<p>在JavaScript中，作用域分为 <code>全局作用域</code> 和 <code>函数作用域</code></p>
+</blockquote>
+<ul>
+<li>一般情况下，变量取值到 创建 这个变量 的函数的作用域中取值,但是如果在当前作用域中没有查到值，就会向上级作用域去查，直到查到全局作用域，这么一个查找过程形成的链条就叫做作用域链。<br><img src="zyy.jpg" alt></li>
+</ul>
+<h4 id="6-原型和原型链"><a href="#6-原型和原型链" class="headerlink" title="6.原型和原型链"></a>6.原型和原型链</h4><p><strong>概念</strong></p>
+<blockquote>
+<p>每个对象都会在其内部初始化一个属性，就是prototype(原型)，当我们访问一个对象的属性时，如果这个对象内部不存在这个属性，那么他就会去prototype里找这个属性，这个prototype又会有自己的prototype，于是就这样一直找下去</p>
+</blockquote>
+<p><strong>完整版原型链</strong></p>
+<p><a href="https://blog.csdn.net/u011313703/article/details/78343108" target="_blank" rel="noopener">完整原型链详细图解（构造函数、原型、实例化对象）</a><br><img src="yxl.jpg" alt></p>
+<h4 id="7-组件化和模块化"><a href="#7-组件化和模块化" class="headerlink" title="7.组件化和模块化"></a>7.组件化和模块化</h4><ul>
+<li>组件化优点: 专一、可配置性、标准性、复用性、可维护性</li>
+<li>模块化优点: 避免变量污染、命名冲突、提高代码复用率、提高了可维护性、方便依赖关系管理</li>
+</ul>
+<h4 id="8-图片的预加载和懒加载"><a href="#8-图片的预加载和懒加载" class="headerlink" title="8.图片的预加载和懒加载"></a>8.图片的预加载和懒加载</h4><ul>
+<li>预加载：提前加载图片，当用户需要查看时可直接从本地缓存中渲染</li>
+<li>懒加载：懒加载的主要目的是作为服务器前端的优化，减少请求数或延迟请求数</li>
+</ul>
+<h4 id="9-实例化new与不new的区别"><a href="#9-实例化new与不new的区别" class="headerlink" title="9.实例化new与不new的区别"></a>9.实例化new与不new的区别</h4><blockquote>
+<p> 简单来说，就是， new是通过调用构造函数Function来创建函数  ，没有return会返回一个对象,不new只是调用函数把返回值赋值变量。  没有return就返回undefind</p>
+</blockquote>
+<p>null 和undefind的区别   :=&gt;  null用来表示尚未存在的对象, undefind表示还没有赋值.  null转数值为0,  undefind转数值为nan.</p>
+<h4 id="10-什么是promise"><a href="#10-什么是promise" class="headerlink" title="10.什么是promise"></a>10.什么是promise</h4><blockquote>
+<p>一句话概括promise : Promise对象用于异步操作,他表示一个尚未完成切预计在未来会完成的异步操作.</p>
+</blockquote>
+<p><strong>promise 是什么?</strong>  </p>
+<ul>
+<li>promise是es6提供的一种解决回调地狱的方案,它是一个容器,内部存放着某个异步操作的结果,并且提供统一的api进行操作,</li>
+<li>它本身有<code>all,resolve,pending,reject,</code> 原型上有 then,catch方法,  <code>缺点</code>在于,一旦建立,就无法取消</li>
+</ul>
+<p><strong>回调地狱解决方案</strong></p>
+<ul>
+<li>promise </li>
+<li>async/await </li>
+<li>generator </li>
+</ul>
+<h4 id="11-对This对象的理解"><a href="#11-对This对象的理解" class="headerlink" title="11.对This对象的理解"></a>11.对This对象的理解</h4><ul>
+<li>普通函数的this指向大致分为几种:<ul>
+<li>指向window的 -&gt;普通函数调用和定时器，</li>
+<li>指向实例化对象的 -&gt;构造函数，</li>
+<li>指向事件处理对象的 -&gt;事件函数。  </li>
+<li>箭头函数是es6新增的特性，它不能用作构造函数，也没有自己的this,argument,super或new.target.它只会从自己的作用域链的上一层继承this，也就是沿用外一层的this指向。</li>
+</ul>
+</li>
+<li>定时器中的this是指向window的,那么如果对定时器的function改造成箭头函数的话, 它的指向是什么?    :=&gt;  沿用作用域上一层的this,  </li>
+<li>那么怎么去固定定时器中的this  :=&gt;古老的方法: var that = this      工作中常用的方法   .bind(this)  ( 参见贪吃蛇中绑定this的方法)</li>
+</ul>
+<h4 id="12-浅拷贝和深拷贝的区别"><a href="#12-浅拷贝和深拷贝的区别" class="headerlink" title="12.浅拷贝和深拷贝的区别"></a>12.浅拷贝和深拷贝的区别</h4><blockquote>
+<p>简单点来说，就是假设B复制了A，当修改A时，看B是否会发生变化，如果B也跟着变了，说明这是浅拷贝，拿人手短，如果B没变，那就是深拷贝，自食其力赋值。</p>
+</blockquote>
+<p>在引用类型中，只是赋值了指针， 并没有创建对象空间,而浅拷贝和深拷贝都会创建一个新对象只是说浅拷贝的对象是引用类数据的第一层引用 ，拷贝第一层级，指针依然指向引用数据，引用数据内部改变，浅拷贝对象也会发生改变。深拷贝是完全创建一个新对象，拷贝所有层级，复制内部所有结构。两者互不影响.</p>
+<ul>
+<li><p>怎么完成一个浅拷贝</p>
+<ul>
+<li>用es6的spread操作符   …obj</li>
+</ul>
+</li>
+<li><p>怎么用简单的方法实现一个深拷贝 </p>
+<ul>
+<li><p>用json.stringify转字符串,然后json.parse转对象, 但是function的话,在转换过程中会丢失那个function(就是声明类型,面试的时候不要解释) .</p>
+</li>
+<li><p>递归 </p>
+<pre><code>var deepCopy = (obj) =&gt; {
+    var ret = {}
+    for (var key in obj) {
+        var value = obj[key]
+        ret[key] = typeof value === &#39;object&#39; ? deepCopy(value) : value
+    }
+    return ret
+}</code></pre></li>
+<li><p>通过jQuery的extend方法实现深拷贝</p>
+</li>
+<li><p>Object.assign()拷贝</p>
+</li>
+<li><p>lodash函数库实现深拷贝 -&gt;lodash很热门的函数库，提供了 lodash.cloneDeep()实现深拷贝</p>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="12-es5和es6的区别"><a href="#12-es5和es6的区别" class="headerlink" title="12.es5和es6的区别"></a>12.es5和es6的区别</h4><ol>
+<li>箭头函数 </li>
+<li>字符串插值 ：字符串插值允许使用`` 插入字符串 ${}可以解析变量=&gt;模板字符串。  </li>
+<li>let  const  ：  </li>
+<li>类定义和继承： es6引入了对类class ， 构造函数constructor ,和extend的语言支持    class可以理解为是构造函数的另一种写法。类本身指向的就是构造函数。类中所有的方法都是定义在prototype上的， 没有变量提升。</li>
+<li>for-of  ： 可以创建一个循环遍历可迭代对象的循环</li>
+<li>promise： 解决回调地狱的方案</li>
+<li>模块的导入与导出：  import  export default</li>
+<li>拓展运算符 </li>
+<li>解构赋值 =&gt; 用于对对象或数组快速取值 let [] =[]，等式两边属性一一对应，找不到的为undefind.</li>
+<li>from 可以将对象转成数组</li>
+</ol>
+<h3 id="四-杂项"><a href="#四-杂项" class="headerlink" title="四 杂项"></a>四 杂项</h3><h4 id="1-数组操作"><a href="#1-数组操作" class="headerlink" title="1.数组操作"></a>1.数组操作</h4><ol>
+<li>forEach()返回值是undefined，不可以链式调用。</li>
+<li>map()返回一个新数组，原数组不会改变。</li>
+<li>flat()默认只会拉平一层，flat（n）拉平n层，Infinity无限次,flat()会跳过空格,返回新数组不改变原数组</li>
+<li>数组去重，3种方法<ul>
+<li>遍历加indexof去重。 </li>
+<li>for循环嵌套splice去重，     </li>
+<li>es6 new Set去重（原理是通过map实现的）</li>
+</ul>
+</li>
+<li>字符串截取的方法   <ul>
+<li>slice（开始索引，结束索引） </li>
+<li>substring(开始索引，结束索引，包头不包尾)，  </li>
+<li>substr(开始索引，结束索引) </li>
+<li>数组的  splice(下标， 删除个数，目标元素)</li>
+</ul>
+</li>
+</ol>
+<h4 id="2-抖动与防抖"><a href="#2-抖动与防抖" class="headerlink" title="2.抖动与防抖"></a>2.抖动与防抖</h4><p><strong>函数防抖</strong></p>
+<blockquote>
+<p>函数防抖是通过设置定时器，判断，当持续触发事件时，一定时间内没有再触发事件，事件处理函数才会执行一次，如果设定的延时到来之前又触发了事件，那么就重新开始延时.<br>作用: 作用在于限制浏览器发送请求的次数，减少服务器压力，</p>
+</blockquote>
+<p><strong>函数节流</strong>   </p>
+<blockquote>
+<p>函数节流是通过设置定时器加时间戳的模式来控制一定时间内只触发一次函数，原理是判断是否达到给定的时间来触发函数。</p>
+</blockquote>
+<p><code>区别</code>:两者的区别在于函数节流无论事件触发的多频繁，都会保证在规定时间内触发一次函数， 而函数防抖只是在最后一次事件后才触发一次函数。</p>
+<h4 id="3-跨域解决方案"><a href="#3-跨域解决方案" class="headerlink" title="3.跨域解决方案"></a>3.跨域解决方案</h4><p><a href="https://juejin.im/entry/59b8fb276fb9a00a42474a6f" target="_blank" rel="noopener">转前端常见跨域解决方案（全）</a></p>
+<ol>
+<li>jsonp<blockquote>
+<p>原理:主要是利用script标签的src属性不受同源策略影响，向后台发送get请求，并通过回调函数由服务器返回数据，实现跨域，先创建一个唯一的回调函数名，挂载到window属性上，然后创建一个script标签， 把src属性赋值url，然后通过请求之后执行挂载回调获取数据，再将回调删除，再将script删除。  就完成了一个jsonp的封装。</p>
+</blockquote>
+</li>
+<li>cors(后端处理)</li>
+<li>nginx反向代理(通过add_header处理添加一些响应头信息)</li>
+</ol>
+<h4 id="4-get和post区别"><a href="#4-get和post区别" class="headerlink" title="4.get和post区别"></a>4.get和post区别</h4><ul>
+<li>get和post请求的区别在于， get请求需要将参数以？拼接在url后面，而post不需要。  </li>
+<li>post请求需要设置一个请求头 content-type application x-www-form-urlencode,get使用默认请求头</li>
+<li>post请求参数以&amp;拼接放入请求体中，上传给服务器。而get请求体中不传参或null,  </li>
+<li>get 请求相较于post请求，安全性低。  </li>
+<li>get请求对数据大小有4k的限制，而post没有明显限制</li>
+</ul>
+<p><code>put和post的区别</code> : put指定了资源在服务器的位置,而post没有  , put一般用于对资源的创建于修改.</p>
+<h4 id="5-http状态码"><a href="#5-http状态码" class="headerlink" title="5.http状态码"></a>5.http状态码</h4><blockquote>
+<p> 常见的状态码  200  请求成功，  302： 重定向  304： 文件未修改  400：请求语法错误，401：未授权  404： 找不到资源，405：访问不被允许  500 服务器错误。</p>
+</blockquote>
+<h4 id="6-浏览器的渲染原理？"><a href="#6-浏览器的渲染原理？" class="headerlink" title="6.浏览器的渲染原理？"></a>6.浏览器的渲染原理？</h4><p> 解析html以构建dom树 -&gt; 构建render树 -&gt; 布局render树 -&gt; 绘制render树</p>
+<h4 id="7-当输入地址，按下回车的时候，页面发生了什么？"><a href="#7-当输入地址，按下回车的时候，页面发生了什么？" class="headerlink" title="7.当输入地址，按下回车的时候，页面发生了什么？"></a>7.当输入地址，按下回车的时候，页面发生了什么？</h4><blockquote>
+<p>进行域名解析，  先查看浏览器自身的DNS缓存，  然后查看操作系统本身的DNS缓存， 在查找本地host,最后再到DNS服务器。域名解析完成后，会 发起TCP的三次握手，建立TCP连接后发起http请求，服务器响应请求，浏览器获得html代码。之后浏览器解析代码，并将资源缓存。最后进行渲染。</p>
+</blockquote>
+<h4 id="8-媒体查询写法"><a href="#8-媒体查询写法" class="headerlink" title="8.媒体查询写法:"></a>8.媒体查询写法:</h4><p> <code>@media screen and (max-width:480px){.ads {display:none;}}</code></p>
+<h4 id="9-事件委托"><a href="#9-事件委托" class="headerlink" title="9.事件委托"></a>9.事件委托</h4><blockquote>
+<p>语法：element.addEventListener(event, function, useCapture)；</p>
+</blockquote>
+<ol>
+<li>event:必须。字符串，指定事件名。 </li>
+<li>不加’on’，如click function:必须。指定要事件触发时执行的函数。</li>
+<li>useCapture：可选。布尔值，指定事件是否在捕获或冒泡阶段执行(true-事件句柄在捕获阶段执行；false-默认。事件句柄在冒泡阶段执行)。</li>
+</ol>
+<p><code>移除事件监听</code>：element.removeEventListener(event, function,useCapture) 匿名函数无法移出</p>
+<h4 id="10-浏览器缓存"><a href="#10-浏览器缓存" class="headerlink" title="10.浏览器缓存"></a>10.浏览器缓存</h4><p><a href="https://juejin.im/post/5c417993f265da61285a6075" target="_blank" rel="noopener">转:浏览器缓存</a></p>
+<h3 id="五-VUE"><a href="#五-VUE" class="headerlink" title="五 VUE"></a>五 VUE</h3><h4 id="1-vue源码原理"><a href="#1-vue源码原理" class="headerlink" title="1.vue源码原理"></a>1.vue源码原理</h4><blockquote>
+<p><a href="https://cn.vuejs.org/v2/guide/instance.html?" target="_blank" rel="noopener">vue</a>的原理：主要是采用数据劫持结合发布者-订阅者模式的方式，通过Object.defineProperty()来劫持各个属性的setter，getter，在数据变动时发布消息给订阅者，触发相应的监听回调。它是通过observer,compile ,watcher 三个模块来实现的。observer的核心是在数据变化时通过object.definePrototype(/)设置setter和getter，来通知watcher，watcher是observer和compile之间通信的桥梁，主要是调用update方法来触发compile中的回调，compile(使用document fragment操作节点)解析模版指令替换数据，并且为操作节点绑定更新函数，从而更新视图。</p>
+</blockquote>
+<h4 id="2-vue的生命周期"><a href="#2-vue的生命周期" class="headerlink" title="2. vue的生命周期"></a>2. vue的生命周期</h4><blockquote>
+<p> vue的生命周期分为八个阶段,创建前创建后, 挂载前和挂载后, 更新前更新后, 销毁前销毁后.</p>
+</blockquote>
+<ul>
+<li>创建阶段为beforecreate ,create      </li>
+<li>挂载阶段为 beforemount和mounted   </li>
+<li>更新阶段 为beforeupdate 和update   </li>
+<li>销毁阶段为 beforedestroy和destroy </li>
+</ul>
+<p><strong>问题</strong></p>
+<ol>
+<li>创建阶段和挂载阶段有什么区别, create和mounted    :=&gt; create阶段不能操作DOM元素,因为此时el还没有挂载, 而mounted可以,</li>
+<li>父组件的create阶段先执行还是子组件的create阶段先执行  :=&gt;  父组件的create先执行,  但是子组件的mounted阶段又比父组件的mounted先执行</li>
+<li>个人理解:  在页面渲染的时候, 首先应该渲染父组件,所以先执行父组件的create, 而父组件里通常是有子组件的,那么这个时候,因为父组件本身的完整内容是包含子组件的,所以,可以想象 , 如果同时挂载多个子组件的话,那么,肯定要等到子组件渲染完成后, 父组件才能完整的挂载el完成. 因为 子组件是父组件的一部分,要渲染完成父组件,那么部分的组件肯定先比父组件完成挂载.  </li>
+</ol>
+<h4 id="3-vue中子组件传值给父组件-的三种方式"><a href="#3-vue中子组件传值给父组件-的三种方式" class="headerlink" title="3.vue中子组件传值给父组件 的三种方式"></a>3.vue中子组件传值给父组件 的三种方式</h4><ol>
+<li><p>props配合$emit    父组件中必须要有 .sync修饰符  ，它的作用是当一个子组件改变一个prop的值的时候，这个变化会同步到父组件当中所绑定。</p>
+</li>
+<li><p>先在父组件methods中创建一个方法， 然后在子组件用自定义事件触发这个方法进行传值。   </p>
+</li>
+<li><p>v-model  配合 input 。（不推荐）</p>
+<ul>
+<li>===&gt;一般问完组件通信 :=&gt; 父传子:父组件声明变量,子组件使用props声明接收,<br>父:<code>&lt;child :msg=&quot;message&quot;&gt;&lt;/child&gt;</code> 子:<code>&lt;div&gt;&lt;/div&gt;</code></li>
+<li>===&gt; 子传父的方式.   :=&gt; 先在父组件methods中创建一个方法<code>@msgFunc</code>， 然后在子组件用自定义事件触发这个 <code>this.$emit(&#39;msgFunc&#39;)</code>;方法进行传值。</li>
+<li>===&gt;非父子 : <code>Bus.$emit(&#39;on&#39;, &#39;来自兄弟组件&#39;)</code>  -&gt;     <code>Bus.$on(&#39;on&#39;, (msg) =&gt; {  this.message = msg }) =&gt;msg = 来自兄弟组件</code></li>
+</ul>
+</li>
+</ol>
+<h4 id="4-vue组件间的传参方式"><a href="#4-vue组件间的传参方式" class="headerlink" title="4.vue组件间的传参方式"></a>4.vue组件间的传参方式</h4><ol>
+<li><p><a href="https://vuex.vuejs.org/zh/" target="_blank" rel="noopener">Vuex</a></p>
+<blockquote>
+<p>Vuex 是一个专为 Vue.js 应用程序开发的状态管理模式。它采用集中式存储管理应用的所有组件的状态，<br>并以相应的规则保证状态以一种可预测的方式发生变化。Vuex 也集成到 Vue 的官方调试工具 devtools extension，<br>提供了诸如零配置的 time-travel 调试、状态快照导入导出等高级调试功能</p>
+</blockquote>
+<ul>
+<li>Vuex优缺点</li>
+<li>优点<ol>
+<li>解决了多层组件之间繁琐的事件传播。</li>
+<li>解决了多组件依赖统同一状态的问题。</li>
+<li>单向数据流</li>
+<li>为Vue量身定做，学习成本不高</li>
+</ol>
+</li>
+<li>缺点<ol>
+<li>不能做数据持久化，刷新页面就要重制，要做数据持久化可以考虑使用localstorage。</li>
+<li>增加额外的代码体积，简单的业务场景不建议使用</li>
+</ol>
+</li>
+</ul>
+</li>
+</ol>
+<ol start="2">
+<li><p>本地存储传值</p>
+</li>
+<li><p>路由传参 </p>
+<ul>
+<li><p>方案一<br>   getDescribe(id) {<br>   直接调用$router.push 实现携带参数的跳转</p>
+<pre><code>   this.$router.push({
+   path: `/describe/${id}`,
+   })</code></pre><p>   }<br>   路由配置如下：</p>
+<pre><code>{
+   path: &#39;/describe/:id&#39;,
+   name: &#39;Describe&#39;,
+   component: Describe</code></pre><p>   }</p>
+</li>
+<li><p>方案二 </p>
+<pre><code>this.$router.push({
+ name: &#39;Describe&#39;,
+ params(query): {   
+   id: id
+ }</code></pre><p>   })<br>   获取:<br>   this.$route.params(query).id</p>
+</li>
+</ul>
+</li>
+</ol>
+<p><a href="https://blog.csdn.net/mf_717714/article/details/81945218?utm_medium=distribute.pc_relevant.none-task-blog-baidujs-2" target="_blank" rel="noopener">路由传参params(query)区别</a></p>
+<ul>
+<li><p>方案三</p>
+<pre><code> &lt;router-link :to=&quot;{path:&#39;/test&#39;,query: {name: id}}&quot;&gt;跳转&lt;/router-link&gt;</code></pre></li>
+</ul>
+<h4 id="5-router和-route有什么区别"><a href="#5-router和-route有什么区别" class="headerlink" title="5.$router和$route有什么区别"></a>5.$router和$route有什么区别</h4><blockquote>
+<p>$route 是路由对象，负责解析url的hash值，主要用于获取几个属性（name,parmas,path,query），而 $router是路由实例对象，负责的是实现路由跳转功能。</p>
+</blockquote>
+<p>如何监听$route =&gt;  使用watch监听。$route(to){to.parmas.id}</p>
+<h4 id="6-vue-router中hash模式与history模式的区别"><a href="#6-vue-router中hash模式与history模式的区别" class="headerlink" title="6. vue-router中hash模式与history模式的区别"></a>6. vue-router中hash模式与history模式的区别</h4><blockquote>
+<p>vue-router有两种模式。一种是默认的hash模式，一种是history模式。<br>如何去除hash模式的# 在路由对象里写 mode:history</p>
+</blockquote>
+<p>   hash模式 原理是利用window监听hashchange事件，由hash改变的url都会被浏览器记录下来，浏览器的前进后退也可以对其控制，虽然没有请求服务器，但还是将页面和url一一关联起来了，这个就是hash模式，也是前端路由中，单页应用的标配。</p>
+<p>   history模式，是利用H5新增的history interface中的history.pushState（） 和history.replaceState（） 来请求服务器（前端的url必须和实际向后端发起请求的url 一致）实现的，它会向服务器发送请求。 history模式在刷新和F5的时候会出现404错误，需要用nginx配置出错时</p>
+<h4 id="7-vue杂项问题"><a href="#7-vue杂项问题" class="headerlink" title="7.vue杂项问题"></a>7.vue杂项问题</h4><ol>
+<li>vue是单向绑定还是双向绑定？<br>vue是单向绑定的 ，  双向是指 view层和model数据层双向绑定，    而v-model只是双向绑定的一个语法糖。<br>组件和组件中是单向绑定的、</li>
+<li><a href="https://www.jianshu.com/p/a7550c0e164f" target="_blank" rel="noopener">$nextTick是什么?</a><br>因为vue是异步更新的，$nextTick是用来知道什么时候DOM更新完成的</li>
+<li><a href="https://www.cnblogs.com/Sherlock09/p/11023593.html" target="_blank" rel="noopener">vue-loader</a>是什么？<br>是解析和转换。vue文件的工具，作用是提取出可被浏览器识别的js代码</li>
+<li>vue中<a href="https://www.jianshu.com/p/a6f741c7b500" target="_blank" rel="noopener"> keep-alive</a> 组件的作用<br><code>&lt;keep-alive&gt;</code>是Vue的内置组件，能在组件切换过程中将状态保留在内存中，防止重复渲染DOM。<br>keep-alive：主要用于保留组件状态或避免重新渲染。<br>当二个组件被很频繁的调用的时候可以使用keep-alive标签进行缓存，这样页面就会从缓存中快速渲染，而不是重新渲染。</li>
+<li><a href="https://segmentfault.com/a/1190000017752182?utm_source=tag-newest" target="_blank" rel="noopener"> vue-router如何响应 路由参数 的变化</a>？<br> 1.使用watch监听。  2. 使用beforeUpdate守卫</li>
+<li><a href="https://www.cnblogs.com/shenjianping/p/11330126.html" target="_blank" rel="noopener">过滤器</a></li>
+<li><a href="https://www.jianshu.com/p/088a7eb6de72" target="_blank" rel="noopener">Vue.mixin的作用（混入）</a><blockquote>
+<p>将使用频率比较多的部分提取出来，定义一个对象可以包含任意组件选项。</p>
+</blockquote>
+</li>
+</ol>
+<p>　　 1. 使用时混入的对象会跟组件中的对象进行合并；<br>　　 2. 同名的钩子函数会合并成数组，先调用混入的钩子函数；<br>　　 3. 出现相同的属性或方法时会调用组件内的方法。</p>
+<ol start="8">
+<li><p>router-link  高亮处理<br>1.使用类router-link-active<br>2.在路由中配置  linkActiveClass：‘类名’（类名为自定义样式）</p>
+</li>
+<li><p><a href="https://blog.csdn.net/qq_40958876/article/details/99822406?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.nonecase&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.nonecase" target="_blank" rel="noopener">编程式导航</a><br>跳转：this.$router.push()  返回 :this.$router.back()  替换:this.$replace()    ===》  关于跳转和替换的区别在于 历史记录的问题， ：=》 跳转有历史记录，而替换没有。</p>
+</li>
+<li><p>/child  和child的区别<br>/child访问的路径是/child     而child访问的是  /parent/child</p>
+</li>
+<li><p>vue 左侧菜单展开隐藏重新渲染echars<br>加个监控=&gt; window.onresize</p>
+</li>
+<li><p>为什么vue中 data是个函数而不是个对象</p>
+<blockquote>
+<p>因为组件是可复用的vue实例。它有可能被多次复用，而组件中的data写成一个函数，数据以函数返回值的形式定义，这样每复用一次组件，就会返回一个新的data，类似于给每个组件实例创建了一个私有的数据空间，让各自组件维护自己的数据，互不影响。 而如果写成对象的形式，就使得所有组件都共用一份data，那么一个组件中改变就会造成所有的组件数据都会改变。</p>
+</blockquote>
+</li>
+<li><p><a href="https://www.jianshu.com/p/52e6692639f5" target="_blank" rel="noopener">slot 插槽 </a></p>
+<blockquote>
+<p>作用是可以让父组件向子组件插入一些内容（包含html标签结构），并且也可以在父组件中拿到子组件的数据</p>
+</blockquote>
+<p>slot插槽有三种， 匿名插槽   具名插槽，和作用域插槽  </p>
+<ol>
+<li>匿名插槽 v-slot:default   只能有且只有一个</li>
+<li>具名插槽  v-slot:名称    ，子组件使用slot标签插入时也要加上name属性</li>
+<li>作用域插槽  v-slot：名字 = “数据名”  主要用于子组件数据被父组件获取。</li>
+</ol>
+</li>
+<li><p>provice/inject 依赖注入<br>主要用于高阶插件/应用库提供用例，并不推荐在应用程序上使用， 。  它允许祖先组件向所有子孙组件注入依赖，<br>祖先组件使用provice声明变量，  子孙使用 inject注入依赖。</p>
+</li>
+<li><p>vue和jq的区别<br>vue和jq的区别在于控制反转，<br>jq是开发人员起主导作用，通过操作DOM,来进行数据修改<br>vue是框架起主导作用,  修改数据,vue会自己帮我们完成DOM操作</p>
+</li>
+<li><p><a href="https://www.cnblogs.com/jiajialove/p/11327945.html" target="_blank" rel="noopener">watch和computed 的区别</a></p>
+</li>
+</ol>
+<ul>
+<li>watch 一个数据响应多个数据</li>
+<li>computed 一个数据受到多个数据的影响 有缓存<blockquote>
+<p>在实现原理上watch和computed是差不多的，vue的data值在初始化阶段都会被挂载上watcher观察者模式，当数据改变的时候会先调用watcher观察者模式，然后调用计算属性，和监听属性。本质上来说没有多大区别</p>
+</blockquote>
+</li>
+</ul>
+<ol start="17">
+<li><a href="https://www.cnblogs.com/dianzan/p/12751087.html" target="_blank" rel="noopener">v-for和v-if不应该一起使用</a></li>
+</ol>
+<ul>
+<li>原因：v-for比v-if优先，即每一次都需要遍历整个数组，影响速度。</li>
+<li>解决: 在computed 里面使用,缓存v-show</li>
+</ul>
+<ol start="18">
+<li>spa 优缺点:<br><strong>优点:</strong><ol>
+<li>良好的交互体验</li>
+<li>良好的前后端工作分离模式</li>
+<li>减轻服务器压力</li>
+</ol>
+<strong>缺点:</strong><ol>
+<li>首屏加载慢</li>
+<li>不利于SEO</li>
+<li>不适合开发大型项目</li>
+</ol>
+</li>
+<li>加载渲染过程<br><code>父beforeCreate-&gt;父created-&gt;父beforeMount-&gt;子beforeCreate-&gt;子created-&gt;子beforeMount-&gt;子mounted-&gt;父mounted</code></li>
+<li>与React的区别　　</li>
+</ol>
+<ul>
+<li><strong>相同点：</strong>　<ol>
+<li>React采用特殊的JSX语法，Vue在组件开发中也推崇编写Vue特殊文件格式，对文件内容都有一些约定，两者都需要编译后使用。</li>
+<li>中心思想相同：一切都是组件，组件实例之间可以嵌套。</li>
+<li>都提供合理的钩子函数，可以让开发者定制化地去处理需求。</li>
+<li>都不内置列数Ajax，Route等功能的核心包，而是以插件的方式加载。</li>
+<li>在组件开发中都支持mixins的特性。</li>
+</ol>
+</li>
+<li>不同点：<ol>
+<li>React依赖Virtual DOM，而Vue使用的是DOM模板，React采用的Virtual DOM会对渲染出来的结果做脏检查。</li>
+<li>vue在模板中提供了指令，过滤器等，可以非常方便，开解的操作DOM</li>
+</ol>
+</li>
+</ul>
+<h3 id="六-前端性能优化及自身代码优化"><a href="#六-前端性能优化及自身代码优化" class="headerlink" title="六 前端性能优化及自身代码优化"></a>六 前端性能优化及自身代码优化</h3><ul>
+<li><strong>前端性能优化：</strong> <ol>
+<li>减少http请求次数 （可以合理设置缓存，资源压缩，比如精灵图，懒加载图片等）   </li>
+<li>将样式文件引在前面，脚本文件引在最后。 不会造成阻塞其他资源加载。   </li>
+<li>异步执行inline脚本  。因为浏览器在页面处理方面是单线程的，（多线程会出先分支增删同一元素的冲突问题）。   </li>
+<li>避免重复的资源请求，减少不必要的http跳转</li>
+</ol>
+</li>
+<li><strong>自身代码优化：</strong><ol>
+<li>代码复用， </li>
+<li>避免使用过多全局变量， </li>
+<li>拆分函数避免函数过于臃肿，职责单一，</li>
+<li>面向对象编程，对功能进行封装复用， </li>
+<li>适当的注释，</li>
+<li>内存管理。</li>
+</ol>
+</li>
+</ul>
+<blockquote>
+<p>==&gt; 函数式编程，顾名思义，这种编程是以函数思维做为核心，在这种思维的角度去思考问题。<br> ==&gt;缺点 :所有的数据都是不可以改变的，严重占据运行资源，导致运行速度也不够快<br> ==&gt;面向对象编程：为了编写可以重用的代码导致许多无用代码的产生，并且许多人为了面向对象而面向对象导致代码给后期维护带来很多麻烦。<br>面向对象三大要素: 封装 继承 多态</p>
+</blockquote>
+<ul>
+<li><p><strong>vue项目<code>性能优化</code>及<code>首屏性能优化</code></strong></p>
+<ol>
+<li>按需加载，  当前主流的ui框架都支持按需加载</li>
+<li>服务端代码压缩   gzip</li>
+<li>代码分块</li>
+<li>路由组件懒加载 <code>const HelloWorld = ()=&gt;import(&quot;@/components/HelloWorld&quot;)</code></li>
+<li>图片懒加载/服务端渲染（ssr）</li>
+</ol>
+<p><a href="https://www.jianshu.com/p/2c929f211d08" target="_blank" rel="noopener">进阶版首屏优化</a></p>
+</li>
+</ul>
+<h3 id="七-webpack"><a href="#七-webpack" class="headerlink" title="七 webpack"></a>七 webpack</h3><h4 id="1-打包优化"><a href="#1-打包优化" class="headerlink" title="1. 打包优化"></a>1. 打包优化</h4><p><a href="https://segmentfault.com/a/1190000011138081?utm_source=tag-newest" target="_blank" rel="noopener">转:webpack打包优化解决方案</a></p>
+<h4 id="2-配置生产测试环境"><a href="#2-配置生产测试环境" class="headerlink" title="2. 配置生产测试环境"></a>2. 配置生产测试环境</h4><p><a href="https://blog.csdn.net/xhjfor/article/details/80796801" target="_blank" rel="noopener">转:webpack实现开发、测试、生产等环境的打包切换</a></p>
+<h2 id="结尾"><a href="#结尾" class="headerlink" title="结尾"></a>结尾</h2><p>未完待续,持续更新中……</p>
+
+            </div>
+            <hr />
+
+            
+            <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.88rem;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-large waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fa fa-close"></i></a>
+            <h4 class="reward-title">写作不易，客官能否打赏一杯奶茶？</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+            
+
+            <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+
+<div id="article-share">
+    
+    <div class="social-share" data-disabled="qzone" data-wechat-qrcode-helper="<p>微信里点“发现”->“扫一扫”二维码便可查看分享。</p>"></div>
+    
+</div>
+
+<script src="/libs/share/js/social-share.min.js"></script>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        <p class="reprint-tip">
+            <i class="fa fa-exclamation-triangle"></i>&nbsp;&nbsp;
+            <span>转载规则</span>
+        </p>
+        
+            <div class="center-align">
+                <a rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.zh">
+                    <img alt=""
+                         style="border-width:0"
+                         src="https://i.creativecommons.org/l/by/4.0/88x31.png"/>
+                </a>
+            </div>
+            <br/>
+            <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
+                  property="dct:title" rel="dct:type">
+                    《2020 前端面试》
+                </span> 由
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2020/05/30/mian-shi-2.0-ban-ben/" property="cc:attributionName"
+               rel="cc:attributionURL">
+                唐宇
+            </a> 采用
+            <a rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.zh">
+                知识共享署名 4.0 国际许可协议
+            </a>进行许可。
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+        </div>
+    </div>
+
+    
+    <link rel="stylesheet" href="/libs/gitalk/gitalk.css">
+<link rel="stylesheet" href="/css/my-gitalk.css">
+
+<div class="card gitalk-card" data-aos="fade-up">
+    <div id="gitalk-container" class="card-content"></div>
+</div>
+
+<script src="/libs/gitalk/gitalk.min.js"></script>
+<script>
+    let gitalk = new Gitalk({
+        clientID: 'f0af2af6cee5fc6ad7ce',
+        clientSecret: 'd0f22709cb94f03b4d771d2ed5c091c8f0cc312b',
+        repo: 'Lingtian007.github.io',
+        owner: 'Lingtian007',
+        admin: "Lingtian007",
+        id: '2020/05/30/mian-shi-2.0-ban-ben/',
+        distractionFreeMode: false  // Facebook-like distraction free mode
+    });
+
+    gitalk.render('gitalk-container');
+</script>
+    
+
+    
+
+    
+
+    
+
+    
+    <style>
+    .valine-card {
+        margin: 1.5rem auto;
+    }
+
+    .valine-card .card-content {
+        padding: 20px 20px 5px 20px;
+    }
+
+    #vcomments input[type=text],
+    #vcomments input[type=email],
+    #vcomments input[type=url],
+    #vcomments textarea {
+        box-sizing: border-box;
+    }
+
+    #vcomments p {
+        margin: 2px 2px 10px;
+        font-size: 1.05rem;
+        line-height: 1.78rem;
+    }
+
+    #vcomments blockquote p {
+        text-indent: 0.2rem;
+    }
+
+    #vcomments a {
+        padding: 0 2px;
+        color: #42b983;
+        font-weight: 500;
+        text-decoration: underline;
+    }
+
+    #vcomments img {
+        max-width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+
+    #vcomments ol li {
+        list-style-type: decimal;
+    }
+
+    #vcomments ol,
+    ul {
+        display: block;
+        padding-left: 2em;
+        word-spacing: 0.05rem;
+    }
+
+    #vcomments ul li,
+    ol li {
+        display: list-item;
+        line-height: 1.8rem;
+        font-size: 1rem;
+    }
+
+    #vcomments ul li {
+        list-style-type: disc;
+    }
+
+    #vcomments ul ul li {
+        list-style-type: circle;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    #vcomments table, th, td {
+        border: 0;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments h1 {
+        font-size: 1.85rem;
+        font-weight: bold;
+        line-height: 2.2rem;
+    }
+
+    #vcomments h2 {
+        font-size: 1.65rem;
+        font-weight: bold;
+        line-height: 1.9rem;
+    }
+
+    #vcomments h3 {
+        font-size: 1.45rem;
+        font-weight: bold;
+        line-height: 1.7rem;
+    }
+
+    #vcomments h4 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    #vcomments h5 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        line-height: 1.4rem;
+    }
+
+    #vcomments h6 {
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+
+    #vcomments p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    #vcomments hr {
+        margin: 12px 0;
+        border: 0;
+        border-top: 1px solid #ccc;
+    }
+
+    #vcomments blockquote {
+        margin: 15px 0;
+        border-left: 5px solid #42b983;
+        padding: 1rem 0.8rem 0.3rem 0.8rem;
+        color: #666;
+        background-color: rgba(66, 185, 131, .1);
+    }
+
+    #vcomments pre {
+        font-family: monospace, monospace;
+        padding: 1.2em;
+        margin: .5em 0;
+        background: #272822;
+        overflow: auto;
+        border-radius: 0.3em;
+        tab-size: 4;
+    }
+
+    #vcomments code {
+        font-family: monospace, monospace;
+        padding: 1px 3px;
+        font-size: 0.92rem;
+        color: #e96900;
+        background-color: #f8f8f8;
+        border-radius: 2px;
+    }
+
+    #vcomments pre code {
+        font-family: monospace, monospace;
+        padding: 0;
+        color: #e8eaf6;
+        background-color: #272822;
+    }
+
+    #vcomments pre[class*="language-"] {
+        padding: 1.2em;
+        margin: .5em 0;
+    }
+
+    #vcomments code[class*="language-"],
+    pre[class*="language-"] {
+        color: #e8eaf6;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+
+    #vcomments b,
+    strong {
+        font-weight: bold;
+    }
+
+    #vcomments dfn {
+        font-style: italic;
+    }
+
+    #vcomments small {
+        font-size: 85%;
+    }
+
+    #vcomments cite {
+        font-style: normal;
+    }
+
+    #vcomments mark {
+        background-color: #fcf8e3;
+        padding: .2em;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+</style>
+
+<div class="card valine-card" data-aos="fade-up">
+    <div id="vcomments" class="card-content"></div>
+</div>
+
+<script src="/libs/valine/av-min.js"></script>
+<script src="/libs/valine/Valine.min.js"></script>
+<!-- <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script> -->
+
+<script>
+    new Valine({
+        el: '#vcomments',
+        appId: '',
+        appKey: '',
+        notify: 'false' === 'true',
+        verify: 'false' === 'true',
+        visitor: 'false' === 'true',
+        avatar: 'wavatar',
+        pageSize: '10',
+        lang: 'zh-cn',
+        placeholder: '如果你没有GitHub账号，还可以在这里评论啦！'
+    });
+</script>
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2020/05/30/mian-shi-zhi-lu/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="2020 前端面试">
+                        
+                        <span class="card-title">2020 前端面试</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            闲来无事，随便写写。
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2020-05-30
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/面试/" class="post-category" target="_blank">
+                                    面试
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/面试/" target="_blank">
+                        <span class="chip bg-color">面试</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2020/03/28/cong-ling-da-jian-qian-duan-zu-jian-ku/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="从零搭建前端组件库">
+                        
+                        <span class="card-title">从零搭建前端组件库</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            闲来无事，随便写写。
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-03-28
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/技术/" class="post-category" target="_blank">
+                                    技术
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/技术/" target="_blank">
+                        <span class="chip bg-color">技术</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: 唐宇的博客<br />'
+            + '作者: 唐宇<br />'
+            + '链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () { bodyElement.removeChild(newdiv); }, 200);
+    });
+</script>
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="fa fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fa fa-list"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            // headingsOffset: -205,
+            headingSelector: 'h1, h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h1, h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).slideUp(500);
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).slideDown(500);
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+    
+
+</main>
+
+
+    <footer class="page-footer bg-color">
+    <div class="container row center-align">
+        <div class="col s12 m8 l8 copy-right">
+            &copy; 2020 LFDW. All Rights Reserved.
+
+            
+            &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
+            <span class="white-color">64.1k</span>
+            
+
+            <br>
+            <span id="sitetime"></span>
+
+            
+            
+            <br>
+            
+            <span id="busuanzi_container_site_pv" style='display:none'>
+                <i class="fa fa-heart-o"></i>
+                本站总访问量 <span id="busuanzi_value_site_pv" class="white-color"></span>
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv" style='display:none'>
+                人次,&nbsp;访客数 <span id="busuanzi_value_site_uv" class="white-color"></span> 人.
+            </span>
+            
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/Lingtian007/blogDemo" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fa fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:632271304@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fa fa-envelope-open"></i>
+    </a>
+
+
+
+    <a href="https://zhihu.com/people/Lingtian" class="tooltipped" target="_blank" data-tooltip="访问我的知乎" data-position="top" data-delay="50">
+        <i class="fa fa-inverse">知</i>
+    </a>
+
+
+
+    <a href="https://user.qzone.qq.com/632271304" class="tooltipped" target="_blank" data-tooltip="访问我的QQ空间" data-position="top" data-delay="50">
+        <i class="fa fa-qq"></i>
+    </a>
+
+
+
+    <a href="https://weibo.com/6010843426" class="tooltipped" target="_blank" data-tooltip="关注我的微博" data-position="top" data-delay="50">
+        <i class="fa fa-weibo"></i>
+    </a>
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fa fa-rss"></i>
+    </a>
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+<!-- 不蒜子计数初始值纠正 -->
+<script>
+    $(document).ready(function () {
+
+        var int = setInterval(fixCount, 50);
+        var pvcountOffset = 80000;
+        var uvcountOffset = 20000;
+
+        function fixCount() {
+            if (document.getElementById("busuanzi_container_site_pv").style.display != "none") {
+                $("#busuanzi_value_site_pv").html(parseInt($("#busuanzi_value_site_pv").html()) + pvcountOffset);
+                clearInterval(int);
+            }
+            if ($("#busuanzi_container_site_pv").css("display") != "none") {
+                $("#busuanzi_value_site_uv").html(parseInt($("#busuanzi_value_site_uv").html()) + uvcountOffset); // 加上初始数据 
+                clearInterval(int);
+            }
+        }
+    });
+</script>
+
+<script language=javascript>
+    function siteTime() {
+        window.setTimeout("siteTime()", 1000);
+        var seconds = 1000;
+        var minutes = seconds * 60;
+        var hours = minutes * 60;
+        var days = hours * 24;
+        var years = days * 365;
+        var today = new Date();
+        var todayYear = today.getFullYear();
+        var todayMonth = today.getMonth() + 1;
+        var todayDate = today.getDate();
+        var todayHour = today.getHours();
+        var todayMinute = today.getMinutes();
+        var todaySecond = today.getSeconds();
+        /* Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+        year - 作为date对象的年份，为4位年份值
+        month - 0-11之间的整数，做为date对象的月份
+        day - 1-31之间的整数，做为date对象的天数
+        hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+        minutes - 0-59之间的整数，做为date对象的分钟数
+        seconds - 0-59之间的整数，做为date对象的秒数
+        microseconds - 0-999之间的整数，做为date对象的毫秒数 */
+        var t1 = Date.UTC(2019, 05, 11, 00, 00, 00); //北京时间2018-2-13 00:00:00
+        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+        var diff = t2 - t1;
+        var diffYears = Math.floor(diff / years);
+        var diffDays = Math.floor((diff / days) - diffYears * 365);
+        var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+        var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes);
+        var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes * minutes) / seconds);
+        document.getElementById("sitetime").innerHTML = "本站已运行 " + diffYears + " 年 " + diffDays + " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+    }/*因为建站时间还没有一年，就将之注释掉了。需要的可以取消*/
+    siteTime();
+</script>
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fa fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
+});
+</script>
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fa fa-angle-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <script type="text/javascript"> var OriginTitile = document.title, st; document.addEventListener("visibilitychange", function () { document.hidden ? (document.title = "Σ(っ °Д °;)っ喔哟，崩溃啦！", clearTimeout(st)) : (document.title = "φ(゜▽゜*)♪咦，又好了！", st = setTimeout(function () { document.title = OriginTitile }, 3e3)) })
+    </script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id="></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', '');
+</script>
+
+
+
+    
+    <script src="/libs/others/clicklove.js"></script>
+    
+
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    <!-- 雪花特效 -->
+    <!-- 
+    <script type="text/javascript" src="/libs/others/snow.js"></script>
+     -->
+
+</body>
+
+</html>
