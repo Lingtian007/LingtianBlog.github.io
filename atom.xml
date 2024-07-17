@@ -6,7 +6,7 @@
   <link href="/LingtianBlog.github.io/atom.xml" rel="self"/>
   
   <link href="https://lingtian007.github.io/LingtianBlog.github.io/"/>
-  <updated>2024-03-20T06:48:05.468Z</updated>
+  <updated>2024-07-17T07:25:30.966Z</updated>
   <id>https://lingtian007.github.io/LingtianBlog.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2020 前端面试</title>
+    <link href="https://lingtian007.github.io/LingtianBlog.github.io/2022/05/30/mian-shi-2.0-ban-ben-copy/"/>
+    <id>https://lingtian007.github.io/LingtianBlog.github.io/2022/05/30/mian-shi-2.0-ban-ben-copy/</id>
+    <published>2022-05-30T07:32:09.000Z</published>
+    <updated>2024-07-17T07:25:30.966Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;div align=&quot;middle&quot;&gt;
+&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;330&quot; height=&quot;86&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="面试" scheme="https://lingtian007.github.io/LingtianBlog.github.io/categories/%E9%9D%A2%E8%AF%95/"/>
+    
+    
+      <category term="面试" scheme="https://lingtian007.github.io/LingtianBlog.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+  </entry>
   
   <entry>
     <title>项目配置proxy代理</title>
@@ -525,33 +552,6 @@
     
     
       <category term="总结" scheme="https://lingtian007.github.io/LingtianBlog.github.io/tags/%E6%80%BB%E7%BB%93/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>highcharts 实时动态刷新曲线图</title>
-    <link href="https://lingtian007.github.io/LingtianBlog.github.io/2020/06/18/highchart-zhi-chu-kui/"/>
-    <id>https://lingtian007.github.io/LingtianBlog.github.io/2020/06/18/highchart-zhi-chu-kui/</id>
-    <published>2020-06-18T09:32:09.000Z</published>
-    <updated>2024-03-20T06:48:05.430Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;div align=&quot;middle&quot;&gt;
-&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;330&quot; height=&quot;86&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="方法" scheme="https://lingtian007.github.io/LingtianBlog.github.io/categories/%E6%96%B9%E6%B3%95/"/>
-    
-    
-      <category term="方法" scheme="https://lingtian007.github.io/LingtianBlog.github.io/tags/%E6%96%B9%E6%B3%95/"/>
     
   </entry>
   
